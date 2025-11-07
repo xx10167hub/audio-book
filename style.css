@@ -11,8 +11,13 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 20px;
     margin: 0;
+}
+
+/* 飞书环境优化 */
+.feishu-environment body {
+    padding: 10px;
 }
 
 .player-container {
@@ -20,20 +25,26 @@ body {
     max-width: 900px;
     background: linear-gradient(145deg, #1a332a 0%, #122820 100%);
     border-radius: 16px;
-    padding: 32px;
+    padding: 24px;
     box-shadow: 
         0 8px 32px rgba(0, 0, 0, 0.4),
         0 0 0 1px rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(0, 255, 200, 0.1);
 }
 
+/* 飞书环境特殊样式 */
+.feishu-environment .player-container {
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
 h3 {
     margin-top: 0;
     color: #00ffcc;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     text-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
 }
 
@@ -42,6 +53,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 12px;
 }
 
@@ -61,16 +73,12 @@ h3 {
     cursor: pointer;
     transition: all 0.3s ease;
     outline: none;
+    min-height: 36px;
 }
 
 .controls select:hover {
     background-color: #224440;
     border-color: rgba(0, 255, 200, 0.6);
-}
-
-.controls select:focus {
-    border-color: #00ffcc;
-    box-shadow: 0 0 0 3px rgba(0, 255, 200, 0.1);
 }
 
 .info-display {
@@ -89,7 +97,7 @@ h3 {
     background: rgba(0, 0, 0, 0.3);
     border-radius: 12px;
     padding: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -99,26 +107,29 @@ h3 {
 
 .progress-bar {
     width: 100%;
-    height: 6px;
+    height: 8px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
+    border-radius: 4px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    touch-action: none;
 }
 
 .progress-filled {
     height: 100%;
     background: linear-gradient(90deg, #8b5cf6 0%, #a78bfa 100%);
-    border-radius: 3px;
+    border-radius: 4px;
     width: 0%;
     transition: width 0.1s linear;
+    pointer-events: none;
 }
 
 .player-bottom {
     display: grid;
     grid-template-columns: 100px 1fr 100px;
     align-items: center;
+    gap: 8px;
 }
 
 .time-display {
@@ -142,12 +153,13 @@ h3 {
     justify-self: center;
 }
 
+/* 基础按钮样式 */
 .control-btn {
     background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
     border: none;
     border-radius: 8px;
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,6 +167,9 @@ h3 {
     transition: all 0.3s ease;
     color: white;
     box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+    flex-shrink: 0;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .control-btn:hover {
@@ -167,13 +182,175 @@ h3 {
     transform: scale(0.95);
 }
 
+/* 循环按钮激活状态 - 绿色背景 + 白色边框 */
+#loop-btn.active,
 .control-btn.active {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    border: 3px solid #ffffff !important;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.8), 0 4px 16px rgba(16, 185, 129, 0.6) !important;
+    transform: scale(1.1) !important;
 }
 
+#loop-btn.active:hover,
 .control-btn.active:hover {
-    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%) !important;
+    box-shadow: 0 0 24px rgba(16, 185, 129, 0.9), 0 6px 20px rgba(16, 185, 129, 0.7) !important;
+    transform: scale(1.15) !important;
+}
+
+/* ========== 平板适配 (iPad等) ========== */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .player-container {
+        padding: 28px;
+    }
+    
+    h3 {
+        font-size: 26px;
+    }
+    
+    .control-btn {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .control-btn svg {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .progress-bar {
+        height: 10px;
+    }
+    
+    .player-controls {
+        gap: 20px;
+    }
+}
+
+/* ========== 手机适配 (iPhone, Android) ========== */
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+    
+    .player-container {
+        padding: 16px;
+        border-radius: 12px;
+    }
+    
+    h3 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+    
+    .controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .controls select {
+        width: 100%;
+        min-height: 44px;
+        font-size: 16px;
+    }
+    
+    .custom-player {
+        padding: 16px;
+    }
+    
+    .progress-bar {
+        height: 12px;
+        border-radius: 6px;
+    }
+    
+    /* 手机端按钮更大，方便触摸 */
+    .control-btn {
+        width: 52px;
+        height: 52px;
+    }
+    
+    .control-btn svg {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .player-controls {
+        gap: 12px;
+    }
+    
+    .player-bottom {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .time-display {
+        grid-column: 1 / 2;
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .player-controls {
+        grid-column: 1 / 2;
+        justify-self: center;
+    }
+    
+    .time-spacer {
+        display: none;
+    }
+    
+    .transcript p {
+        padding: 10px 12px;
+        padding-top: 24px;
+        font-size: 15px;
+    }
+    
+    .time-label {
+        font-size: 10px;
+    }
+}
+
+/* ========== 飞书移动端特殊优化 ========== */
+.feishu-environment.mobile-device .control-btn {
+    width: 54px;
+    height: 54px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.feishu-environment.mobile-device .control-btn svg {
+    width: 30px;
+    height: 30px;
+}
+
+.feishu-environment.tablet-device .control-btn {
+    width: 50px;
+    height: 50px;
+}
+
+.feishu-environment.tablet-device .control-btn svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* ========== 小屏手机优化 (iPhone SE等) ========== */
+@media (max-width: 375px) {
+    .control-btn {
+        width: 46px;
+        height: 46px;
+    }
+    
+    .control-btn svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .player-controls {
+        gap: 8px;
+    }
+    
+    h3 {
+        font-size: 18px;
+    }
 }
 
 hr {
@@ -183,13 +360,13 @@ hr {
         transparent 0%, 
         rgba(0, 255, 200, 0.3) 50%, 
         transparent 100%);
-    margin: 24px 0;
+    margin: 20px 0;
 }
 
 .transcript {
-    max-height: 60vh;
     overflow-y: auto;
     padding-right: 8px;
+    max-height: 50vh;
 }
 
 .transcript::-webkit-scrollbar {
@@ -206,14 +383,10 @@ hr {
     border-radius: 4px;
 }
 
-.transcript::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #00ffdd 0%, #00bb99 100%);
-}
-
 .transcript p {
     padding: 12px 16px;
     padding-top: 28px;
-    margin: 10px 0;
+    margin: 8px 0;
     border-radius: 10px;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -221,10 +394,9 @@ hr {
     border: 1px solid rgba(255, 255, 255, 0.05);
     color: #d0d0d0;
     position: relative;
-    
     -webkit-user-select: none;
-    -ms-user-select: none;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .time-label {
@@ -243,11 +415,14 @@ hr {
 
 .sentence-content {
     padding: 5px 0;
+    display: flex;
+    align-items: flex-start;
 }
 
 .text-block {
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .original-text {
@@ -302,39 +477,10 @@ hr {
     box-shadow: 0 0 8px rgba(0, 255, 200, 0.4);
 }
 
-.transcript p.active:hover {
-    background: linear-gradient(90deg, 
-        rgba(0, 255, 200, 0.2) 0%, 
-        rgba(0, 255, 200, 0.12) 100%);
-    border-color: #00ffdd;
-}
-
-/* 逐词高亮样式 */
-.word-highlight {
-    transition: all 0.2s ease;
-    padding: 1px 2px;
-    border-radius: 2px;
-    display: inline-block;
-    margin: 0 1px;
-}
-
-.word-highlight.current {
-    background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
-    color: #000 !important;
-    font-weight: 600;
-    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
-    transform: scale(1.05);
-}
-
-.word-highlight.next {
-    color: #ffd700 !important;
-    font-weight: 500;
-    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
-}
-
 .play-button {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
     background: rgba(0, 255, 200, 0.1);
     border-radius: 50%;
     display: flex;
@@ -344,6 +490,7 @@ hr {
     cursor: pointer;
     transition: all 0.3s ease;
     border: 1px solid rgba(0, 255, 200, 0.3);
+    flex-shrink: 0;
 }
 
 .play-button:hover {
@@ -372,4 +519,50 @@ hr {
             #00ffcc 40%, #00ffcc 60%,
             transparent 60%, transparent 80%,
             #00ffcc 80%, #00ffcc 100%);
-}好
+}
+
+.word-highlight {
+    display: inline-block;
+    margin: 0 1px;
+    transition: all 0.2s ease;
+}
+
+.word-highlight.current {
+    background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
+    color: #000 !important;
+    font-weight: 600;
+    padding: 2px 4px;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+    transform: scale(1.05);
+}
+
+.word-highlight.next {
+    color: #ffd700 !important;
+    font-weight: 500;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+/* 防止移动端下拉刷新和双击缩放 */
+body {
+    overscroll-behavior: none;
+    touch-action: pan-y;
+}
+
+.player-container {
+    touch-action: pan-y;
+}
+
+/* 移动端优化：防止文字选择 */
+@media (max-width: 767px) {
+    * {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    
+    input, textarea, select {
+        -webkit-user-select: auto;
+        user-select: auto;
+    }
+}
