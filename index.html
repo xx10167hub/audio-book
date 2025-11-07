@@ -4,7 +4,503 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>audio book</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 完整的CSS样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background: linear-gradient(135deg, #0a1f1a 0%, #1a2f2a 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .player-container {
+            width: 100%;
+            max-width: 900px;
+            background: linear-gradient(145deg, #1a332a 0%, #122820 100%);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 200, 0.1);
+            display: flex;
+            flex-direction: column;
+            min-height: auto;
+        }
+
+        h3 {
+            margin-top: 0;
+            color: #00ffcc;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 16px;
+            text-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+        }
+
+        .controls {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .controls label {
+            color: #b0b0b0;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .controls select {
+            font-size: 14px;
+            padding: 8px 16px;
+            background-color: #1a3330;
+            color: #00ffcc;
+            border: 1px solid rgba(0, 255, 200, 0.3);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            outline: none;
+            min-height: 36px;
+        }
+
+        .controls select:hover {
+            background-color: #224440;
+            border-color: rgba(0, 255, 200, 0.6);
+        }
+
+        .info-display {
+            font-size: 14px;
+            color: #b0b0b0;
+            font-weight: 500;
+        }
+
+        .info-display #word-count {
+            color: #00ffcc;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .custom-player {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .progress-container {
+            margin-bottom: 12px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            touch-action: none;
+        }
+
+        .progress-filled {
+            height: 100%;
+            background: linear-gradient(90deg, #8b5cf6 0%, #a78bfa 100%);
+            border-radius: 4px;
+            width: 0%;
+            transition: width 0.1s linear;
+            pointer-events: none;
+        }
+
+        .player-bottom {
+            display: grid;
+            grid-template-columns: 100px 1fr 100px;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .time-display {
+            color: #9ca3af;
+            font-size: 13px;
+            font-weight: 500;
+            min-width: 100px;
+            grid-column: 1 / 2;
+        }
+
+        .time-spacer {
+            grid-column: 3 / 4;
+            width: 100px;
+        }
+
+        .player-controls {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            grid-column: 2 / 3;
+            justify-self: center;
+        }
+
+        .control-btn {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            border: none;
+            border-radius: 8px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: white;
+            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+            flex-shrink: 0;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .control-btn:hover {
+            background: linear-gradient(135deg, #9f7aea 0%, #8b5cf6 100%);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.5);
+        }
+
+        .control-btn:active {
+            transform: scale(0.95);
+        }
+
+        #loop-btn.active,
+        .control-btn.active {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+            border: 3px solid #ffffff !important;
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.8), 0 4px 16px rgba(16, 185, 129, 0.6) !important;
+            transform: scale(1.1) !important;
+        }
+
+        #loop-btn.active:hover,
+        .control-btn.active:hover {
+            background: linear-gradient(135deg, #34d399 0%, #10b981 100%) !important;
+            box-shadow: 0 0 24px rgba(16, 185, 129, 0.9), 0 6px 20px rgba(16, 185, 129, 0.7) !important;
+            transform: scale(1.15) !important;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(0, 255, 200, 0.3) 50%, 
+                transparent 100%);
+            margin: 12px 0;
+        }
+
+        .transcript {
+            overflow-y: auto;
+            padding-right: 8px;
+            min-height: 150px;
+            max-height: 50vh;
+            flex: 1;
+        }
+
+        .transcript::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .transcript::-webkit-scrollbar-track {
+            background: #0a1f1a;
+            border-radius: 4px;
+        }
+
+        .transcript::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #00ffcc 0%, #00aa88 100%);
+            border-radius: 4px;
+        }
+
+        .transcript p {
+            padding: 8px 12px;
+            padding-top: 22px;
+            margin: 4px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: #d0d0d0;
+            position: relative;
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .time-label {
+            position: absolute;
+            top: 4px;
+            left: 12px;
+            font-size: 10px;
+            color: #00ffcc;
+            background: rgba(0, 255, 200, 0.1);
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(0, 255, 200, 0.2);
+        }
+
+        .sentence-content {
+            padding: 3px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .text-block {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .original-text {
+            font-size: 1.0em;
+            color: #d0d0d0;
+            line-height: 1.5;
+        }
+
+        .translation {
+            font-size: 0.85em;
+            opacity: 0.8;
+            color: #b0b0b0;
+            margin-top: 2px;
+            line-height: 1.4;
+        }
+
+        .transcript p:hover {
+            background-color: rgba(0, 255, 200, 0.08);
+            border-color: rgba(0, 255, 200, 0.3);
+            transform: translateX(4px);
+        }
+
+        .transcript p:hover .time-label {
+            background: rgba(0, 255, 200, 0.2);
+            border-color: rgba(0, 255, 200, 0.4);
+        }
+
+        .transcript p.active {
+            background: linear-gradient(90deg, 
+                rgba(0, 255, 200, 0.15) 0%, 
+                rgba(0, 255, 200, 0.08) 100%);
+            border-color: #00ffcc;
+            color: #ffffff;
+            box-shadow: 
+                0 0 20px rgba(0, 255, 200, 0.2),
+                inset 0 0 20px rgba(0, 255, 200, 0.05);
+        }
+
+        .transcript p.active .original-text {
+            color: #ffffff;
+        }
+
+        .transcript p.active .translation {
+            color: #e0e0e0;
+            opacity: 0.9;
+        }
+
+        .transcript p.active .time-label {
+            background: rgba(0, 255, 200, 0.3);
+            border-color: #00ffcc;
+            color: #ffffff;
+            box-shadow: 0 0 8px rgba(0, 255, 200, 0.4);
+        }
+
+        .play-button {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            background: rgba(0, 255, 200, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 255, 200, 0.3);
+            flex-shrink: 0;
+        }
+
+        .play-button:hover {
+            background: rgba(0, 255, 200, 0.2);
+            border-color: rgba(0, 255, 200, 0.6);
+        }
+
+        .play-button::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 0 5px 8px;
+            border-color: transparent transparent transparent #00ffcc;
+            margin-left: 1px;
+        }
+
+        .play-button.paused::before {
+            border: none;
+            width: 6px;
+            height: 10px;
+            background: 
+                linear-gradient(to right, 
+                    #00ffcc 0%, #00ffcc 20%, 
+                    transparent 20%, transparent 40%,
+                    #00ffcc 40%, #00ffcc 60%,
+                    transparent 60%, transparent 80%,
+                    #00ffcc 80%, #00ffcc 100%);
+        }
+
+        .word-highlight {
+            display: inline-block;
+            margin: 0 1px;
+            transition: all 0.2s ease;
+        }
+
+        .word-highlight.current {
+            background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
+            color: #000 !important;
+            font-weight: 600;
+            padding: 2px 4px;
+            border-radius: 3px;
+            box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+            transform: scale(1.05);
+        }
+
+        .word-highlight.next {
+            color: #ffd700 !important;
+            font-weight: 500;
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
+
+        @media (max-width: 767px) {
+            body {
+                padding: 10px;
+            }
+            
+            .player-container {
+                padding: 16px;
+                border-radius: 12px;
+            }
+            
+            h3 {
+                font-size: 20px;
+                margin-bottom: 14px;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+                margin-bottom: 14px;
+            }
+            
+            .controls select {
+                width: 100%;
+                min-height: 44px;
+                font-size: 16px;
+            }
+            
+            .custom-player {
+                padding: 14px;
+                margin-bottom: 14px;
+            }
+            
+            .progress-bar {
+                height: 12px;
+                border-radius: 6px;
+            }
+            
+            .control-btn {
+                width: 52px;
+                height: 52px;
+            }
+            
+            .control-btn svg {
+                width: 28px;
+                height: 28px;
+            }
+            
+            .player-controls {
+                gap: 12px;
+            }
+            
+            .player-bottom {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .time-display {
+                grid-column: 1 / 2;
+                text-align: center;
+                font-size: 14px;
+            }
+            
+            .player-controls {
+                grid-column: 1 / 2;
+                justify-self: center;
+            }
+            
+            .time-spacer {
+                display: none;
+            }
+            
+            .transcript p {
+                padding: 8px 10px;
+                padding-top: 22px;
+                font-size: 15px;
+                margin: 3px 0;
+            }
+            
+            .time-label {
+                font-size: 9px;
+                top: 3px;
+            }
+            
+            hr {
+                margin: 10px 0;
+            }
+        }
+
+        /* 防止移动端下拉刷新和双击缩放 */
+        body {
+            overscroll-behavior: none;
+            touch-action: pan-y;
+        }
+
+        .player-container {
+            touch-action: pan-y;
+        }
+
+        /* 移动端优化：防止文字选择 */
+        @media (max-width: 767px) {
+            * {
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                user-select: none;
+            }
+            
+            input, textarea, select {
+                -webkit-user-select: auto;
+                user-select: auto;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="player-container">
@@ -88,6 +584,239 @@
         </div>
     </div>
 
-    <script src="player-script.js"></script>
+    <script>
+        // 完整的JavaScript代码
+        document.addEventListener('DOMContentLoaded', function() {
+            // 音频播放器
+            const audioPlayer = document.getElementById('audio-player');
+            const playPauseBtn = document.getElementById('play-pause-btn');
+            const backwardBtn = document.getElementById('backward-btn');
+            const forwardBtn = document.getElementById('forward-btn');
+            const loopBtn = document.getElementById('loop-btn');
+            const progressBar = document.getElementById('progress-bar');
+            const progressFilled = document.getElementById('progress-filled');
+            const currentTimeDisplay = document.getElementById('current-time');
+            const totalTimeDisplay = document.getElementById('total-time');
+            const speedControl = document.getElementById('speed-control');
+            const transcriptContainer = document.getElementById('transcript-container');
+            
+            // 音频文件路径
+            const audioSrc = 'audio/sample.mp3'; // 请替换为实际音频文件路径
+            
+            // 设置音频源
+            audioPlayer.src = audioSrc;
+            
+            // 示例文本数据
+            const transcriptData = [
+                {
+                    time: "00:00",
+                    original: "Solar and wind generated more electricity than coal for the first time in U.S. history in 2022.",
+                    translation: "2022年，太阳能和风能发电量首次超过煤炭，创下美国历史纪录。"
+                },
+                {
+                    time: "00:08",
+                    original: "Renewable energy sources accounted for 22% of U.S. electricity generation.",
+                    translation: "可再生能源占美国发电量的22%。"
+                },
+                {
+                    time: "00:15",
+                    original: "This milestone reflects the rapid growth of clean energy and the decline of coal power.",
+                    translation: "这一里程碑反映了清洁能源的快速增长和煤炭发电的衰退。"
+                },
+                {
+                    time: "00:23",
+                    original: "The transition to renewable energy is accelerating due to falling costs and policy support.",
+                    translation: "由于成本下降和政策支持，向可再生能源的转型正在加速。"
+                },
+                {
+                    time: "00:31",
+                    original: "Experts predict this trend will continue as technology improves and climate concerns grow.",
+                    translation: "专家预测，随着技术改进和气候问题日益受到关注，这一趋势将持续下去。"
+                }
+            ];
+            
+            // 初始化播放器
+            function initPlayer() {
+                // 加载文本内容
+                loadTranscript();
+                
+                // 设置播放速度
+                audioPlayer.playbackRate = parseFloat(speedControl.value);
+                
+                // 更新总时间显示
+                audioPlayer.addEventListener('loadedmetadata', function() {
+                    totalTimeDisplay.textContent = formatTime(audioPlayer.duration);
+                });
+                
+                // 播放/暂停按钮事件
+                playPauseBtn.addEventListener('click', togglePlayPause);
+                
+                // 快进/快退按钮事件
+                backwardBtn.addEventListener('click', skipBackward);
+                forwardBtn.addEventListener('click', skipForward);
+                
+                // 循环按钮事件
+                loopBtn.addEventListener('click', toggleLoop);
+                
+                // 进度条事件
+                progressBar.addEventListener('click', setProgress);
+                
+                // 播放速度控制事件
+                speedControl.addEventListener('change', function() {
+                    audioPlayer.playbackRate = parseFloat(this.value);
+                });
+                
+                // 更新进度条和时间显示
+                audioPlayer.addEventListener('timeupdate', updateProgress);
+                
+                // 音频播放结束事件
+                audioPlayer.addEventListener('ended', function() {
+                    playPauseBtn.classList.remove('playing');
+                    updatePlayPauseIcon();
+                });
+            }
+            
+            // 加载文本内容
+            function loadTranscript() {
+                transcriptContainer.innerHTML = '';
+                
+                transcriptData.forEach((item, index) => {
+                    const paragraph = document.createElement('p');
+                    paragraph.innerHTML = `
+                        <span class="time-label">${item.time}</span>
+                        <div class="sentence-content">
+                            <div class="play-button"></div>
+                            <div class="text-block">
+                                <div class="original-text">${item.original}</div>
+                                <div class="translation">${item.translation}</div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // 点击文本段落跳转到对应时间
+                    paragraph.addEventListener('click', function() {
+                        const time = parseTime(item.time);
+                        audioPlayer.currentTime = time;
+                        if (audioPlayer.paused) {
+                            audioPlayer.play();
+                            playPauseBtn.classList.add('playing');
+                            updatePlayPauseIcon();
+                        }
+                    });
+                    
+                    transcriptContainer.appendChild(paragraph);
+                });
+            }
+            
+            // 切换播放/暂停
+            function togglePlayPause() {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                    playPauseBtn.classList.add('playing');
+                } else {
+                    audioPlayer.pause();
+                    playPauseBtn.classList.remove('playing');
+                }
+                updatePlayPauseIcon();
+            }
+            
+            // 更新播放/暂停图标
+            function updatePlayPauseIcon() {
+                const playIcon = document.getElementById('play-icon');
+                const pauseIcon = document.getElementById('pause-icon');
+                
+                if (audioPlayer.paused) {
+                    playIcon.style.display = 'block';
+                    pauseIcon.style.display = 'none';
+                } else {
+                    playIcon.style.display = 'none';
+                    pauseIcon.style.display = 'block';
+                }
+            }
+            
+            // 快退10秒
+            function skipBackward() {
+                audioPlayer.currentTime = Math.max(0, audioPlayer.currentTime - 10);
+            }
+            
+            // 快进10秒
+            function skipForward() {
+                audioPlayer.currentTime = Math.min(audioPlayer.duration, audioPlayer.currentTime + 10);
+            }
+            
+            // 切换循环模式
+            function toggleLoop() {
+                audioPlayer.loop = !audioPlayer.loop;
+                loopBtn.classList.toggle('active', audioPlayer.loop);
+            }
+            
+            // 设置进度
+            function setProgress(e) {
+                const rect = progressBar.getBoundingClientRect();
+                const percent = (e.clientX - rect.left) / rect.width;
+                audioPlayer.currentTime = percent * audioPlayer.duration;
+            }
+            
+            // 更新进度条
+            function updateProgress() {
+                const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                progressFilled.style.width = `${percent}%`;
+                currentTimeDisplay.textContent = formatTime(audioPlayer.currentTime);
+                
+                // 高亮当前播放的段落
+                highlightCurrentParagraph();
+            }
+            
+            // 高亮当前播放的段落
+            function highlightCurrentParagraph() {
+                const paragraphs = document.querySelectorAll('.transcript p');
+                let currentIndex = -1;
+                
+                // 找到当前播放的段落
+                for (let i = 0; i < transcriptData.length; i++) {
+                    const time = parseTime(transcriptData[i].time);
+                    if (audioPlayer.currentTime >= time) {
+                        currentIndex = i;
+                    } else {
+                        break;
+                    }
+                }
+                
+                // 移除所有高亮
+                paragraphs.forEach(p => p.classList.remove('active'));
+                
+                // 高亮当前段落
+                if (currentIndex >= 0) {
+                    paragraphs[currentIndex].classList.add('active');
+                    
+                    // 滚动到当前段落
+                    if (currentIndex > 0) {
+                        paragraphs[currentIndex].scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center'
+                        });
+                    }
+                }
+            }
+            
+            // 格式化时间显示 (秒 -> MM:SS)
+            function formatTime(seconds) {
+                if (isNaN(seconds)) return '00:00';
+                
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            }
+            
+            // 解析时间字符串 (MM:SS -> 秒)
+            function parseTime(timeString) {
+                const [mins, secs] = timeString.split(':').map(Number);
+                return mins * 60 + secs;
+            }
+            
+            // 初始化播放器
+            initPlayer();
+        });
+    </script>
 </body>
 </html>
