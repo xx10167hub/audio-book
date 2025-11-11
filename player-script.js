@@ -1,9 +1,11 @@
-// player-script.js - 修复单句循环功能
+// player-script.js - 多文章支持版本（保留所有原有功能）
 document.addEventListener('DOMContentLoaded', function() {
     
-    const urlParams = new URLSearchParams(window.location.search);
-    const articleId = urlParams.get('article') || '1';
-    const dataFile = `data/article-${articleId}.json`;
+    // ===== 新增：多文章配置 =====
+    const ARTICLES_CONFIG_FILE = 'articles.json';
+    let articlesConfig = [];
+    let currentArticleId = null;
+    
     const audioPlayer = document.getElementById('audio-player');
     const titleElement = document.getElementById('article-title');
     const transcriptContainer = document.getElementById('transcript-container');
@@ -19,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentTimeDisplay = document.getElementById('current-time');
     const totalTimeDisplay = document.getElementById('total-time');
     const wordCountDisplay = document.getElementById('word-count');
+    const articleSelect = document.getElementById('article-select'); // 新增
 
     let sentencesData = [];
     let currentHighlightElement = null;
@@ -132,130 +135,249 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // 加载数据
-    fetch(dataFile)
-        .then(response => {
-            if (!response.ok) { 
-                throw new Error('网络错误，找不到数据文件'); 
+    // ===== 新增：加载文章配置列表 =====
+    async function loadArticlesConfig() {
+        try {
+            const response = await fetch(ARTICLES_CONFIG_FILE);
+            if (!response.ok) {
+                throw new Error('文章配置文件不存在');
             }
-            return response.json();
-        })
-        .then(data => {
-            titleElement.textContent = data.title;
-            audioPlayer.src = data.audioUrl; 
+            const config = await response.json();
+            articlesConfig = config.articles;
             
-            let totalWordCount = 0;
-            data.transcript.forEach((line, index) => {
-                const englishText = line.text.split('\n')[0]; 
-                const words = englishText.match(/[a-zA-Z']+/g); 
-                if (words) {
-                    totalWordCount += words.length;
-                }
-                
-                const p = document.createElement('p');
-                p.className = 'sentence';
-                p.id = `sentence-${index}`;
-                
-                const timeLabel = document.createElement('span');
-                timeLabel.className = 'time-label';
-                timeLabel.textContent = formatTime(line.time);
-                
-                const sentenceContent = document.createElement('div');
-                sentenceContent.className = 'sentence-content';
-                
-                const playButton = document.createElement('div');
-                playButton.className = 'play-button';
-
-                let endTime;
-                if (index < data.transcript.length - 1) {
-                    endTime = data.transcript[index + 1].time;
-                } else {
-                    endTime = null;
-                }
-
-                const sentenceData = {
-                    element: p,
-                    playButton: playButton,
-                    start: line.time,
-                    end: endTime,
-                    index: index
-                };
-                
-                p.addEventListener('click', function(event) {
-                    const target = event.target;
-                    if (target.classList.contains('play-button') || target.closest('.play-button')) {
-                        handleSentencePlayToggle(sentenceData);
-                    } else {
-                        handleSentencePlayFromStart(sentenceData);
-                    }
-                });
-                
-                const textBlock = document.createElement('div');
-                textBlock.className = 'text-block';
-                
-                // 处理逐词高亮
-                if (line.words && line.words.length > 0) {
-                    const originalText = document.createElement('span');
-                    originalText.className = 'original-text';
-                    
-                    line.words.forEach((wordData, wordIndex) => {
-                        const wordSpan = document.createElement('span');
-                        wordSpan.className = 'word-highlight';
-                        wordSpan.textContent = wordData.text;
-                        wordSpan.dataset.start = wordData.start;
-                        wordSpan.dataset.end = wordData.end;
-                        
-                        // 添加空格（除了第一个单词）
-                        if (wordIndex > 0) {
-                            const space = document.createTextNode(' ');
-                            originalText.appendChild(space);
-                        }
-                        
-                        originalText.appendChild(wordSpan);
-                        allWordElements.push(wordSpan);
-                        wordTimeMap.set(wordSpan, {
-                            start: wordData.start,
-                            end: wordData.end
-                        });
-                    });
-                    
-                    textBlock.appendChild(originalText);
-                } else {
-                    // 没有单词时间数据
-                    const originalText = document.createElement('span');
-                    originalText.className = 'original-text';
-                    originalText.textContent = line.text;
-                    textBlock.appendChild(originalText);
-                }
-                
-                // 添加翻译
-                if (line.translation) {
-                    const translation = document.createElement('span');
-                    translation.className = 'translation';
-                    translation.textContent = line.translation;
-                    textBlock.appendChild(translation);
-                }
-                
-                sentenceContent.appendChild(playButton);
-                sentenceContent.appendChild(textBlock);
-                p.appendChild(timeLabel);
-                p.appendChild(sentenceContent);
-                transcriptContainer.appendChild(p);
-                
-                sentencesData.push(sentenceData);
+            // 填充下拉选择框
+            articleSelect.innerHTML = '';
+            articlesConfig.forEach(article => {
+                const option = document.createElement('option');
+                option.value = article.id;
+                option.textContent = article.title;
+                articleSelect.appendChild(option);
             });
             
-            if (wordCountDisplay) {
-                wordCountDisplay.textContent = `${totalWordCount} 单词`;
-            }
+            // 获取URL参数或默认第一篇
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleIdFromUrl = urlParams.get('article') || articlesConfig[0].id;
+            currentArticleId = articleIdFromUrl;
+            articleSelect.value = currentArticleId;
             
-            isTranscriptLoaded = true;
-            checkDataLoaded();
-        })
-        .catch(error => {
-            console.error('加载数据失败:', error);
-            transcriptContainer.innerHTML = `<p style="color: red;">加载文章失败: ${error.message}</p>`;
+            // 加载选中的文章
+            loadArticleById(currentArticleId);
+            
+        } catch (error) {
+            console.error('加载文章配置失败:', error);
+            // 回退到单文章模式
+            articleSelect.style.display = 'none';
+            loadSingleArticle();
+        }
+    }
+
+    // ===== 新增：根据ID加载文章 =====
+    function loadArticleById(articleId) {
+        const article = articlesConfig.find(a => a.id === articleId);
+        if (!article) {
+            console.error('找不到文章:', articleId);
+            return;
+        }
+        
+        currentArticleId = articleId;
+        
+        // 更新URL（不刷新页面）
+        const newUrl = new URL(window.location);
+        newUrl.searchParams.set('article', articleId);
+        window.history.pushState({}, '', newUrl);
+        
+        // 重置状态
+        resetPlayerState();
+        
+        // 加载文章数据
+        loadArticleData(article.dataFile, article.audioFile, article.title);
+    }
+
+    // ===== 新增：重置播放器状态 =====
+    function resetPlayerState() {
+        // 停止播放
+        audioPlayer.pause();
+        audioPlayer.currentTime = 0;
+        
+        // 重置变量
+        sentencesData = [];
+        allWordElements = [];
+        wordTimeMap.clear();
+        currentWordElement = null;
+        nextWordElement = null;
+        currentHighlightElement = null;
+        currentSentencePlayer = null;
+        isLooping = false;
+        currentLoopSentence = null;
+        isTranscriptLoaded = false;
+        isAudioLoaded = false;
+        
+        // 重置UI
+        loopBtn.classList.remove('active');
+        transcriptContainer.innerHTML = '<p style="text-align:center; color:#00ffcc;">加载中...</p>';
+        updatePlayPauseButton(false);
+        progressFilled.style.width = '0%';
+        currentTimeDisplay.textContent = '00:00';
+    }
+
+    // ===== 修改：加载文章数据（通用函数） =====
+    function loadArticleData(dataFile, audioFile, title) {
+        fetch(dataFile)
+            .then(response => {
+                if (!response.ok) { 
+                    throw new Error('网络错误，找不到数据文件'); 
+                }
+                return response.json();
+            })
+            .then(data => {
+                titleElement.textContent = title || data.title;
+                audioPlayer.src = audioFile || data.audioUrl; 
+                
+                let totalWordCount = 0;
+                transcriptContainer.innerHTML = ''; // 清空旧内容
+                
+                data.transcript.forEach((line, index) => {
+                    const englishText = line.text.split('\n')[0]; 
+                    const words = englishText.match(/[a-zA-Z']+/g); 
+                    if (words) {
+                        totalWordCount += words.length;
+                    }
+                    
+                    const p = document.createElement('p');
+                    p.className = 'sentence';
+                    p.id = `sentence-${index}`;
+                    
+                    const timeLabel = document.createElement('span');
+                    timeLabel.className = 'time-label';
+                    timeLabel.textContent = formatTime(line.time);
+                    
+                    const sentenceContent = document.createElement('div');
+                    sentenceContent.className = 'sentence-content';
+                    
+                    const playButton = document.createElement('div');
+                    playButton.className = 'play-button';
+
+                    let endTime;
+                    if (index < data.transcript.length - 1) {
+                        endTime = data.transcript[index + 1].time;
+                    } else {
+                        endTime = null;
+                    }
+
+                    const sentenceData = {
+                        element: p,
+                        playButton: playButton,
+                        start: line.time,
+                        end: endTime,
+                        index: index
+                    };
+                    
+                    p.addEventListener('click', function(event) {
+                        const target = event.target;
+                        if (target.classList.contains('play-button') || target.closest('.play-button')) {
+                            handleSentencePlayToggle(sentenceData);
+                        } else {
+                            handleSentencePlayFromStart(sentenceData);
+                        }
+                    });
+                    
+                    const textBlock = document.createElement('div');
+                    textBlock.className = 'text-block';
+                    
+                    // 处理逐词高亮
+                    if (line.words && line.words.length > 0) {
+                        const originalText = document.createElement('span');
+                        originalText.className = 'original-text';
+                        
+                        line.words.forEach((wordData, wordIndex) => {
+                            const wordSpan = document.createElement('span');
+                            wordSpan.className = 'word-highlight';
+                            wordSpan.textContent = wordData.text;
+                            wordSpan.dataset.start = wordData.start;
+                            wordSpan.dataset.end = wordData.end;
+                            
+                            // 添加空格（除了第一个单词）
+                            if (wordIndex > 0) {
+                                const space = document.createTextNode(' ');
+                                originalText.appendChild(space);
+                            }
+                            
+                            originalText.appendChild(wordSpan);
+                            allWordElements.push(wordSpan);
+                            wordTimeMap.set(wordSpan, {
+                                start: wordData.start,
+                                end: wordData.end
+                            });
+                        });
+                        
+                        textBlock.appendChild(originalText);
+                    } else {
+                        // 没有单词时间数据
+                        const originalText = document.createElement('span');
+                        originalText.className = 'original-text';
+                        originalText.textContent = line.text;
+                        textBlock.appendChild(originalText);
+                    }
+                    
+                    // 添加翻译
+                    if (line.translation) {
+                        const translation = document.createElement('span');
+                        translation.className = 'translation';
+                        translation.textContent = line.translation;
+                        textBlock.appendChild(translation);
+                    }
+                    
+                    sentenceContent.appendChild(playButton);
+                    sentenceContent.appendChild(textBlock);
+                    p.appendChild(timeLabel);
+                    p.appendChild(sentenceContent);
+                    transcriptContainer.appendChild(p);
+                    
+                    sentencesData.push(sentenceData);
+                });
+                
+                if (wordCountDisplay) {
+                    wordCountDisplay.textContent = `${totalWordCount} 单词`;
+                }
+                
+                isTranscriptLoaded = true;
+                checkDataLoaded();
+            })
+            .catch(error => {
+                console.error('加载数据失败:', error);
+                transcriptContainer.innerHTML = `<p style="color: red;">加载文章失败: ${error.message}</p>`;
+            });
+    }
+
+    // ===== 回退：单文章模式（兼容旧版本） =====
+    function loadSingleArticle() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const articleId = urlParams.get('article') || '1';
+        const dataFile = `data/article-${articleId}.json`;
+        loadArticleData(dataFile, null, null);
+    }
+
+    // ===== 新增：监听文章选择变化 =====
+    if (articleSelect) {
+        articleSelect.addEventListener('change', function() {
+            const selectedId = this.value;
+            if (selectedId !== currentArticleId) {
+                loadArticleById(selectedId);
+            }
         });
+    }
+
+    // ===== 以下保持原有功能不变 =====
+    
+    function updatePlayPauseButton(isPlaying) {
+        if (isPlaying) {
+            playIcon.style.display = 'none';
+            pauseIcon.style.display = 'block';
+        } else {
+            playIcon.style.display = 'block';
+            pauseIcon.style.display = 'none';
+        }
+    }
 
     // 音频事件
     audioPlayer.addEventListener('loadedmetadata', function() {
@@ -281,13 +403,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     audioPlayer.addEventListener('play', function() {
-        playIcon.style.display = 'none';
-        pauseIcon.style.display = 'block';
+        updatePlayPauseButton(true);
     });
 
     audioPlayer.addEventListener('pause', function() {
-        playIcon.style.display = 'block';
-        pauseIcon.style.display = 'none';
+        updatePlayPauseButton(false);
         
         if (!currentSentencePlayer) {
             resetAllSentenceButtons();
@@ -371,32 +491,29 @@ document.addEventListener('DOMContentLoaded', function() {
         audioPlayer.playbackRate = parseFloat(this.value);
     });
 
-    // 单句循环按钮 - 修复版本
+    // 单句循环按钮
     loopBtn.addEventListener('click', function() {
         isLooping = !isLooping;
         loopBtn.classList.toggle('active', isLooping);
         
         if (isLooping) {
-            // 开启单句循环
             const currentTime = audioPlayer.currentTime;
             currentLoopSentence = findSentenceDataByTime(currentTime);
             
             if (currentLoopSentence) {
                 console.log('单句循环已开启，当前循环句子:', currentLoopSentence.index);
                 
-                // 确保音频在播放状态
                 if (audioPlayer.paused) {
                     audioPlayer.play();
                 }
             }
         } else {
-            // 关闭单句循环
             currentLoopSentence = null;
             console.log('单句循环已关闭');
         }
     });
 
-    // 核心时间更新逻辑 - 修复单句循环
+    // 核心时间更新逻辑
     audioPlayer.addEventListener('timeupdate', function() {
         const currentTime = audioPlayer.currentTime; 
         
@@ -406,9 +523,8 @@ document.addEventListener('DOMContentLoaded', function() {
             currentTimeDisplay.textContent = formatTime(currentTime);
         }
         
-        // 单句循环逻辑 - 修复版本
+        // 单句循环逻辑
         if (isLooping && currentLoopSentence && currentLoopSentence.end) {
-            // 检查是否到达当前循环句子的结束时间
             if (currentTime >= currentLoopSentence.end - 0.15) {
                 isLoopSeeking = true;
                 audioPlayer.currentTime = currentLoopSentence.start;
@@ -542,5 +658,8 @@ document.addEventListener('DOMContentLoaded', function() {
             loopBtn.click();
         }
     });
+
+    // ===== 启动：尝试加载多文章配置，失败则回退单文章 =====
+    loadArticlesConfig();
 
 });

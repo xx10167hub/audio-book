@@ -8,9 +8,17 @@
 </head>
 <body>
     <div class="player-container">
-        <h3 id="article-title">第1篇：☀️ Solar and wind beat coal for first time 💨</h3>
+        <h3 id="article-title">加载中...</h3>
 
         <div class="controls">
+            <!-- 新增：文章选择器 -->
+            <div class="control-group">
+                <label for="article-select">选择文章：</label>
+                <select id="article-select">
+                    <option value="">加载中...</option>
+                </select>
+            </div>
+            
             <div class="speed-control-group">
                 <label for="speed-control">播放速度：</label>
                 <select id="speed-control">
@@ -24,7 +32,7 @@
             
             <div class="info-display">
                 <span>总词数: </span>
-                <span id="word-count">115 单词</span>
+                <span id="word-count">-</span>
             </div>
         </div>
 
@@ -39,7 +47,7 @@
 
             <div class="player-bottom">
                 <span class="time-display">
-                    <span id="current-time">00:00</span> / <span id="total-time">00:44</span>
+                    <span id="current-time">00:00</span> / <span id="total-time">00:00</span>
                 </span>
 
                 <div class="player-controls">
@@ -84,7 +92,7 @@
         <hr>
         
         <div id="transcript-container" class="transcript">
-            <!-- 文本内容将由JavaScript动态加载 -->
+            <div style="text-align:center; color:#00ffcc;">正在加载文章内容...</div>
         </div>
     </div>
 

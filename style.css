@@ -63,6 +63,14 @@ h3 {
     font-weight: 500;
 }
 
+/* --- 用户要求在这里插入新样式 --- */
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .controls select {
     font-size: 14px;
     padding: 8px 16px;
@@ -80,6 +88,29 @@ h3 {
     background-color: #224440;
     border-color: rgba(0, 255, 200, 0.6);
 }
+
+.controls select:focus {
+    border-color: #00ffcc;
+    box-shadow: 0 0 0 3px rgba(0, 255, 200, 0.1);
+}
+
+/* 移动端优化 */
+@media (max-width: 767px) {
+    .control-group {
+        width: 100%;
+    }
+    
+    .control-group label {
+        min-width: 80px;
+    }
+    
+    .control-group select {
+        flex: 1;
+    }
+}
+
+/* --- 新样式结束 --- */
+
 
 .info-display {
     font-size: 14px;
@@ -249,10 +280,18 @@ h3 {
         gap: 8px;
     }
     
+    /* 注意：你添加的 .control-group select 样式会和下面的 select 样式层叠 */
+    /* 原始的 select 样式 */
     .controls select {
         width: 100%;
         min-height: 44px;
         font-size: 16px;
+    }
+    
+    /* 你添加的 .control-group select 样式会覆盖上面的 width */
+    .control-group select {
+        flex: 1; /* 这个会生效 */
+        /* width: 100%; */ /* 这个会被 .controls select 里的 width: 100% 覆盖，除非权重更高 */
     }
     
     .custom-player {
