@@ -134,7 +134,7 @@
     {
       "time": 44.007,
       "text": "China is an expert in bridge building.",
-      "translation": "中国是桥梁建设的行家，",
+      "translation": "中国是桥梁建设的专家，",
       "words": [
         {"text": "China", "start": 44.007, "end": 44.508},
         {"text": "is", "start": 44.628, "end": 44.688},
@@ -263,3 +263,4 @@
   ]
 
 }
+
