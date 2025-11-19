@@ -1,4 +1,4 @@
-// player-script.js - 多文章支持版本（保留所有原有功能）
+// player-script.js - 多文章支持版本（优化版：填补连读空隙）
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===== 新增：多文章配置 =====
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentTimeDisplay = document.getElementById('current-time');
     const totalTimeDisplay = document.getElementById('total-time');
     const wordCountDisplay = document.getElementById('word-count');
-    const articleSelect = document.getElementById('article-select'); // 新增
+    const articleSelect = document.getElementById('article-select');
 
     let sentencesData = [];
     let currentHighlightElement = null;
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 逐词高亮状态
     let currentWordElement = null;
-    let nextWordElement = null;
+    let nextWordElement = null; 
     let allWordElements = [];
     let wordTimeMap = new Map();
 
@@ -80,47 +80,60 @@ document.addEventListener('DOMContentLoaded', function() {
         return -1;
     }
 
-    // 逐词高亮相关函数
+    // ===== 核心修改：优化后的逐词高亮查找函数 =====
     function findCurrentWord(currentTime) {
-        for (let [wordElement, timeRange] of wordTimeMap.entries()) {
-            if (currentTime >= timeRange.start && currentTime < timeRange.end) {
-                return { element: wordElement, timeRange: timeRange };
+        // 既然 allWordElements 已经是按顺序排列的所有单词
+        // 我们可以在这里做一个“更聪明”的判断
+        
+        const MAX_GAP_TO_FILL = 1.5; // 设置阈值：如果空隙小于1.5秒，就填补它
+
+        for (let i = 0; i < allWordElements.length; i++) {
+            const currentElement = allWordElements[i];
+            const currentData = wordTimeMap.get(currentElement);
+            
+            // 获取下一个单词的数据（如果有）
+            let nextData = null;
+            if (i < allWordElements.length - 1) {
+                nextData = wordTimeMap.get(allWordElements[i + 1]);
+            }
+
+            // 计算“视觉上的结束时间”
+            // 默认结束时间就是数据的结束时间
+            let visualEndTime = currentData.end;
+            
+            // 如果有下一个词，且中间有空隙，且空隙不是特别大（不是句号停顿）
+            if (nextData) {
+                const gap = nextData.start - currentData.end;
+                // 如果 gap > 0 说明有空隙
+                // 如果 gap < MAX_GAP_TO_FILL 说明是连读或短停顿，我们把高亮延顺过去
+                if (gap > 0 && gap < MAX_GAP_TO_FILL) {
+                    visualEndTime = nextData.start;
+                }
+            }
+
+            // 判断当前时间是否在这个延展后的范围内
+            if (currentTime >= currentData.start && currentTime < visualEndTime) {
+                return { element: currentElement };
             }
         }
         return null;
     }
 
-    function findNextWord(currentTime) {
-        let nextWord = null;
-        let minStart = Infinity;
-        
-        for (let [wordElement, timeRange] of wordTimeMap.entries()) {
-            if (timeRange.start > currentTime && timeRange.start < minStart) {
-                minStart = timeRange.start;
-                nextWord = { element: wordElement, timeRange: timeRange };
-            }
-        }
-        return nextWord;
-    }
-
-    function highlightCurrentWord(currentWord, nextWord) {
+    function highlightCurrentWord(currentWord) {
         // 移除之前的高亮
         if (currentWordElement) {
             currentWordElement.classList.remove('current');
         }
+        // 清理旧的 next 高亮
         if (nextWordElement) {
             nextWordElement.classList.remove('next');
+            nextWordElement = null;
         }
         
         // 应用新高亮
         if (currentWord) {
             currentWordElement = currentWord.element;
             currentWordElement.classList.add('current');
-        }
-        
-        if (nextWord) {
-            nextWordElement = nextWord.element;
-            nextWordElement.classList.add('next');
         }
     }
 
@@ -534,8 +547,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // 逐词高亮逻辑
         const currentWord = findCurrentWord(currentTime);
-        const nextWord = findNextWord(currentTime);
-        highlightCurrentWord(currentWord, nextWord);
+        highlightCurrentWord(currentWord);
         
         // 单句播放模式逻辑
         if (currentSentencePlayer) {
