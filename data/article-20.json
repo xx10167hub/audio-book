@@ -79,7 +79,7 @@
     {
       "time": 25.789,
       "text": "Its main span stretches 1,420 meters.",
-      "translation": "主跨1420米，",
+      "translation": "其主跨长达1420米，",
       "words": [
         {"text": "Its", "start": 25.789, "end": 25.93},
         {"text": "main", "start": 26.01, "end": 26.33},
@@ -261,4 +261,5 @@
       ]
     }
   ]
+
 }
