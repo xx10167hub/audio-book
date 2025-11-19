@@ -1,0 +1,177 @@
+{
+  "audioUrl": "./data/audio-3.mp3",
+  "title": "第3篇：France bans smoking for tobacco-free generation",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": " France has banned smoking in public.",
+      "translation": "法国已在公共场所实行禁烟。",
+      "words": [
+        {"text": "France", "start": 0.031, "end": 0.972},
+        {"text": "has", "start": 1.073, "end": 1.233},
+        {"text": "banned", "start": 1.333, "end": 1.673},
+        {"text": "smoking", "start": 1.774, "end": 2.274},
+        {"text": "in", "start": 2.395, "end": 2.495},
+        {"text": "public.", "start": 2.575, "end": 3.015}
+      ]
+    },
+    {
+      "time": 3.997,
+      "text": "France's health minister said public places are for children to play, learn and breathe, not for smoking.",
+      "translation": "法国卫生部长表示，公共场所是供孩子们“玩耍、学习和自由呼吸的地方，而不是用来抽烟的”。",
+      "words": [
+        {"text": "France's", "start": 3.997, "end": 4.538},
+        {"text": "health", "start": 4.598, "end": 4.878},
+        {"text": "minister", "start": 4.938, "end": 5.399},
+        {"text": "said", "start": 5.8, "end": 6.02},
+        {"text": "public", "start": 6.38, "end": 6.821},
+        {"text": "places", "start": 6.921, "end": 7.462},
+        {"text": "are", "start": 7.602, "end": 7.702},
+        {"text": "for", "start": 7.762, "end": 7.903},
+        {"text": "children", "start": 7.983, "end": 8.464},
+        {"text": "to", "start": 8.484, "end": 9.004},
+        {"text": "play,", "start": 9.064, "end": 9.465},
+        {"text": "learn", "start": 9.886, "end": 10.246},
+        {"text": "and", "start": 10.406, "end": 10.487},
+        {"text": "breathe,", "start": 10.647, "end": 11.107},
+        {"text": "not", "start": 11.668, "end": 11.949},
+        {"text": "for", "start": 12.109, "end": 12.269},
+        {"text": "smoking.", "start": 12.349, "end": 12.85}
+      ]
+    },
+    {
+      "time": 14.012,
+      "text": "The ban will protect children from passive smoking.",
+      "translation": "此项禁令将保护儿童免受被动吸烟的危害。",
+      "words": [
+        {"text": "The", "start": 14.012, "end": 14.112},
+        {"text": "ban", "start": 14.152, "end": 14.513},
+        {"text": "will", "start": 14.573, "end": 14.773},
+        {"text": "protect", "start": 14.833, "end": 15.254},
+        {"text": "children", "start": 15.394, "end": 15.854},
+        {"text": "from", "start": 15.955, "end": 16.135},
+        {"text": "passive", "start": 16.235, "end": 16.676},
+        {"text": "smoking.", "start": 16.736, "end": 17.257}
+      ]
+    },
+    {
+      "time": 18.358,
+      "text": "This is breathing in the second hand smoke from smokers.",
+      "translation": "也就是避免吸入吸烟者产生的“二手烟”。",
+      "words": [
+        {"text": "This", "start": 18.358, "end": 18.579},
+        {"text": "is", "start": 18.999, "end": 19.079},
+        {"text": "breathing", "start": 19.179, "end": 19.68},
+        {"text": "in", "start": 19.82, "end": 19.921},
+        {"text": "the", "start": 20.001, "end": 20.101},
+        {"text": "second", "start": 20.221, "end": 20.662},
+        {"text": "hand", "start": 20.722, "end": 21.102},
+        {"text": "smoke", "start": 21.182, "end": 21.543},
+        {"text": "from", "start": 21.944, "end": 22.124},
+        {"text": "smokers.", "start": 22.224, "end": 22.785}
+      ]
+    },
+    {
+      "time": 24.167,
+      "text": "France wants a tobacco-free generation by 2032.",
+      "translation": "法国计划在2032年前培养出“无烟的一代”。",
+      "words": [
+        {"text": "France", "start": 24.167, "end": 24.547},
+        {"text": "wants", "start": 24.628, "end": 24.868},
+        {"text": "a", "start": 24.948, "end": 25.048},
+        {"text": "tobacco-free", "start": 25.108, "end": 25.97},
+        {"text": "generation", "start": 26.05, "end": 26.751},
+        {"text": "by", "start": 26.831, "end": 26.991},
+        {"text": "2032.", "start": 27.011, "end": 28.333}
+      ]
+    },
+    {
+      "time": 29.697,
+      "text": " Smoking is falling in France.",
+      "translation": "目前法国吸烟人数有所下降。",
+      "words": [
+        {"text": "Smoking", "start": 29.697, "end": 30.298},
+        {"text": "is", "start": 30.378, "end": 30.458},
+        {"text": "falling", "start": 30.558, "end": 30.978},
+        {"text": "in", "start": 31.078, "end": 31.178},
+        {"text": "France.", "start": 31.279, "end": 31.679}
+      ]
+    },
+    {
+      "time": 32.34,
+      "text": "However, passive smoking still kills many people.",
+      "translation": "但被动吸烟仍导致许多人死亡。",
+      "words": [
+        {"text": "However,", "start": 32.34, "end": 32.76},
+        {"text": "passive", "start": 33.24, "end": 33.721},
+        {"text": "smoking", "start": 33.781, "end": 34.281},
+        {"text": "still", "start": 34.782, "end": 35.142},
+        {"text": "kills", "start": 35.423, "end": 35.863},
+        {"text": "many", "start": 35.983, "end": 36.223},
+        {"text": "people.", "start": 36.303, "end": 36.684}
+      ]
+    },
+    {
+      "time": 37.825,
+      "text": "Most French people support a smoking ban in restaurants.",
+      "translation": "大多数法国人支持餐厅禁烟。",
+      "words": [
+        {"text": "Most", "start": 37.825, "end": 38.105},
+        {"text": "French", "start": 38.205, "end": 38.506},
+        {"text": "people", "start": 38.586, "end": 38.986},
+        {"text": "support", "start": 39.066, "end": 39.527},
+        {"text": "a", "start": 39.627, "end": 39.667},
+        {"text": "smoking", "start": 39.767, "end": 40.267},
+        {"text": "ban", "start": 40.327, "end": 40.588},
+        {"text": "in", "start": 40.668, "end": 40.748},
+        {"text": "restaurants.", "start": 40.828, "end": 41.388}
+      ]
+    },
+    {
+      "time": 42.429,
+      "text": "Smoking can damage nearly every organ of the body.",
+      "translation": "吸烟几乎会伤害身体的每一个器官。",
+      "words": [
+        {"text": "Smoking", "start": 42.429, "end": 42.95},
+        {"text": "can", "start": 43.01, "end": 43.17},
+        {"text": "damage", "start": 43.23, "end": 43.631},
+        {"text": "nearly", "start": 43.691, "end": 43.951},
+        {"text": "every", "start": 44.131, "end": 44.411},
+        {"text": "organ", "start": 44.591, "end": 44.872},
+        {"text": "of", "start": 44.952, "end": 45.012},
+        {"text": "the", "start": 45.072, "end": 45.172},
+        {"text": "body.", "start": 45.232, "end": 45.572}
+      ]
+    },
+    {
+      "time": 46.493,
+      "text": "The smoke harms children's bodies.",
+      "translation": "而二手烟尤其危害儿童健康。",
+      "words": [
+        {"text": "The", "start": 46.493, "end": 46.613},
+        {"text": "smoke", "start": 46.673, "end": 47.014},
+        {"text": "harms", "start": 47.154, "end": 47.594},
+        {"text": "children's", "start": 47.694, "end": 48.215},
+        {"text": "bodies.", "start": 48.295, "end": 48.695}
+      ]
+    },
+    {
+      "time": 49.877,
+      "text": "When children breathe in secondhand smoke, they can have breathing problems.",
+      "translation": "孩子吸入二手烟后，可能会出现呼吸系统问题。",
+      "words": [
+        {"text": "When", "start": 49.877, "end": 50.057},
+        {"text": "children", "start": 50.177, "end": 50.657},
+        {"text": "breathe", "start": 50.737, "end": 51.078},
+        {"text": "in", "start": 51.198, "end": 51.318},
+        {"text": "secondhand", "start": 51.418, "end": 52.119},
+        {"text": "smoke,", "start": 52.179, "end": 52.539},
+        {"text": "they", "start": 53.02, "end": 53.18},
+        {"text": "can", "start": 53.22, "end": 53.4},
+        {"text": "have", "start": 53.46, "end": 53.66},
+        {"text": "breathing", "start": 53.961, "end": 54.401},
+        {"text": "problems.", "start": 54.481, "end": 55.502}
+      ]
+    }
+  ]
+}

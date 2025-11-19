@@ -1,0 +1,173 @@
+{
+  "audioUrl": "./data/audio-19.mp3",
+  "title": "第19篇：Nature can reduce anxiety and boost mental health",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "Standing in nature for 10 minutes is good for our mental health.",
+      "translation": "在自然环境中待上10分钟，对心理健康就很有益处。",
+      "words": [
+        {"text": "Standing", "start": 0.031, "end": 0.792},
+        {"text": "in", "start": 0.952, "end": 1.052},
+        {"text": "nature", "start": 1.152, "end": 1.593},
+        {"text": "for", "start": 1.673, "end": 1.793},
+        {"text": "10", "start": 1.813, "end": 2.094},
+        {"text": "minutes", "start": 2.154, "end": 2.514},
+        {"text": "is", "start": 2.554, "end": 2.855},
+        {"text": "good", "start": 2.955, "end": 3.175},
+        {"text": "for", "start": 3.275, "end": 3.415},
+        {"text": "our", "start": 3.536, "end": 3.636},
+        {"text": "mental", "start": 3.696, "end": 4.116},
+        {"text": "health.", "start": 4.176, "end": 4.457}
+      ]
+    },
+    {
+      "time": 5.438,
+      "text": "Even gardening can help us.",
+      "translation": "即使是简单的园艺活动也能有所帮助。",
+      "words": [
+        {"text": "Even", "start": 5.438, "end": 5.658},
+        {"text": "gardening", "start": 5.779, "end": 6.319},
+        {"text": "can", "start": 6.399, "end": 6.54},
+        {"text": "help", "start": 6.58, "end": 6.84},
+        {"text": "us.", "start": 7.0, "end": 7.08}
+      ]
+    },
+    {
+      "time": 8.262,
+      "text": "A study found that nature makes us see other people as more human.",
+      "translation": "研究发现，自然能让我们更关注他人，",
+      "words": [
+        {"text": "A", "start": 8.262, "end": 8.302},
+        {"text": "study", "start": 8.342, "end": 8.742},
+        {"text": "found", "start": 8.883, "end": 9.243},
+        {"text": "that", "start": 9.283, "end": 9.844},
+        {"text": "nature", "start": 9.884, "end": 10.445},
+        {"text": "makes", "start": 10.545, "end": 10.825},
+        {"text": "us", "start": 10.945, "end": 11.045},
+        {"text": "see", "start": 11.306, "end": 11.566},
+        {"text": "other", "start": 11.766, "end": 11.967},
+        {"text": "people", "start": 12.027, "end": 12.447},
+        {"text": "as", "start": 12.467, "end": 13.028},
+        {"text": "more", "start": 13.469, "end": 13.689},
+        {"text": "human.", "start": 13.769, "end": 14.21}
+      ]
+    },
+    {
+      "time": 14.23,
+      "text": "This makes us help others, so we feel more positive about ourselves.",
+      "translation": "这会促使我们帮助别人，从而让自己感觉更积极。",
+      "words": [
+        {"text": "This", "start": 14.23, "end": 15.571},
+        {"text": "makes", "start": 15.792, "end": 16.052},
+        {"text": "us", "start": 16.172, "end": 16.252},
+        {"text": "help", "start": 16.352, "end": 16.613},
+        {"text": "others,", "start": 16.833, "end": 17.173},
+        {"text": "so", "start": 17.754, "end": 17.934},
+        {"text": "we", "start": 17.974, "end": 18.095},
+        {"text": "feel", "start": 18.155, "end": 18.395},
+        {"text": "more", "start": 18.435, "end": 18.655},
+        {"text": "positive", "start": 18.756, "end": 19.316},
+        {"text": "about", "start": 19.416, "end": 19.717},
+        {"text": "ourselves.", "start": 19.877, "end": 20.518}
+      ]
+    },
+    {
+      "time": 21.399,
+      "text": "Helping other people reduces our stress.",
+      "translation": "而帮助他人又能减轻自身压力。",
+      "words": [
+        {"text": "Helping", "start": 21.399, "end": 21.82},
+        {"text": "other", "start": 21.88, "end": 22.08},
+        {"text": "people", "start": 22.12, "end": 22.54},
+        {"text": "reduces", "start": 22.941, "end": 23.542},
+        {"text": "our", "start": 23.582, "end": 23.882},
+        {"text": "stress.", "start": 23.942, "end": 24.503}
+      ]
+    },
+    {
+      "time": 25.917,
+      "text": "More people are suffering from stress, depression, and other problems.",
+      "translation": "如今越来越多人面临压力、抑郁等问题。",
+      "words": [
+        {"text": "More", "start": 25.917, "end": 26.218},
+        {"text": "people", "start": 26.278, "end": 26.618},
+        {"text": "are", "start": 26.638, "end": 26.839},
+        {"text": "suffering", "start": 26.899, "end": 27.4},
+        {"text": "from", "start": 27.52, "end": 27.68},
+        {"text": "stress,", "start": 27.76, "end": 28.201},
+        {"text": "depression,", "start": 28.702, "end": 29.343},
+        {"text": "and", "start": 29.864, "end": 29.985},
+        {"text": "other", "start": 30.025, "end": 30.425},
+        {"text": "problems.", "start": 30.485, "end": 31.087}
+      ]
+    },
+    {
+      "time": 32.129,
+      "text": "One in five Americans has a mental health problem.",
+      "translation": "据统计，每五个美国人中就有一人存在心理健康问题。",
+      "words": [
+        {"text": "One", "start": 32.129, "end": 32.209},
+        {"text": "in", "start": 32.289, "end": 32.369},
+        {"text": "five", "start": 32.429, "end": 32.75},
+        {"text": "Americans", "start": 32.83, "end": 33.471},
+        {"text": "has", "start": 33.571, "end": 33.731},
+        {"text": "a", "start": 33.812, "end": 33.872},
+        {"text": "mental", "start": 33.952, "end": 34.373},
+        {"text": "health", "start": 34.453, "end": 34.773},
+        {"text": "problem.", "start": 34.894, "end": 35.334}
+      ]
+    },
+    {
+      "time": 36.657,
+      "text": "The research has good advice.",
+      "translation": "研究提供了实用建议：",
+      "words": [
+        {"text": "The", "start": 36.657, "end": 36.757},
+        {"text": "research", "start": 36.797, "end": 37.338},
+        {"text": "has", "start": 37.539, "end": 37.719},
+        {"text": "good", "start": 37.759, "end": 38.1},
+        {"text": "advice.", "start": 38.22, "end": 38.661}
+      ]
+    },
+    {
+      "time": 39.562,
+      "text": "It says being in nature helps us sleep better.",
+      "translation": "接触自然能改善睡眠。",
+      "words": [
+        {"text": "It", "start": 39.562, "end": 39.642},
+        {"text": "says", "start": 39.703, "end": 39.983},
+        {"text": "being", "start": 40.404, "end": 40.765},
+        {"text": "in", "start": 40.805, "end": 41.065},
+        {"text": "nature", "start": 41.185, "end": 41.646},
+        {"text": "helps", "start": 41.686, "end": 42.347},
+        {"text": "us", "start": 42.528, "end": 42.628},
+        {"text": "sleep", "start": 42.828, "end": 43.149},
+        {"text": "better.", "start": 43.329, "end": 43.71}
+      ]
+    },
+    {
+      "time": 43.73,
+      "text": "Another study found that workers who had flowers on their desk became calmer after four minutes.",
+      "translation": "另一项研究还发现，办公桌上放花的员工，仅四分钟后情绪就平静了许多。",
+      "words": [
+        {"text": "Another", "start": 43.73, "end": 45.233},
+        {"text": "study", "start": 45.293, "end": 45.634},
+        {"text": "found", "start": 46.135, "end": 46.395},
+        {"text": "that", "start": 46.455, "end": 46.595},
+        {"text": "workers", "start": 46.635, "end": 47.217},
+        {"text": "who", "start": 47.337, "end": 47.477},
+        {"text": "had", "start": 47.517, "end": 47.657},
+        {"text": "flowers", "start": 47.798, "end": 48.299},
+        {"text": "on", "start": 48.419, "end": 48.479},
+        {"text": "their", "start": 48.519, "end": 48.679},
+        {"text": "desk", "start": 48.719, "end": 49.04},
+        {"text": "became", "start": 49.641, "end": 50.042},
+        {"text": "calmer", "start": 50.162, "end": 50.643},
+        {"text": "after", "start": 50.683, "end": 51.424},
+        {"text": "four", "start": 51.504, "end": 51.765},
+        {"text": "minutes.", "start": 51.825, "end": 52.887}
+      ]
+    }
+  ]
+}

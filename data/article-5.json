@@ -1,0 +1,193 @@
+{
+  "audioUrl": "./data/audio-5.mp3",
+  "title": "第5篇：Drug-resistant superbugs spreading, says WHO",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": " The WHO warned about an increase in superbugs that drugs cannot kill.",
+      "translation": "世界卫生组织（WHO）警告称，那些药物无法杀死的“超级细菌”正变得越来越多。",
+      "words": [
+        {"text": "The", "start": 0.031, "end": 0.412},
+        {"text": "WHO", "start": 0.792, "end": 1.433},
+        {"text": "warned", "start": 1.533, "end": 1.954},
+        {"text": "about", "start": 2.014, "end": 2.275},
+        {"text": "an", "start": 2.295, "end": 2.415},
+        {"text": "increase", "start": 2.615, "end": 3.116},
+        {"text": "in", "start": 3.176, "end": 3.276},
+        {"text": "superbugs", "start": 3.376, "end": 4.078},
+        {"text": "that", "start": 4.678, "end": 4.859},
+        {"text": "drugs", "start": 5.139, "end": 5.56},
+        {"text": "cannot", "start": 5.72, "end": 6.101},
+        {"text": "kill.", "start": 6.341, "end": 6.642}
+      ]
+    },
+    {
+      "time": 6.702,
+      "text": "One in six of bugs tested by researchers was drug-resistant.",
+      "translation": "在研究人员测试的细菌中，有六分之一都表现出了耐药性。",
+      "words": [
+        {"text": "One", "start": 6.702, "end": 7.964},
+        {"text": "in", "start": 8.124, "end": 8.284},
+        {"text": "six", "start": 8.304, "end": 8.645},
+        {"text": "of", "start": 8.905, "end": 9.005},
+        {"text": "bugs", "start": 9.146, "end": 9.506},
+        {"text": "tested", "start": 9.987, "end": 10.408},
+        {"text": "by", "start": 10.488, "end": 10.648},
+        {"text": "researchers", "start": 10.728, "end": 11.469},
+        {"text": "was", "start": 11.87, "end": 12.07},
+        {"text": "drug-resistant.", "start": 12.191, "end": 14.494}
+      ]
+    },
+    {
+      "time": 14.514,
+      "text": "Many of the drugs have been saving lives for many years.",
+      "translation": "要知道，许多这类药物在过去多年里一直是拯救生命的关键。",
+      "words": [
+        {"text": "Many", "start": 14.514, "end": 14.795},
+        {"text": "of", "start": 14.915, "end": 14.995},
+        {"text": "the", "start": 15.075, "end": 15.155},
+        {"text": "drugs", "start": 15.215, "end": 15.616},
+        {"text": "have", "start": 15.756, "end": 15.917},
+        {"text": "been", "start": 15.957, "end": 16.137},
+        {"text": "saving", "start": 16.257, "end": 16.698},
+        {"text": "lives", "start": 16.818, "end": 17.239},
+        {"text": "for", "start": 17.359, "end": 17.539},
+        {"text": "many", "start": 17.639, "end": 17.88},
+        {"text": "years.", "start": 17.92, "end": 18.681}
+      ]
+    },
+    {
+      "time": 18.661,
+      "text": " Cuts and infections could kill us in the future, because drugs will not kill the bacteria.",
+      "translation": "未来，即便是普通的割伤和感染也可能变得致命，因为药物将对这些细菌失效。",
+      "words": [
+        {"text": "Cuts", "start": 18.661, "end": 19.925},
+        {"text": "and", "start": 20.186, "end": 20.287},
+        {"text": "infections", "start": 20.327, "end": 21.129},
+        {"text": "could", "start": 21.29, "end": 21.491},
+        {"text": "kill", "start": 21.611, "end": 21.832},
+        {"text": "us", "start": 21.932, "end": 22.033},
+        {"text": "in", "start": 22.173, "end": 22.233},
+        {"text": "the", "start": 22.293, "end": 22.374},
+        {"text": "future,", "start": 22.434, "end": 22.855},
+        {"text": "because", "start": 22.895, "end": 23.899},
+        {"text": "drugs", "start": 23.939, "end": 24.782},
+        {"text": "will", "start": 25.103, "end": 25.324},
+        {"text": "not", "start": 25.384, "end": 25.625},
+        {"text": "kill", "start": 25.866, "end": 26.127},
+        {"text": "the", "start": 26.167, "end": 26.267},
+        {"text": "bacteria.", "start": 26.307, "end": 27.01}
+      ]
+    },
+    {
+      "time": 27.03,
+      "text": "The WHO said our lives are at risk.",
+      "translation": "世卫组织称，我们的生命正“处于危险之中”。",
+      "words": [
+        {"text": "The", "start": 27.03, "end": 28.033},
+        {"text": "WHO", "start": 28.354, "end": 28.836},
+        {"text": "said", "start": 28.856, "end": 29.117},
+        {"text": "our", "start": 29.157, "end": 29.438},
+        {"text": "lives", "start": 29.518, "end": 29.859},
+        {"text": "are", "start": 29.96, "end": 30.06},
+        {"text": "at", "start": 30.14, "end": 30.261},
+        {"text": "risk.", "start": 30.341, "end": 30.662}
+      ]
+    },
+    {
+      "time": 32.043,
+      "text": " The WHO looked at data from 100 countries.",
+      "translation": "世卫组织分析了来自100个国家的数据。",
+      "words": [
+        {"text": "The", "start": 32.043, "end": 32.203},
+        {"text": "WHO", "start": 32.504, "end": 33.086},
+        {"text": "looked", "start": 33.126, "end": 33.466},
+        {"text": "at", "start": 33.567, "end": 33.647},
+        {"text": "data", "start": 33.747, "end": 34.168},
+        {"text": "from", "start": 34.248, "end": 34.389},
+        {"text": "100", "start": 34.409, "end": 34.469},
+        {"text": "countries.", "start": 35.191, "end": 35.772}
+      ]
+    },
+    {
+      "time": 36.674,
+      "text": "Drug resistance is highest in South East Asia.",
+      "translation": "数据显示，东南亚地区的耐药性问题最为严重，",
+      "words": [
+        {"text": "Drug", "start": 36.674, "end": 36.955},
+        {"text": "resistance", "start": 37.015, "end": 37.657},
+        {"text": "is", "start": 37.757, "end": 37.837},
+        {"text": "highest", "start": 37.917, "end": 38.399},
+        {"text": "in", "start": 38.499, "end": 38.599},
+        {"text": "South", "start": 38.659, "end": 38.98},
+        {"text": "East", "start": 39.08, "end": 39.241},
+        {"text": "Asia.", "start": 39.381, "end": 39.682}
+      ]
+    },
+    {
+      "time": 40.584,
+      "text": "There, one in three infections was resistant.",
+      "translation": "当地有三分之一的感染病例都具有耐药性。",
+      "words": [
+        {"text": "There,", "start": 40.584, "end": 40.865},
+        {"text": "one", "start": 41.446, "end": 41.526},
+        {"text": "in", "start": 41.606, "end": 41.687},
+        {"text": "three", "start": 41.807, "end": 42.088},
+        {"text": "infections", "start": 42.148, "end": 42.91},
+        {"text": "was", "start": 42.97, "end": 43.15},
+        {"text": "resistant.", "start": 43.25, "end": 43.992}
+      ]
+    },
+    {
+      "time": 45.035,
+      "text": "Parks are becoming drug resistant faster than we can make new drugs.",
+      "translation": "目前，细菌产生耐药性的速度，已经超过了我们研发新药的速度。",
+      "words": [
+        {"text": "Parks", "start": 45.035, "end": 45.356},
+        {"text": "are", "start": 45.436, "end": 45.516},
+        {"text": "becoming", "start": 45.576, "end": 46.017},
+        {"text": "drug", "start": 46.117, "end": 46.418},
+        {"text": "resistant", "start": 46.498, "end": 47.2},
+        {"text": "faster", "start": 47.661, "end": 48.243},
+        {"text": "than", "start": 48.303, "end": 48.443},
+        {"text": "we", "start": 48.523, "end": 48.684},
+        {"text": "can", "start": 48.724, "end": 48.904},
+        {"text": "make", "start": 48.984, "end": 49.205},
+        {"text": "new", "start": 49.225, "end": 49.566},
+        {"text": "drugs.", "start": 49.626, "end": 50.007}
+      ]
+    },
+    {
+      "time": 51.13,
+      "text": "Drug resistance has increased a lot since 2018.",
+      "translation": "自2018年以来，耐药性问题已显著加剧。",
+      "words": [
+        {"text": "Drug", "start": 51.13, "end": 51.43},
+        {"text": "resistance", "start": 51.491, "end": 52.112},
+        {"text": "has", "start": 52.172, "end": 52.333},
+        {"text": "increased", "start": 52.413, "end": 52.974},
+        {"text": "a", "start": 53.074, "end": 53.114},
+        {"text": "lot", "start": 53.155, "end": 53.415},
+        {"text": "since", "start": 53.515, "end": 53.756},
+        {"text": "2018.", "start": 53.776, "end": 54.237}
+      ]
+    },
+    {
+      "time": 54.819,
+      "text": "Not enough testing is being done to create better drugs.",
+      "translation": "然而，为了研发出更好的药物，目前所做的测试还远远不够。",
+      "words": [
+        {"text": "Not", "start": 54.819, "end": 56.142},
+        {"text": "enough", "start": 56.242, "end": 56.463},
+        {"text": "testing", "start": 56.523, "end": 57.024},
+        {"text": "is", "start": 57.164, "end": 57.245},
+        {"text": "being", "start": 57.305, "end": 57.585},
+        {"text": "done", "start": 57.646, "end": 57.886},
+        {"text": "to", "start": 57.926, "end": 58.468},
+        {"text": "create", "start": 58.548, "end": 58.909},
+        {"text": "better", "start": 59.049, "end": 59.35},
+        {"text": "drugs.", "start": 59.41, "end": 60.312}
+      ]
+    }
+  ]
+}

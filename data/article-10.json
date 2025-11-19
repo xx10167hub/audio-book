@@ -1,0 +1,200 @@
+{
+  "audioUrl": "./data/audio-10.mp3",
+  "title": "第10篇：Global warming will delay next ice age, say scientists",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": " The next ice age will be late.",
+      "translation": "下一个冰河时代（或称“冰期”）的到来可能会推迟。",
+      "words": [
+        {"text": "The", "start": 0.031, "end": 0.632},
+        {"text": "next", "start": 0.692, "end": 0.952},
+        {"text": "ice", "start": 1.132, "end": 1.292},
+        {"text": "age", "start": 1.432, "end": 1.593},
+        {"text": "will", "start": 1.653, "end": 1.833},
+        {"text": "be", "start": 1.893, "end": 1.993},
+        {"text": "late.", "start": 2.073, "end": 2.353}
+      ]
+    },
+    {
+      "time": 3.434,
+      "text": "An ice age is a long time of freezing weather.",
+      "translation": "所谓的冰河时代，是指一段天气极其寒冷的漫长时期，会导致全球的冰雪覆盖量大幅增加。",
+      "words": [
+        {"text": "An", "start": 3.434, "end": 3.515},
+        {"text": "ice", "start": 3.675, "end": 3.855},
+        {"text": "age", "start": 4.035, "end": 4.215},
+        {"text": "is", "start": 4.375, "end": 4.456},
+        {"text": "a", "start": 4.516, "end": 4.556},
+        {"text": "long", "start": 4.636, "end": 4.876},
+        {"text": "time", "start": 4.936, "end": 5.216},
+        {"text": "of", "start": 5.276, "end": 5.316},
+        {"text": "freezing", "start": 5.396, "end": 5.817},
+        {"text": "weather.", "start": 5.897, "end": 6.197}
+      ]
+    },
+    {
+      "time": 6.858,
+      "text": "It brings a huge increase in ice in the world.",
+      "translation": "（此句意已合并至上一句翻译中）",
+      "words": [
+        {"text": "It", "start": 6.858, "end": 6.938},
+        {"text": "brings", "start": 7.038, "end": 7.358},
+        {"text": "a", "start": 7.378, "end": 7.499},
+        {"text": "huge", "start": 7.619, "end": 7.999},
+        {"text": "increase", "start": 8.159, "end": 8.62},
+        {"text": "in", "start": 9.06, "end": 9.14},
+        {"text": "ice", "start": 9.34, "end": 9.521},
+        {"text": "in", "start": 9.961, "end": 10.021},
+        {"text": "the", "start": 10.081, "end": 10.141},
+        {"text": "world.", "start": 10.201, "end": 10.482}
+      ]
+    },
+    {
+      "time": 11.623,
+      "text": "The researchers think the next ice age will be in 10,000 years.",
+      "translation": "研究人员认为，下一个冰河时代可能要在一万年后才会到来，而推迟的原因可能与气候变化有关。",
+      "words": [
+        {"text": "The", "start": 11.623, "end": 11.703},
+        {"text": "researchers", "start": 11.743, "end": 12.303},
+        {"text": "think", "start": 12.404, "end": 12.644},
+        {"text": "the", "start": 12.744, "end": 12.844},
+        {"text": "next", "start": 12.924, "end": 13.204},
+        {"text": "ice", "start": 13.385, "end": 13.545},
+        {"text": "age", "start": 13.665, "end": 13.865},
+        {"text": "will", "start": 14.225, "end": 14.406},
+        {"text": "be", "start": 14.466, "end": 14.606},
+        {"text": "in", "start": 14.686, "end": 14.746},
+        {"text": "10,000", "start": 14.766, "end": 15.567},
+        {"text": "years.", "start": 15.627, "end": 15.967}
+      ]
+    },
+    {
+      "time": 16.988,
+      "text": "It could be delayed because of climate change.",
+      "translation": "（此句意已合并至上一句翻译中）",
+      "words": [
+        {"text": "It", "start": 16.988, "end": 17.068},
+        {"text": "could", "start": 17.188, "end": 17.389},
+        {"text": "be", "start": 17.469, "end": 17.629},
+        {"text": "delayed", "start": 17.689, "end": 18.149},
+        {"text": "because", "start": 18.25, "end": 18.57},
+        {"text": "of", "start": 18.63, "end": 18.67},
+        {"text": "climate", "start": 18.79, "end": 19.231},
+        {"text": "change.", "start": 19.311, "end": 19.711}
+      ]
+    },
+    {
+      "time": 20.592,
+      "text": "This could make it very unlikely that the next ice age will arrive on time.",
+      "translation": "这使得下一个冰河时代“非常不可能”按时到来。",
+      "words": [
+        {"text": "This", "start": 20.592, "end": 20.772},
+        {"text": "could", "start": 21.072, "end": 21.233},
+        {"text": "make", "start": 21.293, "end": 21.493},
+        {"text": "it", "start": 21.593, "end": 21.653},
+        {"text": "very", "start": 21.773, "end": 22.013},
+        {"text": "unlikely", "start": 22.154, "end": 22.694},
+        {"text": "that", "start": 23.114, "end": 23.275},
+        {"text": "the", "start": 23.315, "end": 23.495},
+        {"text": "next", "start": 23.555, "end": 23.855},
+        {"text": "ice", "start": 24.075, "end": 24.256},
+        {"text": "age", "start": 24.456, "end": 24.656},
+        {"text": "will", "start": 25.036, "end": 25.277},
+        {"text": "arrive", "start": 25.417, "end": 25.757},
+        {"text": "on", "start": 25.897, "end": 25.977},
+        {"text": "time.", "start": 26.078, "end": 26.578}
+      ]
+    },
+    {
+      "time": 27.773,
+      "text": " A researcher looked at one million years of climate data.",
+      "translation": "一名研究人员分析了过去一百万年的气候数据。",
+      "words": [
+        {"text": "A", "start": 27.773, "end": 27.913},
+        {"text": "researcher", "start": 27.933, "end": 28.554},
+        {"text": "looked", "start": 28.594, "end": 28.834},
+        {"text": "at", "start": 28.895, "end": 28.955},
+        {"text": "one", "start": 28.995, "end": 29.215},
+        {"text": "million", "start": 29.315, "end": 29.616},
+        {"text": "years", "start": 29.676, "end": 29.896},
+        {"text": "of", "start": 29.976, "end": 30.016},
+        {"text": "climate", "start": 30.116, "end": 30.537},
+        {"text": "data.", "start": 30.597, "end": 30.997}
+      ]
+    },
+    {
+      "time": 31.718,
+      "text": "He studied how past ice ages happened.",
+      "translation": "他研究了以往冰河时代的成因，",
+      "words": [
+        {"text": "He", "start": 31.718, "end": 31.799},
+        {"text": "studied", "start": 31.859, "end": 32.219},
+        {"text": "how", "start": 32.259, "end": 32.72},
+        {"text": "past", "start": 32.82, "end": 33.18},
+        {"text": "ice", "start": 33.601, "end": 33.781},
+        {"text": "ages", "start": 33.962, "end": 34.322},
+        {"text": "happened.", "start": 34.602, "end": 35.023}
+      ]
+    },
+    {
+      "time": 35.984,
+      "text": "He looked at how ice affects the Earth's axis and global temperatures.",
+      "translation": "以及冰层是如何影响地球自转轴（地轴）和全球气温的。",
+      "words": [
+        {"text": "He", "start": 35.984, "end": 36.085},
+        {"text": "looked", "start": 36.165, "end": 36.465},
+        {"text": "at", "start": 36.886, "end": 36.966},
+        {"text": "how", "start": 37.086, "end": 37.326},
+        {"text": "ice", "start": 37.667, "end": 37.867},
+        {"text": "affects", "start": 38.348, "end": 38.848},
+        {"text": "the", "start": 38.989, "end": 39.109},
+        {"text": "Earth's", "start": 39.249, "end": 39.509},
+        {"text": "axis", "start": 39.79, "end": 40.21},
+        {"text": "and", "start": 40.611, "end": 40.731},
+        {"text": "global", "start": 40.811, "end": 41.212},
+        {"text": "temperatures.", "start": 41.292, "end": 41.832}
+      ]
+    },
+    {
+      "time": 42.954,
+      "text": "When the amount of ice does not change, ice ages happen at regular intervals.",
+      "translation": "当全球冰量保持相对稳定时，冰河时代会以固定的周期发生。",
+      "words": [
+        {"text": "When", "start": 42.954, "end": 43.114},
+        {"text": "the", "start": 43.154, "end": 43.254},
+        {"text": "amount", "start": 43.375, "end": 43.695},
+        {"text": "of", "start": 43.795, "end": 43.835},
+        {"text": "ice", "start": 44.056, "end": 44.196},
+        {"text": "does", "start": 44.236, "end": 44.416},
+        {"text": "not", "start": 44.496, "end": 44.636},
+        {"text": "change,", "start": 44.777, "end": 45.137},
+        {"text": "ice", "start": 46.078, "end": 46.219},
+        {"text": "ages", "start": 46.499, "end": 46.819},
+        {"text": "happen", "start": 46.839, "end": 47.42},
+        {"text": "at", "start": 47.48, "end": 47.54},
+        {"text": "regular", "start": 47.58, "end": 48.001},
+        {"text": "intervals.", "start": 48.061, "end": 48.542}
+      ]
+    },
+    {
+      "time": 49.623,
+      "text": "The researcher said less ice means a longer gap between ice ages.",
+      "translation": "该研究人员表示，冰量越少，就意味着两次冰河时代之间的间隔期会越长。",
+      "words": [
+        {"text": "The", "start": 49.623, "end": 49.723},
+        {"text": "researcher", "start": 49.763, "end": 50.304},
+        {"text": "said", "start": 50.344, "end": 50.484},
+        {"text": "less", "start": 50.545, "end": 50.845},
+        {"text": "ice", "start": 51.065, "end": 51.205},
+        {"text": "means", "start": 51.666, "end": 51.886},
+        {"text": "a", "start": 51.947, "end": 51.987},
+        {"text": "longer", "start": 52.067, "end": 52.407},
+        {"text": "gap", "start": 52.447, "end": 52.728},
+        {"text": "between", "start": 53.108, "end": 53.469},
+        {"text": "ice", "start": 53.629, "end": 53.789},
+        {"text": "ages.", "start": 53.969, "end": 54.49}
+      ]
+    }
+  ]
+}

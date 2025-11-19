@@ -1,0 +1,165 @@
+{
+  "audioUrl": "./data/audio-17.mp3",
+  "title": "第17篇：Energy levels of songs affect memories",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "The energy of music affects our memories.",
+      "translation": "音乐的能量会影响我们的记忆。",
+      "words": [
+        {"text": "The", "start": 0.031, "end": 0.412},
+        {"text": "energy", "start": 0.532, "end": 0.912},
+        {"text": "of", "start": 1.032, "end": 1.093},
+        {"text": "music", "start": 1.173, "end": 1.553},
+        {"text": "affects", "start": 1.653, "end": 2.074},
+        {"text": "our", "start": 2.214, "end": 2.354},
+        {"text": "memories.", "start": 2.415, "end": 2.815}
+      ]
+    },
+    {
+      "time": 3.616,
+      "text": "A researcher said the tempo and mood of songs affected what people remembered.",
+      "translation": "一位研究人员指出，歌曲的节奏和情绪会影响人们回忆的内容。",
+      "words": [
+        {"text": "A", "start": 3.616, "end": 3.656},
+        {"text": "researcher", "start": 3.716, "end": 4.317},
+        {"text": "said", "start": 4.357, "end": 4.518},
+        {"text": "the", "start": 4.578, "end": 4.658},
+        {"text": "tempo", "start": 4.718, "end": 5.199},
+        {"text": "and", "start": 5.619, "end": 5.719},
+        {"text": "mood", "start": 5.759, "end": 6.14},
+        {"text": "of", "start": 6.26, "end": 6.34},
+        {"text": "songs", "start": 6.38, "end": 6.841},
+        {"text": "affected", "start": 7.402, "end": 7.903},
+        {"text": "what", "start": 7.963, "end": 8.123},
+        {"text": "people", "start": 8.223, "end": 8.524},
+        {"text": "remembered.", "start": 8.604, "end": 9.104}
+      ]
+    },
+    {
+      "time": 9.966,
+      "text": "She said high energy music made people remember funny and happy things.",
+      "translation": "活力四射的音乐让人想起欢乐趣事，",
+      "words": [
+        {"text": "She", "start": 9.966, "end": 10.106},
+        {"text": "said", "start": 10.166, "end": 10.326},
+        {"text": "high", "start": 10.406, "end": 10.627},
+        {"text": "energy", "start": 10.807, "end": 11.147},
+        {"text": "music", "start": 11.207, "end": 11.588},
+        {"text": "made", "start": 12.029, "end": 12.289},
+        {"text": "people", "start": 12.429, "end": 12.79},
+        {"text": "remember", "start": 12.85, "end": 13.291},
+        {"text": "funny", "start": 13.391, "end": 13.691},
+        {"text": "and", "start": 13.811, "end": 13.911},
+        {"text": "happy", "start": 13.952, "end": 14.252},
+        {"text": "things.", "start": 14.312, "end": 14.653}
+      ]
+    },
+    {
+      "time": 15.554,
+      "text": "However, slower and acoustic music brought back memories of calmness, sadness and romance.",
+      "translation": "而舒缓的原声音乐则让人忆起宁静、伤感或浪漫的时刻。",
+      "words": [
+        {"text": "However,", "start": 15.554, "end": 15.974},
+        {"text": "slower", "start": 16.515, "end": 16.916},
+        {"text": "and", "start": 16.996, "end": 17.076},
+        {"text": "acoustic", "start": 17.156, "end": 17.717},
+        {"text": "music", "start": 17.817, "end": 18.198},
+        {"text": "brought", "start": 18.598, "end": 18.899},
+        {"text": "back", "start": 18.999, "end": 19.219},
+        {"text": "memories", "start": 19.319, "end": 19.72},
+        {"text": "of", "start": 19.8, "end": 19.84},
+        {"text": "calmness,", "start": 19.94, "end": 20.501},
+        {"text": "sadness", "start": 21.002, "end": 21.543},
+        {"text": "and", "start": 21.663, "end": 21.763},
+        {"text": "romance.", "start": 21.843, "end": 22.444}
+      ]
+    },
+    {
+      "time": 23.572,
+      "text": "In the study, 233 people listened to songs from their childhood.",
+      "translation": "研究中，233人聆听了他们童年时期的歌曲。",
+      "words": [
+        {"text": "In", "start": 23.572, "end": 23.752},
+        {"text": "the", "start": 23.792, "end": 23.872},
+        {"text": "study,", "start": 23.933, "end": 24.333},
+        {"text": "233", "start": 24.353, "end": 24.934},
+        {"text": "people", "start": 26.015, "end": 26.396},
+        {"text": "listened", "start": 26.777, "end": 27.137},
+        {"text": "to", "start": 27.237, "end": 27.337},
+        {"text": "songs", "start": 27.417, "end": 27.778},
+        {"text": "from", "start": 27.878, "end": 28.038},
+        {"text": "their", "start": 28.098, "end": 28.259},
+        {"text": "childhood.", "start": 28.299, "end": 28.819}
+      ]
+    },
+    {
+      "time": 29.741,
+      "text": "The feelings people had about the songs affected their memories.",
+      "translation": "研究发现，人们对歌曲的感受会影响记忆内容，",
+      "words": [
+        {"text": "The", "start": 29.741, "end": 29.841},
+        {"text": "feelings", "start": 29.901, "end": 30.342},
+        {"text": "people", "start": 30.422, "end": 30.722},
+        {"text": "had", "start": 30.782, "end": 30.962},
+        {"text": "about", "start": 31.043, "end": 31.343},
+        {"text": "the", "start": 31.403, "end": 31.523},
+        {"text": "songs", "start": 31.583, "end": 31.944},
+        {"text": "affected", "start": 32.364, "end": 32.805},
+        {"text": "their", "start": 32.865, "end": 33.045},
+        {"text": "memories.", "start": 33.085, "end": 33.526}
+      ]
+    },
+    {
+      "time": 34.528,
+      "text": "How much a person liked a song changed the memories they had.",
+      "translation": "对歌曲的喜爱程度不同，唤起的记忆也会不同。",
+      "words": [
+        {"text": "How", "start": 34.528, "end": 34.668},
+        {"text": "much", "start": 34.728, "end": 34.908},
+        {"text": "a", "start": 34.988, "end": 35.028},
+        {"text": "person", "start": 35.088, "end": 35.529},
+        {"text": "liked", "start": 35.629, "end": 35.99},
+        {"text": "a", "start": 36.11, "end": 36.15},
+        {"text": "song", "start": 36.21, "end": 36.47},
+        {"text": "changed", "start": 36.951, "end": 37.432},
+        {"text": "the", "start": 37.472, "end": 37.712},
+        {"text": "memories", "start": 37.752, "end": 38.173},
+        {"text": "they", "start": 38.233, "end": 38.413},
+        {"text": "had.", "start": 38.493, "end": 38.713}
+      ]
+    },
+    {
+      "time": 39.935,
+      "text": "Acoustic songs brought back emotional memories.",
+      "translation": "其中，原声音乐特别容易引发情感丰富的回忆。",
+      "words": [
+        {"text": "Acoustic", "start": 39.935, "end": 40.496},
+        {"text": "songs", "start": 40.556, "end": 40.937},
+        {"text": "brought", "start": 41.037, "end": 41.317},
+        {"text": "back", "start": 41.437, "end": 41.618},
+        {"text": "emotional", "start": 41.698, "end": 42.299},
+        {"text": "memories.", "start": 42.359, "end": 42.759}
+      ]
+    },
+    {
+      "time": 43.981,
+      "text": "The research will be put onto an online database of musical memories.",
+      "translation": "这项研究成果将被收录到一个音乐记忆的在线数据库中。",
+      "words": [
+        {"text": "The", "start": 43.981, "end": 44.081},
+        {"text": "research", "start": 44.121, "end": 44.562},
+        {"text": "will", "start": 44.622, "end": 44.802},
+        {"text": "be", "start": 44.842, "end": 44.922},
+        {"text": "put", "start": 45.002, "end": 45.203},
+        {"text": "onto", "start": 45.343, "end": 45.603},
+        {"text": "an", "start": 45.703, "end": 45.743},
+        {"text": "online", "start": 45.904, "end": 46.364},
+        {"text": "database", "start": 46.424, "end": 47.085},
+        {"text": "of", "start": 47.566, "end": 47.666},
+        {"text": "musical", "start": 47.806, "end": 48.307},
+        {"text": "memories.", "start": 48.367, "end": 48.988}
+      ]
+    }
+  ]
+}

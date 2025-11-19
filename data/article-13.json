@@ -1,0 +1,189 @@
+{
+  "audioUrl": "./data/audio-13.mp3",
+  "title": "第13篇：Animal puppets walk 20,000 km for climate action",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "A 20,000 km walk from Congo to Norway has started.",
+      "translation": "一场从刚果到挪威、全程2万公里的徒步活动已经启程。",
+      "words": [
+        {"text": "A", "start": 0.031, "end": 0.452},
+        {"text": "20,000", "start": 0.472, "end": 0.913},
+        {"text": "km", "start": 1.534, "end": 2.075},
+        {"text": "walk", "start": 2.115, "end": 2.435},
+        {"text": "from", "start": 2.776, "end": 2.977},
+        {"text": "Congo", "start": 3.057, "end": 3.518},
+        {"text": "to", "start": 3.758, "end": 3.858},
+        {"text": "Norway", "start": 3.938, "end": 4.419},
+        {"text": "has", "start": 4.74, "end": 4.9},
+        {"text": "started.", "start": 4.96, "end": 5.481}
+      ]
+    },
+    {
+      "time": 5.541,
+      "text": "It is called the herds.",
+      "translation": "这项名为“兽群”的行动",
+      "words": [
+        {"text": "It", "start": 5.541, "end": 6.543},
+        {"text": "is", "start": 6.643, "end": 6.703},
+        {"text": "called", "start": 6.784, "end": 7.144},
+        {"text": "the", "start": 7.164, "end": 7.725},
+        {"text": "herds.", "start": 7.786, "end": 8.226}
+      ]
+    },
+    {
+      "time": 9.248,
+      "text": "It will teach people about the climate crisis.",
+      "translation": "旨在提高人们对气候危机的意识。",
+      "words": [
+        {"text": "It", "start": 9.248, "end": 9.328},
+        {"text": "will", "start": 9.368, "end": 9.549},
+        {"text": "teach", "start": 9.609, "end": 9.889},
+        {"text": "people", "start": 9.97, "end": 10.37},
+        {"text": "about", "start": 10.531, "end": 10.851},
+        {"text": "the", "start": 10.871, "end": 11.132},
+        {"text": "climate", "start": 11.172, "end": 11.613},
+        {"text": "crisis.", "start": 11.673, "end": 12.234}
+      ]
+    },
+    {
+      "time": 13.336,
+      "text": "Hundreds of life-sized puppets of animals are on the walk.",
+      "translation": "数百个等比例制作的动物木偶参与了徒步，",
+      "words": [
+        {"text": "Hundreds", "start": 13.336, "end": 13.777},
+        {"text": "of", "start": 13.857, "end": 13.897},
+        {"text": "life-sized", "start": 13.937, "end": 14.718},
+        {"text": "puppets", "start": 14.799, "end": 15.239},
+        {"text": "of", "start": 15.7, "end": 15.78},
+        {"text": "animals", "start": 15.941, "end": 16.382},
+        {"text": "are", "start": 16.562, "end": 16.642},
+        {"text": "on", "start": 16.782, "end": 16.883},
+        {"text": "the", "start": 16.963, "end": 17.063},
+        {"text": "walk.", "start": 17.083, "end": 18.225}
+      ]
+    },
+    {
+      "time": 18.205, "text": "The herds will show how climate change is a danger to animals.",
+      "translation": "通过展示气候变化对动物的威胁，让更多人关注这一问题。",
+      "words": [
+        {"text": "The", "start": 18.205, "end": 18.506},
+        {"text": "herds", "start": 18.546, "end": 18.907},
+        {"text": "will", "start": 19.128, "end": 19.329},
+        {"text": "show", "start": 19.409, "end": 19.63},
+        {"text": "how", "start": 19.67, "end": 19.951},
+        {"text": "climate", "start": 19.991, "end": 20.573},
+        {"text": "change", "start": 20.674, "end": 21.115},
+        {"text": "is", "start": 21.236, "end": 21.296},
+        {"text": "a", "start": 21.396, "end": 21.436},
+        {"text": "danger", "start": 21.517, "end": 21.978},
+        {"text": "to", "start": 22.36, "end": 22.48},
+        {"text": "animals.", "start": 22.641, "end": 23.062}
+      ]
+    },
+    {
+      "time": 24.226,
+      "text": "A spokesperson said, the herds is a coming together of culture and climate.",
+      "translation": "活动发言人表示，“兽群”是“文化与气候议题的完美结合”。",
+      "words": [
+        {"text": "A", "start": 24.226, "end": 24.266},
+        {"text": "spokesperson", "start": 24.286, "end": 25.21},
+        {"text": "said,", "start": 25.31, "end": 25.551},
+        {"text": "the", "start": 26.133, "end": 26.253},
+        {"text": "herds", "start": 26.293, "end": 26.675},
+        {"text": "is", "start": 27.237, "end": 27.317},
+        {"text": "a", "start": 27.417, "end": 27.457},
+        {"text": "coming", "start": 27.558, "end": 27.859},
+        {"text": "together", "start": 27.939, "end": 28.421},
+        {"text": "of", "start": 28.581, "end": 28.642},
+        {"text": "culture", "start": 28.742, "end": 29.244},
+        {"text": "and", "start": 29.384, "end": 29.485},
+        {"text": "climate.", "start": 29.625, "end": 30.207}
+      ]
+    },
+    {
+      "time": 31.705,
+      "text": "The animal puppets will visit 20 cities in Africa and Europe.",
+      "translation": "这些动物木偶将造访亚欧两洲的20个城市，",
+      "words": [
+        {"text": "The", "start": 31.705, "end": 31.885},
+        {"text": "animal", "start": 32.005, "end": 32.346},
+        {"text": "puppets", "start": 32.386, "end": 32.847},
+        {"text": "will", "start": 32.927, "end": 33.127},
+        {"text": "visit", "start": 33.187, "end": 33.487},
+        {"text": "20", "start": 33.507, "end": 33.988},
+        {"text": "cities", "start": 34.068, "end": 34.489},
+        {"text": "in", "start": 35.029, "end": 35.09},
+        {"text": "Africa", "start": 35.23, "end": 35.67},
+        {"text": "and", "start": 35.831, "end": 35.931},
+        {"text": "Europe.", "start": 35.971, "end": 36.471}
+      ]
+    },
+    {
+      "time": 37.232,
+      "text": "Each city will have street performances.",
+      "translation": "每个城市都会举办街头表演，",
+      "words": [
+        {"text": "Each", "start": 37.232, "end": 37.413},
+        {"text": "city", "start": 37.493, "end": 37.833},
+        {"text": "will", "start": 37.853, "end": 38.074},
+        {"text": "have", "start": 38.114, "end": 38.234},
+        {"text": "street", "start": 38.294, "end": 38.594},
+        {"text": "performances.", "start": 38.634, "end": 39.395}
+      ]
+    },
+    {
+      "time": 40.297,
+      "text": "These will focus on how we can help Earth.",
+      "translation": "聚焦人类如何保护地球。",
+      "words": [
+        {"text": "These", "start": 40.297, "end": 40.477},
+        {"text": "will", "start": 40.517, "end": 40.717},
+        {"text": "focus", "start": 40.797, "end": 41.298},
+        {"text": "on", "start": 41.678, "end": 41.759},
+        {"text": "how", "start": 41.839, "end": 42.059},
+        {"text": "we", "start": 42.139, "end": 42.259},
+        {"text": "can", "start": 42.299, "end": 42.439},
+        {"text": "help", "start": 42.5, "end": 42.74},
+        {"text": "Earth.", "start": 42.94, "end": 43.14}
+      ]
+    },
+    {
+      "time": 44.262,
+      "text": "The herds will teach millions of people about nature.",
+      "translation": "活动将向数百万人传递自然保护的理念。",
+      "words": [
+        {"text": "The", "start": 44.262, "end": 44.362},
+        {"text": "herds", "start": 44.402, "end": 44.743},
+        {"text": "will", "start": 44.823, "end": 45.023},
+        {"text": "teach", "start": 45.083, "end": 45.303},
+        {"text": "millions", "start": 45.403, "end": 45.844},
+        {"text": "of", "start": 45.924, "end": 45.964},
+        {"text": "people", "start": 46.064, "end": 46.445},
+        {"text": "about", "start": 46.545, "end": 46.845},
+        {"text": "nature.", "start": 46.885, "end": 47.426}
+      ]
+    },
+    {
+      "time": 47.486,
+      "text": "An environmentalist says the herds will teach people about climate change and biodiversity loss.",
+      "translation": "一位环保人士指出，“兽群”能帮助公众理解气候变化与生物多样性丧失的严峻现实。",
+      "words": [
+        {"text": "An", "start": 47.486, "end": 48.708},
+        {"text": "environmentalist", "start": 48.768, "end": 49.909},
+        {"text": "says", "start": 50.11, "end": 50.37},
+        {"text": "the", "start": 50.831, "end": 50.951},
+        {"text": "herds", "start": 51.011, "end": 51.371},
+        {"text": "will", "start": 51.411, "end": 51.612},
+        {"text": "teach", "start": 51.672, "end": 51.932},
+        {"text": "people", "start": 52.032, "end": 52.373},
+        {"text": "about", "start": 52.453, "end": 52.693},
+        {"text": "climate", "start": 52.833, "end": 53.334},
+        {"text": "change", "start": 53.414, "end": 53.815},
+        {"text": "and", "start": 54.295, "end": 54.395},
+        {"text": "biodiversity", "start": 54.536, "end": 55.637},
+        {"text": "loss.", "start": 55.717, "end": 56.278}
+      ]
+    }
+  ]
+}

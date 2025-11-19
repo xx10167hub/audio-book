@@ -1,0 +1,192 @@
+{
+  "audioUrl": "./data/audio-2.mp3",
+  "title": "第2篇：Exercise and therapy can heal a broken heart",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": " Broken hearts are real.",
+      "translation": "“心碎”是真实存在的。",
+      "words": [
+        {"text": "Broken", "start": 0.031, "end": 1.052},
+        {"text": "hearts", "start": 1.152, "end": 1.572},
+        {"text": "are", "start": 1.753, "end": 1.833},
+        {"text": "real.", "start": 1.913, "end": 2.213}
+      ]
+    },
+    {
+      "time": 2.273,
+      "text": "They are caused by the stress of losing someone you love.",
+      "translation": "通常由失去挚爱带来的巨大压力引发。",
+      "words": [
+        {"text": "They", "start": 2.273, "end": 3.154},
+        {"text": "are", "start": 3.214, "end": 3.294},
+        {"text": "caused", "start": 3.354, "end": 3.754},
+        {"text": "by", "start": 3.935, "end": 4.055},
+        {"text": "the", "start": 4.115, "end": 4.195},
+        {"text": "stress", "start": 4.275, "end": 4.795},
+        {"text": "of", "start": 5.396, "end": 5.476},
+        {"text": "losing", "start": 5.516, "end": 5.996},
+        {"text": "someone", "start": 6.116, "end": 6.497},
+        {"text": "you", "start": 6.577, "end": 6.777},
+        {"text": "love.", "start": 6.877, "end": 7.117}
+      ]
+    },
+    {
+      "time": 8.278,
+      "text": "Doctors think they have a cure.",
+      "translation": "医生认为已有治愈方法。",
+      "words": [
+        {"text": "Doctors", "start": 8.278, "end": 8.739},
+        {"text": "think", "start": 8.799, "end": 9.019},
+        {"text": "they", "start": 9.099, "end": 9.239},
+        {"text": "have", "start": 9.279, "end": 9.439},
+        {"text": "a", "start": 9.5, "end": 9.52},
+        {"text": "cure.", "start": 9.64, "end": 10.0}
+      ]
+    },
+    {
+      "time": 10.761,
+      "text": "Researchers conducted tests on 76 broken-hearted people.",
+      "translation": "研究人员对76名经历心碎的人进行试验。",
+      "words": [
+        {"text": "Researchers", "start": 10.761, "end": 11.461},
+        {"text": "conducted", "start": 11.842, "end": 12.522},
+        {"text": "tests", "start": 12.542, "end": 13.123},
+        {"text": "on", "start": 13.603, "end": 13.683},
+        {"text": "76", "start": 13.703, "end": 14.264},
+        {"text": "broken-hearted", "start": 14.984, "end": 15.985},
+        {"text": "people.", "start": 16.105, "end": 16.506}
+      ]
+    },
+    {
+      "time": 16.546,
+      "text": "The people all had weekly counselling and did lots of exercise.",
+      "translation": "参与者每周接受心理咨询并保持大量运动。",
+      "words": [
+        {"text": "The", "start": 16.546, "end": 17.607},
+        {"text": "people", "start": 17.667, "end": 18.027},
+        {"text": "all", "start": 18.267, "end": 18.408},
+        {"text": "had", "start": 18.488, "end": 18.648},
+        {"text": "weekly", "start": 18.688, "end": 19.168},
+        {"text": "counselling", "start": 19.248, "end": 19.889},
+        {"text": "and", "start": 20.289, "end": 20.409},
+        {"text": "did", "start": 20.569, "end": 20.77},
+        {"text": "lots", "start": 20.87, "end": 21.11},
+        {"text": "of", "start": 21.21, "end": 21.27},
+        {"text": "exercise.", "start": 21.47, "end": 22.151}
+      ]
+    },
+    {
+      "time": 23.112,
+      "text": "Doctors were surprised at how counselling improved heart function and patients' fitness.",
+      "translation": "医生惊讶地发现，心理咨询显著“改善了心脏功能与患者体能”。",
+      "words": [
+        {"text": "Doctors", "start": 23.112, "end": 23.552},
+        {"text": "were", "start": 23.592, "end": 23.732},
+        {"text": "surprised", "start": 23.792, "end": 24.393},
+        {"text": "at", "start": 24.513, "end": 24.553},
+        {"text": "how", "start": 24.673, "end": 24.933},
+        {"text": "counselling", "start": 25.294, "end": 25.994},
+        {"text": "improved", "start": 26.555, "end": 27.075},
+        {"text": "heart", "start": 27.135, "end": 27.416},
+        {"text": "function", "start": 27.476, "end": 27.996},
+        {"text": "and", "start": 28.397, "end": 28.497},
+        {"text": "patients'", "start": 28.657, "end": 29.177},
+        {"text": "fitness.", "start": 29.237, "end": 30.038}
+      ]
+    },
+    {
+      "time": 30.018,
+      "text": " Thousands of people have a broken heart.",
+      "translation": "全球有成千上万人受心碎困扰。",
+      "words": [
+        {"text": "Thousands", "start": 30.018, "end": 31.6},
+        {"text": "of", "start": 31.7, "end": 31.74},
+        {"text": "people", "start": 31.861, "end": 32.261},
+        {"text": "have", "start": 32.341, "end": 32.542},
+        {"text": "a", "start": 32.602, "end": 32.622},
+        {"text": "broken", "start": 32.682, "end": 33.102},
+        {"text": "heart.", "start": 33.162, "end": 33.483}
+      ]
+    },
+    {
+      "time": 34.224,
+      "text": "It can double the risk of dying early.",
+      "translation": "这种情况会使早逝风险翻倍。",
+      "words": [
+        {"text": "It", "start": 34.224, "end": 34.304},
+        {"text": "can", "start": 34.384, "end": 34.544},
+        {"text": "double", "start": 34.644, "end": 35.005},
+        {"text": "the", "start": 35.065, "end": 35.185},
+        {"text": "risk", "start": 35.245, "end": 35.506},
+        {"text": "of", "start": 35.586, "end": 35.626},
+        {"text": "dying", "start": 35.666, "end": 36.167},
+        {"text": "early.", "start": 36.207, "end": 36.707}
+      ]
+    },
+    {
+      "time": 37.609,
+      "text": "People can get chest pain, shortness of breath, and tiredness.",
+      "translation": "患者可能出现胸痛、呼吸急促和疲劳等症状。",
+      "words": [
+        {"text": "People", "start": 37.609, "end": 37.949},
+        {"text": "can", "start": 37.989, "end": 38.149},
+        {"text": "get", "start": 38.209, "end": 38.37},
+        {"text": "chest", "start": 38.53, "end": 38.83},
+        {"text": "pain,", "start": 38.91, "end": 39.251},
+        {"text": "shortness", "start": 39.712, "end": 40.292},
+        {"text": "of", "start": 40.413, "end": 40.473},
+        {"text": "breath,", "start": 40.653, "end": 40.993},
+        {"text": "and", "start": 41.414, "end": 41.514},
+        {"text": "tiredness.", "start": 41.554, "end": 42.275}
+      ]
+    },
+    {
+      "time": 43.297,
+      "text": "The illness makes the heart bigger and rounder.",
+      "translation": "心脏也会变得更大、更圆。",
+      "words": [
+        {"text": "The", "start": 43.297, "end": 43.417},
+        {"text": "illness", "start": 43.537, "end": 43.937},
+        {"text": "makes", "start": 44.018, "end": 44.278},
+        {"text": "the", "start": 44.358, "end": 44.478},
+        {"text": "heart", "start": 44.518, "end": 44.799},
+        {"text": "bigger", "start": 44.919, "end": 45.219},
+        {"text": "and", "start": 45.399, "end": 45.5},
+        {"text": "rounder.", "start": 45.66, "end": 46.121}
+      ]
+    },
+    {
+      "time": 47.162,
+      "text": "The research shows the importance of the brain-heart relationship.",
+      "translation": "研究强调了大脑与心脏关联的重要性。",
+      "words": [
+        {"text": "The", "start": 47.162, "end": 47.262},
+        {"text": "research", "start": 47.302, "end": 47.783},
+        {"text": "shows", "start": 47.983, "end": 48.304},
+        {"text": "the", "start": 48.324, "end": 48.464},
+        {"text": "importance", "start": 48.564, "end": 49.205},
+        {"text": "of", "start": 49.285, "end": 49.325},
+        {"text": "the", "start": 49.365, "end": 49.505},
+        {"text": "brain-heart", "start": 49.565, "end": 50.306},
+        {"text": "relationship.", "start": 50.386, "end": 51.268}
+      ]
+    },
+    {
+      "time": 52.129,
+      "text": "It said mental and physical therapy can help people.",
+      "translation": "并指出心理与身体双管齐下的治疗对康复有帮助。",
+      "words": [
+        {"text": "It", "start": 52.129, "end": 52.249},
+        {"text": "said", "start": 52.349, "end": 52.489},
+        {"text": "mental", "start": 52.549, "end": 52.99},
+        {"text": "and", "start": 53.371, "end": 53.471},
+        {"text": "physical", "start": 53.591, "end": 54.092},
+        {"text": "therapy", "start": 54.212, "end": 54.753},
+        {"text": "can", "start": 55.193, "end": 55.474},
+        {"text": "help", "start": 55.574, "end": 55.834},
+        {"text": "people.", "start": 55.994, "end": 56.515}
+      ]
+    }
+  ]
+}

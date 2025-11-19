@@ -1,0 +1,195 @@
+{
+  "audioUrl": "./data/audio-6.mp3",
+  "title": "第6篇：Over 99% of heart attacks have a warning sign",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": " Doctors say we can avoid heart attacks and strokes.",
+      "translation": "医生指出，心脏病发作和中风其实是可以预防的。",
+      "words": [
+        {"text": "Doctors", "start": 0.031, "end": 1.072},
+        {"text": "say", "start": 1.172, "end": 1.412},
+        {"text": "we", "start": 1.452, "end": 1.692},
+        {"text": "can", "start": 1.752, "end": 1.913},
+        {"text": "avoid", "start": 1.993, "end": 2.333},
+        {"text": "heart", "start": 2.413, "end": 2.673},
+        {"text": "attacks", "start": 2.713, "end": 3.134},
+        {"text": "and", "start": 3.314, "end": 3.454},
+        {"text": "strokes.", "start": 3.594, "end": 4.074}
+      ]
+    },
+    {
+      "time": 4.835,
+      "text": "These are the biggest causes of death.",
+      "translation": "这两者是导致死亡的首要原因。",
+      "words": [
+        {"text": "These", "start": 4.835, "end": 5.095},
+        {"text": "are", "start": 5.195, "end": 5.275},
+        {"text": "the", "start": 5.335, "end": 5.416},
+        {"text": "biggest", "start": 5.536, "end": 5.936},
+        {"text": "causes", "start": 6.096, "end": 6.537},
+        {"text": "of", "start": 6.637, "end": 6.697},
+        {"text": "death.", "start": 6.797, "end": 7.097}
+      ]
+    },
+    {
+      "time": 8.138,
+      "text": "A study said over 99% of people who had a heart attack had one or more warning signs.",
+      "translation": "一项研究显示，超过99%的心脏病患者在发病前都会出现至少一种预警信号，",
+      "words": [
+        {"text": "A", "start": 8.138, "end": 8.178},
+        {"text": "study", "start": 8.238, "end": 8.658},
+        {"text": "said", "start": 8.698, "end": 8.959},
+        {"text": "over", "start": 8.999, "end": 9.399},
+        {"text": "99%", "start": 9.419, "end": 9.939},
+        {"text": "of", "start": 10.88, "end": 10.92},
+        {"text": "people", "start": 11.12, "end": 11.561},
+        {"text": "who", "start": 11.581, "end": 12.161},
+        {"text": "had", "start": 12.221, "end": 12.441},
+        {"text": "a", "start": 12.542, "end": 12.582},
+        {"text": "heart", "start": 12.662, "end": 12.922},
+        {"text": "attack", "start": 12.962, "end": 13.322},
+        {"text": "had", "start": 13.943, "end": 14.123},
+        {"text": "one", "start": 14.323, "end": 14.443},
+        {"text": "or", "start": 14.844, "end": 14.924},
+        {"text": "more", "start": 15.024, "end": 15.284},
+        {"text": "warning", "start": 15.564, "end": 16.005},
+        {"text": "signs.", "start": 16.145, "end": 16.585}
+      ]
+    },
+    {
+      "time": 17.466,
+      "text": "These include high blood pressure and high cholesterol.",
+      "translation": "比如高血压或高胆固醇。",
+      "words": [
+        {"text": "These", "start": 17.466, "end": 17.746},
+        {"text": "include", "start": 17.766, "end": 18.527},
+        {"text": "high", "start": 18.547, "end": 19.167},
+        {"text": "blood", "start": 19.207, "end": 19.407},
+        {"text": "pressure", "start": 19.467, "end": 19.928},
+        {"text": "and", "start": 20.388, "end": 20.488},
+        {"text": "high", "start": 20.568, "end": 20.829},
+        {"text": "cholesterol.", "start": 20.869, "end": 21.589}
+      ]
+    },
+    {
+      "time": 22.55,
+      "text": "People can reduce these.",
+      "translation": "而这些指标是可以通过改善生活方式来控制的，",
+      "words": [
+        {"text": "People", "start": 22.55, "end": 22.93},
+        {"text": "can", "start": 23.01, "end": 23.271},
+        {"text": "reduce", "start": 23.531, "end": 23.991},
+        {"text": "these.", "start": 24.091, "end": 24.412}
+      ]
+    },
+    {
+      "time": 25.212,
+      "text": "They can eat a healthier diet, exercise or quit smoking.",
+      "translation": "例如健康饮食、坚持运动或戒烟。",
+      "words": [
+        {"text": "They", "start": 25.212, "end": 25.352},
+        {"text": "can", "start": 25.412, "end": 25.553},
+        {"text": "eat", "start": 25.613, "end": 25.753},
+        {"text": "a", "start": 25.813, "end": 25.853},
+        {"text": "healthier", "start": 25.913, "end": 26.433},
+        {"text": "diet,", "start": 26.513, "end": 26.954},
+        {"text": "exercise", "start": 27.494, "end": 28.135},
+        {"text": "or", "start": 28.155, "end": 28.455},
+        {"text": "quit", "start": 28.475, "end": 28.755},
+        {"text": "smoking.", "start": 28.815, "end": 29.616}
+      ]
+    },
+    {
+      "time": 30.457,
+      "text": " The study looked at the health records of nine million people.",
+      "translation": "该研究分析了九百万份健康记录，",
+      "words": [
+        {"text": "The", "start": 30.457, "end": 30.638},
+        {"text": "study", "start": 30.678, "end": 31.119},
+        {"text": "looked", "start": 31.199, "end": 31.48},
+        {"text": "at", "start": 31.58, "end": 31.66},
+        {"text": "the", "start": 31.681, "end": 31.881},
+        {"text": "health", "start": 31.921, "end": 32.262},
+        {"text": "records", "start": 32.362, "end": 32.904},
+        {"text": "of", "start": 32.984, "end": 33.044},
+        {"text": "nine", "start": 33.085, "end": 33.546},
+        {"text": "million", "start": 33.626, "end": 33.987},
+        {"text": "people.", "start": 34.087, "end": 34.549}
+      ]
+    },
+    {
+      "time": 34.589,
+      "text": "They all had a heart attack or stroke.",
+      "translation": "所有记录者都曾经历过心脏病发作或中风。",
+      "words": [
+        {"text": "They", "start": 34.589, "end": 35.331},
+        {"text": "all", "start": 35.371, "end": 35.632},
+        {"text": "had", "start": 35.712, "end": 35.832},
+        {"text": "a", "start": 35.893, "end": 35.913},
+        {"text": "heart", "start": 35.973, "end": 36.254},
+        {"text": "attack", "start": 36.274, "end": 36.615},
+        {"text": "or", "start": 36.715, "end": 36.795},
+        {"text": "stroke.", "start": 36.875, "end": 37.337}
+      ]
+    },
+    {
+      "time": 38.259,
+      "text": "A researcher said there is a small number of risk factors for heart disease.",
+      "translation": "一位研究人员表示，引发心脏病的风险因素并不多。",
+      "words": [
+        {"text": "A", "start": 38.259, "end": 38.3},
+        {"text": "researcher", "start": 38.38, "end": 39.022},
+        {"text": "said", "start": 39.082, "end": 39.282},
+        {"text": "there", "start": 39.302, "end": 39.864},
+        {"text": "is", "start": 39.944, "end": 40.004},
+        {"text": "a", "start": 40.105, "end": 40.125},
+        {"text": "small", "start": 40.265, "end": 40.727},
+        {"text": "number", "start": 40.947, "end": 41.308},
+        {"text": "of", "start": 41.408, "end": 41.449},
+        {"text": "risk", "start": 41.489, "end": 41.91},
+        {"text": "factors", "start": 41.97, "end": 42.492},
+        {"text": "for", "start": 42.632, "end": 42.893},
+        {"text": "heart", "start": 42.953, "end": 43.274},
+        {"text": "disease.", "start": 43.334, "end": 43.835}
+      ]
+    },
+    {
+      "time": 44.758,
+      "text": "He said we should look at the things that lead to heart attacks.",
+      "translation": "他认为我们应该聚焦于导致心脏病的根本原因，",
+      "words": [
+        {"text": "He", "start": 44.758, "end": 44.878},
+        {"text": "said", "start": 44.939, "end": 45.119},
+        {"text": "we", "start": 45.179, "end": 45.28},
+        {"text": "should", "start": 45.32, "end": 45.5},
+        {"text": "look", "start": 45.58, "end": 45.801},
+        {"text": "at", "start": 45.881, "end": 45.942},
+        {"text": "the", "start": 46.042, "end": 46.182},
+        {"text": "things", "start": 46.242, "end": 46.684},
+        {"text": "that", "start": 47.145, "end": 47.305},
+        {"text": "lead", "start": 47.346, "end": 47.707},
+        {"text": "to", "start": 47.807, "end": 47.907},
+        {"text": "heart", "start": 47.987, "end": 48.288},
+        {"text": "attacks.", "start": 48.308, "end": 49.532}
+      ]
+    },
+    {
+      "time": 49.552,
+      "text": "The goal is to find ways to control risk factors.",
+      "translation": "目标是找到控制这些风险因素的有效方法。",
+      "words": [
+        {"text": "The", "start": 49.552, "end": 49.672},
+        {"text": "goal", "start": 49.732, "end": 50.053},
+        {"text": "is", "start": 50.073, "end": 50.575},
+        {"text": "to", "start": 50.635, "end": 50.735},
+        {"text": "find", "start": 50.836, "end": 51.157},
+        {"text": "ways", "start": 51.257, "end": 51.598},
+        {"text": "to", "start": 52.019, "end": 52.139},
+        {"text": "control", "start": 52.22, "end": 52.761},
+        {"text": "risk", "start": 52.801, "end": 53.463},
+        {"text": "factors.", "start": 53.583, "end": 54.827}
+      ]
+    }
+  ]
+}

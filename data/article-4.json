@@ -1,0 +1,209 @@
+{
+  "audioUrl": "./data/audio-4.mp3",
+  "title": "第4篇：Different foods affect your body's smells",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": " Food and drink change our body smells.",
+      "translation": "饮食确实会改变我们的体味。",
+      "words": [
+        {"text": "Food", "start": 0.031, "end": 0.732},
+        {"text": "and", "start": 0.812, "end": 0.892},
+        {"text": "drink", "start": 0.932, "end": 1.293},
+        {"text": "change", "start": 1.433, "end": 1.794},
+        {"text": "our", "start": 1.814, "end": 2.014},
+        {"text": "body", "start": 2.054, "end": 2.334},
+        {"text": "smells.", "start": 2.375, "end": 2.795}
+      ]
+    },
+    {
+      "time": 3.476,
+      "text": "We all have different smells.",
+      "translation": "而每个人的体味各不相同。",
+      "words": [
+        {"text": "We", "start": 3.476, "end": 3.636},
+        {"text": "all", "start": 3.737, "end": 3.897},
+        {"text": "have", "start": 3.937, "end": 4.117},
+        {"text": "different", "start": 4.217, "end": 4.618},
+        {"text": "smells.", "start": 4.698, "end": 5.139}
+      ]
+    },
+    {
+      "time": 6.08,
+      "text": "A professor of health said the smells from our body come from two places.",
+      "translation": "一位健康教授解释，身体的气味主要来自两个方面。",
+      "words": [
+        {"text": "A", "start": 6.08, "end": 6.14},
+        {"text": "professor", "start": 6.2, "end": 6.661},
+        {"text": "of", "start": 6.741, "end": 6.801},
+        {"text": "health", "start": 6.861, "end": 7.122},
+        {"text": "said", "start": 7.542, "end": 7.723},
+        {"text": "the", "start": 7.763, "end": 7.863},
+        {"text": "smells", "start": 7.923, "end": 8.283},
+        {"text": "from", "start": 8.384, "end": 8.524},
+        {"text": "our", "start": 8.604, "end": 8.704},
+        {"text": "body", "start": 8.744, "end": 9.025},
+        {"text": "come", "start": 9.445, "end": 9.645},
+        {"text": "from", "start": 9.946, "end": 10.086},
+        {"text": "two", "start": 10.146, "end": 10.326},
+        {"text": "places.", "start": 10.387, "end": 10.847}
+      ]
+    },
+    {
+      "time": 11.709,
+      "text": "One is the bacteria in our stomach.",
+      "translation": "一是胃里的细菌。",
+      "words": [
+        {"text": "One", "start": 11.709, "end": 11.809},
+        {"text": "is", "start": 11.889, "end": 11.949},
+        {"text": "the", "start": 11.989, "end": 12.109},
+        {"text": "bacteria", "start": 12.169, "end": 12.83},
+        {"text": "in", "start": 12.91, "end": 12.99},
+        {"text": "our", "start": 13.091, "end": 13.191},
+        {"text": "stomach.", "start": 13.231, "end": 13.651}
+      ]
+    },
+    {
+      "time": 14.453,
+      "text": "Bacteria break down food and release gases.",
+      "translation": "——它们在分解食物时会释放气体。",
+      "words": [
+        {"text": "Bacteria", "start": 14.453, "end": 15.174},
+        {"text": "break", "start": 15.534, "end": 15.815},
+        {"text": "down", "start": 15.855, "end": 16.075},
+        {"text": "food", "start": 16.175, "end": 16.476},
+        {"text": "and", "start": 16.576, "end": 16.656},
+        {"text": "release", "start": 16.696, "end": 17.097},
+        {"text": "gases.", "start": 17.157, "end": 17.597}
+      ]
+    },
+    {
+      "time": 18.459,
+      "text": "These gases can give us bad breath.",
+      "translation": "可能带来口臭。",
+      "words": [
+        {"text": "These", "start": 18.459, "end": 18.679},
+        {"text": "gases", "start": 18.979, "end": 19.44},
+        {"text": "can", "start": 19.861, "end": 20.021},
+        {"text": "give", "start": 20.061, "end": 20.221},
+        {"text": "us", "start": 20.281, "end": 20.362},
+        {"text": "bad", "start": 20.462, "end": 20.702},
+        {"text": "breath.", "start": 20.782, "end": 21.063}
+      ]
+    },
+    {
+      "time": 21.964,
+      "text": "Food also changes the smell of our skin.",
+      "translation": "二是食物也会改变皮肤的气味。",
+      "words": [
+        {"text": "Food", "start": 21.964, "end": 22.244},
+        {"text": "also", "start": 22.605, "end": 22.885},
+        {"text": "changes", "start": 22.985, "end": 23.406},
+        {"text": "the", "start": 23.446, "end": 23.546},
+        {"text": "smell", "start": 23.606, "end": 23.867},
+        {"text": "of", "start": 23.907, "end": 23.967},
+        {"text": "our", "start": 24.047, "end": 24.187},
+        {"text": "skin.", "start": 24.267, "end": 24.688}
+      ]
+    },
+    {
+      "time": 25.782,
+      "text": " The food that makes the strongest body smells contain sulphur.",
+      "translation": "最容易产生浓重体味的食物通常含硫。",
+      "words": [
+        {"text": "The", "start": 25.782, "end": 25.942},
+        {"text": "food", "start": 25.982, "end": 26.203},
+        {"text": "that", "start": 26.243, "end": 26.363},
+        {"text": "makes", "start": 26.463, "end": 26.703},
+        {"text": "the", "start": 26.783, "end": 26.904},
+        {"text": "strongest", "start": 26.944, "end": 27.464},
+        {"text": "body", "start": 27.545, "end": 27.865},
+        {"text": "smells", "start": 27.945, "end": 28.326},
+        {"text": "contain", "start": 28.426, "end": 28.886},
+        {"text": "sulphur.", "start": 28.967, "end": 29.467}
+      ]
+    },
+    {
+      "time": 30.348,
+      "text": "Broccoli and cabbage contain sulphur.",
+      "translation": "比如西兰花和卷心菜。",
+      "words": [
+        {"text": "Broccoli", "start": 30.348, "end": 30.789},
+        {"text": "and", "start": 30.889, "end": 30.969},
+        {"text": "cabbage", "start": 31.09, "end": 31.51},
+        {"text": "contain", "start": 31.57, "end": 32.011},
+        {"text": "sulphur.", "start": 32.071, "end": 32.532}
+      ]
+    },
+    {
+      "time": 33.493,
+      "text": "Another food is garlic.",
+      "translation": "大蒜也是其中之一。",
+      "words": [
+        {"text": "Another", "start": 33.493, "end": 33.773},
+        {"text": "food", "start": 33.833, "end": 34.114},
+        {"text": "is", "start": 34.134, "end": 34.274},
+        {"text": "garlic.", "start": 34.354, "end": 34.775}
+      ]
+    },
+    {
+      "time": 35.416,
+      "text": "This makes our breath smell and can make our armpits smell nicer.",
+      "translation": "虽然会让口气不好闻，不过可能让腋下的气味变得更宜人。",
+      "words": [
+        {"text": "This", "start": 35.416, "end": 35.556},
+        {"text": "makes", "start": 35.636, "end": 35.876},
+        {"text": "our", "start": 35.956, "end": 36.057},
+        {"text": "breath", "start": 36.137, "end": 36.397},
+        {"text": "smell", "start": 36.477, "end": 36.758},
+        {"text": "and", "start": 37.278, "end": 37.398},
+        {"text": "can", "start": 37.499, "end": 37.659},
+        {"text": "make", "start": 37.699, "end": 37.899},
+        {"text": "our", "start": 37.999, "end": 38.12},
+        {"text": "armpits", "start": 38.26, "end": 38.7},
+        {"text": "smell", "start": 38.881, "end": 39.181},
+        {"text": "nicer.", "start": 39.241, "end": 39.642}
+      ]
+    },
+    {
+      "time": 40.603,
+      "text": "Alcohol, coffee and tea can lead to bad breath and a smelly body.",
+      "translation": "酒精、咖啡和茶则可能导致口臭和身体异味。",
+      "words": [
+        {"text": "Alcohol,", "start": 40.603, "end": 41.084},
+        {"text": "coffee", "start": 41.444, "end": 41.765},
+        {"text": "and", "start": 41.845, "end": 41.925},
+        {"text": "tea", "start": 42.045, "end": 42.305},
+        {"text": "can", "start": 42.706, "end": 42.866},
+        {"text": "lead", "start": 42.926, "end": 43.147},
+        {"text": "to", "start": 43.227, "end": 43.347},
+        {"text": "bad", "start": 43.407, "end": 43.707},
+        {"text": "breath", "start": 43.768, "end": 44.068},
+        {"text": "and", "start": 44.288, "end": 44.368},
+        {"text": "a", "start": 44.428, "end": 44.448},
+        {"text": "smelly", "start": 44.529, "end": 44.889},
+        {"text": "body.", "start": 44.929, "end": 45.25}
+      ]
+    },
+    {
+      "time": 46.231,
+      "text": "If we want to smell nice, we should eat fruit and drink water.",
+      "translation": "如果想保持气味清新，平时应该多吃水果、多喝水。",
+      "words": [
+        {"text": "If", "start": 46.231, "end": 46.311},
+        {"text": "we", "start": 46.351, "end": 46.451},
+        {"text": "want", "start": 46.511, "end": 46.672},
+        {"text": "to", "start": 46.712, "end": 46.812},
+        {"text": "smell", "start": 46.852, "end": 47.112},
+        {"text": "nice,", "start": 47.192, "end": 47.493},
+        {"text": "we", "start": 47.873, "end": 47.994},
+        {"text": "should", "start": 48.034, "end": 48.214},
+        {"text": "eat", "start": 48.334, "end": 48.494},
+        {"text": "fruit", "start": 48.815, "end": 49.095},
+        {"text": "and", "start": 49.436, "end": 49.536},
+        {"text": "drink", "start": 49.656, "end": 49.936},
+        {"text": "water.", "start": 49.996, "end": 50.457}
+      ]
+    }
+  ]
+}

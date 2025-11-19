@@ -1,0 +1,197 @@
+{
+  "audioUrl": "./data/audio-15.mp3",
+  "title": "第15篇：Flossing your teeth could reduce the risk of stroke",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "Keeping your teeth healthy can also help your brain.",
+      "translation": "保持牙齿健康同样有益大脑。",
+      "words": [
+        {"text": "Keeping", "start": 0.031, "end": 0.752},
+        {"text": "your", "start": 0.812, "end": 0.952},
+        {"text": "teeth", "start": 1.012, "end": 1.292},
+        {"text": "healthy", "start": 1.372, "end": 1.813},
+        {"text": "can", "start": 1.913, "end": 2.053},
+        {"text": "also", "start": 2.213, "end": 2.574},
+        {"text": "help", "start": 2.614, "end": 3.214},
+        {"text": "your", "start": 3.295, "end": 3.475},
+        {"text": "brain.", "start": 3.555, "end": 3.915}
+      ]
+    },
+    {
+      "time": 3.955,
+      "text": "New research says flossing your teeth could help to prevent a stroke.",
+      "translation": "最新研究表明，用牙线洁齿有助于预防中风。",
+      "words": [
+        {"text": "New", "start": 3.955, "end": 4.996},
+        {"text": "research", "start": 5.077, "end": 5.597},
+        {"text": "says", "start": 5.777, "end": 5.978},
+        {"text": "flossing", "start": 6.138, "end": 6.598},
+        {"text": "your", "start": 6.879, "end": 7.039},
+        {"text": "teeth", "start": 7.079, "end": 7.339},
+        {"text": "could", "start": 7.92, "end": 8.1},
+        {"text": "help", "start": 8.18, "end": 8.42},
+        {"text": "to", "start": 8.5, "end": 8.6},
+        {"text": "prevent", "start": 8.66, "end": 9.081},
+        {"text": "a", "start": 9.181, "end": 9.221},
+        {"text": "stroke.", "start": 9.321, "end": 9.742}
+      ]
+    },
+    {
+      "time": 10.623,
+      "text": "A stroke happens when blood cannot get to the brain.",
+      "translation": "中风发生在血液无法流入大脑时，",
+      "words": [
+        {"text": "A", "start": 10.623, "end": 10.683},
+        {"text": "stroke", "start": 10.783, "end": 11.143},
+        {"text": "happens", "start": 11.323, "end": 11.784},
+        {"text": "when", "start": 12.264, "end": 12.425},
+        {"text": "blood", "start": 12.545, "end": 12.825},
+        {"text": "cannot", "start": 12.925, "end": 13.246},
+        {"text": "get", "start": 13.346, "end": 13.526},
+        {"text": "to", "start": 13.546, "end": 13.766},
+        {"text": "the", "start": 13.806, "end": 13.906},
+        {"text": "brain.", "start": 13.966, "end": 14.287}
+      ]
+    },
+    {
+      "time": 14.327,
+      "text": "Around five million people die each year from a stroke.",
+      "translation": "全球每年约500万人死于中风。",
+      "words": [
+        {"text": "Around", "start": 14.327, "end": 15.548},
+        {"text": "five", "start": 15.628, "end": 15.888},
+        {"text": "million", "start": 15.969, "end": 16.289},
+        {"text": "people", "start": 16.349, "end": 16.689},
+        {"text": "die", "start": 16.769, "end": 16.99},
+        {"text": "each", "start": 17.03, "end": 17.35},
+        {"text": "year", "start": 17.53, "end": 17.791},
+        {"text": "from", "start": 17.831, "end": 18.311},
+        {"text": "a", "start": 18.391, "end": 18.451},
+        {"text": "stroke.", "start": 18.531, "end": 18.912}
+      ]
+    },
+    {
+      "time": 19.793,
+      "text": "Flossing helps reduce tooth decay and gum disease.",
+      "translation": "使用牙线能减少蛀牙和牙龈疾病，",
+      "words": [
+        {"text": "Flossing", "start": 19.793, "end": 20.213},
+        {"text": "helps", "start": 20.574, "end": 20.934},
+        {"text": "reduce", "start": 21.114, "end": 21.515},
+        {"text": "tooth", "start": 21.795, "end": 22.075},
+        {"text": "decay", "start": 22.135, "end": 22.496},
+        {"text": "and", "start": 22.636, "end": 22.736},
+        {"text": "gum", "start": 22.836, "end": 23.056},
+        {"text": "disease.", "start": 23.096, "end": 23.517}
+      ]
+    },
+    {
+      "time": 24.198,
+      "text": "This cuts the risk of having a stroke.",
+      "translation": "从而降低中风风险。",
+      "words": [
+        {"text": "This", "start": 24.198, "end": 24.378},
+        {"text": "cuts", "start": 24.698, "end": 24.978},
+        {"text": "the", "start": 25.099, "end": 25.199},
+        {"text": "risk", "start": 25.259, "end": 25.499},
+        {"text": "of", "start": 25.579, "end": 25.619},
+        {"text": "having", "start": 25.699, "end": 25.939},
+        {"text": "a", "start": 25.979, "end": 26.02},
+        {"text": "stroke.", "start": 26.06, "end": 26.46}
+      ]
+    },
+    {
+      "time": 27.638,
+      "text": "Researchers found that flossing teeth once a week could lower the risk of a stroke by 44%.",
+      "translation": "研究人员发现，每周使用牙线一次可使中风风险降低44%。",
+      "words": [
+        {"text": "Researchers", "start": 27.638, "end": 28.239},
+        {"text": "found", "start": 28.319, "end": 28.579},
+        {"text": "that", "start": 28.619, "end": 28.819},
+        {"text": "flossing", "start": 28.839, "end": 29.36},
+        {"text": "teeth", "start": 29.44, "end": 29.72},
+        {"text": "once", "start": 30.221, "end": 30.381},
+        {"text": "a", "start": 30.401, "end": 30.421},
+        {"text": "week", "start": 30.561, "end": 30.781},
+        {"text": "could", "start": 31.322, "end": 31.522},
+        {"text": "lower", "start": 31.943, "end": 32.243},
+        {"text": "the", "start": 32.283, "end": 32.363},
+        {"text": "risk", "start": 32.423, "end": 32.663},
+        {"text": "of", "start": 32.723, "end": 32.783},
+        {"text": "a", "start": 32.843, "end": 32.863},
+        {"text": "stroke", "start": 32.944, "end": 33.304},
+        {"text": "by", "start": 33.404, "end": 33.544},
+        {"text": "44%.", "start": 33.564, "end": 33.925}
+      ]
+    },
+    {
+      "time": 34.605,
+      "text": "They added that flossing was a cheap and easy way to care for your teeth.",
+      "translation": "他们补充说，这是种经济又简便的护齿方式。",
+      "words": [
+        {"text": "They", "start": 34.605, "end": 35.586},
+        {"text": "added", "start": 35.686, "end": 35.907},
+        {"text": "that", "start": 35.987, "end": 36.127},
+        {"text": "flossing", "start": 36.147, "end": 36.627},
+        {"text": "was", "start": 36.687, "end": 36.828},
+        {"text": "a", "start": 36.908, "end": 36.968},
+        {"text": "cheap", "start": 37.148, "end": 37.448},
+        {"text": "and", "start": 37.829, "end": 37.929},
+        {"text": "easy", "start": 38.069, "end": 38.329},
+        {"text": "way", "start": 38.409, "end": 38.589},
+        {"text": "to", "start": 38.65, "end": 38.75},
+        {"text": "care", "start": 38.83, "end": 39.03},
+        {"text": "for", "start": 39.07, "end": 39.19},
+        {"text": "your", "start": 39.23, "end": 39.37},
+        {"text": "teeth.", "start": 39.41, "end": 39.671}
+      ]
+    },
+    {
+      "time": 40.592,
+      "text": "A doctor said many people have said that dental care is expensive.",
+      "translation": "一位医生提到，很多人都说看牙太贵了",
+      "words": [
+        {"text": "A", "start": 40.592, "end": 40.632},
+        {"text": "doctor", "start": 40.672, "end": 41.072},
+        {"text": "said", "start": 41.132, "end": 41.312},
+        {"text": "many", "start": 41.412, "end": 41.633},
+        {"text": "people", "start": 41.793, "end": 42.193},
+        {"text": "have", "start": 42.213, "end": 42.694},
+        {"text": "said", "start": 42.754, "end": 42.914},
+        {"text": "that", "start": 42.954, "end": 43.094},
+        {"text": "dental", "start": 43.234, "end": 43.635},
+        {"text": "care", "start": 43.715, "end": 43.975},
+        {"text": "is", "start": 44.055, "end": 44.115},
+        {"text": "expensive.", "start": 44.215, "end": 44.936}
+      ]
+    },
+    {
+      "time": 45.737,
+      "text": "Flossing is a healthy habit.",
+      "translation": "使用牙线其实是种健康的习惯。”",
+      "words": [
+        {"text": "Flossing", "start": 45.737, "end": 46.197},
+        {"text": "is", "start": 46.318, "end": 46.378},
+        {"text": "a", "start": 46.458, "end": 46.498},
+        {"text": "healthy", "start": 46.578, "end": 46.958},
+        {"text": "habit.", "start": 47.018, "end": 47.399}
+      ]
+    },
+    {
+      "time": 48.099,
+      "text": "The doctor said flossing was easy and cheap.",
+      "translation": "这位医生表示，用牙线其实既简单又便宜。",
+      "words": [
+        {"text": "The", "start": 48.099, "end": 48.2},
+        {"text": "doctor", "start": 48.24, "end": 48.52},
+        {"text": "said", "start": 48.56, "end": 48.7},
+        {"text": "flossing", "start": 48.72, "end": 49.221},
+        {"text": "was", "start": 49.581, "end": 49.721},
+        {"text": "easy", "start": 49.881, "end": 50.182},
+        {"text": "and", "start": 50.222, "end": 50.742},
+        {"text": "cheap.", "start": 51.103, "end": 51.503}
+      ]
+    }
+  ]
+}

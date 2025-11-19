@@ -1,0 +1,164 @@
+{
+  "audioUrl": "./data/audio-14.mp3",
+  "title": "第14篇：Noise-cancelling headphones may cause hearing problems",
+  "transcript": [
+    {
+      "time": 0.588,
+      "text": "More young people are wearing headphones.",
+      "translation": "如今戴耳机的年轻人越来越多。",
+      "words": [
+        {"text": "More", "start": 0.588, "end": 0.908},
+        {"text": "young", "start": 0.969, "end": 1.169},
+        {"text": "people", "start": 1.249, "end": 1.569},
+        {"text": "are", "start": 1.63, "end": 1.71},
+        {"text": "wearing", "start": 1.73, "end": 2.03},
+        {"text": "headphones.", "start": 2.09, "end": 2.611}
+      ]
+    },
+    {
+      "time": 3.412,
+      "text": "A report from the BBC suggests noise-canceling earphones could cause hearing problems.",
+      "translation": "BBC一份报告指出，降噪耳机可能会导致听力问题。",
+      "words": [
+        {"text": "A", "start": 3.412, "end": 3.472},
+        {"text": "report", "start": 3.532, "end": 3.933},
+        {"text": "from", "start": 3.993, "end": 4.133},
+        {"text": "the", "start": 4.173, "end": 4.254},
+        {"text": "BBC", "start": 4.294, "end": 4.935},
+        {"text": "suggests", "start": 5.375, "end": 5.876},
+        {"text": "noise-canceling", "start": 6.357, "end": 7.338},
+        {"text": "earphones", "start": 7.378, "end": 7.959},
+        {"text": "could", "start": 8.4, "end": 8.6},
+        {"text": "cause", "start": 8.921, "end": 9.241},
+        {"text": "hearing", "start": 9.381, "end": 9.702},
+        {"text": "problems.", "start": 9.782, "end": 10.203}
+      ]
+    },
+    {
+      "time": 11.084,
+      "text": "The BBC interviewed ear doctors.",
+      "translation": "BBC咨询了耳科医生，",
+      "words": [
+        {"text": "The", "start": 11.084, "end": 11.164},
+        {"text": "BBC", "start": 11.204, "end": 11.805},
+        {"text": "interviewed", "start": 11.925, "end": 12.426},
+        {"text": "ear", "start": 12.466, "end": 12.766},
+        {"text": "doctors.", "start": 12.806, "end": 13.307}
+      ]
+    },
+    {
+      "time": 14.329,
+      "text": "The doctors said young people are having problems hearing sounds.",
+      "translation": "得知年轻人正出现声音辨识困难：",
+      "words": [
+        {"text": "The", "start": 14.329, "end": 14.409},
+        {"text": "doctors", "start": 14.449, "end": 14.89},
+        {"text": "said", "start": 15.19, "end": 15.35},
+        {"text": "young", "start": 15.39, "end": 15.611},
+        {"text": "people", "start": 15.691, "end": 16.011},
+        {"text": "are", "start": 16.111, "end": 16.212},
+        {"text": "having", "start": 16.252, "end": 16.512},
+        {"text": "problems", "start": 16.612, "end": 17.093},
+        {"text": "hearing", "start": 17.433, "end": 17.834},
+        {"text": "sounds.", "start": 17.874, "end": 18.375}
+      ]
+    },
+    {
+      "time": 19.256,
+      "text": "They can hear sounds, but they're not sure where they are from.",
+      "translation": "他们能听到声音，却无法准确判断声源位置。",
+      "words": [
+        {"text": "They", "start": 19.256, "end": 19.376},
+        {"text": "can", "start": 19.416, "end": 19.537},
+        {"text": "hear", "start": 19.577, "end": 19.757},
+        {"text": "sounds,", "start": 19.837, "end": 20.198},
+        {"text": "but", "start": 20.578, "end": 20.698},
+        {"text": "they're", "start": 20.738, "end": 20.999},
+        {"text": "not", "start": 21.039, "end": 21.179},
+        {"text": "sure", "start": 21.299, "end": 21.58},
+        {"text": "where", "start": 21.62, "end": 22.101},
+        {"text": "they", "start": 22.141, "end": 22.261},
+        {"text": "are", "start": 22.321, "end": 22.401},
+        {"text": "from.", "start": 22.441, "end": 23.102}
+      ]
+    },
+    {
+      "time": 24.027,
+      "text": "A doctor said many young people are complaining about poor hearing.",
+      "translation": "有位医生表示，很多年轻人抱怨听力变差。",
+      "words": [
+        {"text": "A", "start": 24.027, "end": 24.167},
+        {"text": "doctor", "start": 24.247, "end": 24.668},
+        {"text": "said", "start": 24.708, "end": 24.888},
+        {"text": "many", "start": 24.968, "end": 25.188},
+        {"text": "young", "start": 25.248, "end": 25.429},
+        {"text": "people", "start": 25.509, "end": 25.869},
+        {"text": "are", "start": 25.909, "end": 26.41},
+        {"text": "complaining", "start": 26.47, "end": 27.05},
+        {"text": "about", "start": 27.13, "end": 27.431},
+        {"text": "poor", "start": 27.451, "end": 27.811},
+        {"text": "hearing.", "start": 27.891, "end": 28.292}
+      ]
+    },
+    {
+      "time": 29.133,
+      "text": "She said, there is a difference between hearing and listening, and that listening skills are suffering.",
+      "translation": "她解释说“听见”和“听清”是两回事，而现在人们的辨音能力正在下降。",
+      "words": [
+        {"text": "She", "start": 29.133, "end": 29.293},
+        {"text": "said,", "start": 29.393, "end": 29.653},
+        {"text": "there", "start": 30.154, "end": 30.314},
+        {"text": "is", "start": 30.374, "end": 30.434},
+        {"text": "a", "start": 30.474, "end": 30.514},
+        {"text": "difference", "start": 30.554, "end": 31.015},
+        {"text": "between", "start": 31.215, "end": 31.555},
+        {"text": "hearing", "start": 31.615, "end": 31.976},
+        {"text": "and", "start": 32.076, "end": 32.176},
+        {"text": "listening,", "start": 32.236, "end": 32.616},
+        {"text": "and", "start": 33.437, "end": 33.517},
+        {"text": "that", "start": 33.557, "end": 33.798},
+        {"text": "listening", "start": 33.838, "end": 34.578},
+        {"text": "skills", "start": 34.679, "end": 35.039},
+        {"text": "are", "start": 35.139, "end": 35.219},
+        {"text": "suffering.", "start": 35.279, "end": 35.74}
+      ]
+    },
+    {
+      "time": 37.001,
+      "text": "We need to hear many sounds so we can decide which ones are important.",
+      "translation": "我们本需接收各种声音来判断重要信息，",
+      "words": [
+        {"text": "We", "start": 37.001, "end": 37.121},
+        {"text": "need", "start": 37.181, "end": 37.422},
+        {"text": "to", "start": 37.522, "end": 37.622},
+        {"text": "hear", "start": 37.662, "end": 37.842},
+        {"text": "many", "start": 37.862, "end": 38.162},
+        {"text": "sounds", "start": 38.262, "end": 38.663},
+        {"text": "so", "start": 39.163, "end": 39.344},
+        {"text": "we", "start": 39.404, "end": 39.484},
+        {"text": "can", "start": 39.544, "end": 39.684},
+        {"text": "decide", "start": 39.744, "end": 40.185},
+        {"text": "which", "start": 40.225, "end": 40.445},
+        {"text": "ones", "start": 40.585, "end": 40.745},
+        {"text": "are", "start": 40.825, "end": 40.905},
+        {"text": "important.", "start": 40.965, "end": 41.546}
+      ]
+    },
+    {
+      "time": 42.607,
+      "text": "Headphones mean we can forget to hear important sounds.",
+      "translation": "但长期使用耳机会让人“忽略”那些本该注意的声音。",
+      "words": [
+        {"text": "Headphones", "start": 42.607, "end": 43.128},
+        {"text": "mean", "start": 43.588, "end": 43.828},
+        {"text": "we", "start": 44.209, "end": 44.329},
+        {"text": "can", "start": 44.409, "end": 44.709},
+        {"text": "forget", "start": 44.749, "end": 45.53},
+        {"text": "to", "start": 45.55, "end": 46.151},
+        {"text": "hear", "start": 46.231, "end": 46.451},
+        {"text": "important", "start": 46.491, "end": 47.232},
+        {"text": "sounds.", "start": 47.312, "end": 47.993}
+      ]
+    }
+  ]
+}

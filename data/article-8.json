@@ -1,0 +1,212 @@
+{
+  "audioUrl": "./data/audio-8.mp3",
+  "title": "第8篇：Disney cuts hundreds of jobs",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": " Disney is cutting hundreds of jobs.",
+      "translation": "迪士尼计划裁员数百人，",
+      "words": [
+        {"text": "Disney", "start": 0.031, "end": 0.812},
+        {"text": "is", "start": 0.952, "end": 1.012},
+        {"text": "cutting", "start": 1.092, "end": 1.453},
+        {"text": "hundreds", "start": 1.493, "end": 1.993},
+        {"text": "of", "start": 2.113, "end": 2.173},
+        {"text": "jobs.", "start": 2.253, "end": 2.634}
+      ]
+    },
+    {
+      "time": 3.535,
+      "text": "It wants to reduce its costs.",
+      "translation": "以削减成本。",
+      "words": [
+        {"text": "It", "start": 3.535, "end": 3.635},
+        {"text": "wants", "start": 3.715, "end": 4.015},
+        {"text": "to", "start": 4.316, "end": 4.456},
+        {"text": "reduce", "start": 4.516, "end": 4.956},
+        {"text": "its", "start": 5.056, "end": 5.197},
+        {"text": "costs.", "start": 5.317, "end": 6.838}
+      ]
+    },
+    {
+      "time": 6.858,
+      "text": "The new job losses are in marketing.",
+      "translation": "此次裁员主要集中在市场营销部门。",
+      "words": [
+        {"text": "The", "start": 6.858, "end": 6.958},
+        {"text": "new", "start": 7.018, "end": 7.219},
+        {"text": "job", "start": 7.279, "end": 7.519},
+        {"text": "losses", "start": 7.559, "end": 7.939},
+        {"text": "are", "start": 8.04, "end": 8.14},
+        {"text": "in", "start": 8.22, "end": 8.28},
+        {"text": "marketing.", "start": 8.36, "end": 8.981}
+      ]
+    },
+    {
+      "time": 10.062,
+      "text": "A spokesperson said that as the industry changes, Disney would keep being creative.",
+      "translation": "一位发言人表示，虽然行业在变化，但迪士尼会继续保持创意，",
+      "words": [
+        {"text": "A", "start": 10.062, "end": 10.142},
+        {"text": "spokesperson", "start": 10.202, "end": 11.123},
+        {"text": "said", "start": 11.203, "end": 11.443},
+        {"text": "that", "start": 11.804, "end": 11.984},
+        {"text": "as", "start": 12.144, "end": 12.224},
+        {"text": "the", "start": 12.304, "end": 12.424},
+        {"text": "industry", "start": 12.564, "end": 13.085},
+        {"text": "changes,", "start": 13.165, "end": 13.706},
+        {"text": "Disney", "start": 14.326, "end": 14.767},
+        {"text": "would", "start": 15.147, "end": 15.347},
+        {"text": "keep", "start": 15.467, "end": 15.708},
+        {"text": "being", "start": 15.928, "end": 16.228},
+        {"text": "creative.", "start": 16.328, "end": 17.009}
+      ]
+    },
+    {
+      "time": 18.17,
+      "text": "He added that people want creativity and innovation.",
+      "translation": "因为人们渴望的正是创造力和创新。",
+      "words": [
+        {"text": "He", "start": 18.17, "end": 18.29},
+        {"text": "added", "start": 18.331, "end": 18.671},
+        {"text": "that", "start": 18.751, "end": 18.911},
+        {"text": "people", "start": 19.011, "end": 19.452},
+        {"text": "want", "start": 19.472, "end": 19.852},
+        {"text": "creativity", "start": 20.273, "end": 21.134},
+        {"text": "and", "start": 21.314, "end": 21.414},
+        {"text": "innovation.", "start": 21.534, "end": 22.235}
+      ]
+    },
+    {
+      "time": 23.336,
+      "text": "Disney's boss said the cuts would keep the company healthy.",
+      "translation": "公司负责人也称，裁员是为了让公司保持健康发展。",
+      "words": [
+        {"text": "Disney's", "start": 23.336, "end": 23.816},
+        {"text": "boss", "start": 23.896, "end": 24.197},
+        {"text": "said", "start": 24.377, "end": 24.557},
+        {"text": "the", "start": 24.637, "end": 24.697},
+        {"text": "cuts", "start": 24.757, "end": 25.118},
+        {"text": "would", "start": 25.358, "end": 25.538},
+        {"text": "keep", "start": 25.598, "end": 25.859},
+        {"text": "the", "start": 26.019, "end": 26.119},
+        {"text": "company", "start": 26.179, "end": 26.659},
+        {"text": "healthy.", "start": 26.699, "end": 27.22}
+      ]
+    },
+    {
+      "time": 28.853,
+      "text": " Disney is one of the world's most famous companies.",
+      "translation": "迪士尼是全球最著名的公司之一，",
+      "words": [
+        {"text": "Disney", "start": 28.853, "end": 29.334},
+        {"text": "is", "start": 29.454, "end": 29.534},
+        {"text": "one", "start": 29.554, "end": 29.734},
+        {"text": "of", "start": 29.774, "end": 29.834},
+        {"text": "the", "start": 29.894, "end": 29.954},
+        {"text": "world's", "start": 30.014, "end": 30.395},
+        {"text": "most", "start": 30.475, "end": 30.755},
+        {"text": "famous", "start": 30.875, "end": 31.276},
+        {"text": "companies.", "start": 31.356, "end": 31.917}
+      ]
+    },
+    {
+      "time": 32.758,
+      "text": "It started in 1923.",
+      "translation": "创立于1923年。",
+      "words": [
+        {"text": "It", "start": 32.758, "end": 32.838},
+        {"text": "started", "start": 32.918, "end": 33.439},
+        {"text": "in", "start": 33.459, "end": 33.579},
+        {"text": "1923.", "start": 33.599, "end": 33.979}
+      ]
+    },
+    {
+      "time": 33.999,
+      "text": "In 1928, it made a cartoon.",
+      "translation": "1928年，它推出了动画片，",
+      "words": [
+        {"text": "In", "start": 33.999, "end": 34.059},
+        {"text": "1928,", "start": 34.079, "end": 34.86},
+        {"text": "it", "start": 36.002, "end": 36.062},
+        {"text": "made", "start": 37.644, "end": 37.864},
+        {"text": "a", "start": 37.904, "end": 37.924},
+        {"text": "cartoon.", "start": 38.004, "end": 38.665}
+      ]
+    },
+    {
+      "time": 38.705,
+      "text": "This was the debut of Mickey Mouse.",
+      "translation": "这也是米老鼠的首次亮相。",
+      "words": [
+        {"text": "This", "start": 38.705, "end": 39.606},
+        {"text": "was", "start": 39.967, "end": 40.127},
+        {"text": "the", "start": 40.187, "end": 40.287},
+        {"text": "debut", "start": 40.347, "end": 40.828},
+        {"text": "of", "start": 40.968, "end": 41.028},
+        {"text": "Mickey", "start": 41.108, "end": 41.428},
+        {"text": "Mouse.", "start": 41.488, "end": 41.809}
+      ]
+    },
+    {
+      "time": 43.11,
+      "text": "Disney is now a big company.",
+      "translation": "如今迪士尼已发展成大型企业，",
+      "words": [
+        {"text": "Disney", "start": 43.11, "end": 43.551},
+        {"text": "is", "start": 43.731, "end": 43.811},
+        {"text": "now", "start": 43.891, "end": 44.092},
+        {"text": "a", "start": 44.172, "end": 44.212},
+        {"text": "big", "start": 44.252, "end": 44.612},
+        {"text": "company.", "start": 44.913, "end": 45.453}
+      ]
+    },
+    {
+      "time": 46.474,
+      "text": "It owns companies like Pixar and National Geographic.",
+      "translation": "旗下拥有皮克斯和国家地理等公司，",
+      "words": [
+        {"text": "It", "start": 46.474, "end": 46.555},
+        {"text": "owns", "start": 46.715, "end": 46.955},
+        {"text": "companies", "start": 47.075, "end": 47.596},
+        {"text": "like", "start": 47.696, "end": 47.916},
+        {"text": "Pixar", "start": 48.036, "end": 48.597},
+        {"text": "and", "start": 48.737, "end": 48.877},
+        {"text": "National", "start": 48.997, "end": 49.418},
+        {"text": "Geographic.", "start": 49.498, "end": 50.279}
+      ]
+    },
+    {
+      "time": 51.32,
+      "text": "It also has many theme parks around the world.",
+      "translation": "还在全球经营多家主题公园，",
+      "words": [
+        {"text": "It", "start": 51.32, "end": 51.38},
+        {"text": "also", "start": 51.501, "end": 51.821},
+        {"text": "has", "start": 51.841, "end": 52.061},
+        {"text": "many", "start": 52.141, "end": 52.362},
+        {"text": "theme", "start": 52.462, "end": 52.742},
+        {"text": "parks", "start": 52.782, "end": 53.183},
+        {"text": "around", "start": 53.363, "end": 53.703},
+        {"text": "the", "start": 53.803, "end": 53.903},
+        {"text": "world.", "start": 53.964, "end": 54.384}
+      ]
+    },
+    {
+      "time": 55.385,
+      "text": "It will build a new park in Abu Dhabi.",
+      "translation": "并将在阿布扎比新建一座乐园。",
+      "words": [
+        {"text": "It", "start": 55.385, "end": 55.445},
+        {"text": "will", "start": 55.505, "end": 55.666},
+        {"text": "build", "start": 55.706, "end": 56.126},
+        {"text": "a", "start": 56.266, "end": 56.306},
+        {"text": "new", "start": 56.346, "end": 56.707},
+        {"text": "park", "start": 56.787, "end": 57.147},
+        {"text": "in", "start": 57.348, "end": 57.408},
+        {"text": "Abu", "start": 57.608, "end": 57.868},
+        {"text": "Dhabi.", "start": 57.888, "end": 58.489}
+      ]
+    }
+  ]
+}
