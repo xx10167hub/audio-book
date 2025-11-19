@@ -23,7 +23,8 @@ body {
 .player-container {
     width: 100%;
     max-width: 900px;
-    height: 85vh; 
+    /* --- 修改这里：高度改为 95vh --- */
+    height: 95vh; 
     display: flex;
     flex-direction: column;
     background: linear-gradient(145deg, #1a332a 0%, #122820 100%);
