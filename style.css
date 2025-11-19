@@ -23,6 +23,9 @@ body {
 .player-container {
     width: 100%;
     max-width: 900px;
+    height: 85vh; 
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(145deg, #1a332a 0%, #122820 100%);
     border-radius: 16px;
     padding: 24px;
@@ -46,6 +49,7 @@ h3 {
     text-align: center;
     margin-bottom: 20px;
     text-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+    flex-shrink: 0;
 }
 
 .controls {
@@ -55,6 +59,7 @@ h3 {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
+    flex-shrink: 0;
 }
 
 .controls label {
@@ -62,8 +67,6 @@ h3 {
     font-size: 14px;
     font-weight: 500;
 }
-
-/* --- 用户要求在这里插入新样式 --- */
 
 .control-group {
     display: flex;
@@ -109,9 +112,6 @@ h3 {
     }
 }
 
-/* --- 新样式结束 --- */
-
-
 .info-display {
     font-size: 14px;
     color: #b0b0b0;
@@ -130,6 +130,7 @@ h3 {
     padding: 20px;
     margin-bottom: 20px;
     border: 1px solid rgba(255, 255, 255, 0.05);
+    flex-shrink: 0;
 }
 
 .progress-container {
@@ -213,7 +214,7 @@ h3 {
     transform: scale(0.95);
 }
 
-/* 循环按钮激活状态 - 绿色背景 + 白色边框 */
+/* 循环按钮激活状态 */
 #loop-btn.active,
 .control-btn.active {
     background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
@@ -280,18 +281,14 @@ h3 {
         gap: 8px;
     }
     
-    /* 注意：你添加的 .control-group select 样式会和下面的 select 样式层叠 */
-    /* 原始的 select 样式 */
     .controls select {
         width: 100%;
         min-height: 44px;
         font-size: 16px;
     }
     
-    /* 你添加的 .control-group select 样式会覆盖上面的 width */
     .control-group select {
-        flex: 1; /* 这个会生效 */
-        /* width: 100%; */ /* 这个会被 .controls select 里的 width: 100% 覆盖，除非权重更高 */
+        flex: 1; 
     }
     
     .custom-player {
@@ -303,7 +300,6 @@ h3 {
         border-radius: 6px;
     }
     
-    /* 手机端按钮更大，方便触摸 */
     .control-btn {
         width: 52px;
         height: 52px;
@@ -400,12 +396,14 @@ hr {
         rgba(0, 255, 200, 0.3) 50%, 
         transparent 100%);
     margin: 20px 0;
+    flex-shrink: 0;
 }
 
 .transcript {
     overflow-y: auto;
     padding-right: 8px;
-    max-height: 50vh;
+    flex: 1;
+    max-height: none;
 }
 
 .transcript::-webkit-scrollbar {
@@ -574,12 +572,6 @@ hr {
     border-radius: 3px;
     box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
     transform: scale(1.05);
-}
-
-.word-highlight.next {
-    color: #ffd700 !important;
-    font-weight: 500;
-    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
 }
 
 /* 防止移动端下拉刷新和双击缩放 */
