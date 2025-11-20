@@ -5,7 +5,7 @@
     {
       "time": 0.031,
       "text": " Disney is cutting hundreds of jobs.",
-      "translation": "迪士尼计划裁员数百人，",
+      "translation": "迪士尼正在裁减数百个职位",
       "words": [
         {"text": "Disney", "start": 0.031, "end": 0.812},
         {"text": "is", "start": 0.952, "end": 1.012},
@@ -18,7 +18,7 @@
     {
       "time": 3.535,
       "text": "It wants to reduce its costs.",
-      "translation": "以削减成本。",
+      "translation": "目的是为了降低成本",
       "words": [
         {"text": "It", "start": 3.535, "end": 3.635},
         {"text": "wants", "start": 3.715, "end": 4.015},
@@ -31,7 +31,7 @@
     {
       "time": 6.858,
       "text": "The new job losses are in marketing.",
-      "translation": "此次裁员主要集中在市场营销部门。",
+      "translation": "新一轮的裁员主要在市场营销部门。",
       "words": [
         {"text": "The", "start": 6.858, "end": 6.958},
         {"text": "new", "start": 7.018, "end": 7.219},
@@ -45,7 +45,7 @@
     {
       "time": 10.062,
       "text": "A spokesperson said that as the industry changes, Disney would keep being creative.",
-      "translation": "一位发言人表示，虽然行业在变化，但迪士尼会继续保持创意，",
+      "translation": "一位发言人表示，随着行业的变化，迪士尼将继续保持创造力",
       "words": [
         {"text": "A", "start": 10.062, "end": 10.142},
         {"text": "spokesperson", "start": 10.202, "end": 11.123},
@@ -65,7 +65,7 @@
     {
       "time": 18.17,
       "text": "He added that people want creativity and innovation.",
-      "translation": "因为人们渴望的正是创造力和创新。",
+      "translation": "他还补充说，大家真正想要的就是创意和创新",
       "words": [
         {"text": "He", "start": 18.17, "end": 18.29},
         {"text": "added", "start": 18.331, "end": 18.671},
@@ -80,7 +80,7 @@
     {
       "time": 23.336,
       "text": "Disney's boss said the cuts would keep the company healthy.",
-      "translation": "公司负责人也称，裁员是为了让公司保持健康发展。",
+      "translation": "迪士尼的老板表示，此次裁员是为了让公司保持健康发展",
       "words": [
         {"text": "Disney's", "start": 23.336, "end": 23.816},
         {"text": "boss", "start": 23.896, "end": 24.197},
@@ -97,7 +97,7 @@
     {
       "time": 28.853,
       "text": " Disney is one of the world's most famous companies.",
-      "translation": "迪士尼是全球最著名的公司之一，",
+      "translation": "迪士尼是全球最著名的公司之一",
       "words": [
         {"text": "Disney", "start": 28.853, "end": 29.334},
         {"text": "is", "start": 29.454, "end": 29.534},
@@ -113,7 +113,7 @@
     {
       "time": 32.758,
       "text": "It started in 1923.",
-      "translation": "创立于1923年。",
+      "translation": "创立于1923年",
       "words": [
         {"text": "It", "start": 32.758, "end": 32.838},
         {"text": "started", "start": 32.918, "end": 33.439},
@@ -124,7 +124,7 @@
     {
       "time": 33.999,
       "text": "In 1928, it made a cartoon.",
-      "translation": "1928年，它推出了动画片，",
+      "translation": "1928年，它制作了一部动画片",
       "words": [
         {"text": "In", "start": 33.999, "end": 34.059},
         {"text": "1928,", "start": 34.079, "end": 34.86},
@@ -151,7 +151,7 @@
     {
       "time": 43.11,
       "text": "Disney is now a big company.",
-      "translation": "如今迪士尼已发展成大型企业，",
+      "translation": "如今，迪士尼已是一家大企业",
       "words": [
         {"text": "Disney", "start": 43.11, "end": 43.551},
         {"text": "is", "start": 43.731, "end": 43.811},
@@ -164,7 +164,7 @@
     {
       "time": 46.474,
       "text": "It owns companies like Pixar and National Geographic.",
-      "translation": "旗下拥有皮克斯和国家地理等公司，",
+      "translation": "旗下拥有皮克斯和国家地理等公司",
       "words": [
         {"text": "It", "start": 46.474, "end": 46.555},
         {"text": "owns", "start": 46.715, "end": 46.955},
@@ -179,7 +179,7 @@
     {
       "time": 51.32,
       "text": "It also has many theme parks around the world.",
-      "translation": "还在全球经营多家主题公园，",
+      "translation": "它还在全球拥有许多主题乐园",
       "words": [
         {"text": "It", "start": 51.32, "end": 51.38},
         {"text": "also", "start": 51.501, "end": 51.821},
