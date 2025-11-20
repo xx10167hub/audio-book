@@ -5,7 +5,7 @@
     {
       "time": 0.031,
       "text": " The next ice age will be late.",
-      "translation": "下一个冰河时代（或称“冰期”）的到来可能会推迟。",
+      "translation": "下一个冰河时代将会晚点到来。",
       "words": [
         {"text": "The", "start": 0.031, "end": 0.632},
         {"text": "next", "start": 0.692, "end": 0.952},
@@ -19,7 +19,7 @@
     {
       "time": 3.434,
       "text": "An ice age is a long time of freezing weather.",
-      "translation": "所谓的冰河时代，是指一段天气极其寒冷的漫长时期，会导致全球的冰雪覆盖量大幅增加。",
+      "translation": "所谓的冰河时代，是指一段天气极其寒冷的漫长时期。",
       "words": [
         {"text": "An", "start": 3.434, "end": 3.515},
         {"text": "ice", "start": 3.675, "end": 3.855},
@@ -36,7 +36,7 @@
     {
       "time": 6.858,
       "text": "It brings a huge increase in ice in the world.",
-      "translation": "（此句意已合并至上一句翻译中）",
+      "translation": "它会带来全球冰量的大幅增加",
       "words": [
         {"text": "It", "start": 6.858, "end": 6.938},
         {"text": "brings", "start": 7.038, "end": 7.358},
@@ -53,7 +53,7 @@
     {
       "time": 11.623,
       "text": "The researchers think the next ice age will be in 10,000 years.",
-      "translation": "研究人员认为，下一个冰河时代可能要在一万年后才会到来，而推迟的原因可能与气候变化有关。",
+      "translation": "研究人员认为，下一个冰河时代将在一万年后到来",
       "words": [
         {"text": "The", "start": 11.623, "end": 11.703},
         {"text": "researchers", "start": 11.743, "end": 12.303},
@@ -72,7 +72,7 @@
     {
       "time": 16.988,
       "text": "It could be delayed because of climate change.",
-      "translation": "（此句意已合并至上一句翻译中）",
+      "translation": "它可能会因气候变化而推迟",
       "words": [
         {"text": "It", "start": 16.988, "end": 17.068},
         {"text": "could", "start": 17.188, "end": 17.389},
@@ -87,7 +87,7 @@
     {
       "time": 20.592,
       "text": "This could make it very unlikely that the next ice age will arrive on time.",
-      "translation": "这使得下一个冰河时代“非常不可能”按时到来。",
+      "translation": "这使得下一个冰河时代“极不可能”按时到来",
       "words": [
         {"text": "This", "start": 20.592, "end": 20.772},
         {"text": "could", "start": 21.072, "end": 21.233},
@@ -109,7 +109,7 @@
     {
       "time": 27.773,
       "text": " A researcher looked at one million years of climate data.",
-      "translation": "一名研究人员分析了过去一百万年的气候数据。",
+      "translation": "一位研究人员分析了一百万年的气候数据",
       "words": [
         {"text": "A", "start": 27.773, "end": 27.913},
         {"text": "researcher", "start": 27.933, "end": 28.554},
@@ -126,7 +126,7 @@
     {
       "time": 31.718,
       "text": "He studied how past ice ages happened.",
-      "translation": "他研究了以往冰河时代的成因，",
+      "translation": "他研究了过去的冰河时代是如何发生的。",
       "words": [
         {"text": "He", "start": 31.718, "end": 31.799},
         {"text": "studied", "start": 31.859, "end": 32.219},
@@ -140,7 +140,7 @@
     {
       "time": 35.984,
       "text": "He looked at how ice affects the Earth's axis and global temperatures.",
-      "translation": "以及冰层是如何影响地球自转轴（地轴）和全球气温的。",
+      "translation": "他观察了冰层如何影响地轴和全球气温",
       "words": [
         {"text": "He", "start": 35.984, "end": 36.085},
         {"text": "looked", "start": 36.165, "end": 36.465},
@@ -159,7 +159,7 @@
     {
       "time": 42.954,
       "text": "When the amount of ice does not change, ice ages happen at regular intervals.",
-      "translation": "当全球冰量保持相对稳定时，冰河时代会以固定的周期发生。",
+      "translation": "当冰量没有变化时，冰河时代会按固定的周期到来",
       "words": [
         {"text": "When", "start": 42.954, "end": 43.114},
         {"text": "the", "start": 43.154, "end": 43.254},
@@ -180,7 +180,7 @@
     {
       "time": 49.623,
       "text": "The researcher said less ice means a longer gap between ice ages.",
-      "translation": "该研究人员表示，冰量越少，就意味着两次冰河时代之间的间隔期会越长。",
+      "translation": "这位研究人员说，冰量越少意味着冰河时代之间的间隔越长",
       "words": [
         {"text": "The", "start": 49.623, "end": 49.723},
         {"text": "researcher", "start": 49.763, "end": 50.304},
