@@ -49,7 +49,7 @@
     {
       "time": 14.329,
       "text": "The doctors said young people are having problems hearing sounds.",
-      "translation": "得知年轻人正出现声音辨识困难：",
+      "translation": "医生们说，年轻人在听声音方面出了问题",
       "words": [
         {"text": "The", "start": 14.329, "end": 14.409},
         {"text": "doctors", "start": 14.449, "end": 14.89},
@@ -66,7 +66,7 @@
     {
       "time": 19.256,
       "text": "They can hear sounds, but they're not sure where they are from.",
-      "translation": "他们能听到声音，却无法准确判断声源位置。",
+      "translation": "他们能听到声音，但不确定声音是从哪里来的。",
       "words": [
         {"text": "They", "start": 19.256, "end": 19.376},
         {"text": "can", "start": 19.416, "end": 19.537},
@@ -85,7 +85,7 @@
     {
       "time": 24.027,
       "text": "A doctor said many young people are complaining about poor hearing.",
-      "translation": "有位医生表示，很多年轻人抱怨听力变差。",
+      "translation": "一位医生表示，很多年轻人抱怨听力变差。",
       "words": [
         {"text": "A", "start": 24.027, "end": 24.167},
         {"text": "doctor", "start": 24.247, "end": 24.668},
@@ -103,7 +103,7 @@
     {
       "time": 29.133,
       "text": "She said, there is a difference between hearing and listening, and that listening skills are suffering.",
-      "translation": "她解释说“听见”和“听清”是两回事，而现在人们的辨音能力正在下降。",
+      "translation": "她说，“听见”和“听清”是有区别的，而且人们的“听辨能力”正在受损",
       "words": [
         {"text": "She", "start": 29.133, "end": 29.293},
         {"text": "said,", "start": 29.393, "end": 29.653},
@@ -126,7 +126,7 @@
     {
       "time": 37.001,
       "text": "We need to hear many sounds so we can decide which ones are important.",
-      "translation": "我们本需接收各种声音来判断重要信息，",
+      "translation": "我们需要听到许多声音来，以便决定哪些是重要的。",
       "words": [
         {"text": "We", "start": 37.001, "end": 37.121},
         {"text": "need", "start": 37.181, "end": 37.422},
@@ -147,7 +147,7 @@
     {
       "time": 42.607,
       "text": "Headphones mean we can forget to hear important sounds.",
-      "translation": "但长期使用耳机会让人“忽略”那些本该注意的声音。",
+      "translation": "戴耳机意味着我们会“忘记”去听那些重要的声音。",
       "words": [
         {"text": "Headphones", "start": 42.607, "end": 43.128},
         {"text": "mean", "start": 43.588, "end": 43.828},
