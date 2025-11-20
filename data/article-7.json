@@ -5,7 +5,7 @@
     {
       "time": 0.031,
       "text": " A scientist found a new bee species in Australia.",
-      "translation": "一位科学家在澳大利亚发现了一种新的蜜蜂，",
+      "translation": "一位科学家在澳大利亚发现了一种新的蜜蜂",
       "words": [
         {"text": "A", "start": 0.031, "end": 0.271},
         {"text": "scientist", "start": 0.331, "end": 0.952},
@@ -21,7 +21,7 @@
     {
       "time": 4.398,
       "text": "It has horns on its head.",
-      "translation": "头上长着角。",
+      "translation": "它头上长着角。",
       "words": [
         {"text": "It", "start": 4.398, "end": 4.478},
         {"text": "has", "start": 4.518, "end": 4.678},
@@ -34,7 +34,7 @@
     {
       "time": 7.222,
       "text": "It was named Megacayli Lucifer.",
-      "translation": "它被命名为Megachile lucifer（路西法切叶蜂）。",
+      "translation": "因此被命名为Megachile lucifer（路西法切叶蜂）。",
       "words": [
         {"text": "It", "start": 7.222, "end": 7.282},
         {"text": "was", "start": 7.342, "end": 7.462},
@@ -46,7 +46,7 @@
     {
       "time": 11.108,
       "text": "Lucifer is a name for the devil.",
-      "translation": "“路西法”是魔鬼的别称。",
+      "translation": "路西法”是魔鬼的别称",
       "words": [
         {"text": "Lucifer", "start": 11.108, "end": 11.669},
         {"text": "is", "start": 11.789, "end": 11.849},
@@ -60,7 +60,7 @@
     {
       "time": 14.092,
       "text": "The scientist said, these horns are very devilish.",
-      "translation": "科学家解释说：“这些角看起来非常……有魔鬼的感觉，",
+      "translation": "科学家解释说：“这些角看起来非常……有魔鬼的感觉",
       "words": [
         {"text": "The", "start": 14.092, "end": 14.173},
         {"text": "scientist", "start": 14.233, "end": 14.854},
@@ -129,7 +129,7 @@
     {
       "time": 33.978,
       "text": "The scientist said, there are many bee species we do not know about.",
-      "translation": "科学家还称，目前仍有大量蜜蜂物种尚未被人类认知。",
+      "translation": "科学家还说，目前仍有很多蜜蜂种类我们尚未发现。",
       "words": [
         {"text": "The", "start": 33.978, "end": 34.078},
         {"text": "scientist", "start": 34.118, "end": 34.698},
@@ -190,7 +190,7 @@
     {
       "time": 49.213,
       "text": "This is because of habitat loss.",
-      "translation": "由于栖息地不断丧失，",
+      "translation": "由于栖息地减少",
       "words": [
         {"text": "This", "start": 49.213, "end": 50.074},
         {"text": "is", "start": 50.154, "end": 50.214},
