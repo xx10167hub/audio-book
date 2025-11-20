@@ -5,189 +5,577 @@
     {
       "time": 0.368,
       "text": " Travelling is good for us.",
-      "translation": "旅行对人大有好处。它既能开阔眼界，还能延缓衰老。",
+      "translation": "旅行对我们有益。",
       "words": [
-        {"text": "Travelling", "start": 0.368, "end": 0.868},
-        {"text": "is", "start": 0.969, "end": 1.049},
-        {"text": "good", "start": 1.109, "end": 1.289},
-        {"text": "for", "start": 1.349, "end": 1.549},
-        {"text": "us.", "start": 1.689, "end": 1.769}
+        {
+          "text": "Travelling",
+          "start": 0.368,
+          "end": 0.868
+        },
+        {
+          "text": "is",
+          "start": 0.969,
+          "end": 1.049
+        },
+        {
+          "text": "good",
+          "start": 1.109,
+          "end": 1.289
+        },
+        {
+          "text": "for",
+          "start": 1.349,
+          "end": 1.549
+        },
+        {
+          "text": "us.",
+          "start": 1.689,
+          "end": 1.769
+        }
       ]
     },
     {
       "time": 2.43,
       "text": "It broadens the mind.",
-      "translation": "（此句意已合并至上一句翻译中，为保持格式，此处留空或重复，通常建议合并显示，这里为您保留空白以免重复显示）",
+      "translation": "它能开阔眼界。",
       "words": [
-        {"text": "It", "start": 2.43, "end": 2.51},
-        {"text": "broadens", "start": 2.61, "end": 3.111},
-        {"text": "the", "start": 3.211, "end": 3.311},
-        {"text": "mind.", "start": 3.351, "end": 3.671}
+        {
+          "text": "It",
+          "start": 2.43,
+          "end": 2.51
+        },
+        {
+          "text": "broadens",
+          "start": 2.61,
+          "end": 3.111
+        },
+        {
+          "text": "the",
+          "start": 3.211,
+          "end": 3.311
+        },
+        {
+          "text": "mind.",
+          "start": 3.351,
+          "end": 3.671
+        }
       ]
     },
     {
       "time": 4.592,
       "text": "It could slow down aging.",
-      "translation": "（此句意已合并至第一段翻译中）",
+      "translation": "它或许能延缓衰老。",
       "words": [
-        {"text": "It", "start": 4.592, "end": 4.672},
-        {"text": "could", "start": 4.812, "end": 5.052},
-        {"text": "slow", "start": 5.253, "end": 5.533},
-        {"text": "down", "start": 5.593, "end": 5.813},
-        {"text": "aging.", "start": 5.993, "end": 6.314}
+        {
+          "text": "It",
+          "start": 4.592,
+          "end": 4.672
+        },
+        {
+          "text": "could",
+          "start": 4.812,
+          "end": 5.052
+        },
+        {
+          "text": "slow",
+          "start": 5.253,
+          "end": 5.533
+        },
+        {
+          "text": "down",
+          "start": 5.593,
+          "end": 5.813
+        },
+        {
+          "text": "aging.",
+          "start": 5.993,
+          "end": 6.314
+        }
       ]
     },
     {
       "time": 7.375,
       "text": "Researchers said travelling could make us look and feel younger.",
-      "translation": "研究人员称，旅行能让人看起来更年轻，感觉也更年轻。",
+      "translation": "研究人员说，旅行能让我们看起来更年轻，感觉也更年轻。",
       "words": [
-        {"text": "Researchers", "start": 7.375, "end": 7.995},
-        {"text": "said", "start": 8.035, "end": 8.556},
-        {"text": "travelling", "start": 8.576, "end": 9.156},
-        {"text": "could", "start": 9.477, "end": 9.677},
-        {"text": "make", "start": 9.777, "end": 9.977},
-        {"text": "us", "start": 10.077, "end": 10.137},
-        {"text": "look", "start": 10.257, "end": 10.458},
-        {"text": "and", "start": 10.698, "end": 10.798},
-        {"text": "feel", "start": 10.818, "end": 11.158},
-        {"text": "younger.", "start": 11.178, "end": 11.559}
+        {
+          "text": "Researchers",
+          "start": 7.375,
+          "end": 7.995
+        },
+        {
+          "text": "said",
+          "start": 8.035,
+          "end": 8.556
+        },
+        {
+          "text": "travelling",
+          "start": 8.576,
+          "end": 9.156
+        },
+        {
+          "text": "could",
+          "start": 9.477,
+          "end": 9.677
+        },
+        {
+          "text": "make",
+          "start": 9.777,
+          "end": 9.977
+        },
+        {
+          "text": "us",
+          "start": 10.077,
+          "end": 10.137
+        },
+        {
+          "text": "look",
+          "start": 10.257,
+          "end": 10.458
+        },
+        {
+          "text": "and",
+          "start": 10.698,
+          "end": 10.798
+        },
+        {
+          "text": "feel",
+          "start": 10.818,
+          "end": 11.158
+        },
+        {
+          "text": "younger.",
+          "start": 11.178,
+          "end": 11.559
+        }
       ]
     },
     {
       "time": 12.54,
       "text": "Researcher, Fang Li Hu, said going on trips could make us healthier.",
-      "translation": "胡芳丽研究员指出，经常旅行对健康很有好处。",
+      "translation": "研究员胡芳丽表示，外出旅行能让我们更健康。",
       "words": [
-        {"text": "Researcher,", "start": 12.54, "end": 13.2},
-        {"text": "Fang", "start": 13.541, "end": 13.841},
-        {"text": "Li", "start": 13.861, "end": 14.021},
-        {"text": "Hu,", "start": 14.101, "end": 14.301},
-        {"text": "said", "start": 14.802, "end": 15.022},
-        {"text": "going", "start": 15.242, "end": 15.523},
-        {"text": "on", "start": 15.623, "end": 15.703},
-        {"text": "trips", "start": 15.783, "end": 16.143},
-        {"text": "could", "start": 16.463, "end": 16.664},
-        {"text": "make", "start": 16.784, "end": 16.984},
-        {"text": "us", "start": 17.084, "end": 17.164},
-        {"text": "healthier.", "start": 17.224, "end": 17.745}
+        {
+          "text": "Researcher,",
+          "start": 12.54,
+          "end": 13.2
+        },
+        {
+          "text": "Fang",
+          "start": 13.541,
+          "end": 13.841
+        },
+        {
+          "text": "Li",
+          "start": 13.861,
+          "end": 14.021
+        },
+        {
+          "text": "Hu,",
+          "start": 14.101,
+          "end": 14.301
+        },
+        {
+          "text": "said",
+          "start": 14.802,
+          "end": 15.022
+        },
+        {
+          "text": "going",
+          "start": 15.242,
+          "end": 15.523
+        },
+        {
+          "text": "on",
+          "start": 15.623,
+          "end": 15.703
+        },
+        {
+          "text": "trips",
+          "start": 15.783,
+          "end": 16.143
+        },
+        {
+          "text": "could",
+          "start": 16.463,
+          "end": 16.664
+        },
+        {
+          "text": "make",
+          "start": 16.784,
+          "end": 16.984
+        },
+        {
+          "text": "us",
+          "start": 17.084,
+          "end": 17.164
+        },
+        {
+          "text": "healthier.",
+          "start": 17.224,
+          "end": 17.745
+        }
       ]
     },
     {
       "time": 18.726,
       "text": "She added, aging is irreversible.",
-      "translation": "她补充说：“衰老是不可逆的，我们无法阻止它，但可以延缓这个过程。”",
+      "translation": "她补充道：“衰老是不可逆转的。",
       "words": [
-        {"text": "She", "start": 18.726, "end": 18.846},
-        {"text": "added,", "start": 18.966, "end": 19.186},
-        {"text": "aging", "start": 19.987, "end": 20.307},
-        {"text": "is", "start": 20.507, "end": 20.607},
-        {"text": "irreversible.", "start": 20.647, "end": 21.528}
+        {
+          "text": "She",
+          "start": 18.726,
+          "end": 18.846
+        },
+        {
+          "text": "added,",
+          "start": 18.966,
+          "end": 19.186
+        },
+        {
+          "text": "aging",
+          "start": 19.987,
+          "end": 20.307
+        },
+        {
+          "text": "is",
+          "start": 20.507,
+          "end": 20.607
+        },
+        {
+          "text": "irreversible.",
+          "start": 20.647,
+          "end": 21.528
+        }
       ]
     },
     {
       "time": 22.189,
       "text": "It can't be stopped, but it can be slowed down.",
-      "translation": "（此句意已合并至上一句翻译中）",
+      "translation": "它无法停止，但可以延缓。”",
       "words": [
-        {"text": "It", "start": 22.189, "end": 22.269},
-        {"text": "can't", "start": 22.369, "end": 22.649},
-        {"text": "be", "start": 22.749, "end": 22.87},
-        {"text": "stopped,", "start": 22.91, "end": 23.31},
-        {"text": "but", "start": 23.79, "end": 23.951},
-        {"text": "it", "start": 24.051, "end": 24.111},
-        {"text": "can", "start": 24.211, "end": 24.491},
-        {"text": "be", "start": 24.591, "end": 24.691},
-        {"text": "slowed", "start": 24.751, "end": 25.092},
-        {"text": "down.", "start": 25.172, "end": 25.452}
+        {
+          "text": "It",
+          "start": 22.189,
+          "end": 22.269
+        },
+        {
+          "text": "can't",
+          "start": 22.369,
+          "end": 22.649
+        },
+        {
+          "text": "be",
+          "start": 22.749,
+          "end": 22.87
+        },
+        {
+          "text": "stopped,",
+          "start": 22.91,
+          "end": 23.31
+        },
+        {
+          "text": "but",
+          "start": 23.79,
+          "end": 23.951
+        },
+        {
+          "text": "it",
+          "start": 24.051,
+          "end": 24.111
+        },
+        {
+          "text": "can",
+          "start": 24.211,
+          "end": 24.491
+        },
+        {
+          "text": "be",
+          "start": 24.591,
+          "end": 24.691
+        },
+        {
+          "text": "slowed",
+          "start": 24.751,
+          "end": 25.092
+        },
+        {
+          "text": "down.",
+          "start": 25.172,
+          "end": 25.452
+        }
       ]
     },
     {
       "time": 27.254,
       "text": "Going on vacation can lower stress.",
-      "translation": "度假旅行能减轻压力，增强免疫系统。",
+      "translation": "去度假可以降低压力。",
       "words": [
-        {"text": "Going", "start": 27.254, "end": 27.514},
-        {"text": "on", "start": 27.594, "end": 27.674},
-        {"text": "vacation", "start": 27.734, "end": 28.355},
-        {"text": "can", "start": 28.435, "end": 28.595},
-        {"text": "lower", "start": 28.655, "end": 28.975},
-        {"text": "stress.", "start": 29.035, "end": 29.616}
+        {
+          "text": "Going",
+          "start": 27.254,
+          "end": 27.514
+        },
+        {
+          "text": "on",
+          "start": 27.594,
+          "end": 27.674
+        },
+        {
+          "text": "vacation",
+          "start": 27.734,
+          "end": 28.355
+        },
+        {
+          "text": "can",
+          "start": 28.435,
+          "end": 28.595
+        },
+        {
+          "text": "lower",
+          "start": 28.655,
+          "end": 28.975
+        },
+        {
+          "text": "stress.",
+          "start": 29.035,
+          "end": 29.616
+        }
       ]
     },
     {
       "time": 30.119,
       "text": " it can make our immune system stronger.\"",
-      "translation": "（此句意已合并至上一句翻译中）",
+      "translation": "它能让我们的免疫系统更强大。”",
       "words": [
-        {"text": "it", "start": 30.119, "end": 30.299},
-        {"text": "can", "start": 30.36, "end": 30.52},
-        {"text": "make", "start": 30.56, "end": 30.78},
-        {"text": "our", "start": 30.921, "end": 31.021},
-        {"text": "immune", "start": 31.141, "end": 31.502},
-        {"text": "system", "start": 31.562, "end": 31.983},
-        {"text": "stronger.\"", "start": 32.023, "end": 32.504}
+        {
+          "text": "it",
+          "start": 30.119,
+          "end": 30.299
+        },
+        {
+          "text": "can",
+          "start": 30.36,
+          "end": 30.52
+        },
+        {
+          "text": "make",
+          "start": 30.56,
+          "end": 30.78
+        },
+        {
+          "text": "our",
+          "start": 30.921,
+          "end": 31.021
+        },
+        {
+          "text": "immune",
+          "start": 31.141,
+          "end": 31.502
+        },
+        {
+          "text": "system",
+          "start": 31.562,
+          "end": 31.983
+        },
+        {
+          "text": "stronger.\"",
+          "start": 32.023,
+          "end": 32.504
+        }
       ]
     },
     {
       "time": 33.587,
-      "text": "Muzhu said, hiking, climbing and cycling can lower stress.",
-      "translation": "胡女士表示，徒步、爬山、骑自行车等活动都有助减压，对肌肉也很有益。",
+      "text": "Ms Hu said, hiking, climbing and cycling can lower stress.",
+      "translation": "胡女士说，徒步、登山和骑车能减轻压力。",
       "words": [
-        {"text": "Muzhu", "start": 33.587, "end": 34.208},
-        {"text": "said,", "start": 34.288, "end": 34.489},
-        {"text": "hiking,", "start": 34.79, "end": 35.311},
-        {"text": "climbing", "start": 35.631, "end": 36.072},
-        {"text": "and", "start": 36.193, "end": 36.313},
-        {"text": "cycling", "start": 36.413, "end": 36.934},
-        {"text": "can", "start": 37.275, "end": 37.496},
-        {"text": "lower", "start": 37.556, "end": 37.897},
-        {"text": "stress.", "start": 37.917, "end": 38.298}
+        {
+          "text": "Ms Hu",
+          "start": 33.587,
+          "end": 34.208
+        },
+        {
+          "text": "said,",
+          "start": 34.288,
+          "end": 34.489
+        },
+        {
+          "text": "hiking,",
+          "start": 34.79,
+          "end": 35.311
+        },
+        {
+          "text": "climbing",
+          "start": 35.631,
+          "end": 36.072
+        },
+        {
+          "text": "and",
+          "start": 36.193,
+          "end": 36.313
+        },
+        {
+          "text": "cycling",
+          "start": 36.413,
+          "end": 36.934
+        },
+        {
+          "text": "can",
+          "start": 37.275,
+          "end": 37.496
+        },
+        {
+          "text": "lower",
+          "start": 37.556,
+          "end": 37.897
+        },
+        {
+          "text": "stress.",
+          "start": 37.917,
+          "end": 38.298
+        }
       ]
     },
     {
       "time": 39.059,
       "text": "They can help our muscles.",
-      "translation": "（此句意已合并至上一句翻译中）",
+      "translation": "它们对我们的肌肉有帮助。",
       "words": [
-        {"text": "They", "start": 39.059, "end": 39.2},
-        {"text": "can", "start": 39.24, "end": 39.38},
-        {"text": "help", "start": 39.42, "end": 39.641},
-        {"text": "our", "start": 39.721, "end": 39.861},
-        {"text": "muscles.", "start": 39.941, "end": 40.382}
+        {
+          "text": "They",
+          "start": 39.059,
+          "end": 39.2
+        },
+        {
+          "text": "can",
+          "start": 39.24,
+          "end": 39.38
+        },
+        {
+          "text": "help",
+          "start": 39.42,
+          "end": 39.641
+        },
+        {
+          "text": "our",
+          "start": 39.721,
+          "end": 39.861
+        },
+        {
+          "text": "muscles.",
+          "start": 39.941,
+          "end": 40.382
+        }
       ]
     },
     {
       "time": 41.585,
       "text": "She added, these activities could help the body's self-defense.",
-      "translation": "她还说，这些活动能提升身体的自我防御能力。",
+      "translation": "她补充说，这些活动有助于身体的自我防御。",
       "words": [
-        {"text": "She", "start": 41.585, "end": 41.725},
-        {"text": "added,", "start": 41.846, "end": 42.066},
-        {"text": "these", "start": 42.367, "end": 42.567},
-        {"text": "activities", "start": 42.667, "end": 43.349},
-        {"text": "could", "start": 43.75, "end": 43.97},
-        {"text": "help", "start": 44.171, "end": 44.451},
-        {"text": "the", "start": 44.572, "end": 44.692},
-        {"text": "body's", "start": 44.732, "end": 45.113},
-        {"text": "self-defense.", "start": 45.414, "end": 46.276}
+        {
+          "text": "She",
+          "start": 41.585,
+          "end": 41.725
+        },
+        {
+          "text": "added,",
+          "start": 41.846,
+          "end": 42.066
+        },
+        {
+          "text": "these",
+          "start": 42.367,
+          "end": 42.567
+        },
+        {
+          "text": "activities",
+          "start": 42.667,
+          "end": 43.349
+        },
+        {
+          "text": "could",
+          "start": 43.75,
+          "end": 43.97
+        },
+        {
+          "text": "help",
+          "start": 44.171,
+          "end": 44.451
+        },
+        {
+          "text": "the",
+          "start": 44.572,
+          "end": 44.692
+        },
+        {
+          "text": "body's",
+          "start": 44.732,
+          "end": 45.113
+        },
+        {
+          "text": "self-defense.",
+          "start": 45.414,
+          "end": 46.276
+        }
       ]
     },
     {
       "time": 47.438,
       "text": "The researchers said traveling might be better than anti-aging creams.",
-      "translation": "研究人员认为，在抗衰老方面，旅行的效果可能比抗衰老面霜更好。",
+      "translation": "研究人员表示，旅行可能比抗衰老面霜更有效。",
       "words": [
-        {"text": "The", "start": 47.438, "end": 47.518},
-        {"text": "researchers", "start": 47.559, "end": 48.16},
-        {"text": "said", "start": 48.2, "end": 48.661},
-        {"text": "traveling", "start": 48.741, "end": 49.202},
-        {"text": "might", "start": 49.262, "end": 49.463},
-        {"text": "be", "start": 49.563, "end": 49.663},
-        {"text": "better", "start": 49.723, "end": 50.044},
-        {"text": "than", "start": 50.084, "end": 50.585},
-        {"text": "anti-aging", "start": 50.726, "end": 51.568},
-        {"text": "creams.", "start": 51.668, "end": 52.65}
+        {
+          "text": "The",
+          "start": 47.438,
+          "end": 47.518
+        },
+        {
+          "text": "researchers",
+          "start": 47.559,
+          "end": 48.16
+        },
+        {
+          "text": "said",
+          "start": 48.2,
+          "end": 48.661
+        },
+        {
+          "text": "traveling",
+          "start": 48.741,
+          "end": 49.202
+        },
+        {
+          "text": "might",
+          "start": 49.262,
+          "end": 49.463
+        },
+        {
+          "text": "be",
+          "start": 49.563,
+          "end": 49.663
+        },
+        {
+          "text": "better",
+          "start": 49.723,
+          "end": 50.044
+        },
+        {
+          "text": "than",
+          "start": 50.084,
+          "end": 50.585
+        },
+        {
+          "text": "anti-aging",
+          "start": 50.726,
+          "end": 51.568
+        },
+        {
+          "text": "creams.",
+          "start": 51.668,
+          "end": 52.65
+        }
       ]
     }
   ]
