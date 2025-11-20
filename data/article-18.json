@@ -59,7 +59,7 @@
     },
     {
       "time": 18.762, "text": "Parker is also the fastest object ever made.",
-      "translation": "它同时也是人类史上最快的人造物体，",
+      "translation": "它同时也是人类史上最快的人造物体",
       "words": [
         {"text": "Parker", "start": 18.762, "end": 19.183},
         {"text": "is", "start": 19.283, "end": 19.343},
@@ -74,7 +74,7 @@
     {
       "time": 22.708,
       "text": "In 2023, it flew at a speed of 635,266 km per hour.",
-      "translation": "2023年曾达到每小时63.5万公里的飞行速度。",
+      "translation": "2023年曾达到每小时63.5万公里的飞行速度",
       "words": [
         {"text": "In", "start": 22.708, "end": 22.768},
         {"text": "2023,", "start": 22.808, "end": 23.109},
@@ -93,7 +93,7 @@
     {
       "time": 29.138,
       "text": "Parker is named after a scientist.",
-      "translation": "帕克号以一位毕生研究太阳的科学家命名。",
+      "translation": "帕克号以一位毕生研究太阳的科学家命名",
       "words": [
         {"text": "Parker", "start": 29.138, "end": 32.183},
         {"text": "is", "start": 32.303, "end": 32.363},
@@ -106,7 +106,7 @@
     {
       "time": 34.487,
       "text": "He spent his life studying the sun.",
-      "translation": "他一生都在研究太阳。",
+      "translation": "他一生都在研究太阳",
       "words": [
         {"text": "He", "start": 34.487, "end": 34.587},
         {"text": "spent", "start": 34.627, "end": 34.927},
@@ -120,7 +120,7 @@
     {
       "time": 37.592,
       "text": "He wanted to know why the sun's flares are hotter than the sun's surface.",
-      "translation": "他一直试图解开一个谜题：为何太阳耀斑温度远高于太阳表面。",
+      "translation": "他一直试图解开一个谜题：为何太阳耀斑温度远高于太阳表面",
       "words": [
         {"text": "He", "start": 37.592, "end": 37.692},
         {"text": "wanted", "start": 37.732, "end": 38.012},
@@ -141,7 +141,7 @@
     {
       "time": 43.754,
       "text": "The surface is 4100 degrees C, while the flares can be 1.1 million degrees Celsius.",
-      "translation": "太阳表面温度约4100摄氏度，而耀斑温度可达110万摄氏度。",
+      "translation": "太阳表面温度约4100摄氏度，而耀斑温度可达110万摄氏度",
       "words": [
         {"text": "The", "start": 43.754, "end": 43.894},
         {"text": "surface", "start": 43.954, "end": 44.355},
@@ -163,7 +163,7 @@
     {
       "time": 52.213,
       "text": "Scientists also want to find out how solar winds start.",
-      "translation": "科学家们也希望通过此次任务，探索太阳风的起源之谜。",
+      "translation": "科学家们也希望通过此次任务，探索太阳风的起源之谜",
       "words": [
         {"text": "Scientists", "start": 52.213, "end": 52.814},
         {"text": "also", "start": 53.034, "end": 53.335},
