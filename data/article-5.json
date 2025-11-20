@@ -1,11 +1,11 @@
 {
   "audioUrl": "./data/audio-5.mp3",
-  "title": "第5篇：Drug-resistant superbugs spreading, says WHO",
+  "title": "第5篇：Drug-resistant superbugs spreading",
   "transcript": [
     {
       "time": 0.031,
       "text": " The WHO warned about an increase in superbugs that drugs cannot kill.",
-      "translation": "世界卫生组织（WHO）警告称，那些药物无法杀死的“超级细菌”正变得越来越多。",
+      "translation": "世界卫生组织（WHO）预警，那些药物无法杀死的“超级细菌”正变得越来越多。",
       "words": [
         {"text": "The", "start": 0.031, "end": 0.412},
         {"text": "WHO", "start": 0.792, "end": 1.433},
@@ -175,7 +175,7 @@
     {
       "time": 54.819,
       "text": "Not enough testing is being done to create better drugs.",
-      "translation": "然而，为了研发出更好的药物，目前所做的测试还远远不够。",
+      "translation": "为了研发出更好的药物，目前所做的测试还远远不够。",
       "words": [
         {"text": "Not", "start": 54.819, "end": 56.142},
         {"text": "enough", "start": 56.242, "end": 56.463},
