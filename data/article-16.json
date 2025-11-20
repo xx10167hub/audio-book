@@ -63,7 +63,7 @@
     {
       "time": 15.99,
       "text": "Making money in a crisis is called price gouging.",
-      "translation": "这种趁危机抬价的行为被称为“价格欺诈”。",
+      "translation": "这种趁机抬价的行为被称为“价格欺诈”。",
       "words": [
         {"text": "Making", "start": 15.99, "end": 16.331},
         {"text": "money", "start": 16.411, "end": 16.671},
@@ -95,7 +95,7 @@
     {
       "time": 26.187,
       "text": "The wildfires shocked America.",
-      "translation": "这场野火震惊了全美国。",
+      "translation": "这场野火震惊了美国。",
       "words": [
         {"text": "The", "start": 26.187, "end": 26.267},
         {"text": "wildfires", "start": 26.327, "end": 27.068},
@@ -167,7 +167,7 @@
     {
       "time": 46.378,
       "text": "She wrote, It was my favourite place.",
-      "translation": "她感叹：“那曾是我最心爱的家，",
+      "translation": "她说：那曾是我最心爱的家",
       "words": [
         {"text": "She", "start": 46.378, "end": 46.559},
         {"text": "wrote,", "start": 46.639, "end": 46.9},
