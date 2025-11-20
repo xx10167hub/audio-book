@@ -40,7 +40,7 @@
     {
       "time": 10.623,
       "text": "A stroke happens when blood cannot get to the brain.",
-      "translation": "中风发生在血液无法流入大脑时，",
+      "translation": "中风发生在血液无法流入大脑时",
       "words": [
         {"text": "A", "start": 10.623, "end": 10.683},
         {"text": "stroke", "start": 10.783, "end": 11.143},
@@ -57,7 +57,7 @@
     {
       "time": 14.327,
       "text": "Around five million people die each year from a stroke.",
-      "translation": "全球每年约500万人死于中风。",
+      "translation": "全球每年约500万人死于中风",
       "words": [
         {"text": "Around", "start": 14.327, "end": 15.548},
         {"text": "five", "start": 15.628, "end": 15.888},
@@ -74,7 +74,7 @@
     {
       "time": 19.793,
       "text": "Flossing helps reduce tooth decay and gum disease.",
-      "translation": "使用牙线能减少蛀牙和牙龈疾病，",
+      "translation": "使用牙线能减少蛀牙和牙龈疾病",
       "words": [
         {"text": "Flossing", "start": 19.793, "end": 20.213},
         {"text": "helps", "start": 20.574, "end": 20.934},
@@ -89,7 +89,7 @@
     {
       "time": 24.198,
       "text": "This cuts the risk of having a stroke.",
-      "translation": "从而降低中风风险。",
+      "translation": "从而降低中风风险",
       "words": [
         {"text": "This", "start": 24.198, "end": 24.378},
         {"text": "cuts", "start": 24.698, "end": 24.978},
@@ -104,7 +104,7 @@
     {
       "time": 27.638,
       "text": "Researchers found that flossing teeth once a week could lower the risk of a stroke by 44%.",
-      "translation": "研究人员发现，每周使用牙线一次可使中风风险降低44%。",
+      "translation": "研究人员发现，每周使用牙线一次可使中风风险降低44%",
       "words": [
         {"text": "Researchers", "start": 27.638, "end": 28.239},
         {"text": "found", "start": 28.319, "end": 28.579},
@@ -169,7 +169,7 @@
     {
       "time": 45.737,
       "text": "Flossing is a healthy habit.",
-      "translation": "使用牙线其实是种健康的习惯。”",
+      "translation": "使用牙线其实是种健康的习惯",
       "words": [
         {"text": "Flossing", "start": 45.737, "end": 46.197},
         {"text": "is", "start": 46.318, "end": 46.378},
