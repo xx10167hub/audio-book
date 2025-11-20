@@ -1,11 +1,12 @@
-// player-script.js - 多文章支持版本（优化版：填补连读空隙）
+// player-script.js - 最终版：支持网址尾巴参数 + 自动隐藏下拉框 + 连读优化
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ===== 新增：多文章配置 =====
+    // ===== 配置 =====
     const ARTICLES_CONFIG_FILE = 'articles.json';
     let articlesConfig = [];
     let currentArticleId = null;
     
+    // ===== 获取 DOM 元素 =====
     const audioPlayer = document.getElementById('audio-player');
     const titleElement = document.getElementById('article-title');
     const transcriptContainer = document.getElementById('transcript-container');
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalTimeDisplay = document.getElementById('total-time');
     const wordCountDisplay = document.getElementById('word-count');
     const articleSelect = document.getElementById('article-select');
+    const articleSelectGroup = document.getElementById('article-select-group'); // 获取整个选择框容器
 
     let sentencesData = [];
     let currentHighlightElement = null;
@@ -80,38 +82,28 @@ document.addEventListener('DOMContentLoaded', function() {
         return -1;
     }
 
-    // ===== 核心修改：优化后的逐词高亮查找函数 =====
+    // ===== 核心逻辑：逐词高亮（含填补空隙） =====
     function findCurrentWord(currentTime) {
-        // 既然 allWordElements 已经是按顺序排列的所有单词
-        // 我们可以在这里做一个“更聪明”的判断
-        
-        const MAX_GAP_TO_FILL = 1.5; // 设置阈值：如果空隙小于1.5秒，就填补它
+        const MAX_GAP_TO_FILL = 1.5; 
 
         for (let i = 0; i < allWordElements.length; i++) {
             const currentElement = allWordElements[i];
             const currentData = wordTimeMap.get(currentElement);
             
-            // 获取下一个单词的数据（如果有）
             let nextData = null;
             if (i < allWordElements.length - 1) {
                 nextData = wordTimeMap.get(allWordElements[i + 1]);
             }
 
-            // 计算“视觉上的结束时间”
-            // 默认结束时间就是数据的结束时间
             let visualEndTime = currentData.end;
             
-            // 如果有下一个词，且中间有空隙，且空隙不是特别大（不是句号停顿）
             if (nextData) {
                 const gap = nextData.start - currentData.end;
-                // 如果 gap > 0 说明有空隙
-                // 如果 gap < MAX_GAP_TO_FILL 说明是连读或短停顿，我们把高亮延顺过去
                 if (gap > 0 && gap < MAX_GAP_TO_FILL) {
                     visualEndTime = nextData.start;
                 }
             }
 
-            // 判断当前时间是否在这个延展后的范围内
             if (currentTime >= currentData.start && currentTime < visualEndTime) {
                 return { element: currentElement };
             }
@@ -120,17 +112,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function highlightCurrentWord(currentWord) {
-        // 移除之前的高亮
         if (currentWordElement) {
             currentWordElement.classList.remove('current');
         }
-        // 清理旧的 next 高亮
         if (nextWordElement) {
             nextWordElement.classList.remove('next');
             nextWordElement = null;
         }
         
-        // 应用新高亮
         if (currentWord) {
             currentWordElement = currentWord.element;
             currentWordElement.classList.add('current');
@@ -158,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const config = await response.json();
             articlesConfig = config.articles;
             
-            // 填充下拉选择框
+            // 1. 填充下拉选择框
             articleSelect.innerHTML = '';
             articlesConfig.forEach(article => {
                 const option = document.createElement('option');
@@ -167,37 +156,63 @@ document.addEventListener('DOMContentLoaded', function() {
                 articleSelect.appendChild(option);
             });
             
-            // 获取URL参数或默认第一篇
+            // 2. 检查 URL 是否指定了文章 ID
             const urlParams = new URLSearchParams(window.location.search);
-            const articleIdFromUrl = urlParams.get('article') || articlesConfig[0].id;
-            currentArticleId = articleIdFromUrl;
+            const articleIdFromUrl = urlParams.get('article');
+
+            if (articleIdFromUrl) {
+                // 这种情况：用户通过 index.html?article=5 访问
+                // 动作：隐藏下拉框，直接加载指定文章
+                console.log('检测到URL指定文章:', articleIdFromUrl);
+                currentArticleId = articleIdFromUrl;
+                
+                // 隐藏选择器
+                if (articleSelectGroup) {
+                    articleSelectGroup.style.display = 'none';
+                }
+            } else {
+                // 这种情况：用户直接访问 index.html
+                // 动作：默认加载第一篇，显示下拉框
+                currentArticleId = articlesConfig[0].id;
+                // 确保选择器显示
+                if (articleSelectGroup) {
+                    articleSelectGroup.style.display = 'flex';
+                }
+            }
+
+            // 同步下拉框的值
             articleSelect.value = currentArticleId;
             
-            // 加载选中的文章
+            // 加载文章
             loadArticleById(currentArticleId);
             
         } catch (error) {
             console.error('加载文章配置失败:', error);
-            // 回退到单文章模式
-            articleSelect.style.display = 'none';
+            // 失败回退
+            if (articleSelectGroup) articleSelectGroup.style.display = 'none';
             loadSingleArticle();
         }
     }
 
-    // ===== 新增：根据ID加载文章 =====
+    // ===== 根据ID加载文章 =====
     function loadArticleById(articleId) {
         const article = articlesConfig.find(a => a.id === articleId);
         if (!article) {
             console.error('找不到文章:', articleId);
+            // 如果找不到，尝试加载第一篇
+            if (articlesConfig.length > 0) {
+                loadArticleById(articlesConfig[0].id);
+            }
             return;
         }
         
         currentArticleId = articleId;
         
-        // 更新URL（不刷新页面）
-        const newUrl = new URL(window.location);
-        newUrl.searchParams.set('article', articleId);
-        window.history.pushState({}, '', newUrl);
+        // 仅更新变量，不强制修改浏览器历史记录，以免影响后退功能
+        // 但如果需要分享链接，可以保留下面这行
+        // const newUrl = new URL(window.location);
+        // newUrl.searchParams.set('article', articleId);
+        // window.history.replaceState({}, '', newUrl);
         
         // 重置状态
         resetPlayerState();
@@ -206,13 +221,11 @@ document.addEventListener('DOMContentLoaded', function() {
         loadArticleData(article.dataFile, article.audioFile, article.title);
     }
 
-    // ===== 新增：重置播放器状态 =====
+    // ===== 重置播放器状态 =====
     function resetPlayerState() {
-        // 停止播放
         audioPlayer.pause();
         audioPlayer.currentTime = 0;
         
-        // 重置变量
         sentencesData = [];
         allWordElements = [];
         wordTimeMap.clear();
@@ -225,7 +238,6 @@ document.addEventListener('DOMContentLoaded', function() {
         isTranscriptLoaded = false;
         isAudioLoaded = false;
         
-        // 重置UI
         loopBtn.classList.remove('active');
         transcriptContainer.innerHTML = '<p style="text-align:center; color:#00ffcc;">加载中...</p>';
         updatePlayPauseButton(false);
@@ -233,7 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentTimeDisplay.textContent = '00:00';
     }
 
-    // ===== 修改：加载文章数据（通用函数） =====
+    // ===== 加载文章数据（通用函数） =====
     function loadArticleData(dataFile, audioFile, title) {
         fetch(dataFile)
             .then(response => {
@@ -247,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 audioPlayer.src = audioFile || data.audioUrl; 
                 
                 let totalWordCount = 0;
-                transcriptContainer.innerHTML = ''; // 清空旧内容
+                transcriptContainer.innerHTML = ''; 
                 
                 data.transcript.forEach((line, index) => {
                     const englishText = line.text.split('\n')[0]; 
@@ -297,7 +309,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     const textBlock = document.createElement('div');
                     textBlock.className = 'text-block';
                     
-                    // 处理逐词高亮
                     if (line.words && line.words.length > 0) {
                         const originalText = document.createElement('span');
                         originalText.className = 'original-text';
@@ -309,7 +320,6 @@ document.addEventListener('DOMContentLoaded', function() {
                             wordSpan.dataset.start = wordData.start;
                             wordSpan.dataset.end = wordData.end;
                             
-                            // 添加空格（除了第一个单词）
                             if (wordIndex > 0) {
                                 const space = document.createTextNode(' ');
                                 originalText.appendChild(space);
@@ -325,14 +335,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                         textBlock.appendChild(originalText);
                     } else {
-                        // 没有单词时间数据
                         const originalText = document.createElement('span');
                         originalText.className = 'original-text';
                         originalText.textContent = line.text;
                         textBlock.appendChild(originalText);
                     }
                     
-                    // 添加翻译
                     if (line.translation) {
                         const translation = document.createElement('span');
                         translation.className = 'translation';
@@ -362,7 +370,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    // ===== 回退：单文章模式（兼容旧版本） =====
     function loadSingleArticle() {
         const urlParams = new URLSearchParams(window.location.search);
         const articleId = urlParams.get('article') || '1';
@@ -370,7 +377,6 @@ document.addEventListener('DOMContentLoaded', function() {
         loadArticleData(dataFile, null, null);
     }
 
-    // ===== 新增：监听文章选择变化 =====
     if (articleSelect) {
         articleSelect.addEventListener('change', function() {
             const selectedId = this.value;
@@ -379,8 +385,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    // ===== 以下保持原有功能不变 =====
     
     function updatePlayPauseButton(isPlaying) {
         if (isPlaying) {
@@ -392,7 +396,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // 音频事件
     audioPlayer.addEventListener('loadedmetadata', function() {
         if (audioPlayer.duration) {
             totalTimeDisplay.textContent = formatTime(audioPlayer.duration);
@@ -401,7 +404,6 @@ document.addEventListener('DOMContentLoaded', function() {
         checkDataLoaded();
     });
 
-    // 播放/暂停按钮
     playPauseBtn.addEventListener('click', function() {
         cancelSentencePlayerMode();
         currentLoopSentence = null;
@@ -421,13 +423,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     audioPlayer.addEventListener('pause', function() {
         updatePlayPauseButton(false);
-        
         if (!currentSentencePlayer) {
             resetAllSentenceButtons();
         }
     });
     
-    // 上一句
     backwardBtn.addEventListener('click', function() {
         cancelSentencePlayerMode();
         currentLoopSentence = null;
@@ -450,7 +450,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateHighlightAndButton();
     });
 
-    // 下一句
     forwardBtn.addEventListener('click', function() {
         cancelSentencePlayerMode();
         currentLoopSentence = null;
@@ -467,13 +466,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             updateHighlightAndButton();
         } else {
-            // 最后一句，跳到末尾并暂停
             audioPlayer.currentTime = audioPlayer.duration || 0;
             audioPlayer.pause();
         }
     });
     
-    // 进度条点击
     progressBar.addEventListener('click', function(e) {
         cancelSentencePlayerMode();
         currentLoopSentence = null;
@@ -499,12 +496,10 @@ document.addEventListener('DOMContentLoaded', function() {
         updateHighlightAndButton();
     });
     
-    // 播放速度
     speedControl.addEventListener('change', function() {
         audioPlayer.playbackRate = parseFloat(this.value);
     });
 
-    // 单句循环按钮
     loopBtn.addEventListener('click', function() {
         isLooping = !isLooping;
         loopBtn.classList.toggle('active', isLooping);
@@ -515,7 +510,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (currentLoopSentence) {
                 console.log('单句循环已开启，当前循环句子:', currentLoopSentence.index);
-                
                 if (audioPlayer.paused) {
                     audioPlayer.play();
                 }
@@ -526,7 +520,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 核心时间更新逻辑
     audioPlayer.addEventListener('timeupdate', function() {
         const currentTime = audioPlayer.currentTime; 
         
@@ -536,7 +529,6 @@ document.addEventListener('DOMContentLoaded', function() {
             currentTimeDisplay.textContent = formatTime(currentTime);
         }
         
-        // 单句循环逻辑
         if (isLooping && currentLoopSentence && currentLoopSentence.end) {
             if (currentTime >= currentLoopSentence.end - 0.15) {
                 isLoopSeeking = true;
@@ -545,11 +537,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // 逐词高亮逻辑
         const currentWord = findCurrentWord(currentTime);
         highlightCurrentWord(currentWord);
         
-        // 单句播放模式逻辑
         if (currentSentencePlayer) {
             if (currentSentencePlayer.end && currentTime >= currentSentencePlayer.end - 0.1) { 
                 audioPlayer.pause(); 
@@ -557,13 +547,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 cancelSentencePlayerMode();
             }
         } 
-        // 全局播放模式
         else {
             updateHighlightAndButton();
         }
     });
     
-    // 进度条拖动状态
     let isDragging = false;
     progressBar.addEventListener('mousedown', function() {
         isSeeking = true;
@@ -613,7 +601,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function handleSentencePlayToggle(sentenceData) {
         if (sentenceData === currentSentencePlayer) {
-            // 同一个句子：切换播放/暂停
             if (audioPlayer.paused) {
                 sentenceData.playButton.classList.add('paused');
                 audioPlayer.play();
@@ -622,7 +609,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 sentenceData.playButton.classList.remove('paused');
             }
         } else {
-            // 新句子：从头播放
             handleSentencePlayFromStart(sentenceData);
         }
     }
@@ -647,7 +633,6 @@ document.addEventListener('DOMContentLoaded', function() {
         audioPlayer.play();
     }
     
-    // 键盘快捷键
     document.addEventListener('keydown', function(e) {
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') {
             return;
@@ -671,7 +656,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // ===== 启动：尝试加载多文章配置，失败则回退单文章 =====
+    // 启动
     loadArticlesConfig();
 
 });
