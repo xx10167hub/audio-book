@@ -39,7 +39,7 @@
     {
       "time": 11.301,
       "text": "It stands at a height of 625 metres.",
-      "translation": "桥面距谷底625米。",
+      "translation": "桥面距谷底625米",
       "words": [
         {"text": "It", "start": 11.301, "end": 11.382},
         {"text": "stands", "start": 11.442, "end": 11.843},
@@ -54,7 +54,7 @@
     {
       "time": 15.573,
       "text": "The 2,800 meter long bridge also has the longest span of any bridge ever constructed in the mountains.",
-      "translation": "大桥全长2890米，也创下了山区桥梁的最大跨度纪录。",
+      "translation": "大桥全长2890米，也创下了山区桥梁的最大跨度纪录",
       "words": [
         {"text": "The", "start": 15.573, "end": 16.034},
         {"text": "2,800", "start": 16.054, "end": 16.695},
@@ -79,7 +79,7 @@
     {
       "time": 25.789,
       "text": "Its main span stretches 1,420 meters.",
-      "translation": "其主跨长达1420米，",
+      "translation": "桥梁主跨1420米",
       "words": [
         {"text": "Its", "start": 25.789, "end": 25.93},
         {"text": "main", "start": 26.01, "end": 26.33},
@@ -92,7 +92,7 @@
     {
       "time": 31.419,
       "text": "The bridge will greatly improve the rural economy.",
-      "translation": "这座桥将极大促进农村经济发展，",
+      "translation": "这座桥将极大促进农村经济发展",
       "words": [
         {"text": "The", "start": 31.419, "end": 31.519},
         {"text": "bridge", "start": 31.579, "end": 31.839},
@@ -134,7 +134,7 @@
     {
       "time": 44.007,
       "text": "China is an expert in bridge building.",
-      "translation": "中国是桥梁建设的专家，",
+      "translation": "中国是桥梁建设的专家",
       "words": [
         {"text": "China", "start": 44.007, "end": 44.508},
         {"text": "is", "start": 44.628, "end": 44.688},
@@ -148,7 +148,7 @@
     {
       "time": 47.311,
       "text": "It built the 18 tallest bridges in the world.",
-      "translation": "全球最高的18座大桥都出自中国。",
+      "translation": "全球最高的18座大桥都出自中国",
       "words": [
         {"text": "It", "start": 47.311, "end": 47.412},
         {"text": "built", "start": 47.492, "end": 47.772},
@@ -164,7 +164,7 @@
     {
       "time": 52.018,
       "text": "The top three are in Guizhou, which also has another 32,000 spans.",
-      "translation": "其中前三名都在贵州，这个省还拥有约3.2万座其他桥梁。",
+      "translation": "其中前三名都在贵州，这个省还拥有约3.2万座其他桥梁",
       "words": [
         {"text": "The", "start": 52.018, "end": 52.098},
         {"text": "top", "start": 52.138, "end": 52.398},
@@ -183,7 +183,7 @@
     {
       "time": 59.287,
       "text": "Half of the highest 100 bridges in the world are in Guizhou.",
-      "translation": "世界百大最高桥梁中，一半位于贵州。",
+      "translation": "世界百大最高桥梁中，一半位于贵州",
       "words": [
         {"text": "Half", "start": 59.287, "end": 59.588},
         {"text": "of", "start": 59.668, "end": 59.708},
@@ -202,7 +202,7 @@
     {
       "time": 64.544,
       "text": "The Hua Zhang Grand Canyon Bridge is full of cutting-edge engineering.",
-      "translation": "花江峡谷大桥运用了大量尖端工程技术。",
+      "translation": "花江峡谷大桥运用了大量尖端工程技术",
       "words": [
         {"text": "The", "start": 64.544, "end": 64.704},
         {"text": "Hua", "start": 64.744, "end": 65.005},
@@ -220,7 +220,7 @@
     {
       "time": 70.675,
       "text": "A spokesperson said the bridge would become a sightseeing spot and attract a million visitors a year.",
-      "translation": "发言人表示，大桥将成为观光景点，每年吸引百万游客，",
+      "translation": "发言人说，大桥将成为观光景点，每年吸引百万游客",
       "words": [
         {"text": "A", "start": 70.675, "end": 70.735},
         {"text": "spokesperson", "start": 70.835, "end": 71.837},
@@ -244,7 +244,7 @@
     {
       "time": 79.29,
       "text": "It has a cafe, a geological museum and a bungee jumping centre.",
-      "translation": "还设有咖啡馆、地质博物馆和蹦极中心。",
+      "translation": "还设有咖啡馆，地质博物馆和蹦极中心",
       "words": [
         {"text": "It", "start": 79.29, "end": 79.35},
         {"text": "has", "start": 79.39, "end": 79.55},
@@ -261,6 +261,4 @@
       ]
     }
   ]
-
 }
-
