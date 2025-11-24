@@ -3,12 +3,21 @@
     padding: 0;
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
+/* ============================================
+   🔥 1. 全局布局：锁死屏幕，禁止整体滚动
+   ============================================ */
 body {
     line-height: 1.6;
     background: linear-gradient(135deg, #0a1f1a 0%, #1a2f2a 100%);
-    min-height: 100vh;
+    
+    /* 🔥 核心修正：强制锁死高度，禁止 body 滚动 */
+    height: 100dvh; 
+    width: 100vw;
+    overflow: hidden; 
+    
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -19,25 +28,29 @@ body {
     padding: 10px;
 }
 
+/* 容器：垂直弹性盒子 */
 .player-container {
     width: 100%;
     max-width: 900px;
-    height: 95vh; 
+    height: 100%; /* 跟随 body 高度 */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* 上下结构 */
     background: linear-gradient(145deg, #1a332a 0%, #122820 100%);
     border-radius: 16px;
     padding: 0;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(0, 255, 200, 0.1);
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* 内部裁剪 */
 }
 
 .feishu-environment .player-container {
     border-radius: 12px;
 }
 
+/* ============================================
+   🔥 2. 头部区域 (固定不动)
+   ============================================ */
 h3 {
     margin-top: 0;
     color: #00ffcc;
@@ -46,7 +59,7 @@ h3 {
     text-align: center;
     margin-bottom: 16px;
     text-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
-    flex-shrink: 0;
+    flex-shrink: 0; /* 禁止压缩 */
     padding: 20px 20px 0 20px;
 }
 
@@ -57,6 +70,7 @@ h3 {
     padding: 0 24px;
     margin-bottom: 16px;
     box-sizing: border-box;
+    flex-shrink: 0; /* 禁止压缩 */
 }
 
 .controls label {
@@ -94,28 +108,135 @@ h3 {
     font-weight: 600;
 }
 
+/* ============================================
+   🔥 3. 中间文本区域 (唯一可滚动区域)
+   ============================================ */
+.transcript {
+    flex: 1; /* 霸占所有剩余空间 */
+    overflow-y: auto; /* 只有这里可以滚动 */
+    padding: 0 20px;
+    /* 底部留白：留出足够空间给底部播放器 */
+    padding-bottom: 150px; 
+    
+    /* 增加惯性滚动 */
+    -webkit-overflow-scrolling: touch;
+}
+
+.transcript::-webkit-scrollbar { width: 6px; }
+.transcript::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+
+.transcript p {
+    padding: 12px 14px;
+    padding-top: 26px;
+    margin: 8px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    color: #ccc;
+    position: relative;
+}
+
+.time-label {
+    position: absolute;
+    top: 6px;
+    left: 12px;
+    font-size: 10px;
+    color: #555;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.transcript p.active {
+    background: rgba(0, 255, 200, 0.05);
+    border-color: rgba(0, 255, 200, 0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.transcript p.active .original-text { color: #fff; }
+.transcript p.active .time-label { color: #00ffcc; }
+
+/* 行内播放按钮 */
+.play-button {
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+    margin-top: 3px; 
+}
+
+.play-button::before {
+    content: '';
+    border-style: solid;
+    border-width: 4px 0 4px 7px;
+    border-color: transparent transparent transparent #aaa;
+    margin-left: 2px;
+}
+
+.play-button.paused::before {
+    content: '';
+    border: none;
+    width: 4px;
+    height: 10px;
+    background: transparent;
+    border-left: 2px solid #00ffcc;
+    border-right: 2px solid #00ffcc;
+    margin-left: 0;
+    box-sizing: content-box;
+}
+
+.transcript p.active .play-button { background: #00ffcc; }
+.transcript p.active .play-button::before { border-color: transparent transparent transparent #000; }
+.transcript p.active .play-button.paused::before {
+    border-left-color: #000;
+    border-right-color: #000;
+}
+
+.sentence-content { padding: 2px 0; display: flex; align-items: flex-start; }
+.text-block { display: flex; flex-direction: column; flex: 1; }
+.original-text { font-size: 1.0em; line-height: 1.5; }
+.translation { font-size: 0.85em; opacity: 0.6; margin-top: 4px; }
+.word-highlight.current { background: #ffb700; color: #000; border-radius: 2px; padding: 0 2px;}
+
+/* 显示模式 */
+.mode-none .text-block { opacity: 0; pointer-events: none; }
+.mode-none .sentence-content:hover .text-block { opacity: 0.3; }
+.mode-original .translation { display: none; }
+.mode-translation .original-text { display: none; }
+.mode-translation .translation { opacity: 1; color: #ccc; }
+
+/* ============================================
+   🔥 4. 底部播放器 (PC/默认样式)
+   ============================================ */
 .custom-player {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 10;
-    background: rgba(15, 25, 22, 0.98);
-    backdrop-filter: blur(15px);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(15, 25, 22, 0.90); 
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 12px 16px 24px 16px;
     box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.5);
 }
 
 .progress-container {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     padding: 0 4px;
+    width: 100%;
 }
 
 .progress-bar {
     width: 100%;
     height: 6px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 3px;
     cursor: pointer;
     position: relative;
@@ -186,11 +307,11 @@ h3 {
 }
 
 .mini-select {
-    background-color: rgba(255, 255, 255, 0.05);
-    color: #aaa;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 6px;
-    padding: 4px 4px;
+    padding: 0 4px;
     font-size: 12px;
     height: 28px;
     outline: none;
@@ -212,105 +333,67 @@ h3 {
     color: #fff;
 }
 
-.transcript {
-    flex: 1;
-    overflow-y: auto;
-    padding: 0 20px 180px 20px;
-    max-height: none;
+/* ============================================
+   🔥 5. 手机端专属适配 (紧凑+固定+透明)
+   ============================================ */
+@media (max-width: 767px) {
+    body { padding: 0; }
+
+    .player-container {
+        border-radius: 0; 
+        height: 100dvh; /* 确保铺满 */
+        border: none;
+    }
+
+    /* 🔥 核心修复：底部播放器 */
+    .custom-player {
+        background: rgba(15, 25, 22, 0.8); /* 高透明度 */
+        padding: 12px 12px 20px 12px;
+        padding-bottom: calc(20px + env(safe-area-inset-bottom));
+    }
+    
+    /* 文本区底部留白加大，防遮挡 */
+    .transcript {
+        padding-bottom: 220px; 
+    }
+
+    /* 强制不换行，单行排列 */
+    .controls-main {
+        flex-wrap: nowrap; 
+        justify-content: space-between;
+        gap: 4px;
+    }
+
+    /* 时间显示：强制显示，紧凑 */
+    .time-display { 
+        display: block !important;
+        font-size: 10px;
+        min-width: auto;
+        margin-right: 4px;
+    }
+
+    /* 按钮组：按钮缩小，间距缩小 */
+    .player-controls { 
+        justify-content: center;
+        gap: 8px; 
+        flex: 1;
+    }
+    
+    .control-btn { width: 34px; height: 34px; } 
+    .control-btn svg { width: 18px; height: 18px; }
+
+    /* 设置组：横排右对齐 */
+    .mini-selectors { 
+        gap: 2px; 
+        min-width: auto; 
+        margin-left: 0;
+    }
+
+    /* 极简下拉框 */
+    .mini-select {
+        height: 24px;
+        font-size: 10px;
+        padding: 0;
+        min-width: 35px; 
+    }
 }
-
-.transcript::-webkit-scrollbar { width: 6px; }
-.transcript::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
-
-.transcript p {
-    padding: 12px 14px;
-    padding-top: 26px;
-    margin: 8px 0;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    color: #ccc;
-    position: relative;
-}
-
-.time-label {
-    position: absolute;
-    top: 6px;
-    left: 12px;
-    font-size: 10px;
-    color: #555;
-    background: transparent;
-    border: none;
-    padding: 0;
-}
-
-.transcript p.active {
-    background: rgba(0, 255, 200, 0.05);
-    border-color: rgba(0, 255, 200, 0.3);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
-.transcript p.active .original-text { color: #fff; }
-.transcript p.active .time-label { color: #00ffcc; }
-
-/* 🔥 修复版：行内播放按钮 */
-.play-button {
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    flex-shrink: 0;
-    /* 这里加了下沉，保证和文字中线对齐 */
-    margin-top: 3px; 
-}
-
-.play-button::before {
-    content: '';
-    border-style: solid;
-    border-width: 4px 0 4px 7px;
-    border-color: transparent transparent transparent #aaa;
-    margin-left: 2px;
-}
-
-.play-button.paused::before {
-    content: '';
-    border: none;
-    width: 4px;
-    height: 10px;
-    background: transparent;
-    border-left: 2px solid #00ffcc;
-    border-right: 2px solid #00ffcc;
-    margin-left: 0;
-    box-sizing: content-box;
-}
-
-.transcript p.active .play-button { background: #00ffcc; }
-.transcript p.active .play-button::before { border-color: transparent transparent transparent #000; }
-.transcript p.active .play-button.paused::before {
-    border-left-color: #000;
-    border-right-color: #000;
-}
-
-@media (max-width: 375px) {
-    .time-display { display: none; }
-    .player-controls { gap: 10px; }
-    .control-btn { width: 36px; height: 36px; }
-    .custom-player { padding: 12px 12px 20px 12px; }
-}
-
-.sentence-content { padding: 2px 0; display: flex; align-items: flex-start; }
-.text-block { display: flex; flex-direction: column; flex: 1; }
-.original-text { font-size: 1.0em; line-height: 1.5; }
-.translation { font-size: 0.85em; opacity: 0.6; margin-top: 4px; }
-.word-highlight.current { background: #ffb700; color: #000; border-radius: 2px; padding: 0 2px;}
-
-.mode-none .text-block { opacity: 0; pointer-events: none; }
-.mode-none .sentence-content:hover .text-block { opacity: 0.3; }
-.mode-original .translation { display: none; }
-.mode-translation .original-text { display: none; }
-.mode-translation .translation { opacity: 1; color: #ccc; }
