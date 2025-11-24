@@ -15,7 +15,6 @@ body {
     margin: 0;
 }
 
-/* 飞书环境优化 */
 .feishu-environment body {
     padding: 10px;
 }
@@ -23,49 +22,46 @@ body {
 .player-container {
     width: 100%;
     max-width: 900px;
-    /* --- 修改这里：高度改为 95vh --- */
     height: 95vh; 
     display: flex;
     flex-direction: column;
     background: linear-gradient(145deg, #1a332a 0%, #122820 100%);
     border-radius: 16px;
-    padding: 24px;
-    box-shadow: 
-        0 8px 32px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(255, 255, 255, 0.05);
+    padding: 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(0, 255, 200, 0.1);
+    position: relative;
+    overflow: hidden;
 }
 
-/* 飞书环境特殊样式 */
 .feishu-environment .player-container {
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 h3 {
     margin-top: 0;
     color: #00ffcc;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     text-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
     flex-shrink: 0;
+    padding: 20px 20px 0 20px;
 }
 
 .controls {
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-    flex-shrink: 0;
+    width: 100%;
+    padding: 0 24px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
 }
 
 .controls label {
     color: #b0b0b0;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
 }
 
@@ -77,524 +73,244 @@ h3 {
 
 .controls select {
     font-size: 14px;
-    padding: 8px 16px;
+    padding: 6px 12px;
     background-color: #1a3330;
     color: #00ffcc;
     border: 1px solid rgba(0, 255, 200, 0.3);
     border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
     outline: none;
-    min-height: 36px;
-}
-
-.controls select:hover {
-    background-color: #224440;
-    border-color: rgba(0, 255, 200, 0.6);
-}
-
-.controls select:focus {
-    border-color: #00ffcc;
-    box-shadow: 0 0 0 3px rgba(0, 255, 200, 0.1);
-}
-
-/* 移动端优化 */
-@media (max-width: 767px) {
-    .control-group {
-        width: 100%;
-    }
-    
-    .control-group label {
-        min-width: 80px;
-    }
-    
-    .control-group select {
-        flex: 1;
-    }
+    cursor: pointer;
 }
 
 .info-display {
-    font-size: 14px;
+    margin-left: auto;
+    font-size: 13px;
     color: #b0b0b0;
-    font-weight: 500;
+    white-space: nowrap;
 }
 
 .info-display #word-count {
     color: #00ffcc;
     font-weight: 600;
-    font-size: 16px;
 }
 
 .custom-player {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    flex-shrink: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: rgba(15, 25, 22, 0.98);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px 16px 24px 16px;
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.5);
 }
 
 .progress-container {
     margin-bottom: 16px;
+    padding: 0 4px;
 }
 
 .progress-bar {
     width: 100%;
-    height: 8px;
+    height: 6px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
+    border-radius: 3px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    touch-action: none;
 }
 
 .progress-filled {
     height: 100%;
     background: linear-gradient(90deg, #8b5cf6 0%, #a78bfa 100%);
-    border-radius: 4px;
+    border-radius: 3px;
     width: 0%;
     transition: width 0.1s linear;
-    pointer-events: none;
 }
 
-.player-bottom {
-    display: grid;
-    grid-template-columns: 100px 1fr 100px;
+.controls-main {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .time-display {
-    color: #9ca3af;
-    font-size: 13px;
-    font-weight: 500;
-    min-width: 100px;
-    grid-column: 1 / 2;
-}
-
-.time-spacer {
-    grid-column: 3 / 4;
-    width: 100px;
+    color: #888;
+    font-size: 12px;
+    font-family: monospace;
+    min-width: 80px;
 }
 
 .player-controls {
     display: flex;
     gap: 16px;
     align-items: center;
-    grid-column: 2 / 3;
-    justify-self: center;
+    justify-content: center;
+    flex: 1;
 }
 
-/* 基础按钮样式 */
+.mini-selectors {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    min-width: 80px;
+}
+
 .control-btn {
-    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.3s ease;
-    color: white;
-    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+    transition: all 0.2s ease;
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     flex-shrink: 0;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.control-btn:hover {
-    background: linear-gradient(135deg, #9f7aea 0%, #8b5cf6 100%);
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.5);
 }
 
 .control-btn:active {
-    transform: scale(0.95);
+    transform: scale(0.92);
 }
 
-/* 循环按钮激活状态 */
-#loop-btn.active,
-.control-btn.active {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
-    border: 3px solid #ffffff !important;
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.8), 0 4px 16px rgba(16, 185, 129, 0.6) !important;
-    transform: scale(1.1) !important;
+#loop-btn.active {
+    background: #10b981 !important;
+    color: white;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
 }
 
-#loop-btn.active:hover,
-.control-btn.active:hover {
-    background: linear-gradient(135deg, #34d399 0%, #10b981 100%) !important;
-    box-shadow: 0 0 24px rgba(16, 185, 129, 0.9), 0 6px 20px rgba(16, 185, 129, 0.7) !important;
-    transform: scale(1.15) !important;
-}
-
-/* ========== 平板适配 (iPad等) ========== */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .player-container {
-        padding: 28px;
-    }
-    
-    h3 {
-        font-size: 26px;
-    }
-    
-    .control-btn {
-        width: 48px;
-        height: 48px;
-    }
-    
-    .control-btn svg {
-        width: 26px;
-        height: 26px;
-    }
-    
-    .progress-bar {
-        height: 10px;
-    }
-    
-    .player-controls {
-        gap: 20px;
-    }
-}
-
-/* ========== 手机适配 (iPhone, Android) ========== */
-@media (max-width: 767px) {
-    body {
-        padding: 10px;
-    }
-    
-    .player-container {
-        padding: 16px;
-        border-radius: 12px;
-    }
-    
-    h3 {
-        font-size: 20px;
-        margin-bottom: 16px;
-    }
-    
-    .controls {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-    
-    .controls select {
-        width: 100%;
-        min-height: 44px;
-        font-size: 16px;
-    }
-    
-    .control-group select {
-        flex: 1; 
-    }
-    
-    .custom-player {
-        padding: 16px;
-    }
-    
-    .progress-bar {
-        height: 12px;
-        border-radius: 6px;
-    }
-    
-    .control-btn {
-        width: 52px;
-        height: 52px;
-    }
-    
-    .control-btn svg {
-        width: 28px;
-        height: 28px;
-    }
-    
-    .player-controls {
-        gap: 12px;
-    }
-    
-    .player-bottom {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-    
-    .time-display {
-        grid-column: 1 / 2;
-        text-align: center;
-        font-size: 14px;
-    }
-    
-    .player-controls {
-        grid-column: 1 / 2;
-        justify-self: center;
-    }
-    
-    .time-spacer {
-        display: none;
-    }
-    
-    .transcript p {
-        padding: 10px 12px;
-        padding-top: 24px;
-        font-size: 15px;
-    }
-    
-    .time-label {
-        font-size: 10px;
-    }
-}
-
-/* ========== 飞书移动端特殊优化 ========== */
-.feishu-environment.mobile-device .control-btn {
-    width: 54px;
-    height: 54px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.feishu-environment.mobile-device .control-btn svg {
-    width: 30px;
-    height: 30px;
-}
-
-.feishu-environment.tablet-device .control-btn {
-    width: 50px;
-    height: 50px;
-}
-
-.feishu-environment.tablet-device .control-btn svg {
-    width: 28px;
+.mini-select {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #aaa;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 4px 4px;
+    font-size: 12px;
     height: 28px;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    text-align: center;
+    min-width: 60px;
+    color-scheme: dark; 
 }
 
-/* ========== 小屏手机优化 (iPhone SE等) ========== */
-@media (max-width: 375px) {
-    .control-btn {
-        width: 46px;
-        height: 46px;
-    }
-    
-    .control-btn svg {
-        width: 24px;
-        height: 24px;
-    }
-    
-    .player-controls {
-        gap: 8px;
-    }
-    
-    h3 {
-        font-size: 18px;
-    }
+.mini-select:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
-hr {
-    border: none;
-    height: 1px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        rgba(0, 255, 200, 0.3) 50%, 
-        transparent 100%);
-    margin: 20px 0;
-    flex-shrink: 0;
+.mini-select option {
+    background-color: #1a2f2a;
+    color: #fff;
 }
 
 .transcript {
-    overflow-y: auto;
-    padding-right: 8px;
     flex: 1;
+    overflow-y: auto;
+    padding: 0 20px 180px 20px;
     max-height: none;
 }
 
-.transcript::-webkit-scrollbar {
-    width: 8px;
-}
-
-.transcript::-webkit-scrollbar-track {
-    background: #0a1f1a;
-    border-radius: 4px;
-}
-
-.transcript::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #00ffcc 0%, #00aa88 100%);
-    border-radius: 4px;
-}
+.transcript::-webkit-scrollbar { width: 6px; }
+.transcript::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
 
 .transcript p {
-    padding: 12px 16px;
-    padding-top: 28px;
+    padding: 12px 14px;
+    padding-top: 26px;
     margin: 8px 0;
-    border-radius: 10px;
-    transition: all 0.3s ease;
+    border-radius: 8px;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    color: #d0d0d0;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    color: #ccc;
     position: relative;
-    -webkit-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .time-label {
     position: absolute;
     top: 6px;
     left: 12px;
-    font-size: 11px;
-    color: #00ffcc;
-    background: rgba(0, 255, 200, 0.1);
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    border: 1px solid rgba(0, 255, 200, 0.2);
-}
-
-.sentence-content {
-    padding: 5px 0;
-    display: flex;
-    align-items: flex-start;
-}
-
-.text-block {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.original-text {
-    font-size: 1.0em;
-    color: #d0d0d0;
-    line-height: 1.5;
-}
-
-.translation {
-    font-size: 0.85em;
-    opacity: 0.8;
-    color: #b0b0b0;
-    margin-top: 4px;
-    line-height: 1.5;
-}
-
-.transcript p:hover {
-    background-color: rgba(0, 255, 200, 0.08);
-    border-color: rgba(0, 255, 200, 0.3);
-    transform: translateX(4px);
-}
-
-.transcript p:hover .time-label {
-    background: rgba(0, 255, 200, 0.2);
-    border-color: rgba(0, 255, 200, 0.4);
+    font-size: 10px;
+    color: #555;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 .transcript p.active {
-    background: linear-gradient(90deg, 
-        rgba(0, 255, 200, 0.15) 0%, 
-        rgba(0, 255, 200, 0.08) 100%);
-    border-color: #00ffcc;
-    color: #ffffff;
-    box-shadow: 
-        0 0 20px rgba(0, 255, 200, 0.2),
-        inset 0 0 20px rgba(0, 255, 200, 0.05);
+    background: rgba(0, 255, 200, 0.05);
+    border-color: rgba(0, 255, 200, 0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.transcript p.active .original-text {
-    color: #ffffff;
-}
+.transcript p.active .original-text { color: #fff; }
+.transcript p.active .time-label { color: #00ffcc; }
 
-.transcript p.active .translation {
-    color: #e0e0e0;
-    opacity: 0.9;
-}
-
-.transcript p.active .time-label {
-    background: rgba(0, 255, 200, 0.3);
-    border-color: #00ffcc;
-    color: #ffffff;
-    box-shadow: 0 0 8px rgba(0, 255, 200, 0.4);
-}
-
+/* 🔥 修复版：行内播放按钮 */
 .play-button {
-    width: 24px;
-    height: 24px;
-    min-width: 24px;
-    background: rgba(0, 255, 200, 0.1);
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 255, 200, 0.3);
     flex-shrink: 0;
-}
-
-.play-button:hover {
-    background: rgba(0, 255, 200, 0.2);
-    border-color: rgba(0, 255, 200, 0.6);
+    /* 这里加了下沉，保证和文字中线对齐 */
+    margin-top: 3px; 
 }
 
 .play-button::before {
     content: '';
-    width: 0;
-    height: 0;
     border-style: solid;
-    border-width: 5px 0 5px 8px;
-    border-color: transparent transparent transparent #00ffcc;
-    margin-left: 1px;
+    border-width: 4px 0 4px 7px;
+    border-color: transparent transparent transparent #aaa;
+    margin-left: 2px;
 }
 
 .play-button.paused::before {
+    content: '';
     border: none;
-    width: 6px;
+    width: 4px;
     height: 10px;
-    background: 
-        linear-gradient(to right, 
-            #00ffcc 0%, #00ffcc 20%, 
-            transparent 20%, transparent 40%,
-            #00ffcc 40%, #00ffcc 60%,
-            transparent 60%, transparent 80%,
-            #00ffcc 80%, #00ffcc 100%);
+    background: transparent;
+    border-left: 2px solid #00ffcc;
+    border-right: 2px solid #00ffcc;
+    margin-left: 0;
+    box-sizing: content-box;
 }
 
-.word-highlight {
-    display: inline-block;
-    margin: 0 1px;
-    transition: all 0.2s ease;
+.transcript p.active .play-button { background: #00ffcc; }
+.transcript p.active .play-button::before { border-color: transparent transparent transparent #000; }
+.transcript p.active .play-button.paused::before {
+    border-left-color: #000;
+    border-right-color: #000;
 }
 
-.word-highlight.current {
-    background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
-    color: #000 !important;
-    font-weight: 600;
-    padding: 2px 4px;
-    border-radius: 3px;
-    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
-    transform: scale(1.05);
+@media (max-width: 375px) {
+    .time-display { display: none; }
+    .player-controls { gap: 10px; }
+    .control-btn { width: 36px; height: 36px; }
+    .custom-player { padding: 12px 12px 20px 12px; }
 }
 
-/* 防止移动端下拉刷新和双击缩放 */
-body {
-    overscroll-behavior: none;
-    touch-action: pan-y;
-}
+.sentence-content { padding: 2px 0; display: flex; align-items: flex-start; }
+.text-block { display: flex; flex-direction: column; flex: 1; }
+.original-text { font-size: 1.0em; line-height: 1.5; }
+.translation { font-size: 0.85em; opacity: 0.6; margin-top: 4px; }
+.word-highlight.current { background: #ffb700; color: #000; border-radius: 2px; padding: 0 2px;}
 
-.player-container {
-    touch-action: pan-y;
-}
-
-/* 移动端优化：防止文字选择 */
-@media (max-width: 767px) {
-    * {
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        user-select: none;
-    }
-    
-    input, textarea, select {
-        -webkit-user-select: auto;
-        user-select: auto;
-    }
-}
+.mode-none .text-block { opacity: 0; pointer-events: none; }
+.mode-none .sentence-content:hover .text-block { opacity: 0.3; }
+.mode-original .translation { display: none; }
+.mode-translation .original-text { display: none; }
+.mode-translation .translation { opacity: 1; color: #ccc; }
