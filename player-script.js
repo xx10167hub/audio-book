@@ -1,4 +1,4 @@
-// player-script.js - 最终版：支持网址尾巴参数 + 自动隐藏下拉框 + 连读优化
+// player-script.js - 最终版：修正连字符单词统计 + 底部悬浮 + 显示模式 + 暂停修复
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===== 配置 =====
@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const titleElement = document.getElementById('article-title');
     const transcriptContainer = document.getElementById('transcript-container');
     const speedControl = document.getElementById('speed-control');
+    const displayMode = document.getElementById('display-mode'); 
     const playPauseBtn = document.getElementById('play-pause-btn');
     const playIcon = document.getElementById('play-icon');
     const pauseIcon = document.getElementById('pause-icon');
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalTimeDisplay = document.getElementById('total-time');
     const wordCountDisplay = document.getElementById('word-count');
     const articleSelect = document.getElementById('article-select');
-    const articleSelectGroup = document.getElementById('article-select-group'); // 获取整个选择框容器
+    const articleSelectGroup = document.getElementById('article-select-group');
 
     let sentencesData = [];
     let currentHighlightElement = null;
@@ -137,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // ===== 新增：加载文章配置列表 =====
+    // ===== 加载文章配置列表 =====
     async function loadArticlesConfig() {
         try {
             const response = await fetch(ARTICLES_CONFIG_FILE);
@@ -147,7 +148,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const config = await response.json();
             articlesConfig = config.articles;
             
-            // 1. 填充下拉选择框
             articleSelect.innerHTML = '';
             articlesConfig.forEach(article => {
                 const option = document.createElement('option');
@@ -156,39 +156,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 articleSelect.appendChild(option);
             });
             
-            // 2. 检查 URL 是否指定了文章 ID
             const urlParams = new URLSearchParams(window.location.search);
             const articleIdFromUrl = urlParams.get('article');
 
             if (articleIdFromUrl) {
-                // 这种情况：用户通过 index.html?article=5 访问
-                // 动作：隐藏下拉框，直接加载指定文章
                 console.log('检测到URL指定文章:', articleIdFromUrl);
                 currentArticleId = articleIdFromUrl;
-                
-                // 隐藏选择器
                 if (articleSelectGroup) {
                     articleSelectGroup.style.display = 'none';
                 }
             } else {
-                // 这种情况：用户直接访问 index.html
-                // 动作：默认加载第一篇，显示下拉框
                 currentArticleId = articlesConfig[0].id;
-                // 确保选择器显示
                 if (articleSelectGroup) {
                     articleSelectGroup.style.display = 'flex';
                 }
             }
 
-            // 同步下拉框的值
             articleSelect.value = currentArticleId;
-            
-            // 加载文章
             loadArticleById(currentArticleId);
             
         } catch (error) {
             console.error('加载文章配置失败:', error);
-            // 失败回退
             if (articleSelectGroup) articleSelectGroup.style.display = 'none';
             loadSingleArticle();
         }
@@ -199,7 +187,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const article = articlesConfig.find(a => a.id === articleId);
         if (!article) {
             console.error('找不到文章:', articleId);
-            // 如果找不到，尝试加载第一篇
             if (articlesConfig.length > 0) {
                 loadArticleById(articlesConfig[0].id);
             }
@@ -207,17 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         currentArticleId = articleId;
-        
-        // 仅更新变量，不强制修改浏览器历史记录，以免影响后退功能
-        // 但如果需要分享链接，可以保留下面这行
-        // const newUrl = new URL(window.location);
-        // newUrl.searchParams.set('article', articleId);
-        // window.history.replaceState({}, '', newUrl);
-        
-        // 重置状态
         resetPlayerState();
-        
-        // 加载文章数据
         loadArticleData(article.dataFile, article.audioFile, article.title);
     }
 
@@ -245,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentTimeDisplay.textContent = '00:00';
     }
 
-    // ===== 加载文章数据（通用函数） =====
+    // ===== 加载文章数据 =====
     function loadArticleData(dataFile, audioFile, title) {
         fetch(dataFile)
             .then(response => {
@@ -261,11 +238,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 let totalWordCount = 0;
                 transcriptContainer.innerHTML = ''; 
                 
+                if (displayMode) {
+                    displayMode.dispatchEvent(new Event('change'));
+                }
+                
                 data.transcript.forEach((line, index) => {
-                    const englishText = line.text.split('\n')[0]; 
-                    const words = englishText.match(/[a-zA-Z']+/g); 
-                    if (words) {
-                        totalWordCount += words.length;
+                    // --- 🔥 核心修复：更智能的词数统计 ---
+                    // 1. 优先使用 words 数组（如果有），这是最准的
+                    if (line.words && line.words.length > 0) {
+                        totalWordCount += line.words.length;
+                    } 
+                    // 2. 如果没有 words 数组，使用正则统计文本
+                    else {
+                        const englishText = line.text.split('\n')[0]; 
+                        // ✅ 修复正则：加入了短横线 '-'，现在 record-breaking 算一个词
+                        const words = englishText.match(/[a-zA-Z0-9'-]+/g); 
+                        if (words) {
+                            totalWordCount += words.length;
+                        }
                     }
                     
                     const p = document.createElement('p');
@@ -509,14 +499,12 @@ document.addEventListener('DOMContentLoaded', function() {
             currentLoopSentence = findSentenceDataByTime(currentTime);
             
             if (currentLoopSentence) {
-                console.log('单句循环已开启，当前循环句子:', currentLoopSentence.index);
                 if (audioPlayer.paused) {
                     audioPlayer.play();
                 }
             }
         } else {
             currentLoopSentence = null;
-            console.log('单句循环已关闭');
         }
     });
 
@@ -533,7 +521,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentTime >= currentLoopSentence.end - 0.15) {
                 isLoopSeeking = true;
                 audioPlayer.currentTime = currentLoopSentence.start;
-                console.log('单句循环：跳回句子开头');
             }
         }
         
@@ -600,10 +587,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function handleSentencePlayToggle(sentenceData) {
-        if (sentenceData === currentSentencePlayer) {
+        const currentTime = audioPlayer.currentTime;
+        const isTimeMatch = currentTime >= (sentenceData.start - 0.2) && 
+                           (sentenceData.end === null || currentTime < sentenceData.end);
+
+        if (sentenceData === currentSentencePlayer || (currentSentencePlayer === null && isTimeMatch)) {
             if (audioPlayer.paused) {
-                sentenceData.playButton.classList.add('paused');
                 audioPlayer.play();
+                sentenceData.playButton.classList.add('paused');
             } else {
                 audioPlayer.pause();
                 sentenceData.playButton.classList.remove('paused');
@@ -656,7 +647,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 启动
+    if (displayMode) {
+        displayMode.addEventListener('change', function() {
+            const mode = this.value;
+            transcriptContainer.classList.remove('mode-all', 'mode-original', 'mode-translation', 'mode-none');
+            transcriptContainer.classList.add(`mode-${mode}`);
+        });
+        
+        displayMode.dispatchEvent(new Event('change'));
+    }
+
     loadArticlesConfig();
 
 });
