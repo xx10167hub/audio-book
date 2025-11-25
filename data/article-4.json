@@ -108,7 +108,7 @@
     },
     {
       "time": 25.782,
-      "text": " The food that makes the strongest body smells contain sulphur.",
+      "text": " The food that makes the strongest body smells contains sulphur.",
       "translation": "最容易产生浓重体味的食物通常含硫。",
       "words": [
         {"text": "The", "start": 25.782, "end": 25.942},
@@ -206,4 +206,5 @@
       ]
     }
   ]
+
 }
