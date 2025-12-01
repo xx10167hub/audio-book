@@ -7,17 +7,14 @@
 }
 
 /* ============================================
-   🔥 1. 全局布局：锁死屏幕，禁止整体滚动
+   🔥 1. 全局布局
    ============================================ */
 body {
     line-height: 1.6;
     background: linear-gradient(135deg, #0a1f1a 0%, #1a2f2a 100%);
-    
-    /* 🔥 核心修正：强制锁死高度，禁止 body 滚动 */
     height: 100dvh; 
     width: 100vw;
     overflow: hidden; 
-    
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -28,20 +25,19 @@ body {
     padding: 10px;
 }
 
-/* 容器：垂直弹性盒子 */
 .player-container {
     width: 100%;
     max-width: 900px;
-    height: 100%; /* 跟随 body 高度 */
+    height: 100%; 
     display: flex;
-    flex-direction: column; /* 上下结构 */
+    flex-direction: column;
     background: linear-gradient(145deg, #1a332a 0%, #122820 100%);
     border-radius: 16px;
     padding: 0;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(0, 255, 200, 0.1);
     position: relative;
-    overflow: hidden; /* 内部裁剪 */
+    overflow: hidden;
 }
 
 .feishu-environment .player-container {
@@ -49,7 +45,7 @@ body {
 }
 
 /* ============================================
-   🔥 2. 头部区域 (固定不动)
+   🔥 2. 头部区域
    ============================================ */
 h3 {
     margin-top: 0;
@@ -59,7 +55,7 @@ h3 {
     text-align: center;
     margin-bottom: 16px;
     text-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
-    flex-shrink: 0; /* 禁止压缩 */
+    flex-shrink: 0; 
     padding: 20px 20px 0 20px;
 }
 
@@ -70,7 +66,7 @@ h3 {
     padding: 0 24px;
     margin-bottom: 16px;
     box-sizing: border-box;
-    flex-shrink: 0; /* 禁止压缩 */
+    flex-shrink: 0; 
 }
 
 .controls label {
@@ -109,16 +105,13 @@ h3 {
 }
 
 /* ============================================
-   🔥 3. 中间文本区域 (唯一可滚动区域)
+   🔥 3. 中间文本区域
    ============================================ */
 .transcript {
-    flex: 1; /* 霸占所有剩余空间 */
-    overflow-y: auto; /* 只有这里可以滚动 */
+    flex: 1; 
+    overflow-y: auto; 
     padding: 0 20px;
-    /* 底部留白：留出足够空间给底部播放器 */
     padding-bottom: 150px; 
-    
-    /* 增加惯性滚动 */
     -webkit-overflow-scrolling: touch;
 }
 
@@ -135,6 +128,7 @@ h3 {
     border: 1px solid rgba(255, 255, 255, 0.03);
     color: #ccc;
     position: relative;
+    transition: all 0.2s ease;
 }
 
 .time-label {
@@ -202,7 +196,8 @@ h3 {
 .text-block { display: flex; flex-direction: column; flex: 1; }
 .original-text { font-size: 1.0em; line-height: 1.5; }
 .translation { font-size: 0.85em; opacity: 0.6; margin-top: 4px; }
-.word-highlight.current { background: #ffb700; color: #000; border-radius: 2px; padding: 0 2px;}
+.word-highlight { transition: all 0.1s; border-radius: 2px; padding: 0 1px; }
+.word-highlight.current { background: #ffb700; color: #000; }
 
 /* 显示模式 */
 .mode-none .text-block { opacity: 0; pointer-events: none; }
@@ -210,6 +205,110 @@ h3 {
 .mode-original .translation { display: none; }
 .mode-translation .original-text { display: none; }
 .mode-translation .translation { opacity: 1; color: #ccc; }
+
+/* ============================================
+   🆕 新增：单词互动模式样式
+   ============================================ */
+
+/* 1. 互动小手按钮 */
+.interact-btn {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    margin-top: 3px; 
+}
+
+.interact-btn:hover {
+    color: #00ffcc;
+    background: rgba(0, 255, 200, 0.1);
+}
+
+.interact-btn.active {
+    color: #ffb700; /* 激活时变成金色 */
+    background: rgba(255, 183, 0, 0.15);
+    box-shadow: 0 0 8px rgba(255, 183, 0, 0.3);
+}
+
+/* 2. 激活互动模式的句子样式 */
+.transcript p.interaction-active {
+    border-color: #ffb700;
+    background-color: rgba(255, 183, 0, 0.03);
+}
+
+/* 3. 互动模式下的单词样式 */
+.transcript p.interaction-active .word-highlight {
+    cursor: pointer;
+    border-bottom: 1px dashed rgba(255, 183, 0, 0.5);
+}
+
+.transcript p.interaction-active .word-highlight:hover {
+    background-color: rgba(255, 183, 0, 0.2);
+    color: #fff;
+}
+
+/* 4. 气泡菜单 (Popup) */
+.word-popup {
+    position: absolute;
+    background: #1a2f2a;
+    border: 1px solid #00ffcc;
+    border-radius: 8px;
+    padding: 6px;
+    display: flex;
+    gap: 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    transform: translate(-50%, -125%); /* 默认向上弹出 */
+    animation: popupFadeIn 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.word-popup::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px 6px 0;
+    border-style: solid;
+    border-color: #00ffcc transparent transparent transparent;
+}
+
+@keyframes popupFadeIn {
+    from { opacity: 0; transform: translate(-50%, -100%) scale(0.9); }
+    to { opacity: 1; transform: translate(-50%, -125%) scale(1); }
+}
+
+.popup-btn {
+    background: rgba(0, 255, 204, 0.1);
+    border: 1px solid rgba(0, 255, 204, 0.3);
+    color: #00ffcc;
+    font-size: 12px;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s;
+    white-space: nowrap;
+    outline: none;
+}
+
+.popup-btn:hover {
+    background: #00ffcc;
+    color: #000;
+}
+
+.popup-btn:active {
+    transform: scale(0.95);
+}
 
 /* ============================================
    🔥 4. 底部播放器 (PC/默认样式)
@@ -334,37 +433,33 @@ h3 {
 }
 
 /* ============================================
-   🔥 5. 手机端专属适配 (紧凑+固定+透明)
+   🔥 5. 手机端专属适配
    ============================================ */
 @media (max-width: 767px) {
     body { padding: 0; }
 
     .player-container {
         border-radius: 0; 
-        height: 100dvh; /* 确保铺满 */
+        height: 100dvh; 
         border: none;
     }
 
-    /* 🔥 核心修复：底部播放器 */
     .custom-player {
-        background: rgba(15, 25, 22, 0.8); /* 高透明度 */
+        background: rgba(15, 25, 22, 0.8); 
         padding: 12px 12px 20px 12px;
         padding-bottom: calc(20px + env(safe-area-inset-bottom));
     }
     
-    /* 文本区底部留白加大，防遮挡 */
     .transcript {
         padding-bottom: 220px; 
     }
 
-    /* 强制不换行，单行排列 */
     .controls-main {
         flex-wrap: nowrap; 
         justify-content: space-between;
         gap: 4px;
     }
 
-    /* 时间显示：强制显示，紧凑 */
     .time-display { 
         display: block !important;
         font-size: 10px;
@@ -372,7 +467,6 @@ h3 {
         margin-right: 4px;
     }
 
-    /* 按钮组：按钮缩小，间距缩小 */
     .player-controls { 
         justify-content: center;
         gap: 8px; 
@@ -382,14 +476,12 @@ h3 {
     .control-btn { width: 34px; height: 34px; } 
     .control-btn svg { width: 18px; height: 18px; }
 
-    /* 设置组：横排右对齐 */
     .mini-selectors { 
         gap: 2px; 
         min-width: auto; 
         margin-left: 0;
     }
 
-    /* 极简下拉框 */
     .mini-select {
         height: 24px;
         font-size: 10px;
