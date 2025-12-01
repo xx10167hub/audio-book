@@ -1,4 +1,4 @@
-// player-script.js - 最终版：修正连字符单词统计 + 底部悬浮 + 显示模式 + 暂停修复
+// player-script.js - 最终修复版：单词互动 + 手机端强力复制补丁
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===== 配置 =====
@@ -40,6 +40,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let allWordElements = [];
     let wordTimeMap = new Map();
 
+    // 互动状态
+    let activeInteractionIndex = -1; 
+    let activePopup = null; 
+
     let isTranscriptLoaded = false;
     let isAudioLoaded = false;
 
@@ -65,6 +69,83 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // 关闭互动模式
+    function closeInteractionMode() {
+        if (activeInteractionIndex !== -1) {
+            const sentenceEl = document.getElementById(`sentence-${activeInteractionIndex}`);
+            if (sentenceEl) {
+                sentenceEl.classList.remove('interaction-active');
+                const btn = sentenceEl.querySelector('.interact-btn');
+                if (btn) btn.classList.remove('active');
+            }
+            activeInteractionIndex = -1;
+            closePopup();
+        }
+    }
+
+    // 关闭气泡
+    function closePopup() {
+        if (activePopup) {
+            activePopup.remove();
+            activePopup = null;
+        }
+    }
+
+    // ===== 🔥 核心修复：手机端/飞书强力复制逻辑 =====
+    function copyToClipboard(text) {
+        // 1. 清洗单词
+        const cleanText = text.replace(/[.,!?;:"]/g, '');
+
+        // 2. 尝试现代 API (仅在 HTTPS 环境有效)
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(cleanText).then(() => {
+                console.log('Modern Copy Success');
+            }).catch(() => {
+                // 如果现代 API 失败，立即降级
+                fallbackCopyTextToClipboard(cleanText);
+            });
+        } else {
+            // 3. 环境不支持或非 HTTPS，直接用备用方案
+            fallbackCopyTextToClipboard(cleanText);
+        }
+    }
+
+    function fallbackCopyTextToClipboard(text) {
+        // 创建输入框
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
+        
+        // 关键样式：防止手机键盘弹出，但必须保持可见以便选中
+        textArea.setAttribute('readonly', '');
+        textArea.style.position = 'absolute';
+        textArea.style.left = '-9999px';
+        textArea.style.fontSize = '12pt'; // 防止iOS缩放
+        
+        document.body.appendChild(textArea);
+        
+        // 核心：手机端必须先 focus 才能 select
+        textArea.focus();
+        textArea.select();
+        
+        // 🔥 关键补丁：iOS/安卓 必须显式设置选区范围才能复制成功
+        textArea.setSelectionRange(0, 999999); 
+
+        try {
+            var successful = document.execCommand('copy');
+            if (!successful) {
+                throw new Error('Copy command failed');
+            }
+            console.log('Fallback copy successful');
+        } catch (err) {
+            console.error('Fallback copy failed:', err);
+            // 最后的兜底：如果还不行，弹窗把单词显示出来让用户长按
+            prompt("自动复制受限，请长按下方文字手动复制：", text);
+        }
+
+        document.body.removeChild(textArea);
+    }
+    // ============================================
+
     function findSentenceDataByTime(currentTime) {
          for (let i = sentencesData.length - 1; i >= 0; i--) {
             if (currentTime >= sentencesData[i].start - 0.1) { 
@@ -83,7 +164,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return -1;
     }
 
-    // ===== 核心逻辑：逐词高亮（含填补空隙） =====
     function findCurrentWord(currentTime) {
         const MAX_GAP_TO_FILL = 1.5; 
 
@@ -138,7 +218,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // ===== 加载文章配置列表 =====
     async function loadArticlesConfig() {
         try {
             const response = await fetch(ARTICLES_CONFIG_FILE);
@@ -182,7 +261,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // ===== 根据ID加载文章 =====
     function loadArticleById(articleId) {
         const article = articlesConfig.find(a => a.id === articleId);
         if (!article) {
@@ -198,7 +276,6 @@ document.addEventListener('DOMContentLoaded', function() {
         loadArticleData(article.dataFile, article.audioFile, article.title);
     }
 
-    // ===== 重置播放器状态 =====
     function resetPlayerState() {
         audioPlayer.pause();
         audioPlayer.currentTime = 0;
@@ -215,6 +292,8 @@ document.addEventListener('DOMContentLoaded', function() {
         isTranscriptLoaded = false;
         isAudioLoaded = false;
         
+        closeInteractionMode();
+
         loopBtn.classList.remove('active');
         transcriptContainer.innerHTML = '<p style="text-align:center; color:#00ffcc;">加载中...</p>';
         updatePlayPauseButton(false);
@@ -222,7 +301,6 @@ document.addEventListener('DOMContentLoaded', function() {
         currentTimeDisplay.textContent = '00:00';
     }
 
-    // ===== 加载文章数据 =====
     function loadArticleData(dataFile, audioFile, title) {
         fetch(dataFile)
             .then(response => {
@@ -243,15 +321,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
                 data.transcript.forEach((line, index) => {
-                    // --- 🔥 核心修复：更智能的词数统计 ---
-                    // 1. 优先使用 words 数组（如果有），这是最准的
                     if (line.words && line.words.length > 0) {
                         totalWordCount += line.words.length;
                     } 
-                    // 2. 如果没有 words 数组，使用正则统计文本
                     else {
                         const englishText = line.text.split('\n')[0]; 
-                        // ✅ 修复正则：加入了短横线 '-'，现在 record-breaking 算一个词
                         const words = englishText.match(/[a-zA-Z0-9'-]+/g); 
                         if (words) {
                             totalWordCount += words.length;
@@ -272,6 +346,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     const playButton = document.createElement('div');
                     playButton.className = 'play-button';
 
+                    // 互动按钮（小手）
+                    const interactBtn = document.createElement('div');
+                    interactBtn.className = 'interact-btn';
+                    interactBtn.innerHTML = `
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    `;
+                    interactBtn.title = "点击进入查词模式";
+
                     let endTime;
                     if (index < data.transcript.length - 1) {
                         endTime = data.transcript[index + 1].time;
@@ -289,7 +375,29 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     p.addEventListener('click', function(event) {
                         const target = event.target;
-                        if (target.classList.contains('play-button') || target.closest('.play-button')) {
+
+                        // 互动模式中
+                        if (activeInteractionIndex === index) {
+                            if (target.closest('.interact-btn')) {
+                                closeInteractionMode();
+                            } else if (!target.closest('.word-highlight') && !target.closest('.word-popup')) {
+                                closeInteractionMode();
+                            }
+                            return; 
+                        }
+
+                        // 进入互动模式
+                        if (target.closest('.interact-btn')) {
+                            closeInteractionMode();
+                            activeInteractionIndex = index;
+                            p.classList.add('interaction-active');
+                            target.closest('.interact-btn').classList.add('active');
+                            if (!audioPlayer.paused) audioPlayer.pause();
+                            return;
+                        }
+
+                        // 正常播放
+                        if (target.classList.contains('play-button') || target.closest('.play-button') || target.closest('.text-block')) {
                             handleSentencePlayToggle(sentenceData);
                         } else {
                             handleSentencePlayFromStart(sentenceData);
@@ -310,6 +418,14 @@ document.addEventListener('DOMContentLoaded', function() {
                             wordSpan.dataset.start = wordData.start;
                             wordSpan.dataset.end = wordData.end;
                             
+                            // 单词点击
+                            wordSpan.addEventListener('click', function(e) {
+                                if (activeInteractionIndex === index) {
+                                    e.stopPropagation();
+                                    showWordPopup(wordSpan, wordData);
+                                }
+                            });
+
                             if (wordIndex > 0) {
                                 const space = document.createTextNode(' ');
                                 originalText.appendChild(space);
@@ -340,6 +456,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     sentenceContent.appendChild(playButton);
                     sentenceContent.appendChild(textBlock);
+                    sentenceContent.appendChild(interactBtn);
                     p.appendChild(timeLabel);
                     p.appendChild(sentenceContent);
                     transcriptContainer.appendChild(p);
@@ -359,6 +476,44 @@ document.addEventListener('DOMContentLoaded', function() {
                 transcriptContainer.innerHTML = `<p style="color: red;">加载文章失败: ${error.message}</p>`;
             });
     }
+
+    function showWordPopup(wordSpan, wordData) {
+        closePopup(); 
+
+        const popup = document.createElement('div');
+        popup.className = 'word-popup';
+        
+        // 复制按钮 (只保留这一个)
+        const copyBtn = document.createElement('button');
+        copyBtn.className = 'popup-btn';
+        copyBtn.innerHTML = '📋 复制';
+        copyBtn.onclick = (e) => {
+            e.stopPropagation();
+            copyToClipboard(wordData.text);
+            copyBtn.innerHTML = '✅ 已复制';
+            setTimeout(() => { if(popup) closePopup(); }, 800);
+        };
+
+        popup.appendChild(copyBtn);
+        
+        document.body.appendChild(popup);
+        activePopup = popup;
+
+        const rect = wordSpan.getBoundingClientRect();
+        const popupHeight = 40; 
+        let top = rect.top - popupHeight - 10;
+        let left = rect.left + rect.width / 2;
+        
+        popup.style.top = top + 'px';
+        popup.style.left = left + 'px';
+    }
+
+    // 全局点击关闭
+    document.addEventListener('click', function(e) {
+        if (activePopup && !e.target.closest('.word-popup') && !e.target.closest('.word-highlight')) {
+            closePopup();
+        }
+    });
 
     function loadSingleArticle() {
         const urlParams = new URLSearchParams(window.location.search);
@@ -399,6 +554,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentLoopSentence = null;
         isLooping = false;
         loopBtn.classList.remove('active');
+        closeInteractionMode();
         
         if (audioPlayer.paused) {
             audioPlayer.play();
@@ -423,6 +579,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentLoopSentence = null;
         isLooping = false;
         loopBtn.classList.remove('active');
+        closeInteractionMode();
         
         const currentIndex = findCurrentSentenceIndex(audioPlayer.currentTime);
         let targetIndex;
@@ -445,6 +602,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentLoopSentence = null;
         isLooping = false;
         loopBtn.classList.remove('active');
+        closeInteractionMode();
         
         const currentIndex = findCurrentSentenceIndex(audioPlayer.currentTime);
         
@@ -466,6 +624,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentLoopSentence = null;
         isLooping = false;
         loopBtn.classList.remove('active');
+        closeInteractionMode();
         
         const rect = progressBar.getBoundingClientRect();
         const clickX = e.clientX - rect.left;
@@ -609,6 +768,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentLoopSentence = null;
         isLooping = false;
         loopBtn.classList.remove('active');
+        closeInteractionMode();
         
         currentSentencePlayer = sentenceData;
         
