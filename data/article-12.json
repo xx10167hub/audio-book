@@ -5,7 +5,7 @@
     {
       "time": 0.031,
       "text": "New research suggests that cheese gives people nightmares.",
-      "translation": "一项新研究发现，吃奶酪可能会让人做噩梦。",
+      "translation": "最新研究指出，食用奶酪可能引发噩梦，",
       "words": [
         {"text": "New", "start": 0.031, "end": 0.572},
         {"text": "research", "start": 0.732, "end": 1.334},
@@ -20,7 +20,7 @@
     {
       "time": 5.643,
       "text": "People with a severe lactose intolerance were more likely to have bad dreams.",
-      "translation": "特别是那些有严重乳糖不耐受症的人，做噩梦的可能性更高。",
+      "translation": "尤其是重度乳糖不耐受人群，受此困扰的概率更高。",
       "words": [
         {"text": "People", "start": 5.643, "end": 6.003},
         {"text": "with", "start": 6.043, "end": 6.184},
@@ -40,7 +40,7 @@
     {
       "time": 12.377,
       "text": "The dream and nightmare lab analysed the diet and sleep patterns of 1,000 people.",
-      "translation": "为此，“梦想与噩梦实验室”分析了1000人的饮食习惯和睡眠模式，",
+      "translation": "“梦与噩梦实验室”分析了1000名受访者的饮食与睡眠模式，",
       "words": [
         {"text": "The", "start": 12.377, "end": 12.457},
         {"text": "dream", "start": 12.497, "end": 12.838},
@@ -59,8 +59,9 @@
       ]
     },
     {
-      "time": 19.792, "text": "It investigated how food affected dreams.",
-      "translation": "旨在调查食物是如何影响梦境的。",
+      "time": 19.792,
+      "text": "It investigated how food affected dreams.",
+      "translation": "旨在探究食物对梦境的具体影响。",
       "words": [
         {"text": "It", "start": 19.792, "end": 20.133},
         {"text": "investigated", "start": 20.253, "end": 21.155},
@@ -73,7 +74,7 @@
     {
       "time": 24.883,
       "text": "The lab based its research on a 2015 study that looked into food-dependent dreaming.",
-      "translation": "这项研究是基于2015年的一项关于“食物依赖性梦境”的调查，",
+      "translation": "该项目建立在2015年一项关于“食物依赖型梦境”（food-dependent dreaming）的研究之上；",
       "words": [
         {"text": "The", "start": 24.883, "end": 24.963},
         {"text": "lab", "start": 25.023, "end": 25.303},
@@ -94,7 +95,7 @@
     {
       "time": 33.26,
       "text": "Participants in that study blamed dairy products for disrupting their sleep.",
-      "translation": "当时的研究参与者就认为，乳制品是干扰他们睡眠的元凶。",
+      "translation": "当时的受试者普遍认为，乳制品是干扰睡眠的元凶。",
       "words": [
         {"text": "Participants", "start": 33.26, "end": 33.982},
         {"text": "in", "start": 34.142, "end": 34.242},
@@ -112,7 +113,7 @@
     {
       "time": 40.514,
       "text": "The lab found that people with stomach problems and lactose intolerance had scarier nightmares.",
-      "translation": "该实验室发现，有胃部问题或乳糖不耐受的人，所做的噩梦往往更吓人。",
+      "translation": "实验室进一步发现，凡患有胃部疾病或乳糖不耐受者，其噩梦内容往往更为惊悚。",
       "words": [
         {"text": "The", "start": 40.514, "end": 40.654},
         {"text": "lab", "start": 40.714, "end": 40.975},
@@ -133,7 +134,7 @@
     {
       "time": 48.745,
       "text": "It said stomach issues could lead to sleep disturbances and nightmares.",
-      "translation": "研究表示，胃部不适很可能导致睡眠障碍和噩梦。",
+      "translation": "研究指出，这可能是因为胃部不适诱发了睡眠紊乱，进而导致噩梦产生。",
       "words": [
         {"text": "It", "start": 48.745, "end": 48.825},
         {"text": "said", "start": 48.885, "end": 49.085},
@@ -151,7 +152,7 @@
     {
       "time": 55.113,
       "text": "A professor said many of us do not sleep well.",
-      "translation": "一位教授指出，我们当中有很多人睡眠质量不佳，",
+      "translation": "一位教授指出，现代人普遍睡眠质量欠佳，",
       "words": [
         {"text": "A", "start": 55.113, "end": 55.173},
         {"text": "professor", "start": 55.273, "end": 55.794},
@@ -168,7 +169,7 @@
     {
       "time": 59.638,
       "text": "Around 35% of people could have a serious sleep disorder.",
-      "translation": "大约35%的人可能患有严重的睡眠障碍。",
+      "translation": "约35%的人群可能患有严重的睡眠障碍。",
       "words": [
         {"text": "Around", "start": 59.638, "end": 59.939},
         {"text": "35%", "start": 59.959, "end": 60.44},
@@ -185,7 +186,7 @@
     {
       "time": 66.535,
       "text": "Research suggests that about 85% of adults have a nightmare at least once a year.",
-      "translation": "研究还表明，大约85%的成年人每年至少会做一次噩梦，",
+      "translation": "数据显示，约85%的成年人每年至少做一次噩梦，",
       "words": [
         {"text": "Research", "start": 66.535, "end": 67.157},
         {"text": "suggests", "start": 67.358, "end": 68.0},
@@ -207,7 +208,7 @@
     {
       "time": 74.18,
       "text": "About 5% of people have a bad dream frequently.",
-      "translation": "而大约5%的人则会频繁地被噩梦困扰。",
+      "translation": "而频发恶梦的人群比例约为5%。",
       "words": [
         {"text": "About", "start": 74.18, "end": 75.404},
         {"text": "5%", "start": 75.425, "end": 75.786},
