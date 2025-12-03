@@ -5,7 +5,7 @@
     {
       "time": 0.031,
       "text": "There is good news if you want to work in New Zealand online.",
-      "translation": "想在新西兰远程工作的人迎来好消息。",
+      "translation": "有意在新西兰从事远程工作的人士迎来了一则利好消息。",
       "words": [
         {"text": "There", "start": 0.031, "end": 0.471},
         {"text": "is", "start": 0.532, "end": 0.612},
@@ -25,7 +25,7 @@
     {
       "time": 4.936,
       "text": "The country has a new visa.",
-      "translation": "该国推出新签证。",
+      "translation": "该国新推出一项签证，",
       "words": [
         {"text": "The", "start": 4.936, "end": 5.036},
         {"text": "country", "start": 5.076, "end": 5.457},
@@ -38,7 +38,7 @@
     {
       "time": 7.619,
       "text": "It lets visitors work online for a foreign employer.",
-      "translation": "允许持签游客为海外雇主进行线上工作。",
+      "translation": "允许访客在境内为海外雇主服务",
       "words": [
         {"text": "It", "start": 7.619, "end": 7.719},
         {"text": "lets", "start": 7.839, "end": 8.119},
@@ -54,7 +54,7 @@
     {
       "time": 12.624,
       "text": "People staying for nine months have to pay tax.",
-      "translation": "停留满九个月者需依法纳税。",
+      "translation": "需注意，在当地停留满九个月者须依法纳税。",
       "words": [
         {"text": "People", "start": 12.624, "end": 13.004},
         {"text": "staying", "start": 13.084, "end": 13.505},
@@ -70,7 +70,7 @@
     {
       "time": 17.048,
       "text": "New Zealand's Economic Growth Minister said, We want wealthy and super-talented people coming through the arrival gates.",
-      "translation": "新西兰经济发展部长表示：“我们希望吸引那些财力与才华兼备的人才踏上这片土地。”",
+      "translation": "新西兰经济发展部长直言：“我们期盼富有且顶尖的人才跨入国门。”",
       "words": [
         {"text": "New", "start": 17.048, "end": 17.208},
         {"text": "Zealand's", "start": 17.249, "end": 17.689},
@@ -94,7 +94,7 @@
     {
       "time": 28.043,
       "text": "New Zealand's economy suffered because of the Covid pandemic.",
-      "translation": "新冠疫情让新西兰经济受到重创。",
+      "translation": "此前，新冠疫情已致新西兰经济受挫，",
       "words": [
         {"text": "New", "start": 28.043, "end": 28.243},
         {"text": "Zealand's", "start": 28.303, "end": 28.684},
@@ -110,7 +110,7 @@
     {
       "time": 32.809,
       "text": "Another thing that is hurting the economy is the many young people leaving the country.",
-      "translation": "另一个拖累经济的因素，是大量年轻人正选择离开。",
+      "translation": "而年轻劳动力的流失更令局势雪上加霜。",
       "words": [
         {"text": "Another", "start": 32.809, "end": 33.169},
         {"text": "thing", "start": 33.249, "end": 33.49},
@@ -132,7 +132,7 @@
     {
       "time": 39.357,
       "text": "New Zealand hopes the new visitors will spend more money.",
-      "translation": "新西兰希望新游客能增加消费，",
+      "translation": "当局寄望这批新访客不仅能通过消费",
       "words": [
         {"text": "New", "start": 39.357, "end": 39.497},
         {"text": "Zealand", "start": 39.537, "end": 39.857},
@@ -149,7 +149,7 @@
     {
       "time": 43.362,
       "text": "This will help the economy.",
-      "translation": "来拉动经济。",
+      "translation": "提振经济，",
       "words": [
         {"text": "This", "start": 43.362, "end": 43.542},
         {"text": "will", "start": 43.662, "end": 43.862},
@@ -161,7 +161,7 @@
     {
       "time": 45.845,
       "text": "It also hopes they will fall in love with New Zealand.",
-      "translation": "更希望他们能真正爱上这个国家。",
+      "translation": "更能最终爱上这片土地。",
       "words": [
         {"text": "It", "start": 45.845, "end": 45.925},
         {"text": "also", "start": 46.065, "end": 46.425},
