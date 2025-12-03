@@ -5,7 +5,7 @@
     {
       "time": 0.588,
       "text": "More young people are wearing headphones.",
-      "translation": "如今戴耳机的年轻人越来越多。",
+      "translation": "越来越多的年轻人开始习惯长时间佩戴耳机。",
       "words": [
         {"text": "More", "start": 0.588, "end": 0.908},
         {"text": "young", "start": 0.969, "end": 1.169},
@@ -18,7 +18,7 @@
     {
       "time": 3.412,
       "text": "A report from the BBC suggests noise-canceling earphones could cause hearing problems.",
-      "translation": "BBC一份报告指出，降噪耳机可能会导致听力问题。",
+      "translation": "然而，BBC 一份最新报告警示：降噪耳机恐致听力受损。",
       "words": [
         {"text": "A", "start": 3.412, "end": 3.472},
         {"text": "report", "start": 3.532, "end": 3.933},
@@ -37,7 +37,7 @@
     {
       "time": 11.084,
       "text": "The BBC interviewed ear doctors.",
-      "translation": "BBC咨询了耳科医生，",
+      "translation": "受访的耳科专家指出，",
       "words": [
         {"text": "The", "start": 11.084, "end": 11.164},
         {"text": "BBC", "start": 11.204, "end": 11.805},
@@ -49,7 +49,7 @@
     {
       "time": 14.329,
       "text": "The doctors said young people are having problems hearing sounds.",
-      "translation": "医生们说，年轻人在听声音方面出了问题",
+      "translation": "许多年轻人的听觉感知已出现异常——",
       "words": [
         {"text": "The", "start": 14.329, "end": 14.409},
         {"text": "doctors", "start": 14.449, "end": 14.89},
@@ -66,7 +66,7 @@
     {
       "time": 19.256,
       "text": "They can hear sounds, but they're not sure where they are from.",
-      "translation": "他们能听到声音，但不确定声音是从哪里来的。",
+      "translation": "他们虽然能听到声音，却难以辨别声音的具体方位。",
       "words": [
         {"text": "They", "start": 19.256, "end": 19.376},
         {"text": "can", "start": 19.416, "end": 19.537},
@@ -85,7 +85,7 @@
     {
       "time": 24.027,
       "text": "A doctor said many young people are complaining about poor hearing.",
-      "translation": "一位医生表示，很多年轻人抱怨听力变差。",
+      "translation": "一位医生透露，因听力下降而感到困扰的年轻人不在少数。",
       "words": [
         {"text": "A", "start": 24.027, "end": 24.167},
         {"text": "doctor", "start": 24.247, "end": 24.668},
@@ -103,7 +103,7 @@
     {
       "time": 29.133,
       "text": "She said, there is a difference between hearing and listening, and that listening skills are suffering.",
-      "translation": "她说，“听见”和“听清”是有区别的，而且人们的“听辨能力”正在受损",
+      "translation": "她强调，“听到”与“聆听”截然不同，而当代年轻人的这项“聆听技能”正日益退化。",
       "words": [
         {"text": "She", "start": 29.133, "end": 29.293},
         {"text": "said,", "start": 29.393, "end": 29.653},
@@ -126,7 +126,7 @@
     {
       "time": 37.001,
       "text": "We need to hear many sounds so we can decide which ones are important.",
-      "translation": "我们需要听到许多声音来，以便决定哪些是重要的。",
+      "translation": "人类本能地需要接收环境音以筛选重要信息，",
       "words": [
         {"text": "We", "start": 37.001, "end": 37.121},
         {"text": "need", "start": 37.181, "end": 37.422},
@@ -147,7 +147,7 @@
     {
       "time": 42.607,
       "text": "Headphones mean we can forget to hear important sounds.",
-      "translation": "戴耳机意味着我们会“忘记”去听那些重要的声音。",
+      "translation": "但耳机的屏蔽效应让我们的大脑逐渐“遗忘”了如何去捕捉这些关键声响。",
       "words": [
         {"text": "Headphones", "start": 42.607, "end": 43.128},
         {"text": "mean", "start": 43.588, "end": 43.828},
