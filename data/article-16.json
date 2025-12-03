@@ -5,7 +5,7 @@
     {
       "time": 0.706,
       "text": "Landlords in Los Angeles are profiting from the wildfires.",
-      "translation": "洛杉矶的部分房东正从野火灾害中获利。",
+      "translation": "洛杉矶部分房东竟借山火肆虐之机大发横财。",
       "words": [
         {"text": "Landlords", "start": 0.706, "end": 1.347},
         {"text": "in", "start": 1.447, "end": 1.507},
@@ -21,7 +21,7 @@
     {
       "time": 4.893,
       "text": "Tens of thousands of people need a house.",
-      "translation": "数万人因火灾急需住所，",
+      "translation": "在数万灾民流离失所、急需安置之际，",
       "words": [
         {"text": "Tens", "start": 4.893, "end": 5.193},
         {"text": "of", "start": 5.233, "end": 5.333},
@@ -36,7 +36,7 @@
     {
       "time": 8.418,
       "text": "However, some landlords increased their rents by thousands of dollars.",
-      "translation": "但一些房东却将月租金抬高数千美元，",
+      "translation": "一些房东却坐地起价，将租金上调数千美元，",
       "words": [
         {"text": "However,", "start": 8.418, "end": 8.819},
         {"text": "some", "start": 9.26, "end": 9.46},
@@ -53,7 +53,7 @@
     {
       "time": 13.927,
       "text": "Some rents doubled.",
-      "translation": "有的甚至直接翻倍。",
+      "translation": "甚至直接翻倍。",
       "words": [
         {"text": "Some", "start": 13.927, "end": 14.127},
         {"text": "rents", "start": 14.208, "end": 14.488},
@@ -63,7 +63,7 @@
     {
       "time": 15.99,
       "text": "Making money in a crisis is called price gouging.",
-      "translation": "这种趁机抬价的行为被称为“价格欺诈”。",
+      "translation": "这种趁火打劫的行径即所谓的“哄抬物价”（price gouging）。",
       "words": [
         {"text": "Making", "start": 15.99, "end": 16.331},
         {"text": "money", "start": 16.411, "end": 16.671},
@@ -79,7 +79,7 @@
     {
       "time": 20.017,
       "text": "California introduced a law against price gouging last week.",
-      "translation": "加州上周已通过反价格欺诈法案。",
+      "translation": "针对此类乱象，加州上周已紧急颁布反哄抬物价法。",
       "words": [
         {"text": "California", "start": 20.017, "end": 20.678},
         {"text": "introduced", "start": 20.858, "end": 21.379},
@@ -95,7 +95,7 @@
     {
       "time": 26.187,
       "text": "The wildfires shocked America.",
-      "translation": "这场野火震惊了美国。",
+      "translation": "此次山火举国震惊，",
       "words": [
         {"text": "The", "start": 26.187, "end": 26.267},
         {"text": "wildfires", "start": 26.327, "end": 27.068},
@@ -106,7 +106,7 @@
     {
       "time": 28.938,
       "text": "Many of LA's most exclusive areas have gone.",
-      "translation": "洛杉矶多个高端社区被大火吞噬。",
+      "translation": "洛杉矶多个顶级富人区化为焦土。",
       "words": [
         {"text": "Many", "start": 28.938, "end": 29.319},
         {"text": "of", "start": 29.439, "end": 29.499},
@@ -121,7 +121,7 @@
     {
       "time": 32.206,
       "text": "Actress Paris Hilton lost her house.",
-      "translation": "演员帕丽斯·希尔顿的住宅被毁，",
+      "translation": "女演员帕里斯·希尔顿（Paris Hilton）的豪宅不幸被毁，",
       "words": [
         {"text": "Actress", "start": 32.206, "end": 33.649},
         {"text": "Paris", "start": 33.93, "end": 34.29},
@@ -134,7 +134,7 @@
     {
       "time": 36.916,
       "text": "She wrote, It feels like my heart has shattered into a million pieces.",
-      "translation": "她在社交媒体上写道：“我的心碎成了无数片。”",
+      "translation": "她坦言：“感觉我的心已碎成了百万片。”",
       "words": [
         {"text": "She", "start": 36.916, "end": 37.057},
         {"text": "wrote,", "start": 37.137, "end": 37.378},
@@ -154,7 +154,7 @@
     {
       "time": 43.351,
       "text": "Beyoncé's mother also lost her house.",
-      "translation": "碧昂丝的母亲也失去了住所，",
+      "translation": "碧昂斯（Beyonce）母亲的居所也未能幸免，",
       "words": [
         {"text": "Beyoncé's", "start": 43.351, "end": 43.953},
         {"text": "mother", "start": 44.013, "end": 44.273},
@@ -167,7 +167,7 @@
     {
       "time": 46.378,
       "text": "She wrote, It was my favourite place.",
-      "translation": "她说：那曾是我最心爱的家",
+      "translation": "她痛陈：“那曾是我最爱的地方，",
       "words": [
         {"text": "She", "start": 46.378, "end": 46.559},
         {"text": "wrote,", "start": 46.639, "end": 46.9},
@@ -192,7 +192,7 @@
     {
       "time": 51.29,
       "text": "Many people say climate change caused the fires.",
-      "translation": "很多人指出，气候变化才是火灾的真正原因。",
+      "translation": "舆论普遍认为，气候变化是这场大火的元凶。",
       "words": [
         {"text": "Many", "start": 51.29, "end": 51.51},
         {"text": "people", "start": 51.57, "end": 51.911},
