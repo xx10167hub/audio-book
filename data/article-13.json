@@ -5,7 +5,7 @@
     {
       "time": 0.031,
       "text": "A 20,000 km walk from Congo to Norway has started.",
-      "translation": "一场从刚果到挪威、全程2万公里的徒步活动已经启程。",
+      "translation": "一场名为“兽群”（The Herds）、横跨刚果至挪威的20,000公里徒步之旅已正式启程，",
       "words": [
         {"text": "A", "start": 0.031, "end": 0.452},
         {"text": "20,000", "start": 0.472, "end": 0.913},
@@ -22,7 +22,7 @@
     {
       "time": 5.541,
       "text": "It is called the herds.",
-      "translation": "这项名为“兽群”的行动",
+      "translation": "此行动名为“兽群”",
       "words": [
         {"text": "It", "start": 5.541, "end": 6.543},
         {"text": "is", "start": 6.643, "end": 6.703},
@@ -34,7 +34,7 @@
     {
       "time": 9.248,
       "text": "It will teach people about the climate crisis.",
-      "translation": "它旨在教人们认识气候危机",
+      "translation": "旨在唤醒公众对气候危机的关注。",
       "words": [
         {"text": "It", "start": 9.248, "end": 9.328},
         {"text": "will", "start": 9.368, "end": 9.549},
@@ -49,7 +49,7 @@
     {
       "time": 13.336,
       "text": "Hundreds of life-sized puppets of animals are on the walk.",
-      "translation": "数百个实物大小的动物木偶加入了徒步队伍",
+      "translation": "数百个真人大小的动物人偶随行其中，",
       "words": [
         {"text": "Hundreds", "start": 13.336, "end": 13.777},
         {"text": "of", "start": 13.857, "end": 13.897},
@@ -64,8 +64,9 @@
       ]
     },
     {
-      "time": 18.205, "text": "The herds will show how climate change is a danger to animals.",
-      "translation": "“兽群”将展示气候变化如何对动物构成危险。",
+      "time": 18.205,
+      "text": "The herds will show how climate change is a danger to animals.",
+      "translation": "将直观呈现气候变化对动物生存构成的严峻威胁。",
       "words": [
         {"text": "The", "start": 18.205, "end": 18.506},
         {"text": "herds", "start": 18.546, "end": 18.907},
@@ -84,7 +85,7 @@
     {
       "time": 24.226,
       "text": "A spokesperson said, the herds is a coming together of culture and climate.",
-      "translation": "一位发言人说，“兽群”是“文化与气候的融合",
+      "translation": "活动发言人称，“兽群”实现了“文化艺术与气候议题的深度融合”。",
       "words": [
         {"text": "A", "start": 24.226, "end": 24.266},
         {"text": "spokesperson", "start": 24.286, "end": 25.21},
@@ -104,7 +105,7 @@
     {
       "time": 31.705,
       "text": "The animal puppets will visit 20 cities in Africa and Europe.",
-      "translation": "这些动物木偶将造访非洲和欧洲的20个城市",
+      "translation": "这些动物人偶将造访非欧两洲的20座城市，",
       "words": [
         {"text": "The", "start": 31.705, "end": 31.885},
         {"text": "animal", "start": 32.005, "end": 32.346},
@@ -122,7 +123,7 @@
     {
       "time": 37.232,
       "text": "Each city will have street performances.",
-      "translation": "每个城市都将有街头表演",
+      "translation": "沿途举办街头表演，",
       "words": [
         {"text": "Each", "start": 37.232, "end": 37.413},
         {"text": "city", "start": 37.493, "end": 37.833},
@@ -135,7 +136,7 @@
     {
       "time": 40.297,
       "text": "These will focus on how we can help Earth.",
-      "translation": "这些表演将聚焦于我们如何能帮助地球",
+      "translation": "聚焦人类守护地球的具体路径。",
       "words": [
         {"text": "These", "start": 40.297, "end": 40.477},
         {"text": "will", "start": 40.517, "end": 40.717},
@@ -151,7 +152,7 @@
     {
       "time": 44.262,
       "text": "The herds will teach millions of people about nature.",
-      "translation": "“兽群”将让数百万人了解自然",
+      "translation": "预计“兽群”将向数百万人传播自然知识。",
       "words": [
         {"text": "The", "start": 44.262, "end": 44.362},
         {"text": "herds", "start": 44.402, "end": 44.743},
@@ -167,7 +168,7 @@
     {
       "time": 47.486,
       "text": "An environmentalist says the herds will teach people about climate change and biodiversity loss.",
-      "translation": "一位环保人士指出，“兽群”能帮助公众理解气候变化和生物多样性的消失。",
+      "translation": "一位环保主义者表示，该项目将致力于普及气候变化与生物多样性丧失的相关议题。",
       "words": [
         {"text": "An", "start": 47.486, "end": 48.708},
         {"text": "environmentalist", "start": 48.768, "end": 49.909},
