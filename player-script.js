@@ -1,4 +1,4 @@
-// player-script.js - 最终修复版：单词互动 + 手机端强力复制补丁
+// player-script.js - 最终修复版：单词互动 + 手机端强力复制 + 标题智能缩短
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===== 配置 =====
@@ -93,58 +93,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ===== 🔥 核心修复：手机端/飞书强力复制逻辑 =====
     function copyToClipboard(text) {
-        // 1. 清洗单词
         const cleanText = text.replace(/[.,!?;:"]/g, '');
 
-        // 2. 尝试现代 API (仅在 HTTPS 环境有效)
         if (navigator.clipboard && window.isSecureContext) {
             navigator.clipboard.writeText(cleanText).then(() => {
                 console.log('Modern Copy Success');
             }).catch(() => {
-                // 如果现代 API 失败，立即降级
                 fallbackCopyTextToClipboard(cleanText);
             });
         } else {
-            // 3. 环境不支持或非 HTTPS，直接用备用方案
             fallbackCopyTextToClipboard(cleanText);
         }
     }
 
     function fallbackCopyTextToClipboard(text) {
-        // 创建输入框
         var textArea = document.createElement("textarea");
         textArea.value = text;
         
-        // 关键样式：防止手机键盘弹出，但必须保持可见以便选中
         textArea.setAttribute('readonly', '');
         textArea.style.position = 'absolute';
         textArea.style.left = '-9999px';
-        textArea.style.fontSize = '12pt'; // 防止iOS缩放
+        textArea.style.fontSize = '12pt'; 
         
         document.body.appendChild(textArea);
         
-        // 核心：手机端必须先 focus 才能 select
         textArea.focus();
         textArea.select();
-        
-        // 🔥 关键补丁：iOS/安卓 必须显式设置选区范围才能复制成功
         textArea.setSelectionRange(0, 999999); 
 
         try {
             var successful = document.execCommand('copy');
-            if (!successful) {
-                throw new Error('Copy command failed');
-            }
+            if (!successful) throw new Error('Copy command failed');
             console.log('Fallback copy successful');
         } catch (err) {
             console.error('Fallback copy failed:', err);
-            // 最后的兜底：如果还不行，弹窗把单词显示出来让用户长按
             prompt("自动复制受限，请长按下方文字手动复制：", text);
         }
 
         document.body.removeChild(textArea);
     }
-    // ============================================
 
     function findSentenceDataByTime(currentTime) {
          for (let i = sentencesData.length - 1; i >= 0; i--) {
@@ -218,6 +205,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // 🔥 新增：根据屏幕宽度更新下拉框文字
+    function updateSelectOptionsText() {
+        if (!articleSelect || articleSelect.options.length === 0) return;
+        
+        const isMobile = window.innerWidth < 768;
+        
+        Array.from(articleSelect.options).forEach(option => {
+            // 如果dataset里存了数据，就进行切换
+            if (option.dataset.full && option.dataset.short) {
+                option.textContent = isMobile ? option.dataset.short : option.dataset.full;
+            }
+        });
+    }
+
+    // 监听窗口大小变化，实时切换标题
+    window.addEventListener('resize', updateSelectOptionsText);
+
     async function loadArticlesConfig() {
         try {
             const response = await fetch(ARTICLES_CONFIG_FILE);
@@ -228,10 +232,34 @@ document.addEventListener('DOMContentLoaded', function() {
             articlesConfig = config.articles;
             
             articleSelect.innerHTML = '';
+            
+            // 🔥 修改：生成选项时，准备好长短标题
             articlesConfig.forEach(article => {
                 const option = document.createElement('option');
                 option.value = article.id;
-                option.textContent = article.title;
+                
+                // 1. 尝试提取 "第xx篇"
+                let shortTitle = article.title;
+                const match = article.title.match(/^(第\d+篇)/);
+                
+                if (match) {
+                    shortTitle = match[1]; // 提取 "第20篇"
+                } else {
+                    // 如果标题格式不是 "第xx篇: xxx"，尝试用冒号分割
+                    const parts = article.title.split(/[:：]/); // 兼容中英文冒号
+                    if (parts.length > 0) {
+                        shortTitle = parts[0];
+                    }
+                }
+
+                // 2. 存入 dataset
+                option.dataset.full = article.title;
+                option.dataset.short = shortTitle;
+                
+                // 3. 初始设置
+                const isMobile = window.innerWidth < 768;
+                option.textContent = isMobile ? shortTitle : article.title;
+
                 articleSelect.appendChild(option);
             });
             
@@ -376,7 +404,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     p.addEventListener('click', function(event) {
                         const target = event.target;
 
-                        // 互动模式中
                         if (activeInteractionIndex === index) {
                             if (target.closest('.interact-btn')) {
                                 closeInteractionMode();
@@ -386,7 +413,6 @@ document.addEventListener('DOMContentLoaded', function() {
                             return; 
                         }
 
-                        // 进入互动模式
                         if (target.closest('.interact-btn')) {
                             closeInteractionMode();
                             activeInteractionIndex = index;
@@ -396,7 +422,6 @@ document.addEventListener('DOMContentLoaded', function() {
                             return;
                         }
 
-                        // 正常播放
                         if (target.classList.contains('play-button') || target.closest('.play-button') || target.closest('.text-block')) {
                             handleSentencePlayToggle(sentenceData);
                         } else {
@@ -418,7 +443,6 @@ document.addEventListener('DOMContentLoaded', function() {
                             wordSpan.dataset.start = wordData.start;
                             wordSpan.dataset.end = wordData.end;
                             
-                            // 单词点击
                             wordSpan.addEventListener('click', function(e) {
                                 if (activeInteractionIndex === index) {
                                     e.stopPropagation();
@@ -483,7 +507,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const popup = document.createElement('div');
         popup.className = 'word-popup';
         
-        // 复制按钮 (只保留这一个)
         const copyBtn = document.createElement('button');
         copyBtn.className = 'popup-btn';
         copyBtn.innerHTML = '📋 复制';
@@ -508,7 +531,6 @@ document.addEventListener('DOMContentLoaded', function() {
         popup.style.left = left + 'px';
     }
 
-    // 全局点击关闭
     document.addEventListener('click', function(e) {
         if (activePopup && !e.target.closest('.word-popup') && !e.target.closest('.word-highlight')) {
             closePopup();
