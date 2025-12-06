@@ -61,8 +61,8 @@ h3 {
 
 .controls {
     display: flex;
-    align-items: center; /* 垂直居中对齐左边的选择框 */
-    justify-content: space-between; /* 左右两端对齐 */
+    align-items: center; 
+    justify-content: space-between; 
     width: 100%;
     padding: 0 24px;
     margin-bottom: 16px;
@@ -80,6 +80,8 @@ h3 {
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-shrink: 1; 
+    min-width: 0; 
 }
 
 .controls select {
@@ -91,15 +93,20 @@ h3 {
     border-radius: 8px;
     outline: none;
     cursor: pointer;
+    max-width: 100%; 
 }
 
-/* 🔥 核心修改：右侧信息显示区 */
+/* 🔥 右侧信息显示区 (核心修正) */
 .info-display {
-    margin-left: auto;        /* 靠右 */
-    display: flex;            /* 开启 flex 布局 */
-    flex-direction: column;   /* 垂直排列 (上：词数，下：ID) */
-    align-items: flex-end;    /* 右对齐关键代码 */
+    /* 关键修改：用 auto 强制推到最右边，即使左边的选择框被隐藏，它也会在右边 */
+    margin-left: auto;        
+    display: flex;            
+    flex-direction: column;   
+    align-items: flex-end;    
     justify-content: center;
+    flex-shrink: 0;
+    /* 增加一点左侧边距，以防万一左边东西还在时贴太近 */
+    padding-left: 10px;       
 }
 
 .count-row {
@@ -113,11 +120,11 @@ h3 {
     font-weight: 600;
 }
 
-/* 🔥 ID 样式调整 */
+/* 🔥 ID 样式 */
 .social-credit {
-    font-size: 13px;          /* 大小一致 */
-    color: #00ffcc;           /* 颜色一致 */
-    margin-top: 4px;          /* 与上面词数的间距 */
+    font-size: 13px;          
+    color: #00ffcc;           
+    margin-top: 4px;          
     white-space: nowrap;      
     text-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
     font-weight: 500;
@@ -463,9 +470,18 @@ h3 {
         border: none;
     }
 
-    /* 手机端隐藏小红书账号，避免拥挤 */
     .social-credit {
-        display: none;
+        display: block !important; 
+        font-size: 11px; /* 字体保持11px，足够清晰 */
+        margin-top: 2px;
+    }
+    
+    .controls {
+        padding: 0 12px; 
+    }
+    
+    .controls select {
+        width: 100px; 
     }
 
     .custom-player {
