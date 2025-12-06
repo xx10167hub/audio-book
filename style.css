@@ -61,7 +61,8 @@ h3 {
 
 .controls {
     display: flex;
-    align-items: center;
+    align-items: center; /* 垂直居中对齐左边的选择框 */
+    justify-content: space-between; /* 左右两端对齐 */
     width: 100%;
     padding: 0 24px;
     margin-bottom: 16px;
@@ -92,8 +93,16 @@ h3 {
     cursor: pointer;
 }
 
+/* 🔥 核心修改：右侧信息显示区 */
 .info-display {
-    margin-left: auto;
+    margin-left: auto;        /* 靠右 */
+    display: flex;            /* 开启 flex 布局 */
+    flex-direction: column;   /* 垂直排列 (上：词数，下：ID) */
+    align-items: flex-end;    /* 右对齐关键代码 */
+    justify-content: center;
+}
+
+.count-row {
     font-size: 13px;
     color: #b0b0b0;
     white-space: nowrap;
@@ -102,6 +111,16 @@ h3 {
 .info-display #word-count {
     color: #00ffcc;
     font-weight: 600;
+}
+
+/* 🔥 ID 样式调整 */
+.social-credit {
+    font-size: 13px;          /* 大小一致 */
+    color: #00ffcc;           /* 颜色一致 */
+    margin-top: 4px;          /* 与上面词数的间距 */
+    white-space: nowrap;      
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+    font-weight: 500;
 }
 
 /* ============================================
@@ -442,6 +461,11 @@ h3 {
         border-radius: 0; 
         height: 100dvh; 
         border: none;
+    }
+
+    /* 手机端隐藏小红书账号，避免拥挤 */
+    .social-credit {
+        display: none;
     }
 
     .custom-player {
