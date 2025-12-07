@@ -2,10 +2,9 @@
     "articles": [
         {
             "id": "1",
-            "title": "第1篇：🌞Solar and wind beat coal for first time💨",
+            "title": "第1篇：🌳Nature can reduce anxiety and boost mental health🧘",
             "dataFile": "data/article-1.json",
             "audioFile": "data/audio-1.mp3"
-
         },
         {
             "id": "2",
@@ -111,7 +110,7 @@
         },
         {
             "id": "19",
-            "title": "第19篇：🌳Nature can reduce anxiety and boost mental health🧘",
+            "title": "第19篇：🌞Solar and wind beat coal for first time💨",
             "dataFile": "data/article-19.json",
             "audioFile": "data/audio-19.mp3"
         },
@@ -120,6 +119,12 @@
             "title": "第20篇：🌉World's tallest bridge opens in China",
             "dataFile": "data/article-20.json",
             "audioFile": "data/audio-20.mp3"
+        },
+        {
+            "id": "79",
+            "title": "第79篇：✈️ Airbus flights disrupted for urgent software update 🛠️",
+            "dataFile": "data/article-79.json",
+            "audioFile": "data/audio-79.mp3"
         }
     ]
 }
