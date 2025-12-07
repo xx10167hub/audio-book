@@ -96,16 +96,14 @@ h3 {
     max-width: 100%; 
 }
 
-/* 🔥 右侧信息显示区 (核心修正) */
+/* 🔥 右侧信息显示区 */
 .info-display {
-    /* 关键修改：用 auto 强制推到最右边，即使左边的选择框被隐藏，它也会在右边 */
     margin-left: auto;        
     display: flex;            
     flex-direction: column;   
     align-items: flex-end;    
     justify-content: center;
     flex-shrink: 0;
-    /* 增加一点左侧边距，以防万一左边东西还在时贴太近 */
     padding-left: 10px;       
 }
 
@@ -233,7 +231,7 @@ h3 {
 .mode-translation .translation { opacity: 1; color: #ccc; }
 
 /* ============================================
-   🆕 新增：单词互动模式样式
+   🆕 互动模式与气泡样式
    ============================================ */
 
 /* 1. 互动小手按钮 */
@@ -258,7 +256,7 @@ h3 {
 }
 
 .interact-btn.active {
-    color: #ffb700; /* 激活时变成金色 */
+    color: #ffb700; 
     background: rgba(255, 183, 0, 0.15);
     box-shadow: 0 0 8px rgba(255, 183, 0, 0.3);
 }
@@ -352,11 +350,16 @@ h3 {
     box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.5);
 }
 
+/* --- 进度条关键修改 Start --- */
 .progress-container {
     margin-bottom: 12px;
-    padding: 0 4px;
+    /* 上下各加10px padding，扩大触摸热区，方便手指拖动 */
+    padding: 10px 0; 
     width: 100%;
+    /* 关键：防止手指在进度条上拖动时触发页面滚动 */
+    touch-action: none; 
 }
+/* --- 进度条关键修改 End --- */
 
 .progress-bar {
     width: 100%;
@@ -472,7 +475,7 @@ h3 {
 
     .social-credit {
         display: block !important; 
-        font-size: 11px; /* 字体保持11px，足够清晰 */
+        font-size: 11px; 
         margin-top: 2px;
     }
     
