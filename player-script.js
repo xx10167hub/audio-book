@@ -1,4 +1,4 @@
-// player-script.js - 最终修复版：单词互动 + 手机端强力复制 + 标题智能缩短
+// player-script.js - 最终修复版：支持进度条拖拽 + 手机触摸 + 单词互动
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===== 配置 =====
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentHighlightElement = null;
     let currentSentencePlayer = null;
     let isLooping = false;
-    let isSeeking = false;
+    let isSeeking = false; // 标记是否正在拖拽中，防止 timeupdate 干扰
     let currentLoopSentence = null;
     let isLoopSeeking = false;
 
@@ -205,21 +205,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // 🔥 新增：根据屏幕宽度更新下拉框文字
+    // 根据屏幕宽度更新下拉框文字
     function updateSelectOptionsText() {
         if (!articleSelect || articleSelect.options.length === 0) return;
         
         const isMobile = window.innerWidth < 768;
         
         Array.from(articleSelect.options).forEach(option => {
-            // 如果dataset里存了数据，就进行切换
             if (option.dataset.full && option.dataset.short) {
                 option.textContent = isMobile ? option.dataset.short : option.dataset.full;
             }
         });
     }
 
-    // 监听窗口大小变化，实时切换标题
     window.addEventListener('resize', updateSelectOptionsText);
 
     async function loadArticlesConfig() {
@@ -233,30 +231,25 @@ document.addEventListener('DOMContentLoaded', function() {
             
             articleSelect.innerHTML = '';
             
-            // 🔥 修改：生成选项时，准备好长短标题
             articlesConfig.forEach(article => {
                 const option = document.createElement('option');
                 option.value = article.id;
                 
-                // 1. 尝试提取 "第xx篇"
                 let shortTitle = article.title;
                 const match = article.title.match(/^(第\d+篇)/);
                 
                 if (match) {
-                    shortTitle = match[1]; // 提取 "第20篇"
+                    shortTitle = match[1]; 
                 } else {
-                    // 如果标题格式不是 "第xx篇: xxx"，尝试用冒号分割
-                    const parts = article.title.split(/[:：]/); // 兼容中英文冒号
+                    const parts = article.title.split(/[:：]/); 
                     if (parts.length > 0) {
                         shortTitle = parts[0];
                     }
                 }
 
-                // 2. 存入 dataset
                 option.dataset.full = article.title;
                 option.dataset.short = shortTitle;
                 
-                // 3. 初始设置
                 const isMobile = window.innerWidth < 768;
                 option.textContent = isMobile ? shortTitle : article.title;
 
@@ -641,32 +634,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    progressBar.addEventListener('click', function(e) {
-        cancelSentencePlayerMode();
-        currentLoopSentence = null;
-        isLooping = false;
-        loopBtn.classList.remove('active');
-        closeInteractionMode();
-        
-        const rect = progressBar.getBoundingClientRect();
-        const clickX = e.clientX - rect.left;
-        const percentage = clickX / rect.width;
-        audioPlayer.currentTime = percentage * (audioPlayer.duration || 0);
-        
-        if (audioPlayer.paused) {
-            updateHighlightAndButton();
-        }
-    });
-    
-    audioPlayer.addEventListener('seeked', function() {
-        if (!isLoopSeeking) {
-            cancelSentencePlayerMode();
-            currentLoopSentence = null;
-        }
-        isLoopSeeking = false;
-        updateHighlightAndButton();
-    });
-    
     speedControl.addEventListener('change', function() {
         audioPlayer.playbackRate = parseFloat(this.value);
     });
@@ -689,15 +656,95 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // ==========================================
+    // 🔥 进度条核心逻辑：拖拽 + 触摸 + 点击
+    // ==========================================
+
+    // 处理跳转计算的通用函数
+    function handleSeek(clientX) {
+        // 1. 重置所有播放状态，避免冲突
+        cancelSentencePlayerMode();
+        currentLoopSentence = null;
+        isLooping = false;
+        loopBtn.classList.remove('active');
+        closeInteractionMode();
+
+        // 2. 计算进度位置
+        const rect = progressBar.getBoundingClientRect();
+        let clickX = clientX - rect.left;
+        
+        // 限制边界，防止拖出范围导致数值异常
+        clickX = Math.max(0, Math.min(clickX, rect.width));
+
+        const percentage = clickX / rect.width;
+        const duration = audioPlayer.duration || 0;
+        
+        if (duration > 0) {
+            const newTime = percentage * duration;
+            audioPlayer.currentTime = newTime;
+            
+            // 立即更新UI，不等timeupdate，更跟手
+            progressFilled.style.width = (percentage * 100) + '%';
+            currentTimeDisplay.textContent = formatTime(newTime);
+        }
+    }
+
+    let isDragging = false;
+
+    // --- 鼠标事件 (PC) ---
+    progressBar.addEventListener('mousedown', function(e) {
+        isSeeking = true;
+        isDragging = true;
+        handleSeek(e.clientX);
+    });
+
+    document.addEventListener('mousemove', function(e) {
+        if (isDragging) {
+            handleSeek(e.clientX);
+        }
+    });
+
+    document.addEventListener('mouseup', function() {
+        if (isDragging) {
+            isSeeking = false;
+            isDragging = false;
+        }
+    });
+
+    // --- 触摸事件 (手机/平板) ---
+    progressBar.addEventListener('touchstart', function(e) {
+        isSeeking = true;
+        isDragging = true;
+        handleSeek(e.touches[0].clientX);
+    }, { passive: false });
+
+    document.addEventListener('touchmove', function(e) {
+        if (isDragging) {
+            e.preventDefault(); // 禁止页面滚动，只拖动进度条
+            handleSeek(e.touches[0].clientX);
+        }
+    }, { passive: false });
+
+    document.addEventListener('touchend', function() {
+        isSeeking = false;
+        isDragging = false;
+    });
+
+
+    // ==========================================
+    // 时间更新逻辑
+    // ==========================================
     audioPlayer.addEventListener('timeupdate', function() {
         const currentTime = audioPlayer.currentTime; 
         
+        // 只有当没有在手动拖拽时，才更新进度条，避免“打架”
         if (!isSeeking) {
             const progress = (currentTime / (audioPlayer.duration || 1)) * 100;
             progressFilled.style.width = progress + '%';
             currentTimeDisplay.textContent = formatTime(currentTime);
         }
         
+        // 循环模式逻辑
         if (isLooping && currentLoopSentence && currentLoopSentence.end) {
             if (currentTime >= currentLoopSentence.end - 0.15) {
                 isLoopSeeking = true;
@@ -720,23 +767,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    let isDragging = false;
-    progressBar.addEventListener('mousedown', function() {
-        isSeeking = true;
-        isDragging = true;
-    });
-    
-    document.addEventListener('mouseup', function() {
-        if (isDragging) {
-            isSeeking = false;
-            isDragging = false;
+    // 循环播放 Seek 完成后的处理
+    audioPlayer.addEventListener('seeked', function() {
+        if (!isLoopSeeking) {
+            // 如果不是循环引起的跳转，则取消单句循环
+            // cancelSentencePlayerMode(); // 注释掉，避免手动拖动时打断当前播放逻辑太生硬，看需求保留
         }
-    });
-    
-    progressBar.addEventListener('mouseleave', function() {
-        if (!isDragging) {
-            isSeeking = false;
-        }
+        isLoopSeeking = false;
+        updateHighlightAndButton();
     });
 
     function updateHighlightAndButton() {
