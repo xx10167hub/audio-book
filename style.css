@@ -96,7 +96,34 @@ h3 {
     max-width: 100%; 
 }
 
-/* 🔥 右侧信息显示区 */
+/* 复制按钮样式 */
+.copy-btn {
+    background: rgba(0, 255, 204, 0.1);
+    border: 1px solid rgba(0, 255, 204, 0.3);
+    color: #00ffcc;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+    margin-right: auto; 
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.copy-btn:hover {
+    background: rgba(0, 255, 204, 0.2);
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+}
+
+.copy-btn:active {
+    transform: scale(0.95);
+}
+
+/* 右侧信息显示区 */
 .info-display {
     margin-left: auto;        
     display: flex;            
@@ -118,7 +145,7 @@ h3 {
     font-weight: 600;
 }
 
-/* 🔥 ID 样式 */
+/* ID 样式 */
 .social-credit {
     font-size: 13px;          
     color: #00ffcc;           
@@ -230,16 +257,20 @@ h3 {
 .mode-translation .original-text { display: none; }
 .mode-translation .translation { opacity: 1; color: #ccc; }
 
-/* ============================================
-   🆕 互动模式与气泡样式
-   ============================================ */
+/* 句子右侧按钮容器 */
+.sentence-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px; 
+    margin-left: 10px;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
 
-/* 1. 互动小手按钮 */
-.interact-btn {
+/* 行内复制按钮 */
+.copy-sentence-btn {
     width: 24px;
     height: 24px;
-    min-width: 24px;
-    margin-left: 10px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -247,95 +278,19 @@ h3 {
     color: #555;
     transition: all 0.2s ease;
     border-radius: 50%;
-    margin-top: 3px; 
 }
 
-.interact-btn:hover {
+.copy-sentence-btn:hover {
     color: #00ffcc;
-    background: rgba(0, 255, 200, 0.1);
-}
-
-.interact-btn.active {
-    color: #ffb700; 
-    background: rgba(255, 183, 0, 0.15);
-    box-shadow: 0 0 8px rgba(255, 183, 0, 0.3);
-}
-
-/* 2. 激活互动模式的句子样式 */
-.transcript p.interaction-active {
-    border-color: #ffb700;
-    background-color: rgba(255, 183, 0, 0.03);
-}
-
-/* 3. 互动模式下的单词样式 */
-.transcript p.interaction-active .word-highlight {
-    cursor: pointer;
-    border-bottom: 1px dashed rgba(255, 183, 0, 0.5);
-}
-
-.transcript p.interaction-active .word-highlight:hover {
-    background-color: rgba(255, 183, 0, 0.2);
-    color: #fff;
-}
-
-/* 4. 气泡菜单 (Popup) */
-.word-popup {
-    position: absolute;
-    background: #1a2f2a;
-    border: 1px solid #00ffcc;
-    border-radius: 8px;
-    padding: 6px;
-    display: flex;
-    gap: 6px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
-    z-index: 9999;
-    transform: translate(-50%, -125%); /* 默认向上弹出 */
-    animation: popupFadeIn 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-}
-
-.word-popup::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 6px 6px 0;
-    border-style: solid;
-    border-color: #00ffcc transparent transparent transparent;
-}
-
-@keyframes popupFadeIn {
-    from { opacity: 0; transform: translate(-50%, -100%) scale(0.9); }
-    to { opacity: 1; transform: translate(-50%, -125%) scale(1); }
-}
-
-.popup-btn {
     background: rgba(0, 255, 204, 0.1);
-    border: 1px solid rgba(0, 255, 204, 0.3);
-    color: #00ffcc;
-    font-size: 12px;
-    padding: 4px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    transition: all 0.2s;
-    white-space: nowrap;
-    outline: none;
 }
 
-.popup-btn:hover {
-    background: #00ffcc;
-    color: #000;
-}
-
-.popup-btn:active {
-    transform: scale(0.95);
+.copy-sentence-btn.success {
+    color: #10b981; 
 }
 
 /* ============================================
-   🔥 4. 底部播放器 (PC/默认样式)
+   🔥 4. 底部播放器
    ============================================ */
 .custom-player {
     position: absolute;
@@ -346,20 +301,18 @@ h3 {
     background: rgba(15, 25, 22, 0.90); 
     backdrop-filter: blur(10px);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 12px 16px 24px 16px;
+    /* 关键修改：减少底部padding，让浏览器知道下面没空间了，逼迫它向上展开 */
+    padding: 12px 16px 8px 16px; 
     box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.5);
 }
 
-/* --- 进度条关键修改 Start --- */
+/* 进度条 */
 .progress-container {
-    margin-bottom: 12px;
-    /* 上下各加10px padding，扩大触摸热区，方便手指拖动 */
-    padding: 10px 0; 
+    margin-bottom: 8px; /* 稍微减少间距 */
+    padding: 8px 0;     /* 稍微减少热区，为了给底部省空间 */
     width: 100%;
-    /* 关键：防止手指在进度条上拖动时触发页面滚动 */
     touch-action: none; 
 }
-/* --- 进度条关键修改 End --- */
 
 .progress-bar {
     width: 100%;
@@ -384,6 +337,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    margin-bottom: 4px; /* 确保不贴底太紧，但也不要太松 */
 }
 
 .time-display {
@@ -473,24 +427,40 @@ h3 {
         border: none;
     }
 
+    /* 🔥 手机端：恢复出处显示，放在顶部区域 */
     .social-credit {
         display: block !important; 
-        font-size: 11px; 
+        font-size: 10px; 
+        color: #00ffcc;
+        opacity: 0.8;
         margin-top: 2px;
+        white-space: nowrap;
     }
     
     .controls {
         padding: 0 12px; 
+        gap: 8px; 
     }
     
     .controls select {
         width: 100px; 
     }
 
+    .copy-btn {
+        padding: 4px 8px;
+        font-size: 11px;
+        margin-left: 6px; 
+    }
+
+    .info-display {
+        align-items: flex-end;
+    }
+
     .custom-player {
-        background: rgba(15, 25, 22, 0.8); 
-        padding: 12px 12px 20px 12px;
-        padding-bottom: calc(20px + env(safe-area-inset-bottom));
+        background: rgba(15, 25, 22, 0.95); /* 不透明度加深，防穿帮 */
+        padding: 10px 12px 5px 12px; /* 🔥 极度压缩底部 padding，确保菜单向上弹 */
+        /* 只保留必要的安全区域 */
+        padding-bottom: calc(5px + env(safe-area-inset-bottom));
     }
     
     .transcript {
@@ -530,5 +500,14 @@ h3 {
         font-size: 10px;
         padding: 0;
         min-width: 35px; 
+    }
+    
+    .sentence-actions {
+        margin-left: 6px;
+        gap: 2px;
+    }
+    .copy-sentence-btn {
+        width: 28px; 
+        height: 28px;
     }
 }
