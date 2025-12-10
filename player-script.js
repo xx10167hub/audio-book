@@ -1,4 +1,4 @@
-// player-script.js - 最终修复版：支持进度条拖拽 + 手机触摸 + 单词互动
+// player-script.js - 最终版：Blob加密 + 进度条拖拽 + 复制功能 (手机显示出处修复)
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===== 配置 =====
@@ -25,12 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const wordCountDisplay = document.getElementById('word-count');
     const articleSelect = document.getElementById('article-select');
     const articleSelectGroup = document.getElementById('article-select-group');
+    const copyAllBtn = document.getElementById('copy-all-btn'); 
 
     let sentencesData = [];
     let currentHighlightElement = null;
     let currentSentencePlayer = null;
     let isLooping = false;
-    let isSeeking = false; // 标记是否正在拖拽中，防止 timeupdate 干扰
+    let isSeeking = false; 
     let currentLoopSentence = null;
     let isLoopSeeking = false;
 
@@ -39,10 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let nextWordElement = null; 
     let allWordElements = [];
     let wordTimeMap = new Map();
-
-    // 互动状态
-    let activeInteractionIndex = -1; 
-    let activePopup = null; 
+    
+    // Blob 音频对象（用于加密链接管理）
+    let currentAudioBlobUrl = null;
 
     let isTranscriptLoaded = false;
     let isAudioLoaded = false;
@@ -69,67 +69,37 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // 关闭互动模式
-    function closeInteractionMode() {
-        if (activeInteractionIndex !== -1) {
-            const sentenceEl = document.getElementById(`sentence-${activeInteractionIndex}`);
-            if (sentenceEl) {
-                sentenceEl.classList.remove('interaction-active');
-                const btn = sentenceEl.querySelector('.interact-btn');
-                if (btn) btn.classList.remove('active');
-            }
-            activeInteractionIndex = -1;
-            closePopup();
-        }
-    }
-
-    // 关闭气泡
-    function closePopup() {
-        if (activePopup) {
-            activePopup.remove();
-            activePopup = null;
-        }
-    }
-
-    // ===== 🔥 核心修复：手机端/飞书强力复制逻辑 =====
+    // ===== 核心修复：手机端/飞书强力复制逻辑 =====
     function copyToClipboard(text) {
-        const cleanText = text.replace(/[.,!?;:"]/g, '');
-
         if (navigator.clipboard && window.isSecureContext) {
-            navigator.clipboard.writeText(cleanText).then(() => {
+            navigator.clipboard.writeText(text).then(() => {
                 console.log('Modern Copy Success');
             }).catch(() => {
-                fallbackCopyTextToClipboard(cleanText);
+                fallbackCopyTextToClipboard(text);
             });
         } else {
-            fallbackCopyTextToClipboard(cleanText);
+            fallbackCopyTextToClipboard(text);
         }
     }
 
     function fallbackCopyTextToClipboard(text) {
         var textArea = document.createElement("textarea");
         textArea.value = text;
-        
         textArea.setAttribute('readonly', '');
         textArea.style.position = 'absolute';
         textArea.style.left = '-9999px';
         textArea.style.fontSize = '12pt'; 
-        
         document.body.appendChild(textArea);
-        
         textArea.focus();
         textArea.select();
         textArea.setSelectionRange(0, 999999); 
-
         try {
             var successful = document.execCommand('copy');
             if (!successful) throw new Error('Copy command failed');
-            console.log('Fallback copy successful');
         } catch (err) {
             console.error('Fallback copy failed:', err);
             prompt("自动复制受限，请长按下方文字手动复制：", text);
         }
-
         document.body.removeChild(textArea);
     }
 
@@ -153,25 +123,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function findCurrentWord(currentTime) {
         const MAX_GAP_TO_FILL = 1.5; 
-
         for (let i = 0; i < allWordElements.length; i++) {
             const currentElement = allWordElements[i];
             const currentData = wordTimeMap.get(currentElement);
-            
             let nextData = null;
             if (i < allWordElements.length - 1) {
                 nextData = wordTimeMap.get(allWordElements[i + 1]);
             }
-
             let visualEndTime = currentData.end;
-            
             if (nextData) {
                 const gap = nextData.start - currentData.end;
                 if (gap > 0 && gap < MAX_GAP_TO_FILL) {
                     visualEndTime = nextData.start;
                 }
             }
-
             if (currentTime >= currentData.start && currentTime < visualEndTime) {
                 return { element: currentElement };
             }
@@ -187,7 +152,6 @@ document.addEventListener('DOMContentLoaded', function() {
             nextWordElement.classList.remove('next');
             nextWordElement = null;
         }
-        
         if (currentWord) {
             currentWordElement = currentWord.element;
             currentWordElement.classList.add('current');
@@ -205,12 +169,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // 根据屏幕宽度更新下拉框文字
     function updateSelectOptionsText() {
         if (!articleSelect || articleSelect.options.length === 0) return;
-        
         const isMobile = window.innerWidth < 768;
-        
         Array.from(articleSelect.options).forEach(option => {
             if (option.dataset.full && option.dataset.short) {
                 option.textContent = isMobile ? option.dataset.short : option.dataset.full;
@@ -223,9 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
     async function loadArticlesConfig() {
         try {
             const response = await fetch(ARTICLES_CONFIG_FILE);
-            if (!response.ok) {
-                throw new Error('文章配置文件不存在');
-            }
+            if (!response.ok) throw new Error('文章配置文件不存在');
             const config = await response.json();
             articlesConfig = config.articles;
             
@@ -234,25 +193,17 @@ document.addEventListener('DOMContentLoaded', function() {
             articlesConfig.forEach(article => {
                 const option = document.createElement('option');
                 option.value = article.id;
-                
                 let shortTitle = article.title;
                 const match = article.title.match(/^(第\d+篇)/);
-                
-                if (match) {
-                    shortTitle = match[1]; 
-                } else {
+                if (match) shortTitle = match[1]; 
+                else {
                     const parts = article.title.split(/[:：]/); 
-                    if (parts.length > 0) {
-                        shortTitle = parts[0];
-                    }
+                    if (parts.length > 0) shortTitle = parts[0];
                 }
-
                 option.dataset.full = article.title;
                 option.dataset.short = shortTitle;
-                
                 const isMobile = window.innerWidth < 768;
                 option.textContent = isMobile ? shortTitle : article.title;
-
                 articleSelect.appendChild(option);
             });
             
@@ -260,23 +211,18 @@ document.addEventListener('DOMContentLoaded', function() {
             const articleIdFromUrl = urlParams.get('article');
 
             if (articleIdFromUrl) {
-                console.log('检测到URL指定文章:', articleIdFromUrl);
                 currentArticleId = articleIdFromUrl;
-                if (articleSelectGroup) {
-                    articleSelectGroup.style.display = 'none';
-                }
+                if (articleSelectGroup) articleSelectGroup.style.display = 'none';
             } else {
                 currentArticleId = articlesConfig[0].id;
-                if (articleSelectGroup) {
-                    articleSelectGroup.style.display = 'flex';
-                }
+                if (articleSelectGroup) articleSelectGroup.style.display = 'flex';
             }
 
             articleSelect.value = currentArticleId;
             loadArticleById(currentArticleId);
             
         } catch (error) {
-            console.error('加载文章配置失败:', error);
+            console.error('加载配置失败:', error);
             if (articleSelectGroup) articleSelectGroup.style.display = 'none';
             loadSingleArticle();
         }
@@ -285,13 +231,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadArticleById(articleId) {
         const article = articlesConfig.find(a => a.id === articleId);
         if (!article) {
-            console.error('找不到文章:', articleId);
-            if (articlesConfig.length > 0) {
-                loadArticleById(articlesConfig[0].id);
-            }
+            if (articlesConfig.length > 0) loadArticleById(articlesConfig[0].id);
             return;
         }
-        
         currentArticleId = articleId;
         resetPlayerState();
         loadArticleData(article.dataFile, article.audioFile, article.title);
@@ -313,8 +255,6 @@ document.addEventListener('DOMContentLoaded', function() {
         isTranscriptLoaded = false;
         isAudioLoaded = false;
         
-        closeInteractionMode();
-
         loopBtn.classList.remove('active');
         transcriptContainer.innerHTML = '<p style="text-align:center; color:#00ffcc;">加载中...</p>';
         updatePlayPauseButton(false);
@@ -325,32 +265,50 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadArticleData(dataFile, audioFile, title) {
         fetch(dataFile)
             .then(response => {
-                if (!response.ok) { 
-                    throw new Error('网络错误，找不到数据文件'); 
-                }
+                if (!response.ok) throw new Error('网络错误'); 
                 return response.json();
             })
             .then(data => {
                 titleElement.textContent = title || data.title;
-                audioPlayer.src = audioFile || data.audioUrl; 
                 
+                // ===== 🔥 核心修改：使用 Blob 加密加载音频 =====
+                const targetAudioUrl = audioFile || data.audioUrl;
+                
+                // 1. 如果之前有 Blob 链接，先释放内存
+                if (currentAudioBlobUrl) {
+                    URL.revokeObjectURL(currentAudioBlobUrl);
+                    currentAudioBlobUrl = null;
+                }
+
+                // 2. 尝试使用 fetch 获取音频并转换为 Blob
+                fetch(targetAudioUrl)
+                    .then(res => {
+                        if (!res.ok) throw new Error('Audio fetch failed');
+                        return res.blob();
+                    })
+                    .then(blob => {
+                        // 3. 创建加密链接 (blob:http://...)
+                        currentAudioBlobUrl = URL.createObjectURL(blob);
+                        audioPlayer.src = currentAudioBlobUrl;
+                        console.log('🔒 音频已加密加载');
+                    })
+                    .catch(err => {
+                        console.warn('⚠️ Blob 加载失败，降级为普通加载:', err);
+                        // 降级方案：直接使用普通链接，保证用户能听到声音
+                        audioPlayer.src = targetAudioUrl;
+                    });
+                // ===== 修改结束 =====
+
                 let totalWordCount = 0;
                 transcriptContainer.innerHTML = ''; 
-                
-                if (displayMode) {
-                    displayMode.dispatchEvent(new Event('change'));
-                }
+                if (displayMode) displayMode.dispatchEvent(new Event('change'));
                 
                 data.transcript.forEach((line, index) => {
-                    if (line.words && line.words.length > 0) {
-                        totalWordCount += line.words.length;
-                    } 
+                    if (line.words && line.words.length > 0) totalWordCount += line.words.length;
                     else {
                         const englishText = line.text.split('\n')[0]; 
                         const words = englishText.match(/[a-zA-Z0-9'-]+/g); 
-                        if (words) {
-                            totalWordCount += words.length;
-                        }
+                        if (words) totalWordCount += words.length;
                     }
                     
                     const p = document.createElement('p');
@@ -367,24 +325,43 @@ document.addEventListener('DOMContentLoaded', function() {
                     const playButton = document.createElement('div');
                     playButton.className = 'play-button';
 
-                    // 互动按钮（小手）
-                    const interactBtn = document.createElement('div');
-                    interactBtn.className = 'interact-btn';
-                    interactBtn.innerHTML = `
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                            <polyline points="15 3 21 3 21 9"></polyline>
-                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                    // === 按钮组：复制按钮 ===
+                    const actionContainer = document.createElement('div');
+                    actionContainer.className = 'sentence-actions';
+
+                    const copySentenceBtn = document.createElement('div');
+                    copySentenceBtn.className = 'copy-sentence-btn';
+                    copySentenceBtn.title = "复制本句";
+                    copySentenceBtn.innerHTML = `
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                         </svg>
                     `;
-                    interactBtn.title = "点击进入查词模式";
+                    
+                    copySentenceBtn.addEventListener('click', function(e) {
+                        e.stopPropagation(); 
+                        let textToCopy = "";
+                        const en = line.words ? line.words.map(w => w.text).join(' ') : line.text;
+                        textToCopy += en;
+                        if (line.translation) textToCopy += `\n${line.translation}`;
+
+                        copyToClipboard(textToCopy);
+
+                        const originalHTML = copySentenceBtn.innerHTML;
+                        copySentenceBtn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+                        copySentenceBtn.classList.add('success');
+                        setTimeout(() => {
+                            copySentenceBtn.innerHTML = originalHTML;
+                            copySentenceBtn.classList.remove('success');
+                        }, 1500);
+                    });
+
+                    actionContainer.appendChild(copySentenceBtn);
 
                     let endTime;
-                    if (index < data.transcript.length - 1) {
-                        endTime = data.transcript[index + 1].time;
-                    } else {
-                        endTime = null;
-                    }
+                    if (index < data.transcript.length - 1) endTime = data.transcript[index + 1].time;
+                    else endTime = null;
 
                     const sentenceData = {
                         element: p,
@@ -396,25 +373,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     p.addEventListener('click', function(event) {
                         const target = event.target;
-
-                        if (activeInteractionIndex === index) {
-                            if (target.closest('.interact-btn')) {
-                                closeInteractionMode();
-                            } else if (!target.closest('.word-highlight') && !target.closest('.word-popup')) {
-                                closeInteractionMode();
-                            }
-                            return; 
-                        }
-
-                        if (target.closest('.interact-btn')) {
-                            closeInteractionMode();
-                            activeInteractionIndex = index;
-                            p.classList.add('interaction-active');
-                            target.closest('.interact-btn').classList.add('active');
-                            if (!audioPlayer.paused) audioPlayer.pause();
-                            return;
-                        }
-
+                        
                         if (target.classList.contains('play-button') || target.closest('.play-button') || target.closest('.text-block')) {
                             handleSentencePlayToggle(sentenceData);
                         } else {
@@ -436,26 +395,11 @@ document.addEventListener('DOMContentLoaded', function() {
                             wordSpan.dataset.start = wordData.start;
                             wordSpan.dataset.end = wordData.end;
                             
-                            wordSpan.addEventListener('click', function(e) {
-                                if (activeInteractionIndex === index) {
-                                    e.stopPropagation();
-                                    showWordPopup(wordSpan, wordData);
-                                }
-                            });
-
-                            if (wordIndex > 0) {
-                                const space = document.createTextNode(' ');
-                                originalText.appendChild(space);
-                            }
-                            
+                            if (wordIndex > 0) originalText.appendChild(document.createTextNode(' '));
                             originalText.appendChild(wordSpan);
                             allWordElements.push(wordSpan);
-                            wordTimeMap.set(wordSpan, {
-                                start: wordData.start,
-                                end: wordData.end
-                            });
+                            wordTimeMap.set(wordSpan, { start: wordData.start, end: wordData.end });
                         });
-                        
                         textBlock.appendChild(originalText);
                     } else {
                         const originalText = document.createElement('span');
@@ -473,62 +417,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     sentenceContent.appendChild(playButton);
                     sentenceContent.appendChild(textBlock);
-                    sentenceContent.appendChild(interactBtn);
+                    sentenceContent.appendChild(actionContainer);
                     p.appendChild(timeLabel);
                     p.appendChild(sentenceContent);
                     transcriptContainer.appendChild(p);
-                    
                     sentencesData.push(sentenceData);
                 });
                 
-                if (wordCountDisplay) {
-                    wordCountDisplay.textContent = `${totalWordCount} 单词`;
-                }
-                
+                if (wordCountDisplay) wordCountDisplay.textContent = `${totalWordCount} 单词`;
                 isTranscriptLoaded = true;
                 checkDataLoaded();
             })
             .catch(error => {
-                console.error('加载数据失败:', error);
-                transcriptContainer.innerHTML = `<p style="color: red;">加载文章失败: ${error.message}</p>`;
+                console.error(error);
+                transcriptContainer.innerHTML = `<p style="color: red;">加载失败: ${error.message}</p>`;
             });
     }
-
-    function showWordPopup(wordSpan, wordData) {
-        closePopup(); 
-
-        const popup = document.createElement('div');
-        popup.className = 'word-popup';
-        
-        const copyBtn = document.createElement('button');
-        copyBtn.className = 'popup-btn';
-        copyBtn.innerHTML = '📋 复制';
-        copyBtn.onclick = (e) => {
-            e.stopPropagation();
-            copyToClipboard(wordData.text);
-            copyBtn.innerHTML = '✅ 已复制';
-            setTimeout(() => { if(popup) closePopup(); }, 800);
-        };
-
-        popup.appendChild(copyBtn);
-        
-        document.body.appendChild(popup);
-        activePopup = popup;
-
-        const rect = wordSpan.getBoundingClientRect();
-        const popupHeight = 40; 
-        let top = rect.top - popupHeight - 10;
-        let left = rect.left + rect.width / 2;
-        
-        popup.style.top = top + 'px';
-        popup.style.left = left + 'px';
-    }
-
-    document.addEventListener('click', function(e) {
-        if (activePopup && !e.target.closest('.word-popup') && !e.target.closest('.word-highlight')) {
-            closePopup();
-        }
-    });
 
     function loadSingleArticle() {
         const urlParams = new URLSearchParams(window.location.search);
@@ -539,10 +443,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (articleSelect) {
         articleSelect.addEventListener('change', function() {
-            const selectedId = this.value;
-            if (selectedId !== currentArticleId) {
-                loadArticleById(selectedId);
-            }
+            if (this.value !== currentArticleId) loadArticleById(this.value);
         });
     }
     
@@ -557,9 +458,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     audioPlayer.addEventListener('loadedmetadata', function() {
-        if (audioPlayer.duration) {
-            totalTimeDisplay.textContent = formatTime(audioPlayer.duration);
-        }
+        if (audioPlayer.duration) totalTimeDisplay.textContent = formatTime(audioPlayer.duration);
         isAudioLoaded = true;
         checkDataLoaded();
     });
@@ -569,24 +468,15 @@ document.addEventListener('DOMContentLoaded', function() {
         currentLoopSentence = null;
         isLooping = false;
         loopBtn.classList.remove('active');
-        closeInteractionMode();
-        
-        if (audioPlayer.paused) {
-            audioPlayer.play();
-        } else {
-            audioPlayer.pause();
-        }
+        if (audioPlayer.paused) audioPlayer.play();
+        else audioPlayer.pause();
     });
 
-    audioPlayer.addEventListener('play', function() {
-        updatePlayPauseButton(true);
-    });
+    audioPlayer.addEventListener('play', function() { updatePlayPauseButton(true); });
 
     audioPlayer.addEventListener('pause', function() {
         updatePlayPauseButton(false);
-        if (!currentSentencePlayer) {
-            resetAllSentenceButtons();
-        }
+        if (!currentSentencePlayer) resetAllSentenceButtons();
     });
     
     backwardBtn.addEventListener('click', function() {
@@ -594,21 +484,10 @@ document.addEventListener('DOMContentLoaded', function() {
         currentLoopSentence = null;
         isLooping = false;
         loopBtn.classList.remove('active');
-        closeInteractionMode();
-        
         const currentIndex = findCurrentSentenceIndex(audioPlayer.currentTime);
-        let targetIndex;
-        
-        if (currentIndex <= 0) {
-             targetIndex = 0;
-        } else {
-             targetIndex = currentIndex - 1;
-        }
-        
+        let targetIndex = (currentIndex <= 0) ? 0 : currentIndex - 1;
         audioPlayer.currentTime = sentencesData[targetIndex].start;
-        if (!audioPlayer.paused) {
-            audioPlayer.play();
-        }
+        if (!audioPlayer.paused) audioPlayer.play();
         updateHighlightAndButton();
     });
 
@@ -617,16 +496,10 @@ document.addEventListener('DOMContentLoaded', function() {
         currentLoopSentence = null;
         isLooping = false;
         loopBtn.classList.remove('active');
-        closeInteractionMode();
-        
         const currentIndex = findCurrentSentenceIndex(audioPlayer.currentTime);
-        
         if (currentIndex < sentencesData.length - 1) {
-            const nextIndex = currentIndex + 1;
-            audioPlayer.currentTime = sentencesData[nextIndex].start;
-            if (!audioPlayer.paused) {
-                audioPlayer.play();
-            }
+            audioPlayer.currentTime = sentencesData[currentIndex + 1].start;
+            if (!audioPlayer.paused) audioPlayer.play();
             updateHighlightAndButton();
         } else {
             audioPlayer.currentTime = audioPlayer.duration || 0;
@@ -634,117 +507,54 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    speedControl.addEventListener('change', function() {
-        audioPlayer.playbackRate = parseFloat(this.value);
-    });
+    speedControl.addEventListener('change', function() { audioPlayer.playbackRate = parseFloat(this.value); });
 
     loopBtn.addEventListener('click', function() {
         isLooping = !isLooping;
         loopBtn.classList.toggle('active', isLooping);
-        
         if (isLooping) {
-            const currentTime = audioPlayer.currentTime;
-            currentLoopSentence = findSentenceDataByTime(currentTime);
-            
-            if (currentLoopSentence) {
-                if (audioPlayer.paused) {
-                    audioPlayer.play();
-                }
-            }
+            currentLoopSentence = findSentenceDataByTime(audioPlayer.currentTime);
+            if (currentLoopSentence && audioPlayer.paused) audioPlayer.play();
         } else {
             currentLoopSentence = null;
         }
     });
 
-    // ==========================================
-    // 🔥 进度条核心逻辑：拖拽 + 触摸 + 点击
-    // ==========================================
-
-    // 处理跳转计算的通用函数
     function handleSeek(clientX) {
-        // 1. 重置所有播放状态，避免冲突
         cancelSentencePlayerMode();
         currentLoopSentence = null;
         isLooping = false;
         loopBtn.classList.remove('active');
-        closeInteractionMode();
 
-        // 2. 计算进度位置
         const rect = progressBar.getBoundingClientRect();
-        let clickX = clientX - rect.left;
-        
-        // 限制边界，防止拖出范围导致数值异常
-        clickX = Math.max(0, Math.min(clickX, rect.width));
-
+        let clickX = Math.max(0, Math.min(clientX - rect.left, rect.width));
         const percentage = clickX / rect.width;
         const duration = audioPlayer.duration || 0;
         
         if (duration > 0) {
             const newTime = percentage * duration;
             audioPlayer.currentTime = newTime;
-            
-            // 立即更新UI，不等timeupdate，更跟手
             progressFilled.style.width = (percentage * 100) + '%';
             currentTimeDisplay.textContent = formatTime(newTime);
         }
     }
 
     let isDragging = false;
+    progressBar.addEventListener('mousedown', function(e) { isSeeking = true; isDragging = true; handleSeek(e.clientX); });
+    document.addEventListener('mousemove', function(e) { if (isDragging) handleSeek(e.clientX); });
+    document.addEventListener('mouseup', function() { if (isDragging) { isSeeking = false; isDragging = false; } });
+    progressBar.addEventListener('touchstart', function(e) { isSeeking = true; isDragging = true; handleSeek(e.touches[0].clientX); }, { passive: false });
+    document.addEventListener('touchmove', function(e) { if (isDragging) { e.preventDefault(); handleSeek(e.touches[0].clientX); } }, { passive: false });
+    document.addEventListener('touchend', function() { isSeeking = false; isDragging = false; });
 
-    // --- 鼠标事件 (PC) ---
-    progressBar.addEventListener('mousedown', function(e) {
-        isSeeking = true;
-        isDragging = true;
-        handleSeek(e.clientX);
-    });
-
-    document.addEventListener('mousemove', function(e) {
-        if (isDragging) {
-            handleSeek(e.clientX);
-        }
-    });
-
-    document.addEventListener('mouseup', function() {
-        if (isDragging) {
-            isSeeking = false;
-            isDragging = false;
-        }
-    });
-
-    // --- 触摸事件 (手机/平板) ---
-    progressBar.addEventListener('touchstart', function(e) {
-        isSeeking = true;
-        isDragging = true;
-        handleSeek(e.touches[0].clientX);
-    }, { passive: false });
-
-    document.addEventListener('touchmove', function(e) {
-        if (isDragging) {
-            e.preventDefault(); // 禁止页面滚动，只拖动进度条
-            handleSeek(e.touches[0].clientX);
-        }
-    }, { passive: false });
-
-    document.addEventListener('touchend', function() {
-        isSeeking = false;
-        isDragging = false;
-    });
-
-
-    // ==========================================
-    // 时间更新逻辑
-    // ==========================================
     audioPlayer.addEventListener('timeupdate', function() {
         const currentTime = audioPlayer.currentTime; 
-        
-        // 只有当没有在手动拖拽时，才更新进度条，避免“打架”
         if (!isSeeking) {
             const progress = (currentTime / (audioPlayer.duration || 1)) * 100;
             progressFilled.style.width = progress + '%';
             currentTimeDisplay.textContent = formatTime(currentTime);
         }
         
-        // 循环模式逻辑
         if (isLooping && currentLoopSentence && currentLoopSentence.end) {
             if (currentTime >= currentLoopSentence.end - 0.15) {
                 isLoopSeeking = true;
@@ -761,54 +571,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 audioPlayer.currentTime = currentSentencePlayer.start;
                 cancelSentencePlayerMode();
             }
-        } 
-        else {
+        } else {
             updateHighlightAndButton();
         }
     });
     
-    // 循环播放 Seek 完成后的处理
     audioPlayer.addEventListener('seeked', function() {
-        if (!isLoopSeeking) {
-            // 如果不是循环引起的跳转，则取消单句循环
-            // cancelSentencePlayerMode(); // 注释掉，避免手动拖动时打断当前播放逻辑太生硬，看需求保留
-        }
         isLoopSeeking = false;
         updateHighlightAndButton();
     });
 
     function updateHighlightAndButton() {
         const sentenceData = findSentenceDataByTime(audioPlayer.currentTime);
-
         if (sentenceData) {
             const foundElement = sentenceData.element;
             const foundButton = sentenceData.playButton;
-            
             if (foundElement && foundElement !== currentHighlightElement) {
-                if (currentHighlightElement) {
-                    currentHighlightElement.classList.remove('active');
-                }
+                if (currentHighlightElement) currentHighlightElement.classList.remove('active');
                 foundElement.classList.add('active');
                 currentHighlightElement = foundElement;
-                
-                if (!currentSentencePlayer) {
-                    foundElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
+                if (!currentSentencePlayer) foundElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
-            
             if (foundButton) {
                 resetAllSentenceButtons();
-                if (!audioPlayer.paused) {
-                    foundButton.classList.add('paused');
-                }
+                if (!audioPlayer.paused) foundButton.classList.add('paused');
             }
         }
     }
 
     function handleSentencePlayToggle(sentenceData) {
         const currentTime = audioPlayer.currentTime;
-        const isTimeMatch = currentTime >= (sentenceData.start - 0.2) && 
-                           (sentenceData.end === null || currentTime < sentenceData.end);
+        const isTimeMatch = currentTime >= (sentenceData.start - 0.2) && (sentenceData.end === null || currentTime < sentenceData.end);
 
         if (sentenceData === currentSentencePlayer || (currentSentencePlayer === null && isTimeMatch)) {
             if (audioPlayer.paused) {
@@ -828,55 +621,63 @@ document.addEventListener('DOMContentLoaded', function() {
         currentLoopSentence = null;
         isLooping = false;
         loopBtn.classList.remove('active');
-        closeInteractionMode();
-        
         currentSentencePlayer = sentenceData;
-        
-        if (currentHighlightElement) {
-            currentHighlightElement.classList.remove('active');
-        }
+        if (currentHighlightElement) currentHighlightElement.classList.remove('active');
         currentHighlightElement = sentenceData.element;
         currentHighlightElement.classList.add('active');
         currentHighlightElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
         sentenceData.playButton.classList.add('paused');
         audioPlayer.currentTime = sentenceData.start;
         audioPlayer.play();
     }
     
     document.addEventListener('keydown', function(e) {
-        if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') {
-            return;
-        }
-        
-        if (e.code === 'Space') {
-            e.preventDefault();
-            playPauseBtn.click(); 
-        }
-        else if (e.code === 'ArrowLeft') {
-            e.preventDefault();
-            backwardBtn.click(); 
-        }
-        else if (e.code === 'ArrowRight') {
-            e.preventDefault();
-            forwardBtn.click(); 
-        }
-        else if (e.code === 'KeyL') {
-            e.preventDefault();
-            loopBtn.click();
-        }
+        if (['INPUT', 'SELECT', 'TEXTAREA'].includes(e.target.tagName)) return;
+        if (e.code === 'Space') { e.preventDefault(); playPauseBtn.click(); }
+        else if (e.code === 'ArrowLeft') { e.preventDefault(); backwardBtn.click(); }
+        else if (e.code === 'ArrowRight') { e.preventDefault(); forwardBtn.click(); }
+        else if (e.code === 'KeyL') { e.preventDefault(); loopBtn.click(); }
     });
 
     if (displayMode) {
         displayMode.addEventListener('change', function() {
-            const mode = this.value;
             transcriptContainer.classList.remove('mode-all', 'mode-original', 'mode-translation', 'mode-none');
-            transcriptContainer.classList.add(`mode-${mode}`);
+            transcriptContainer.classList.add(`mode-${this.value}`);
         });
-        
         displayMode.dispatchEvent(new Event('change'));
     }
 
-    loadArticlesConfig();
+    // 全文复制功能
+    if (copyAllBtn) {
+        copyAllBtn.addEventListener('click', function() {
+            if (!sentencesData || sentencesData.length === 0) {
+                alert("内容尚未加载");
+                return;
+            }
+            let fullText = `【标题】${titleElement.textContent}\n\n`;
+            sentencesData.forEach(item => {
+                const original = item.element.querySelector('.original-text');
+                const enText = original ? original.innerText.replace(/[\r\n]+/g, ' ') : "";
+                const trans = item.element.querySelector('.translation');
+                const cnText = trans ? trans.innerText : "";
+                if (enText) fullText += `${enText}\n`;
+                if (cnText) fullText += `${cnText}\n`;
+                fullText += `\n`; 
+            });
+            fullText += `\n(内容来自：沉浸式精听播放器 - 小红书@lumie鹿米)`;
+            copyToClipboard(fullText);
 
+            const originalHTML = copyAllBtn.innerHTML;
+            copyAllBtn.innerHTML = `✅ 已复制`;
+            copyAllBtn.style.borderColor = "#10b981";
+            copyAllBtn.style.color = "#10b981";
+            setTimeout(() => {
+                copyAllBtn.innerHTML = originalHTML;
+                copyAllBtn.style.borderColor = "";
+                copyAllBtn.style.color = "";
+            }, 2000);
+        });
+    }
+
+    loadArticlesConfig();
 });
