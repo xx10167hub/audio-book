@@ -10,7 +10,7 @@
     <meta property="og:description" content="BBC听力逐句精听神器，支持单句循环、倍速播放。">
     <meta property="og:image" content=""> 
 
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
     <div class="player-container">
@@ -24,13 +24,21 @@
                 </select>
             </div>
             
+            <button id="copy-all-btn" class="copy-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                复制全文
+            </button>
+            
             <div class="info-display">
                 <div class="count-row">
                     <span>总词数: </span>
                     <span id="word-count">-</span>
                 </div>
                 <div class="social-credit">
-                    小红书@lumie鹿米@小鹿鹿米🌟
+                    小红书@lumie鹿米
                 </div>
             </div>
         </div>
@@ -109,6 +117,6 @@
         </div>
     </div>
 
-    <script src="player-script.js?v=5"></script>
+    <script src="player-script.js?v=13"></script>
 </body>
 </html>
