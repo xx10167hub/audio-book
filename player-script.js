@@ -1,4 +1,4 @@
-// player-script.js - 最终版：1秒显示 + 丝滑动画支持
+// player-script.js - 终极修复：解决单句播放与循环模式的冲突
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===== 配置 =====
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let allWordElements = [];
     let wordTimeMap = new Map();
     
-    // Blob 音频对象（用于加密链接管理）
+    // Blob 音频对象
     let currentAudioBlobUrl = null;
 
     let isTranscriptLoaded = false;
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // ===== 手机端/飞书强力复制逻辑 =====
+    // ===== 复制逻辑 =====
     function copyToClipboard(text) {
         if (navigator.clipboard && window.isSecureContext) {
             navigator.clipboard.writeText(text).then(() => {
@@ -366,37 +366,29 @@ document.addEventListener('DOMContentLoaded', function() {
                         index: index
                     };
                     
-                    // ============================================
-                    // 🔥 核心修改：盲听模式 1 秒偷看逻辑
-                    // ============================================
+                    // 点击句子逻辑
                     p.addEventListener('click', function(event) {
                         const target = event.target;
                         
-                        // 1. 原有逻辑：播放处理
+                        // 1. 播放控制
                         if (target.classList.contains('play-button') || target.closest('.play-button') || target.closest('.text-block')) {
                             handleSentencePlayToggle(sentenceData);
                         } else {
                             handleSentencePlayFromStart(sentenceData);
                         }
 
-                        // 2. 新增逻辑：盲听模式显示 1 秒
+                        // 2. 盲听偷看逻辑 (1秒)
                         if (displayMode && displayMode.value === 'none') {
                             const textBlock = this.querySelector('.text-block');
                             if (textBlock) {
-                                // 如果有旧的计时器，清除它（防止闪烁）
                                 if (textBlock.dataset.peekTimer) {
                                     clearTimeout(parseInt(textBlock.dataset.peekTimer));
                                 }
-
-                                // 添加临时显示类（触发 CSS 快进淡入）
                                 textBlock.classList.add('temp-reveal');
-
-                                // 🔥 1 秒后移除（触发 CSS 慢速淡出）
                                 const timerId = setTimeout(() => {
                                     textBlock.classList.remove('temp-reveal');
                                     delete textBlock.dataset.peekTimer;
                                 }, 1000);
-
                                 textBlock.dataset.peekTimer = timerId;
                             }
                         }
@@ -484,13 +476,13 @@ document.addEventListener('DOMContentLoaded', function() {
         checkDataLoaded();
     });
 
+    // 播放/暂停按钮逻辑：只控制播放暂停，不重置状态
     playPauseBtn.addEventListener('click', function() {
-        cancelSentencePlayerMode();
-        currentLoopSentence = null;
-        isLooping = false;
-        loopBtn.classList.remove('active');
-        if (audioPlayer.paused) audioPlayer.play();
-        else audioPlayer.pause();
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+        } else {
+            audioPlayer.pause();
+        }
     });
 
     audioPlayer.addEventListener('play', function() { updatePlayPauseButton(true); });
@@ -534,6 +526,7 @@ document.addEventListener('DOMContentLoaded', function() {
         isLooping = !isLooping;
         loopBtn.classList.toggle('active', isLooping);
         if (isLooping) {
+            // 开启循环时，立即锁定当前句子
             currentLoopSentence = findSentenceDataByTime(audioPlayer.currentTime);
             if (currentLoopSentence && audioPlayer.paused) audioPlayer.play();
         } else {
@@ -576,6 +569,7 @@ document.addEventListener('DOMContentLoaded', function() {
             currentTimeDisplay.textContent = formatTime(currentTime);
         }
         
+        // 1. 循环逻辑：检测是否到达句尾，若是则跳回句首
         if (isLooping && currentLoopSentence && currentLoopSentence.end) {
             if (currentTime >= currentLoopSentence.end - 0.15) {
                 isLoopSeeking = true;
@@ -586,13 +580,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentWord = findCurrentWord(currentTime);
         highlightCurrentWord(currentWord);
         
-        if (currentSentencePlayer) {
+        // 2. 单句播放停止逻辑：
+        // 🔥 关键修改：增加了 && !isLooping 条件。
+        // 只有在【不是】循环模式下，才会执行“播完暂停”。
+        if (currentSentencePlayer && !isLooping) {
             if (currentSentencePlayer.end && currentTime >= currentSentencePlayer.end - 0.1) { 
                 audioPlayer.pause(); 
                 audioPlayer.currentTime = currentSentencePlayer.start;
                 cancelSentencePlayerMode();
             }
         } else {
+            // 如果是在循环模式下，或者没有单句播放任务，只更新高亮
             updateHighlightAndButton();
         }
     });
