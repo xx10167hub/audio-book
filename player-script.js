@@ -1,4 +1,4 @@
-// player-script.js - 终极修复：解决单句播放与循环模式的冲突
+// player-script.js - 最终修复版 (v=20)
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===== 配置 =====
@@ -526,7 +526,6 @@ document.addEventListener('DOMContentLoaded', function() {
         isLooping = !isLooping;
         loopBtn.classList.toggle('active', isLooping);
         if (isLooping) {
-            // 开启循环时，立即锁定当前句子
             currentLoopSentence = findSentenceDataByTime(audioPlayer.currentTime);
             if (currentLoopSentence && audioPlayer.paused) audioPlayer.play();
         } else {
@@ -569,7 +568,6 @@ document.addEventListener('DOMContentLoaded', function() {
             currentTimeDisplay.textContent = formatTime(currentTime);
         }
         
-        // 1. 循环逻辑：检测是否到达句尾，若是则跳回句首
         if (isLooping && currentLoopSentence && currentLoopSentence.end) {
             if (currentTime >= currentLoopSentence.end - 0.15) {
                 isLoopSeeking = true;
@@ -580,9 +578,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentWord = findCurrentWord(currentTime);
         highlightCurrentWord(currentWord);
         
-        // 2. 单句播放停止逻辑：
-        // 🔥 关键修改：增加了 && !isLooping 条件。
-        // 只有在【不是】循环模式下，才会执行“播完暂停”。
         if (currentSentencePlayer && !isLooping) {
             if (currentSentencePlayer.end && currentTime >= currentSentencePlayer.end - 0.1) { 
                 audioPlayer.pause(); 
@@ -590,7 +585,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 cancelSentencePlayerMode();
             }
         } else {
-            // 如果是在循环模式下，或者没有单句播放任务，只更新高亮
             updateHighlightAndButton();
         }
     });
