@@ -1,4 +1,4 @@
-// player-script.js - 最终版：Blob加密 + 进度条拖拽 + 复制功能 (手机显示出处修复)
+// player-script.js - 最终版：1秒显示 + 丝滑动画支持
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===== 配置 =====
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // ===== 核心修复：手机端/飞书强力复制逻辑 =====
+    // ===== 手机端/飞书强力复制逻辑 =====
     function copyToClipboard(text) {
         if (navigator.clipboard && window.isSecureContext) {
             navigator.clipboard.writeText(text).then(() => {
@@ -271,33 +271,28 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 titleElement.textContent = title || data.title;
                 
-                // ===== 🔥 核心修改：使用 Blob 加密加载音频 =====
+                // ===== Blob 加密加载音频 =====
                 const targetAudioUrl = audioFile || data.audioUrl;
                 
-                // 1. 如果之前有 Blob 链接，先释放内存
                 if (currentAudioBlobUrl) {
                     URL.revokeObjectURL(currentAudioBlobUrl);
                     currentAudioBlobUrl = null;
                 }
 
-                // 2. 尝试使用 fetch 获取音频并转换为 Blob
                 fetch(targetAudioUrl)
                     .then(res => {
                         if (!res.ok) throw new Error('Audio fetch failed');
                         return res.blob();
                     })
                     .then(blob => {
-                        // 3. 创建加密链接 (blob:http://...)
                         currentAudioBlobUrl = URL.createObjectURL(blob);
                         audioPlayer.src = currentAudioBlobUrl;
                         console.log('🔒 音频已加密加载');
                     })
                     .catch(err => {
                         console.warn('⚠️ Blob 加载失败，降级为普通加载:', err);
-                        // 降级方案：直接使用普通链接，保证用户能听到声音
                         audioPlayer.src = targetAudioUrl;
                     });
-                // ===== 修改结束 =====
 
                 let totalWordCount = 0;
                 transcriptContainer.innerHTML = ''; 
@@ -371,13 +366,39 @@ document.addEventListener('DOMContentLoaded', function() {
                         index: index
                     };
                     
+                    // ============================================
+                    // 🔥 核心修改：盲听模式 1 秒偷看逻辑
+                    // ============================================
                     p.addEventListener('click', function(event) {
                         const target = event.target;
                         
+                        // 1. 原有逻辑：播放处理
                         if (target.classList.contains('play-button') || target.closest('.play-button') || target.closest('.text-block')) {
                             handleSentencePlayToggle(sentenceData);
                         } else {
                             handleSentencePlayFromStart(sentenceData);
+                        }
+
+                        // 2. 新增逻辑：盲听模式显示 1 秒
+                        if (displayMode && displayMode.value === 'none') {
+                            const textBlock = this.querySelector('.text-block');
+                            if (textBlock) {
+                                // 如果有旧的计时器，清除它（防止闪烁）
+                                if (textBlock.dataset.peekTimer) {
+                                    clearTimeout(parseInt(textBlock.dataset.peekTimer));
+                                }
+
+                                // 添加临时显示类（触发 CSS 快进淡入）
+                                textBlock.classList.add('temp-reveal');
+
+                                // 🔥 1 秒后移除（触发 CSS 慢速淡出）
+                                const timerId = setTimeout(() => {
+                                    textBlock.classList.remove('temp-reveal');
+                                    delete textBlock.dataset.peekTimer;
+                                }, 1000);
+
+                                textBlock.dataset.peekTimer = timerId;
+                            }
                         }
                     });
                     
