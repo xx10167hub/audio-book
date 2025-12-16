@@ -1,4 +1,5 @@
-// player-script.js - 最终修复版 (v=20)
+// player-script.js - V28 锚点救援版 (Anchor Rescue)
+// 更新内容：智能挖词 + 磁吸意群 + 长难句中间保留介词提示
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===== 配置 =====
@@ -476,7 +477,7 @@ document.addEventListener('DOMContentLoaded', function() {
         checkDataLoaded();
     });
 
-    // 播放/暂停按钮逻辑：只控制播放暂停，不重置状态
+    // 播放/暂停按钮逻辑
     playPauseBtn.addEventListener('click', function() {
         if (audioPlayer.paused) {
             audioPlayer.play();
@@ -526,6 +527,7 @@ document.addEventListener('DOMContentLoaded', function() {
         isLooping = !isLooping;
         loopBtn.classList.toggle('active', isLooping);
         if (isLooping) {
+            // 开启循环时，立即锁定当前句子
             currentLoopSentence = findSentenceDataByTime(audioPlayer.currentTime);
             if (currentLoopSentence && audioPlayer.paused) audioPlayer.play();
         } else {
@@ -568,6 +570,7 @@ document.addEventListener('DOMContentLoaded', function() {
             currentTimeDisplay.textContent = formatTime(currentTime);
         }
         
+        // 1. 循环逻辑：检测是否到达句尾，若是则跳回句首
         if (isLooping && currentLoopSentence && currentLoopSentence.end) {
             if (currentTime >= currentLoopSentence.end - 0.15) {
                 isLoopSeeking = true;
@@ -578,15 +581,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentWord = findCurrentWord(currentTime);
         highlightCurrentWord(currentWord);
         
-        if (currentSentencePlayer && !isLooping) {
-            if (currentSentencePlayer.end && currentTime >= currentSentencePlayer.end - 0.1) { 
-                audioPlayer.pause(); 
-                audioPlayer.currentTime = currentSentencePlayer.start;
-                cancelSentencePlayerMode();
-            }
-        } else {
-            updateHighlightAndButton();
-        }
+        updateHighlightAndButton();
     });
     
     audioPlayer.addEventListener('seeked', function() {
@@ -652,14 +647,6 @@ document.addEventListener('DOMContentLoaded', function() {
         else if (e.code === 'KeyL') { e.preventDefault(); loopBtn.click(); }
     });
 
-    if (displayMode) {
-        displayMode.addEventListener('change', function() {
-            transcriptContainer.classList.remove('mode-all', 'mode-original', 'mode-translation', 'mode-none');
-            transcriptContainer.classList.add(`mode-${this.value}`);
-        });
-        displayMode.dispatchEvent(new Event('change'));
-    }
-
     // 全文复制功能
     if (copyAllBtn) {
         copyAllBtn.addEventListener('click', function() {
@@ -690,6 +677,131 @@ document.addEventListener('DOMContentLoaded', function() {
                 copyAllBtn.style.color = "";
             }, 2000);
         });
+    }
+
+    // ===== 🤖 升级版：智能加权 + 75% 控比 + 句首保护 + 磁吸 + ⚓️ 锚点救援 (Core V6) =====
+    
+    // 1. 评分用的停用词 (参与 Pass 1)
+    const STOP_WORDS = new Set([
+        'a', 'an', 'the', 'of', 'in', 'on', 'at', 'to', 'for', 'from', 'with', 'by', 'about',
+        'is', 'are', 'am', 'was', 'were', 'be', 'been', 'being',
+        'and', 'but', 'or', 'so', 'if', 'because', 'as', 'that', 'this', 'it', 'he', 'she', 'they', 'we', 'i', 'you',
+        'my', 'your', 'his', 'her', 'their', 'our', 'us', 'him', 'them'
+    ]);
+
+    // 2. 救援用的锚点词 (只包含介词/连词，参与 Pass 3)
+    const ANCHOR_WORDS = new Set([
+        'in', 'on', 'at', 'to', 'for', 'from', 'with', 'by', 'about', 'of', 
+        'and', 'but', 'or', 'so', 'as', 'into', 'like', 'than', 'over'
+    ]);
+
+    function generateClozeMode() {
+        // 1. 全局重置
+        allWordElements.forEach(el => el.classList.remove('cloze-hidden'));
+
+        // 2. 按句子维度处理
+        const sentences = transcriptContainer.querySelectorAll('.sentence');
+
+        sentences.forEach(sentence => {
+            const wordsInSentence = Array.from(sentence.querySelectorAll('.word-highlight'));
+            const totalWords = wordsInSentence.length;
+
+            if (totalWords === 0) return;
+
+            // --- Pass 1: 核心词权重挖掘 ---
+            let targetHideCount = 0;
+            if (totalWords <= 5) {
+                targetHideCount = totalWords; // 短句全挖
+            } else {
+                targetHideCount = Math.ceil(totalWords * 0.75); // 长句挖 75%
+            }
+
+            const wordDetails = wordsInSentence.map((el, index) => {
+                const rawText = el.textContent.trim();
+                const wordText = rawText.toLowerCase().replace(/[.,?!:;"'()]/g, '');
+                const isNum = /\d/.test(wordText); 
+                const isStop = STOP_WORDS.has(wordText);
+                const len = wordText.length;
+
+                let score = 0;
+
+                // 🌟 句首绝对保护 (Pass 1)
+                if (index === 0 && !isNum && (isStop || len <= 4)) {
+                    score = -1000; 
+                } else if (isNum) {
+                    score = 100;   // 必挖数字
+                } else if (!isStop && len >= 7) {
+                    score = 50;    // 长难词
+                } else if (!isStop && len >= 4) {
+                    score = 40;    // 中等词
+                } else if (!isStop) {
+                    score = 20;    // 短实词
+                } else {
+                    score = 1;     // 虚词
+                }
+                score += Math.random() * 5;
+                return { el, score, isStop, wordText };
+            });
+
+            // 排序并挖掉高分词
+            wordDetails.sort((a, b) => b.score - a.score);
+            for (let i = 0; i < targetHideCount; i++) {
+                if (wordDetails[i].score < 0) continue; 
+                wordDetails[i].el.classList.add('cloze-hidden');
+            }
+
+            // --- Pass 2: 🧲 磁吸补刀 (Cohesion Pass) ---
+            wordsInSentence.forEach((el, index) => {
+                if (index === 0) return; // 句首绝对防御
+
+                if (!el.classList.contains('cloze-hidden') && wordDetails.find(w => w.el === el).isStop) {
+                    let leftHidden = (index > 0 && wordsInSentence[index-1].classList.contains('cloze-hidden'));
+                    let rightHidden = (index < totalWords - 1 && wordsInSentence[index+1].classList.contains('cloze-hidden'));
+                    
+                    // 如果旁边是空洞，大概率吸进去
+                    if ((leftHidden || rightHidden) && Math.random() < 0.6) {
+                        el.classList.add('cloze-hidden');
+                    }
+                }
+            });
+
+            // --- Pass 3: ⚓️ 锚点救援 (Anchor Rescue) ---
+            // 针对长难句 (>7个词)，检查中间被挖掉的介词/连词，随机“复活”它们
+            if (totalWords > 7) {
+                wordsInSentence.forEach((el, index) => {
+                    // 跳过句首和句尾
+                    if (index === 0 || index === totalWords - 1) return;
+
+                    const cleanText = el.textContent.trim().toLowerCase().replace(/[.,?!:;"'()]/g, '');
+
+                    // 如果这个词现在是被挖状态，且属于“锚点词库”(ANCHOR_WORDS)
+                    if (el.classList.contains('cloze-hidden') && ANCHOR_WORDS.has(cleanText)) {
+                        // 50% 的概率把它救回来，作为提示线索
+                        if (Math.random() < 0.5) {
+                            el.classList.remove('cloze-hidden');
+                        }
+                    }
+                });
+            }
+
+        });
+    }
+
+    if (displayMode) {
+        displayMode.addEventListener('change', function() {
+            transcriptContainer.classList.remove('mode-all', 'mode-original', 'mode-translation', 'mode-none', 'mode-cloze');
+            
+            const currentMode = this.value;
+            transcriptContainer.classList.add(`mode-${currentMode}`);
+
+            if (currentMode === 'cloze') {
+                generateClozeMode();
+            } else {
+                allWordElements.forEach(el => el.classList.remove('cloze-hidden'));
+            }
+        });
+        
+        displayMode.dispatchEvent(new Event('change'));
     }
 
     loadArticlesConfig();
