@@ -1,5 +1,5 @@
-// player-script.js - V28 锚点救援版 (Anchor Rescue)
-// 更新内容：智能挖词 + 磁吸意群 + 长难句中间保留介词提示
+// player-script.js - V29 专有名词保护版 (Proper Noun Protection)
+// 更新内容：新增“人名/地名/专有名词”识别保护逻辑，拒绝挖空大写单词
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===== 配置 =====
@@ -679,7 +679,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ===== 🤖 升级版：智能加权 + 75% 控比 + 句首保护 + 磁吸 + ⚓️ 锚点救援 (Core V6) =====
+    // ===== 🤖 升级版：智能加权 + 专有名词保护 + 锚点救援 (Core V29) =====
     
     // 1. 评分用的停用词 (参与 Pass 1)
     const STOP_WORDS = new Set([
@@ -717,15 +717,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             const wordDetails = wordsInSentence.map((el, index) => {
-                const rawText = el.textContent.trim();
+                const rawText = el.textContent.trim(); // 获取原始大小写文本
                 const wordText = rawText.toLowerCase().replace(/[.,?!:;"'()]/g, '');
                 const isNum = /\d/.test(wordText); 
                 const isStop = STOP_WORDS.has(wordText);
                 const len = wordText.length;
+                
+                // 🔥 核心识别：首字母是否大写
+                const isCapitalized = /^[A-Z]/.test(rawText);
 
                 let score = 0;
 
-                // 🌟 句首绝对保护 (Pass 1)
+                // 🌟 Rule 1: 句首保护 & 数字必挖
                 if (index === 0 && !isNum && (isStop || len <= 4)) {
                     score = -1000; 
                 } else if (isNum) {
@@ -739,6 +742,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     score = 1;     // 虚词
                 }
+                
+                // 🌟 Rule 2: 专有名词强力保护 (Proper Noun Protection)
+                // 如果不是句首词 (index>0) 且 首字母大写，极大可能是专有名词
+                // 排除 'I' (虽然大写但是代词)
+                if (index > 0 && isCapitalized && rawText !== 'I') {
+                    score = -9999; // 赋予极低分，绝对不挖
+                }
+
                 score += Math.random() * 5;
                 return { el, score, isStop, wordText };
             });
