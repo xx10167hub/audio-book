@@ -1,176 +1,208 @@
 {
-  "audioUrl": "./data/audio-3.mp3",
-  "title": "第3篇：France bans smoking for tobacco-free generation",
+  "audioUrl": "./data/audio-4.mp3",
+  "title": "第3篇：Different foods affect your body's smells",
   "transcript": [
     {
       "time": 0.031,
-      "text": " France has banned smoking in public.",
-      "translation": "法国已在公共场所实行禁烟。",
+      "text": " Food and drink change our body smells.",
+      "translation": "饮食确实会改变我们的体味。",
       "words": [
-        {"text": "France", "start": 0.031, "end": 0.972},
-        {"text": "has", "start": 1.073, "end": 1.233},
-        {"text": "banned", "start": 1.333, "end": 1.673},
-        {"text": "smoking", "start": 1.774, "end": 2.274},
-        {"text": "in", "start": 2.395, "end": 2.495},
-        {"text": "public.", "start": 2.575, "end": 3.015}
+        {"text": "Food", "start": 0.031, "end": 0.732},
+        {"text": "and", "start": 0.812, "end": 0.892},
+        {"text": "drink", "start": 0.932, "end": 1.293},
+        {"text": "change", "start": 1.433, "end": 1.794},
+        {"text": "our", "start": 1.814, "end": 2.014},
+        {"text": "body", "start": 2.054, "end": 2.334},
+        {"text": "smells.", "start": 2.375, "end": 2.795}
       ]
     },
     {
-      "time": 3.997,
-      "text": "France's health minister said public places are for children to play, learn and breathe, not for smoking.",
-      "translation": "法国卫生部长表示，公共场所是供孩子们“玩耍、学习和自由呼吸的地方，而不是用来抽烟的”。",
+      "time": 3.476,
+      "text": "We all have different smells.",
+      "translation": "而每个人的体味各不相同。",
       "words": [
-        {"text": "France's", "start": 3.997, "end": 4.538},
-        {"text": "health", "start": 4.598, "end": 4.878},
-        {"text": "minister", "start": 4.938, "end": 5.399},
-        {"text": "said", "start": 5.8, "end": 6.02},
-        {"text": "public", "start": 6.38, "end": 6.821},
-        {"text": "places", "start": 6.921, "end": 7.462},
-        {"text": "are", "start": 7.602, "end": 7.702},
-        {"text": "for", "start": 7.762, "end": 7.903},
-        {"text": "children", "start": 7.983, "end": 8.464},
-        {"text": "to", "start": 8.484, "end": 9.004},
-        {"text": "play,", "start": 9.064, "end": 9.465},
-        {"text": "learn", "start": 9.886, "end": 10.246},
-        {"text": "and", "start": 10.406, "end": 10.487},
-        {"text": "breathe,", "start": 10.647, "end": 11.107},
-        {"text": "not", "start": 11.668, "end": 11.949},
-        {"text": "for", "start": 12.109, "end": 12.269},
-        {"text": "smoking.", "start": 12.349, "end": 12.85}
+        {"text": "We", "start": 3.476, "end": 3.636},
+        {"text": "all", "start": 3.737, "end": 3.897},
+        {"text": "have", "start": 3.937, "end": 4.117},
+        {"text": "different", "start": 4.217, "end": 4.618},
+        {"text": "smells.", "start": 4.698, "end": 5.139}
       ]
     },
     {
-      "time": 14.012,
-      "text": "The ban will protect children from passive smoking.",
-      "translation": "此项禁令将保护儿童免受被动吸烟的危害。",
+      "time": 6.08,
+      "text": "A professor of health said the smells from our body come from two places.",
+      "translation": "一位健康教授解释，身体的气味主要来自两个方面。",
       "words": [
-        {"text": "The", "start": 14.012, "end": 14.112},
-        {"text": "ban", "start": 14.152, "end": 14.513},
-        {"text": "will", "start": 14.573, "end": 14.773},
-        {"text": "protect", "start": 14.833, "end": 15.254},
-        {"text": "children", "start": 15.394, "end": 15.854},
-        {"text": "from", "start": 15.955, "end": 16.135},
-        {"text": "passive", "start": 16.235, "end": 16.676},
-        {"text": "smoking.", "start": 16.736, "end": 17.257}
+        {"text": "A", "start": 6.08, "end": 6.14},
+        {"text": "professor", "start": 6.2, "end": 6.661},
+        {"text": "of", "start": 6.741, "end": 6.801},
+        {"text": "health", "start": 6.861, "end": 7.122},
+        {"text": "said", "start": 7.542, "end": 7.723},
+        {"text": "the", "start": 7.763, "end": 7.863},
+        {"text": "smells", "start": 7.923, "end": 8.283},
+        {"text": "from", "start": 8.384, "end": 8.524},
+        {"text": "our", "start": 8.604, "end": 8.704},
+        {"text": "body", "start": 8.744, "end": 9.025},
+        {"text": "come", "start": 9.445, "end": 9.645},
+        {"text": "from", "start": 9.946, "end": 10.086},
+        {"text": "two", "start": 10.146, "end": 10.326},
+        {"text": "places.", "start": 10.387, "end": 10.847}
       ]
     },
     {
-      "time": 18.358,
-      "text": "This is breathing in the second hand smoke from smokers.",
-      "translation": "也就是避免吸入吸烟者产生的“二手烟”。",
+      "time": 11.709,
+      "text": "One is the bacteria in our stomach.",
+      "translation": "一是胃里的细菌。",
       "words": [
-        {"text": "This", "start": 18.358, "end": 18.579},
-        {"text": "is", "start": 18.999, "end": 19.079},
-        {"text": "breathing", "start": 19.179, "end": 19.68},
-        {"text": "in", "start": 19.82, "end": 19.921},
-        {"text": "the", "start": 20.001, "end": 20.101},
-        {"text": "second", "start": 20.221, "end": 20.662},
-        {"text": "hand", "start": 20.722, "end": 21.102},
-        {"text": "smoke", "start": 21.182, "end": 21.543},
-        {"text": "from", "start": 21.944, "end": 22.124},
-        {"text": "smokers.", "start": 22.224, "end": 22.785}
+        {"text": "One", "start": 11.709, "end": 11.809},
+        {"text": "is", "start": 11.889, "end": 11.949},
+        {"text": "the", "start": 11.989, "end": 12.109},
+        {"text": "bacteria", "start": 12.169, "end": 12.83},
+        {"text": "in", "start": 12.91, "end": 12.99},
+        {"text": "our", "start": 13.091, "end": 13.191},
+        {"text": "stomach.", "start": 13.231, "end": 13.651}
       ]
     },
     {
-      "time": 24.167,
-      "text": "France wants a tobacco-free generation by 2032.",
-      "translation": "法国计划在2032年前培养出“无烟的一代”。",
+      "time": 14.453,
+      "text": "Bacteria break down food and release gases.",
+      "translation": "——它们在分解食物时会释放气体。",
       "words": [
-        {"text": "France", "start": 24.167, "end": 24.547},
-        {"text": "wants", "start": 24.628, "end": 24.868},
-        {"text": "a", "start": 24.948, "end": 25.048},
-        {"text": "tobacco-free", "start": 25.108, "end": 25.97},
-        {"text": "generation", "start": 26.05, "end": 26.751},
-        {"text": "by", "start": 26.831, "end": 26.991},
-        {"text": "2032.", "start": 27.011, "end": 28.333}
+        {"text": "Bacteria", "start": 14.453, "end": 15.174},
+        {"text": "break", "start": 15.534, "end": 15.815},
+        {"text": "down", "start": 15.855, "end": 16.075},
+        {"text": "food", "start": 16.175, "end": 16.476},
+        {"text": "and", "start": 16.576, "end": 16.656},
+        {"text": "release", "start": 16.696, "end": 17.097},
+        {"text": "gases.", "start": 17.157, "end": 17.597}
       ]
     },
     {
-      "time": 29.697,
-      "text": " Smoking is falling in France.",
-      "translation": "目前法国吸烟人数有所下降。",
+      "time": 18.459,
+      "text": "These gases can give us bad breath.",
+      "translation": "可能带来口臭。",
       "words": [
-        {"text": "Smoking", "start": 29.697, "end": 30.298},
-        {"text": "is", "start": 30.378, "end": 30.458},
-        {"text": "falling", "start": 30.558, "end": 30.978},
-        {"text": "in", "start": 31.078, "end": 31.178},
-        {"text": "France.", "start": 31.279, "end": 31.679}
+        {"text": "These", "start": 18.459, "end": 18.679},
+        {"text": "gases", "start": 18.979, "end": 19.44},
+        {"text": "can", "start": 19.861, "end": 20.021},
+        {"text": "give", "start": 20.061, "end": 20.221},
+        {"text": "us", "start": 20.281, "end": 20.362},
+        {"text": "bad", "start": 20.462, "end": 20.702},
+        {"text": "breath.", "start": 20.782, "end": 21.063}
       ]
     },
     {
-      "time": 32.34,
-      "text": "However, passive smoking still kills many people.",
-      "translation": "但被动吸烟仍导致许多人死亡。",
+      "time": 21.964,
+      "text": "Food also changes the smell of our skin.",
+      "translation": "二是食物也会改变皮肤的气味。",
       "words": [
-        {"text": "However,", "start": 32.34, "end": 32.76},
-        {"text": "passive", "start": 33.24, "end": 33.721},
-        {"text": "smoking", "start": 33.781, "end": 34.281},
-        {"text": "still", "start": 34.782, "end": 35.142},
-        {"text": "kills", "start": 35.423, "end": 35.863},
-        {"text": "many", "start": 35.983, "end": 36.223},
-        {"text": "people.", "start": 36.303, "end": 36.684}
+        {"text": "Food", "start": 21.964, "end": 22.244},
+        {"text": "also", "start": 22.605, "end": 22.885},
+        {"text": "changes", "start": 22.985, "end": 23.406},
+        {"text": "the", "start": 23.446, "end": 23.546},
+        {"text": "smell", "start": 23.606, "end": 23.867},
+        {"text": "of", "start": 23.907, "end": 23.967},
+        {"text": "our", "start": 24.047, "end": 24.187},
+        {"text": "skin.", "start": 24.267, "end": 24.688}
       ]
     },
     {
-      "time": 37.825,
-      "text": "Most French people support a smoking ban in restaurants.",
-      "translation": "大多数法国人支持餐厅禁烟。",
+      "time": 25.782,
+      "text": " The food that makes the strongest body smells contains sulphur.",
+      "translation": "最容易产生浓重体味的食物通常含硫。",
       "words": [
-        {"text": "Most", "start": 37.825, "end": 38.105},
-        {"text": "French", "start": 38.205, "end": 38.506},
-        {"text": "people", "start": 38.586, "end": 38.986},
-        {"text": "support", "start": 39.066, "end": 39.527},
-        {"text": "a", "start": 39.627, "end": 39.667},
-        {"text": "smoking", "start": 39.767, "end": 40.267},
-        {"text": "ban", "start": 40.327, "end": 40.588},
-        {"text": "in", "start": 40.668, "end": 40.748},
-        {"text": "restaurants.", "start": 40.828, "end": 41.388}
+        {"text": "The", "start": 25.782, "end": 25.942},
+        {"text": "food", "start": 25.982, "end": 26.203},
+        {"text": "that", "start": 26.243, "end": 26.363},
+        {"text": "makes", "start": 26.463, "end": 26.703},
+        {"text": "the", "start": 26.783, "end": 26.904},
+        {"text": "strongest", "start": 26.944, "end": 27.464},
+        {"text": "body", "start": 27.545, "end": 27.865},
+        {"text": "smells", "start": 27.945, "end": 28.326},
+        {"text": "contains", "start": 28.426, "end": 28.886},
+        {"text": "sulphur.", "start": 28.967, "end": 29.467}
       ]
     },
     {
-      "time": 42.429,
-      "text": "Smoking can damage nearly every organ of the body.",
-      "translation": "吸烟几乎会伤害身体的每一个器官。",
+      "time": 30.348,
+      "text": "Broccoli and cabbage contain sulphur.",
+      "translation": "比如西兰花和卷心菜。",
       "words": [
-        {"text": "Smoking", "start": 42.429, "end": 42.95},
-        {"text": "can", "start": 43.01, "end": 43.17},
-        {"text": "damage", "start": 43.23, "end": 43.631},
-        {"text": "nearly", "start": 43.691, "end": 43.951},
-        {"text": "every", "start": 44.131, "end": 44.411},
-        {"text": "organ", "start": 44.591, "end": 44.872},
-        {"text": "of", "start": 44.952, "end": 45.012},
-        {"text": "the", "start": 45.072, "end": 45.172},
-        {"text": "body.", "start": 45.232, "end": 45.572}
+        {"text": "Broccoli", "start": 30.348, "end": 30.789},
+        {"text": "and", "start": 30.889, "end": 30.969},
+        {"text": "cabbage", "start": 31.09, "end": 31.51},
+        {"text": "contain", "start": 31.57, "end": 32.011},
+        {"text": "sulphur.", "start": 32.071, "end": 32.532}
       ]
     },
     {
-      "time": 46.493,
-      "text": "The smoke harms children's bodies.",
-      "translation": "而二手烟尤其危害儿童健康。",
+      "time": 33.493,
+      "text": "Another food is garlic.",
+      "translation": "大蒜也是其中之一。",
       "words": [
-        {"text": "The", "start": 46.493, "end": 46.613},
-        {"text": "smoke", "start": 46.673, "end": 47.014},
-        {"text": "harms", "start": 47.154, "end": 47.594},
-        {"text": "children's", "start": 47.694, "end": 48.215},
-        {"text": "bodies.", "start": 48.295, "end": 48.695}
+        {"text": "Another", "start": 33.493, "end": 33.773},
+        {"text": "food", "start": 33.833, "end": 34.114},
+        {"text": "is", "start": 34.134, "end": 34.274},
+        {"text": "garlic.", "start": 34.354, "end": 34.775}
       ]
     },
     {
-      "time": 49.877,
-      "text": "When children breathe in secondhand smoke, they can have breathing problems.",
-      "translation": "孩子吸入二手烟后，可能会出现呼吸系统问题。",
+      "time": 35.416,
+      "text": "This makes our breath smell and can make our armpits smell nicer.",
+      "translation": "虽然会让口气不好闻，不过可能让腋下的气味变得更宜人。",
       "words": [
-        {"text": "When", "start": 49.877, "end": 50.057},
-        {"text": "children", "start": 50.177, "end": 50.657},
-        {"text": "breathe", "start": 50.737, "end": 51.078},
-        {"text": "in", "start": 51.198, "end": 51.318},
-        {"text": "secondhand", "start": 51.418, "end": 52.119},
-        {"text": "smoke,", "start": 52.179, "end": 52.539},
-        {"text": "they", "start": 53.02, "end": 53.18},
-        {"text": "can", "start": 53.22, "end": 53.4},
-        {"text": "have", "start": 53.46, "end": 53.66},
-        {"text": "breathing", "start": 53.961, "end": 54.401},
-        {"text": "problems.", "start": 54.481, "end": 55.502}
+        {"text": "This", "start": 35.416, "end": 35.556},
+        {"text": "makes", "start": 35.636, "end": 35.876},
+        {"text": "our", "start": 35.956, "end": 36.057},
+        {"text": "breath", "start": 36.137, "end": 36.397},
+        {"text": "smell", "start": 36.477, "end": 36.758},
+        {"text": "and", "start": 37.278, "end": 37.398},
+        {"text": "can", "start": 37.499, "end": 37.659},
+        {"text": "make", "start": 37.699, "end": 37.899},
+        {"text": "our", "start": 37.999, "end": 38.12},
+        {"text": "armpits", "start": 38.26, "end": 38.7},
+        {"text": "smell", "start": 38.881, "end": 39.181},
+        {"text": "nicer.", "start": 39.241, "end": 39.642}
+      ]
+    },
+    {
+      "time": 40.603,
+      "text": "Alcohol, coffee and tea can lead to bad breath and a smelly body.",
+      "translation": "酒精、咖啡和茶则可能导致口臭和身体异味。",
+      "words": [
+        {"text": "Alcohol,", "start": 40.603, "end": 41.084},
+        {"text": "coffee", "start": 41.444, "end": 41.765},
+        {"text": "and", "start": 41.845, "end": 41.925},
+        {"text": "tea", "start": 42.045, "end": 42.305},
+        {"text": "can", "start": 42.706, "end": 42.866},
+        {"text": "lead", "start": 42.926, "end": 43.147},
+        {"text": "to", "start": 43.227, "end": 43.347},
+        {"text": "bad", "start": 43.407, "end": 43.707},
+        {"text": "breath", "start": 43.768, "end": 44.068},
+        {"text": "and", "start": 44.288, "end": 44.368},
+        {"text": "a", "start": 44.428, "end": 44.448},
+        {"text": "smelly", "start": 44.529, "end": 44.889},
+        {"text": "body.", "start": 44.929, "end": 45.25}
+      ]
+    },
+    {
+      "time": 46.231,
+      "text": "If we want to smell nice, we should eat fruit and drink water.",
+      "translation": "如果想保持气味清新，平时应该多吃水果、多喝水。",
+      "words": [
+        {"text": "If", "start": 46.231, "end": 46.311},
+        {"text": "we", "start": 46.351, "end": 46.451},
+        {"text": "want", "start": 46.511, "end": 46.672},
+        {"text": "to", "start": 46.712, "end": 46.812},
+        {"text": "smell", "start": 46.852, "end": 47.112},
+        {"text": "nice,", "start": 47.192, "end": 47.493},
+        {"text": "we", "start": 47.873, "end": 47.994},
+        {"text": "should", "start": 48.034, "end": 48.214},
+        {"text": "eat", "start": 48.334, "end": 48.494},
+        {"text": "fruit", "start": 48.815, "end": 49.095},
+        {"text": "and", "start": 49.436, "end": 49.536},
+        {"text": "drink", "start": 49.656, "end": 49.936},
+        {"text": "water.", "start": 49.996, "end": 50.457}
       ]
     }
   ]
