@@ -1,5 +1,5 @@
-// player-script.js - V29 专有名词保护版 (Proper Noun Protection)
-// 更新内容：新增“人名/地名/专有名词”识别保护逻辑，拒绝挖空大写单词
+// player-script.js - V30 修复最后一句循环Bug版
+// 更新内容：修复最后一句单句循环失效的问题；新增播放结束(ended)强制循环逻辑
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===== 配置 =====
@@ -159,12 +159,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // 🔥 核心修改：修复最后一句结束时间判断逻辑
     function checkDataLoaded() {
         if (isTranscriptLoaded && isAudioLoaded) {
             if (sentencesData.length > 0) {
                 const lastSentence = sentencesData[sentencesData.length - 1];
-                if (lastSentence.end === null) {
-                    lastSentence.end = audioPlayer.duration || 99999;
+                // 如果最后一句的结束时间是 null 或者是默认的 99999
+                if (lastSentence.end === null || lastSentence.end === 99999) {
+                    // 只有当音频确实加载了时长，才去更新它
+                    if (audioPlayer.duration && audioPlayer.duration > 0 && audioPlayer.duration !== Infinity) {
+                        lastSentence.end = audioPlayer.duration;
+                    } else {
+                        // 暂时还没获取到时长，保持占位
+                        lastSentence.end = 99999;
+                    }
                 }
             }
         }
@@ -493,6 +501,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!currentSentencePlayer) resetAllSentenceButtons();
     });
     
+    // 🔥 核心修改：新增 'ended' 事件监听，专门解决最后一句不循环的问题
+    audioPlayer.addEventListener('ended', function() {
+        // 如果当前是循环模式，并且有锁定的句子，就强制跳回开始
+        if (isLooping && currentLoopSentence) {
+            audioPlayer.currentTime = currentLoopSentence.start;
+            audioPlayer.play();
+        }
+    });
+
     backwardBtn.addEventListener('click', function() {
         cancelSentencePlayerMode();
         currentLoopSentence = null;
