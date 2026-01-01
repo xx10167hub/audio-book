@@ -1,0 +1,687 @@
+{
+  "id": "article-52",
+  "audioUrl": "./data/audio-52.mp3",
+  "title": "第52篇：(Why Napping Matters)",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "Studies have shown that a good night's rest helps us stay healthy, both mentally and physically.",
+      "translation": "研究表明，充足的夜间休息有助于我们在心理和生理上保持健康。",
+      "words": [
+        {
+          "text": "Studies",
+          "start": 0.031,
+          "end": 0.592
+        },
+        {
+          "text": "have",
+          "start": 0.673,
+          "end": 0.813
+        },
+        {
+          "text": "shown",
+          "start": 0.893,
+          "end": 1.234
+        },
+        {
+          "text": "that",
+          "start": 1.254,
+          "end": 1.795
+        },
+        {
+          "text": "a",
+          "start": 1.916,
+          "end": 1.936
+        },
+        {
+          "text": "good",
+          "start": 2.016,
+          "end": 2.217
+        },
+        {
+          "text": "night's",
+          "start": 2.277,
+          "end": 2.557
+        },
+        {
+          "text": "rest",
+          "start": 2.658,
+          "end": 3.019
+        },
+        {
+          "text": "helps",
+          "start": 3.46,
+          "end": 3.76
+        },
+        {
+          "text": "us",
+          "start": 3.901,
+          "end": 4.001
+        },
+        {
+          "text": "stay",
+          "start": 4.282,
+          "end": 4.522
+        },
+        {
+          "text": "healthy,",
+          "start": 4.562,
+          "end": 5.004
+        },
+        {
+          "text": "both",
+          "start": 5.445,
+          "end": 5.645
+        },
+        {
+          "text": "mentally",
+          "start": 5.806,
+          "end": 6.287
+        },
+        {
+          "text": "and",
+          "start": 6.327,
+          "end": 6.608
+        },
+        {
+          "text": "physically.",
+          "start": 6.648,
+          "end": 7.289
+        }
+      ]
+    },
+    {
+      "time": 7.891,
+      "text": "But what about getting rest during the middle of the day?",
+      "translation": "但中午休息一下会怎么样呢？",
+      "words": [
+        {
+          "text": "But",
+          "start": 7.891,
+          "end": 8.011
+        },
+        {
+          "text": "what",
+          "start": 8.131,
+          "end": 8.292
+        },
+        {
+          "text": "about",
+          "start": 8.352,
+          "end": 8.613
+        },
+        {
+          "text": "getting",
+          "start": 8.693,
+          "end": 8.994
+        },
+        {
+          "text": "rest",
+          "start": 9.034,
+          "end": 9.555
+        },
+        {
+          "text": "during",
+          "start": 9.816,
+          "end": 10.136
+        },
+        {
+          "text": "the",
+          "start": 10.157,
+          "end": 10.337
+        },
+        {
+          "text": "middle",
+          "start": 10.417,
+          "end": 10.658
+        },
+        {
+          "text": "of",
+          "start": 10.758,
+          "end": 10.818
+        },
+        {
+          "text": "the",
+          "start": 10.838,
+          "end": 10.938
+        },
+        {
+          "text": "day?",
+          "start": 10.999,
+          "end": 11.56
+        }
+      ]
+    },
+    {
+      "time": 12.738,
+      "text": "Short periods of sleep may help our brains work better.",
+      "translation": "短时间睡眠可能有助于大脑更好地工作",
+      "words": [
+        {
+          "text": "Short",
+          "start": 12.738,
+          "end": 13.119
+        },
+        {
+          "text": "periods",
+          "start": 13.179,
+          "end": 13.659
+        },
+        {
+          "text": "of",
+          "start": 13.78,
+          "end": 13.84
+        },
+        {
+          "text": "sleep",
+          "start": 13.96,
+          "end": 14.36
+        },
+        {
+          "text": "may",
+          "start": 14.881,
+          "end": 15.081
+        },
+        {
+          "text": "help",
+          "start": 15.142,
+          "end": 15.362
+        },
+        {
+          "text": "our",
+          "start": 15.482,
+          "end": 15.582
+        },
+        {
+          "text": "brains",
+          "start": 15.642,
+          "end": 16.083
+        },
+        {
+          "text": "work",
+          "start": 16.383,
+          "end": 16.604
+        },
+        {
+          "text": "better.",
+          "start": 16.724,
+          "end": 17.024
+        }
+      ]
+    },
+    {
+      "time": 17.886,
+      "text": "Or so says a recent study on napping.",
+      "translation": "这是最近一项关于午睡的研究得出的结论。",
+      "words": [
+        {
+          "text": "Or",
+          "start": 17.886,
+          "end": 17.966
+        },
+        {
+          "text": "so",
+          "start": 18.066,
+          "end": 18.246
+        },
+        {
+          "text": "says",
+          "start": 18.366,
+          "end": 18.647
+        },
+        {
+          "text": "a",
+          "start": 18.667,
+          "end": 18.687
+        },
+        {
+          "text": "recent",
+          "start": 19.047,
+          "end": 19.428
+        },
+        {
+          "text": "study",
+          "start": 19.568,
+          "end": 19.949
+        },
+        {
+          "text": "on",
+          "start": 19.989,
+          "end": 20.429
+        },
+        {
+          "text": "napping.",
+          "start": 20.75,
+          "end": 21.211
+        }
+      ]
+    },
+    {
+      "time": 21.851,
+      "text": "Also, many people may not want to admit that they take naps.",
+      "translation": "此外，许多人可能不愿承认自己有午睡的习惯。",
+      "words": [
+        {
+          "text": "Also,",
+          "start": 21.851,
+          "end": 22.232
+        },
+        {
+          "text": "many",
+          "start": 22.593,
+          "end": 22.853
+        },
+        {
+          "text": "people",
+          "start": 22.953,
+          "end": 23.334
+        },
+        {
+          "text": "may",
+          "start": 23.494,
+          "end": 23.654
+        },
+        {
+          "text": "not",
+          "start": 23.774,
+          "end": 23.995
+        },
+        {
+          "text": "want",
+          "start": 24.095,
+          "end": 24.295
+        },
+        {
+          "text": "to",
+          "start": 24.375,
+          "end": 24.535
+        },
+        {
+          "text": "admit",
+          "start": 24.636,
+          "end": 25.096
+        },
+        {
+          "text": "that",
+          "start": 25.116,
+          "end": 25.797
+        },
+        {
+          "text": "they",
+          "start": 25.897,
+          "end": 26.058
+        },
+        {
+          "text": "take",
+          "start": 26.118,
+          "end": 26.318
+        },
+        {
+          "text": "naps.",
+          "start": 26.418,
+          "end": 26.799
+        }
+      ]
+    },
+    {
+      "time": 27.44,
+      "text": "They may think that napping shows they are weak or lack energy.",
+      "translation": "他们可能认为午睡表明自己虚弱或缺乏精力。",
+      "words": [
+        {
+          "text": "They",
+          "start": 27.44,
+          "end": 27.6
+        },
+        {
+          "text": "may",
+          "start": 27.66,
+          "end": 27.84
+        },
+        {
+          "text": "think",
+          "start": 27.92,
+          "end": 28.161
+        },
+        {
+          "text": "that",
+          "start": 28.261,
+          "end": 28.421
+        },
+        {
+          "text": "napping",
+          "start": 28.541,
+          "end": 28.982
+        },
+        {
+          "text": "shows",
+          "start": 29.182,
+          "end": 29.543
+        },
+        {
+          "text": "they",
+          "start": 29.563,
+          "end": 29.903
+        },
+        {
+          "text": "are",
+          "start": 29.963,
+          "end": 30.084
+        },
+        {
+          "text": "weak",
+          "start": 30.144,
+          "end": 30.404
+        },
+        {
+          "text": "or",
+          "start": 30.825,
+          "end": 30.905
+        },
+        {
+          "text": "lack",
+          "start": 30.965,
+          "end": 31.225
+        },
+        {
+          "text": "energy.",
+          "start": 31.345,
+          "end": 31.786
+        }
+      ]
+    },
+    {
+      "time": 32.988,
+      "text": "However, that may be changing.",
+      "translation": "然而，这种情况可能正在改变。",
+      "words": [
+        {
+          "text": "However,",
+          "start": 32.988,
+          "end": 33.409
+        },
+        {
+          "text": "that",
+          "start": 33.449,
+          "end": 33.829
+        },
+        {
+          "text": "may",
+          "start": 33.889,
+          "end": 34.029
+        },
+        {
+          "text": "be",
+          "start": 34.07,
+          "end": 34.17
+        },
+        {
+          "text": "changing.",
+          "start": 34.25,
+          "end": 34.771
+        }
+      ]
+    },
+    {
+      "time": 35.411,
+      "text": "Dr. Michael Tweery notes that an hour-long nap may be too long for young, healthy adults.",
+      "translation": "然而迈克尔·特威里医生指出，对于年轻健康的成年人来说，一小时的午睡可能太久。",
+      "words": [
+        {
+          "text": "Dr.",
+          "start": 35.411,
+          "end": 35.792
+        },
+        {
+          "text": "Michael",
+          "start": 35.892,
+          "end": 36.213
+        },
+        {
+          "text": "Tweery",
+          "start": 36.253,
+          "end": 36.633
+        },
+        {
+          "text": "notes",
+          "start": 36.693,
+          "end": 36.994
+        },
+        {
+          "text": "that",
+          "start": 37.354,
+          "end": 37.575
+        },
+        {
+          "text": "an",
+          "start": 37.695,
+          "end": 37.755
+        },
+        {
+          "text": "hour-long",
+          "start": 37.895,
+          "end": 38.576
+        },
+        {
+          "text": "nap",
+          "start": 38.716,
+          "end": 38.997
+        },
+        {
+          "text": "may",
+          "start": 39.478,
+          "end": 39.638
+        },
+        {
+          "text": "be",
+          "start": 39.698,
+          "end": 39.838
+        },
+        {
+          "text": "too",
+          "start": 39.998,
+          "end": 40.239
+        },
+        {
+          "text": "long",
+          "start": 40.299,
+          "end": 40.599
+        },
+        {
+          "text": "for",
+          "start": 40.819,
+          "end": 40.98
+        },
+        {
+          "text": "young,",
+          "start": 41.02,
+          "end": 41.38
+        },
+        {
+          "text": "healthy",
+          "start": 41.48,
+          "end": 41.821
+        },
+        {
+          "text": "adults.",
+          "start": 41.921,
+          "end": 42.542
+        }
+      ]
+    },
+    {
+      "time": 44.108,
+      "text": "Currently, we're recommending that we try to sleep for about 30 minutes or less.",
+      "translation": "“目前我们建议尝试将睡眠时间控制在30分钟左右或更短",
+      "words": [
+        {
+          "text": "Currently,",
+          "start": 44.108,
+          "end": 44.589
+        },
+        {
+          "text": "we're",
+          "start": 44.61,
+          "end": 44.79
+        },
+        {
+          "text": "recommending",
+          "start": 44.83,
+          "end": 45.432
+        },
+        {
+          "text": "that",
+          "start": 45.472,
+          "end": 45.954
+        },
+        {
+          "text": "we",
+          "start": 45.974,
+          "end": 46.074
+        },
+        {
+          "text": "try",
+          "start": 46.134,
+          "end": 46.355
+        },
+        {
+          "text": "to",
+          "start": 46.395,
+          "end": 46.455
+        },
+        {
+          "text": "sleep",
+          "start": 46.515,
+          "end": 46.756
+        },
+        {
+          "text": "for",
+          "start": 46.816,
+          "end": 46.957
+        },
+        {
+          "text": "about",
+          "start": 46.997,
+          "end": 47.559
+        },
+        {
+          "text": "30",
+          "start": 47.579,
+          "end": 47.96
+        },
+        {
+          "text": "minutes",
+          "start": 48.0,
+          "end": 48.261
+        },
+        {
+          "text": "or",
+          "start": 48.321,
+          "end": 48.421
+        },
+        {
+          "text": "less.",
+          "start": 48.562,
+          "end": 48.983
+        }
+      ]
+    },
+    {
+      "time": 50.207,
+      "text": "And 30 minutes is enough to remove the pressure to sleep and will help us feel more awake.",
+      "translation": "30分钟足以消除睡眠压力，并帮助我们感觉更清醒。",
+      "words": [
+        {
+          "text": "And",
+          "start": 50.207,
+          "end": 50.307
+        },
+        {
+          "text": "30",
+          "start": 50.327,
+          "end": 50.367
+        },
+        {
+          "text": "minutes",
+          "start": 50.949,
+          "end": 51.25
+        },
+        {
+          "text": "is",
+          "start": 51.31,
+          "end": 51.39
+        },
+        {
+          "text": "enough",
+          "start": 51.471,
+          "end": 51.732
+        },
+        {
+          "text": "to",
+          "start": 51.772,
+          "end": 51.872
+        },
+        {
+          "text": "remove",
+          "start": 51.932,
+          "end": 52.454
+        },
+        {
+          "text": "the",
+          "start": 52.474,
+          "end": 52.995
+        },
+        {
+          "text": "pressure",
+          "start": 53.076,
+          "end": 53.437
+        },
+        {
+          "text": "to",
+          "start": 53.477,
+          "end": 53.557
+        },
+        {
+          "text": "sleep",
+          "start": 53.617,
+          "end": 53.938
+        },
+        {
+          "text": "and",
+          "start": 55.122,
+          "end": 55.463
+        },
+        {
+          "text": "will",
+          "start": 55.503,
+          "end": 55.684
+        },
+        {
+          "text": "help",
+          "start": 55.724,
+          "end": 55.904
+        },
+        {
+          "text": "us",
+          "start": 56.045,
+          "end": 56.145
+        },
+        {
+          "text": "feel",
+          "start": 56.587,
+          "end": 56.867
+        },
+        {
+          "text": "more",
+          "start": 56.908,
+          "end": 57.188
+        },
+        {
+          "text": "awake.",
+          "start": 57.249,
+          "end": 57.73
+        }
+      ]
+    }
+  ]
+}
