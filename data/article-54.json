@@ -1,0 +1,575 @@
+{
+  "id": "article-54",
+  "audioUrl": "./data/audio-54.mp3",
+  "title": "第54篇：( The Park Sitting on a Supervolcano)",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "Yellowstone is still one of the largest national parks in the US.",
+      "translation": "黄石公园仍然是美国最大的国家公园之一。",
+      "words": [
+        {
+          "text": "Yellowstone",
+          "start": 0.031,
+          "end": 1.293
+        },
+        {
+          "text": "is",
+          "start": 1.413,
+          "end": 1.734
+        },
+        {
+          "text": "still",
+          "start": 1.774,
+          "end": 2.515
+        },
+        {
+          "text": "one",
+          "start": 2.596,
+          "end": 2.736
+        },
+        {
+          "text": "of",
+          "start": 2.796,
+          "end": 3.076
+        },
+        {
+          "text": "the",
+          "start": 3.117,
+          "end": 3.257
+        },
+        {
+          "text": "largest",
+          "start": 3.317,
+          "end": 4.018
+        },
+        {
+          "text": "national",
+          "start": 4.098,
+          "end": 4.579
+        },
+        {
+          "text": "parks",
+          "start": 4.639,
+          "end": 5.26
+        },
+        {
+          "text": "in",
+          "start": 5.341,
+          "end": 5.721
+        },
+        {
+          "text": "the",
+          "start": 5.781,
+          "end": 5.922
+        },
+        {
+          "text": "US.",
+          "start": 6.022,
+          "end": 7.725
+        }
+      ]
+    },
+    {
+      "time": 7.785,
+      "text": "It takes up almost 9,000 square kilometers.",
+      "translation": "它占地近9000平方公里。",
+      "words": [
+        {
+          "text": "It",
+          "start": 7.785,
+          "end": 8.065
+        },
+        {
+          "text": "takes",
+          "start": 8.126,
+          "end": 8.406
+        },
+        {
+          "text": "up",
+          "start": 8.486,
+          "end": 8.707
+        },
+        {
+          "text": "almost",
+          "start": 8.767,
+          "end": 9.388
+        },
+        {
+          "text": "9,000",
+          "start": 9.408,
+          "end": 9.809
+        },
+        {
+          "text": "square",
+          "start": 10.169,
+          "end": 11.151
+        },
+        {
+          "text": "kilometers.",
+          "start": 11.211,
+          "end": 13.095
+        }
+      ]
+    },
+    {
+      "time": 13.135,
+      "text": "Most of the park lies within the western state of Wyoming.",
+      "translation": "公园的大部分区域位于怀俄明州西部。",
+      "words": [
+        {
+          "text": "Most",
+          "start": 13.135,
+          "end": 13.395
+        },
+        {
+          "text": "of",
+          "start": 13.455,
+          "end": 13.575
+        },
+        {
+          "text": "the",
+          "start": 13.595,
+          "end": 13.716
+        },
+        {
+          "text": "park",
+          "start": 13.756,
+          "end": 14.277
+        },
+        {
+          "text": "lies",
+          "start": 14.337,
+          "end": 14.918
+        },
+        {
+          "text": "within",
+          "start": 14.958,
+          "end": 15.759
+        },
+        {
+          "text": "the",
+          "start": 15.819,
+          "end": 15.96
+        },
+        {
+          "text": "western",
+          "start": 16.0,
+          "end": 16.541
+        },
+        {
+          "text": "state",
+          "start": 16.581,
+          "end": 17.222
+        },
+        {
+          "text": "of",
+          "start": 17.302,
+          "end": 17.442
+        },
+        {
+          "text": "Wyoming.",
+          "start": 17.503,
+          "end": 18.965
+        }
+      ]
+    },
+    {
+      "time": 19.005,
+      "text": "The park is unusual because of what lies underneath it.",
+      "translation": "这个公园之所以与众不同，是因为它地下的东西。",
+      "words": [
+        {
+          "text": "The",
+          "start": 19.005,
+          "end": 19.186
+        },
+        {
+          "text": "park",
+          "start": 19.226,
+          "end": 19.727
+        },
+        {
+          "text": "is",
+          "start": 19.847,
+          "end": 20.127
+        },
+        {
+          "text": "unusual",
+          "start": 20.207,
+          "end": 21.37
+        },
+        {
+          "text": "because",
+          "start": 21.41,
+          "end": 22.151
+        },
+        {
+          "text": "of",
+          "start": 22.231,
+          "end": 22.411
+        },
+        {
+          "text": "what",
+          "start": 22.471,
+          "end": 22.792
+        },
+        {
+          "text": "lies",
+          "start": 22.832,
+          "end": 23.373
+        },
+        {
+          "text": "underneath",
+          "start": 23.453,
+          "end": 24.054
+        },
+        {
+          "text": "it.",
+          "start": 24.114,
+          "end": 24.435
+        }
+      ]
+    },
+    {
+      "time": 25.293,
+      "text": "It sits on top of an ancient supervolcano, known as the Yellowstone Caldera.",
+      "translation": "黄石公园坐落在一个古老的超级火山之上，被称为黄石火山。",
+      "words": [
+        {
+          "text": "It",
+          "start": 25.293,
+          "end": 25.594
+        },
+        {
+          "text": "sits",
+          "start": 25.634,
+          "end": 25.975
+        },
+        {
+          "text": "on",
+          "start": 26.075,
+          "end": 26.255
+        },
+        {
+          "text": "top",
+          "start": 26.315,
+          "end": 26.596
+        },
+        {
+          "text": "of",
+          "start": 26.676,
+          "end": 26.877
+        },
+        {
+          "text": "an",
+          "start": 26.957,
+          "end": 27.117
+        },
+        {
+          "text": "ancient",
+          "start": 27.217,
+          "end": 27.859
+        },
+        {
+          "text": "supervolcano,",
+          "start": 27.919,
+          "end": 29.783
+        },
+        {
+          "text": "known",
+          "start": 29.803,
+          "end": 30.084
+        },
+        {
+          "text": "as",
+          "start": 30.164,
+          "end": 30.625
+        },
+        {
+          "text": "the",
+          "start": 30.665,
+          "end": 30.805
+        },
+        {
+          "text": "Yellowstone",
+          "start": 30.846,
+          "end": 31.808
+        },
+        {
+          "text": "Caldera.",
+          "start": 31.868,
+          "end": 33.692
+        }
+      ]
+    },
+    {
+      "time": 33.712,
+      "text": "The caldera remains an active volcano.",
+      "translation": "这个火山口仍然是一座活火山。",
+      "words": [
+        {
+          "text": "The",
+          "start": 33.712,
+          "end": 33.872
+        },
+        {
+          "text": "caldera",
+          "start": 33.933,
+          "end": 34.594
+        },
+        {
+          "text": "remains",
+          "start": 34.654,
+          "end": 35.396
+        },
+        {
+          "text": "an",
+          "start": 35.476,
+          "end": 35.616
+        },
+        {
+          "text": "active",
+          "start": 35.737,
+          "end": 36.418
+        },
+        {
+          "text": "volcano.",
+          "start": 36.458,
+          "end": 37.26
+        }
+      ]
+    },
+    {
+      "time": 38.388,
+      "text": "A park is home to more than 300 geysers.",
+      "translation": "这座公园有超过300座间歇泉。",
+      "words": [
+        {
+          "text": "A",
+          "start": 38.388,
+          "end": 38.689
+        },
+        {
+          "text": "park",
+          "start": 38.709,
+          "end": 39.25
+        },
+        {
+          "text": "is",
+          "start": 39.351,
+          "end": 39.511
+        },
+        {
+          "text": "home",
+          "start": 39.611,
+          "end": 39.892
+        },
+        {
+          "text": "to",
+          "start": 39.932,
+          "end": 40.073
+        },
+        {
+          "text": "more",
+          "start": 40.133,
+          "end": 40.374
+        },
+        {
+          "text": "than",
+          "start": 40.414,
+          "end": 40.815
+        },
+        {
+          "text": "300",
+          "start": 40.835,
+          "end": 41.196
+        },
+        {
+          "text": "geysers.",
+          "start": 41.818,
+          "end": 43.422
+        }
+      ]
+    },
+    {
+      "time": 43.442,
+      "text": "There are more geysers and hot springs in Yellowstone than any other place on Earth.",
+      "translation": "黄石公园里的间歇泉和温泉比地球上任何其他地方都更多。",
+      "words": [
+        {
+          "text": "There",
+          "start": 43.442,
+          "end": 43.663
+        },
+        {
+          "text": "are",
+          "start": 43.763,
+          "end": 43.923
+        },
+        {
+          "text": "more",
+          "start": 43.984,
+          "end": 44.204
+        },
+        {
+          "text": "geysers",
+          "start": 44.264,
+          "end": 44.906
+        },
+        {
+          "text": "and",
+          "start": 45.046,
+          "end": 45.327
+        },
+        {
+          "text": "hot",
+          "start": 45.387,
+          "end": 45.668
+        },
+        {
+          "text": "springs",
+          "start": 45.708,
+          "end": 46.27
+        },
+        {
+          "text": "in",
+          "start": 46.35,
+          "end": 46.671
+        },
+        {
+          "text": "Yellowstone",
+          "start": 46.731,
+          "end": 48.015
+        },
+        {
+          "text": "than",
+          "start": 48.075,
+          "end": 48.556
+        },
+        {
+          "text": "any",
+          "start": 48.656,
+          "end": 48.877
+        },
+        {
+          "text": "other",
+          "start": 48.917,
+          "end": 49.178
+        },
+        {
+          "text": "place",
+          "start": 49.238,
+          "end": 49.86
+        },
+        {
+          "text": "on",
+          "start": 49.94,
+          "end": 50.141
+        },
+        {
+          "text": "Earth.",
+          "start": 50.261,
+          "end": 50.983
+        }
+      ]
+    },
+    {
+      "time": 51.063,
+      "text": "Old Faithful is the name of the park's most famous geyser because it erupts about every 90 minutes.",
+      "translation": "“老忠实泉”是黄石公园里最著名的间歇泉的名字，因为它大约每90分钟喷发一次。",
+      "words": [
+        {
+          "text": "Old",
+          "start": 51.063,
+          "end": 51.424
+        },
+        {
+          "text": "Faithful",
+          "start": 51.464,
+          "end": 52.447
+        },
+        {
+          "text": "is",
+          "start": 52.547,
+          "end": 52.868
+        },
+        {
+          "text": "the",
+          "start": 52.908,
+          "end": 53.029
+        },
+        {
+          "text": "name",
+          "start": 53.089,
+          "end": 53.41
+        },
+        {
+          "text": "of",
+          "start": 53.47,
+          "end": 53.57
+        },
+        {
+          "text": "the",
+          "start": 53.61,
+          "end": 53.711
+        },
+        {
+          "text": "park's",
+          "start": 53.771,
+          "end": 54.433
+        },
+        {
+          "text": "most",
+          "start": 54.493,
+          "end": 54.894
+        },
+        {
+          "text": "famous",
+          "start": 54.954,
+          "end": 55.315
+        },
+        {
+          "text": "geyser",
+          "start": 55.355,
+          "end": 56.378
+        },
+        {
+          "text": "because",
+          "start": 56.418,
+          "end": 57.1
+        },
+        {
+          "text": "it",
+          "start": 57.16,
+          "end": 57.341
+        },
+        {
+          "text": "erupts",
+          "start": 57.421,
+          "end": 58.343
+        },
+        {
+          "text": "about",
+          "start": 58.404,
+          "end": 59.005
+        },
+        {
+          "text": "every",
+          "start": 59.105,
+          "end": 59.406
+        },
+        {
+          "text": "90",
+          "start": 59.426,
+          "end": 59.787
+        },
+        {
+          "text": "minutes.",
+          "start": 59.827,
+          "end": 60.75
+        }
+      ]
+    }
+  ]
+}
