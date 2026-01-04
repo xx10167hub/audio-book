@@ -1,0 +1,830 @@
+{
+  "id": "article-65",
+  "audioUrl": "./data/audio-65.mp3",
+  "title": "第70篇：(Why Apps Know Exactly What You Like)",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "Have you ever found yourself wondering how your Spotify wrapped seems to just get you so perfectly?",
+      "translation": "你有没有想过，为什么你的Spotify音乐年度总结能如此精准地描述你的喜好？",
+      "words": [
+        {
+          "text": "Have",
+          "start": 0.031,
+          "end": 0.111
+        },
+        {
+          "text": "you",
+          "start": 0.131,
+          "end": 0.211
+        },
+        {
+          "text": "ever",
+          "start": 0.291,
+          "end": 0.432
+        },
+        {
+          "text": "found",
+          "start": 0.492,
+          "end": 0.672
+        },
+        {
+          "text": "yourself",
+          "start": 0.712,
+          "end": 0.992
+        },
+        {
+          "text": "wondering",
+          "start": 1.073,
+          "end": 1.473
+        },
+        {
+          "text": "how",
+          "start": 1.513,
+          "end": 1.874
+        },
+        {
+          "text": "your",
+          "start": 1.954,
+          "end": 2.134
+        },
+        {
+          "text": "Spotify",
+          "start": 2.174,
+          "end": 2.655
+        },
+        {
+          "text": "wrapped",
+          "start": 2.715,
+          "end": 2.995
+        },
+        {
+          "text": "seems",
+          "start": 3.055,
+          "end": 3.316
+        },
+        {
+          "text": "to",
+          "start": 3.376,
+          "end": 3.456
+        },
+        {
+          "text": "just",
+          "start": 3.516,
+          "end": 3.736
+        },
+        {
+          "text": "get",
+          "start": 3.977,
+          "end": 4.137
+        },
+        {
+          "text": "you",
+          "start": 4.197,
+          "end": 4.357
+        },
+        {
+          "text": "so",
+          "start": 4.538,
+          "end": 4.698
+        },
+        {
+          "text": "perfectly?",
+          "start": 4.778,
+          "end": 5.339
+        }
+      ]
+    },
+    {
+      "time": 5.379,
+      "text": "Or why Netflix knows how to recommend the exact show you wanted to watch next?",
+      "translation": "或者为什么网飞知道如何推荐你接下来想看的影视剧？",
+      "words": [
+        {
+          "text": "Or",
+          "start": 5.379,
+          "end": 6.0
+        },
+        {
+          "text": "why",
+          "start": 6.04,
+          "end": 6.32
+        },
+        {
+          "text": "Netflix",
+          "start": 6.38,
+          "end": 6.801
+        },
+        {
+          "text": "knows",
+          "start": 6.861,
+          "end": 7.041
+        },
+        {
+          "text": "how",
+          "start": 7.101,
+          "end": 7.181
+        },
+        {
+          "text": "to",
+          "start": 7.221,
+          "end": 7.282
+        },
+        {
+          "text": "recommend",
+          "start": 7.342,
+          "end": 7.742
+        },
+        {
+          "text": "the",
+          "start": 7.782,
+          "end": 7.942
+        },
+        {
+          "text": "exact",
+          "start": 8.043,
+          "end": 8.563
+        },
+        {
+          "text": "show",
+          "start": 8.664,
+          "end": 8.924
+        },
+        {
+          "text": "you",
+          "start": 9.004,
+          "end": 9.124
+        },
+        {
+          "text": "wanted",
+          "start": 9.164,
+          "end": 9.385
+        },
+        {
+          "text": "to",
+          "start": 9.425,
+          "end": 9.485
+        },
+        {
+          "text": "watch",
+          "start": 9.545,
+          "end": 9.765
+        },
+        {
+          "text": "next?",
+          "start": 9.865,
+          "end": 10.186
+        }
+      ]
+    },
+    {
+      "time": 10.727,
+      "text": "It's all thanks to a technology called machine learning.",
+      "translation": "这一切都要归功于机器学习技术。",
+      "words": [
+        {
+          "text": "It's",
+          "start": 10.727,
+          "end": 10.827
+        },
+        {
+          "text": "all",
+          "start": 10.947,
+          "end": 11.087
+        },
+        {
+          "text": "thanks",
+          "start": 11.147,
+          "end": 11.347
+        },
+        {
+          "text": "to",
+          "start": 11.387,
+          "end": 11.468
+        },
+        {
+          "text": "a",
+          "start": 11.508,
+          "end": 11.548
+        },
+        {
+          "text": "technology",
+          "start": 11.588,
+          "end": 12.149
+        },
+        {
+          "text": "called",
+          "start": 12.229,
+          "end": 12.449
+        },
+        {
+          "text": "machine",
+          "start": 12.529,
+          "end": 12.95
+        },
+        {
+          "text": "learning.",
+          "start": 12.99,
+          "end": 13.491
+        }
+      ]
+    },
+    {
+      "time": 13.991,
+      "text": "So what is that?",
+      "translation": "这项技术是什么？",
+      "words": [
+        {
+          "text": "So",
+          "start": 13.991,
+          "end": 14.131
+        },
+        {
+          "text": "what",
+          "start": 14.392,
+          "end": 14.512
+        },
+        {
+          "text": "is",
+          "start": 14.592,
+          "end": 14.652
+        },
+        {
+          "text": "that?",
+          "start": 14.712,
+          "end": 14.893
+        }
+      ]
+    },
+    {
+      "time": 15.253,
+      "text": "Machine learning is a process where a computer takes a bunch of data and uses an algorithm, essentially a mathematical equation, to find patterns in that data to draw conclusions or make recommendations.",
+      "translation": "机器学习是计算机接收大量数据，并运用算法（本质上就是一种数学方程）来发现数据中的模式，从而得出结论或进行推荐。",
+      "words": [
+        {
+          "text": "Machine",
+          "start": 15.253,
+          "end": 15.513
+        },
+        {
+          "text": "learning",
+          "start": 15.554,
+          "end": 15.834
+        },
+        {
+          "text": "is",
+          "start": 15.894,
+          "end": 15.954
+        },
+        {
+          "text": "a",
+          "start": 16.014,
+          "end": 16.034
+        },
+        {
+          "text": "process",
+          "start": 16.094,
+          "end": 16.495
+        },
+        {
+          "text": "where",
+          "start": 16.555,
+          "end": 16.735
+        },
+        {
+          "text": "a",
+          "start": 16.775,
+          "end": 16.815
+        },
+        {
+          "text": "computer",
+          "start": 16.855,
+          "end": 17.336
+        },
+        {
+          "text": "takes",
+          "start": 17.416,
+          "end": 17.697
+        },
+        {
+          "text": "a",
+          "start": 17.717,
+          "end": 17.737
+        },
+        {
+          "text": "bunch",
+          "start": 17.957,
+          "end": 18.197
+        },
+        {
+          "text": "of",
+          "start": 18.257,
+          "end": 18.297
+        },
+        {
+          "text": "data",
+          "start": 18.358,
+          "end": 18.718
+        },
+        {
+          "text": "and",
+          "start": 18.758,
+          "end": 18.938
+        },
+        {
+          "text": "uses",
+          "start": 19.059,
+          "end": 19.319
+        },
+        {
+          "text": "an",
+          "start": 19.339,
+          "end": 19.499
+        },
+        {
+          "text": "algorithm,",
+          "start": 19.659,
+          "end": 20.14
+        },
+        {
+          "text": "essentially",
+          "start": 20.421,
+          "end": 20.841
+        },
+        {
+          "text": "a",
+          "start": 20.861,
+          "end": 20.881
+        },
+        {
+          "text": "mathematical",
+          "start": 21.001,
+          "end": 21.542
+        },
+        {
+          "text": "equation,",
+          "start": 21.622,
+          "end": 22.103
+        },
+        {
+          "text": "to",
+          "start": 22.524,
+          "end": 22.604
+        },
+        {
+          "text": "find",
+          "start": 22.664,
+          "end": 22.864
+        },
+        {
+          "text": "patterns",
+          "start": 22.904,
+          "end": 23.525
+        },
+        {
+          "text": "in",
+          "start": 23.605,
+          "end": 23.665
+        },
+        {
+          "text": "that",
+          "start": 23.725,
+          "end": 23.866
+        },
+        {
+          "text": "data",
+          "start": 23.926,
+          "end": 24.206
+        },
+        {
+          "text": "to",
+          "start": 24.246,
+          "end": 24.366
+        },
+        {
+          "text": "draw",
+          "start": 24.406,
+          "end": 24.547
+        },
+        {
+          "text": "conclusions",
+          "start": 24.587,
+          "end": 25.228
+        },
+        {
+          "text": "or",
+          "start": 25.408,
+          "end": 25.528
+        },
+        {
+          "text": "make",
+          "start": 25.628,
+          "end": 25.788
+        },
+        {
+          "text": "recommendations.",
+          "start": 25.848,
+          "end": 26.95
+        }
+      ]
+    },
+    {
+      "time": 26.93,
+      "text": "So think sorting through all of the music you listen to this year to determine who your favorite artists were.",
+      "translation": "所以想象一下，计算机在整理你今年听过的所有音乐，从而确定谁是你最喜欢的歌手。",
+      "words": [
+        {
+          "text": "So",
+          "start": 26.93,
+          "end": 27.271
+        },
+        {
+          "text": "think",
+          "start": 27.551,
+          "end": 27.772
+        },
+        {
+          "text": "sorting",
+          "start": 27.992,
+          "end": 28.293
+        },
+        {
+          "text": "through",
+          "start": 28.333,
+          "end": 28.534
+        },
+        {
+          "text": "all",
+          "start": 28.574,
+          "end": 28.894
+        },
+        {
+          "text": "of",
+          "start": 28.935,
+          "end": 28.975
+        },
+        {
+          "text": "the",
+          "start": 29.015,
+          "end": 29.115
+        },
+        {
+          "text": "music",
+          "start": 29.155,
+          "end": 29.436
+        },
+        {
+          "text": "you",
+          "start": 29.476,
+          "end": 29.576
+        },
+        {
+          "text": "listen",
+          "start": 29.616,
+          "end": 29.877
+        },
+        {
+          "text": "to",
+          "start": 29.897,
+          "end": 29.997
+        },
+        {
+          "text": "this",
+          "start": 30.057,
+          "end": 30.177
+        },
+        {
+          "text": "year",
+          "start": 30.238,
+          "end": 30.418
+        },
+        {
+          "text": "to",
+          "start": 30.458,
+          "end": 30.618
+        },
+        {
+          "text": "determine",
+          "start": 30.679,
+          "end": 31.12
+        },
+        {
+          "text": "who",
+          "start": 31.24,
+          "end": 31.38
+        },
+        {
+          "text": "your",
+          "start": 31.42,
+          "end": 31.541
+        },
+        {
+          "text": "favorite",
+          "start": 31.601,
+          "end": 31.901
+        },
+        {
+          "text": "artists",
+          "start": 31.982,
+          "end": 32.342
+        },
+        {
+          "text": "were.",
+          "start": 32.402,
+          "end": 32.603
+        }
+      ]
+    },
+    {
+      "time": 33.284,
+      "text": "You might have heard of machine learning in the context of artificial intelligence.",
+      "translation": "你可能在人工智能的语境中听说过机器学习。",
+      "words": [
+        {
+          "text": "You",
+          "start": 33.284,
+          "end": 33.365
+        },
+        {
+          "text": "might",
+          "start": 33.405,
+          "end": 33.545
+        },
+        {
+          "text": "have",
+          "start": 33.585,
+          "end": 33.705
+        },
+        {
+          "text": "heard",
+          "start": 33.766,
+          "end": 33.966
+        },
+        {
+          "text": "of",
+          "start": 34.006,
+          "end": 34.046
+        },
+        {
+          "text": "machine",
+          "start": 34.126,
+          "end": 34.427
+        },
+        {
+          "text": "learning",
+          "start": 34.467,
+          "end": 34.788
+        },
+        {
+          "text": "in",
+          "start": 34.848,
+          "end": 34.908
+        },
+        {
+          "text": "the",
+          "start": 34.948,
+          "end": 35.008
+        },
+        {
+          "text": "context",
+          "start": 35.049,
+          "end": 35.55
+        },
+        {
+          "text": "of",
+          "start": 35.59,
+          "end": 35.63
+        },
+        {
+          "text": "artificial",
+          "start": 35.67,
+          "end": 36.271
+        },
+        {
+          "text": "intelligence.",
+          "start": 36.331,
+          "end": 37.053
+        }
+      ]
+    },
+    {
+      "time": 37.414,
+      "text": "That's because it also powers many of the AI tools we use today.",
+      "translation": "那是因为机器学习也驱动着我们现在使用的许多AI工具。",
+      "words": [
+        {
+          "text": "That's",
+          "start": 37.414,
+          "end": 37.594
+        },
+        {
+          "text": "because",
+          "start": 37.614,
+          "end": 37.835
+        },
+        {
+          "text": "it",
+          "start": 37.895,
+          "end": 37.935
+        },
+        {
+          "text": "also",
+          "start": 38.035,
+          "end": 38.276
+        },
+        {
+          "text": "powers",
+          "start": 38.336,
+          "end": 38.737
+        },
+        {
+          "text": "many",
+          "start": 38.837,
+          "end": 39.078
+        },
+        {
+          "text": "of",
+          "start": 39.118,
+          "end": 39.218
+        },
+        {
+          "text": "the",
+          "start": 39.278,
+          "end": 39.378
+        },
+        {
+          "text": "AI",
+          "start": 39.499,
+          "end": 39.779
+        },
+        {
+          "text": "tools",
+          "start": 39.819,
+          "end": 40.12
+        },
+        {
+          "text": "we",
+          "start": 40.18,
+          "end": 40.3
+        },
+        {
+          "text": "use",
+          "start": 40.421,
+          "end": 40.561
+        },
+        {
+          "text": "today.",
+          "start": 40.601,
+          "end": 40.902
+        }
+      ]
+    },
+    {
+      "time": 41.503,
+      "text": "AI chatbots, for example, were trained on a bunch of human writing, and they use their knowledge of the patterns in our language to respond to our questions.",
+      "translation": "它们运用对人类语言模式的理解来回答我们的问题。",
+      "words": [
+        {
+          "text": "AI",
+          "start": 41.503,
+          "end": 41.704
+        },
+        {
+          "text": "chatbots,",
+          "start": 41.764,
+          "end": 42.205
+        },
+        {
+          "text": "for",
+          "start": 42.245,
+          "end": 42.365
+        },
+        {
+          "text": "example,",
+          "start": 42.425,
+          "end": 42.826
+        },
+        {
+          "text": "were",
+          "start": 42.886,
+          "end": 43.027
+        },
+        {
+          "text": "trained",
+          "start": 43.087,
+          "end": 43.367
+        },
+        {
+          "text": "on",
+          "start": 43.548,
+          "end": 43.608
+        },
+        {
+          "text": "a",
+          "start": 43.628,
+          "end": 43.648
+        },
+        {
+          "text": "bunch",
+          "start": 43.869,
+          "end": 44.149
+        },
+        {
+          "text": "of",
+          "start": 44.189,
+          "end": 44.229
+        },
+        {
+          "text": "human",
+          "start": 44.27,
+          "end": 44.61
+        },
+        {
+          "text": "writing,",
+          "start": 44.67,
+          "end": 45.051
+        },
+        {
+          "text": "and",
+          "start": 45.472,
+          "end": 45.552
+        },
+        {
+          "text": "they",
+          "start": 45.593,
+          "end": 45.713
+        },
+        {
+          "text": "use",
+          "start": 45.893,
+          "end": 46.054
+        },
+        {
+          "text": "their",
+          "start": 46.094,
+          "end": 46.394
+        },
+        {
+          "text": "knowledge",
+          "start": 46.434,
+          "end": 46.855
+        },
+        {
+          "text": "of",
+          "start": 46.956,
+          "end": 46.996
+        },
+        {
+          "text": "the",
+          "start": 47.036,
+          "end": 47.116
+        },
+        {
+          "text": "patterns",
+          "start": 47.176,
+          "end": 47.597
+        },
+        {
+          "text": "in",
+          "start": 47.657,
+          "end": 47.697
+        },
+        {
+          "text": "our",
+          "start": 47.757,
+          "end": 47.838
+        },
+        {
+          "text": "language",
+          "start": 47.898,
+          "end": 48.319
+        },
+        {
+          "text": "to",
+          "start": 48.399,
+          "end": 48.499
+        },
+        {
+          "text": "respond",
+          "start": 48.559,
+          "end": 49.04
+        },
+        {
+          "text": "to",
+          "start": 49.141,
+          "end": 49.241
+        },
+        {
+          "text": "our",
+          "start": 49.461,
+          "end": 49.562
+        },
+        {
+          "text": "questions.",
+          "start": 49.682,
+          "end": 50.203
+        }
+      ]
+    }
+  ]
+}
