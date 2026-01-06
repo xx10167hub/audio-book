@@ -1,5 +1,5 @@
-// player-script.js - V30 修复最后一句循环Bug版
-// 更新内容：修复最后一句单句循环失效的问题；新增播放结束(ended)强制循环逻辑
+// player-script.js - V31 Huawei Patch Version
+// 更新内容：增加华为/鸿蒙平板强制兼容性补丁 (Touch & Audio)
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===== 配置 =====
@@ -834,3 +834,61 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loadArticlesConfig();
 });
+
+/* =========================================
+   🚨 HUAWEI TABLET COMPATIBILITY PATCH (JS)
+   粘贴在所有现有JS代码之后
+   ========================================= */
+
+(function() {
+    console.log("Applying Huawei Tablet Patch...");
+
+    // 1. 解决拖动失效问题：暴力监听触摸事件
+    // 请将 'progress-bar' 替换成你实际的进度条 ID 或 Class
+    // 你的 HTML ID 是 'progress-bar'
+    var targetSlider = document.getElementById('progress-bar') || document.querySelector('input[type="range"]');
+
+    if (targetSlider) {
+        targetSlider.addEventListener('touchstart', function(e) {
+            // 阻止默认事件：这是解决华为平板无法拖动的核心！
+            // 它阻止了浏览器把你的拖动识别为“滚动页面”
+            e.stopPropagation(); 
+        }, { passive: false });
+
+        targetSlider.addEventListener('touchmove', function(e) {
+            e.stopPropagation(); 
+            // 如果你的旧代码里没有阻止默认行为，这里强制阻止
+            if (e.cancelable) {
+                e.preventDefault(); 
+            }
+        }, { passive: false });
+    }
+
+    // 2. 解决无法播放/没声音问题：音频上下文“解锁”
+    // 华为平板有时候需要用户先“摸一下”屏幕，才能播放声音
+    // 我们监听第一次点击，偷偷解锁音频功能
+    function unlockAudio() {
+        // 找到你的 audio 标签
+        var audioEl = document.querySelector('audio'); 
+        if (audioEl) {
+            // 尝试播放一微秒，然后立刻暂停
+            // 这会让浏览器认为“用户已经同意播放声音了”
+            var playPromise = audioEl.play();
+            if (playPromise !== undefined) {
+                playPromise.then(function() {
+                    audioEl.pause();
+                }).catch(function(error) {
+                    console.log("Audio unlock attempt: " + error);
+                });
+            }
+        }
+        // 解锁后移除监听，只执行一次
+        document.removeEventListener('touchstart', unlockAudio);
+        document.removeEventListener('click', unlockAudio);
+    }
+
+    // 只要用户碰到屏幕任何地方，就尝试解锁音频
+    document.addEventListener('touchstart', unlockAudio, { passive: false });
+    document.addEventListener('click', unlockAudio);
+
+})();
