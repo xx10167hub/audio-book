@@ -19,6 +19,11 @@ body {
     justify-content: center;
     padding: 20px;
     margin: 0;
+    
+    /* 全局基础触控修复 */
+    -webkit-user-select: none;
+    user-select: none;
+    overscroll-behavior: none;
 }
 
 .feishu-environment body {
@@ -290,7 +295,7 @@ h3 {
 }
 
 /* ============================================
-   🔥 4. 底部播放器
+   🔥 4. 底部播放器 (默认样式)
    ============================================ */
 .custom-player {
     position: absolute;
@@ -301,17 +306,20 @@ h3 {
     background: rgba(15, 25, 22, 0.90); 
     backdrop-filter: blur(10px);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    /* 关键修改：减少底部padding，让浏览器知道下面没空间了，逼迫它向上展开 */
     padding: 12px 16px 8px 16px; 
     box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.5);
 }
 
 /* 进度条 */
 .progress-container {
-    margin-bottom: 8px; /* 稍微减少间距 */
-    padding: 8px 0;     /* 稍微减少热区，为了给底部省空间 */
+    margin-bottom: 8px; 
+    padding: 8px 0;     
     width: 100%;
-    touch-action: none; 
+    /* 核心触控修复：禁止浏览器默认行为 */
+    touch-action: none !important; 
+    cursor: pointer;
+    position: relative;
+    z-index: 9999;
 }
 
 .progress-bar {
@@ -322,6 +330,7 @@ h3 {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    touch-action: none !important;
 }
 
 .progress-filled {
@@ -337,7 +346,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    margin-bottom: 4px; /* 确保不贴底太紧，但也不要太松 */
+    margin-bottom: 4px; 
 }
 
 .time-display {
@@ -376,6 +385,7 @@ h3 {
     color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     flex-shrink: 0;
+    touch-action: manipulation;
 }
 
 .control-btn:active {
@@ -416,18 +426,57 @@ h3 {
 }
 
 /* ============================================
-   🔥 5. 手机端专属适配
+   🔥 6. 盲听模式 & 挖词模式
    ============================================ */
+
+/* 1. 基础状态（消失状态） */
+.mode-none .text-block {
+    opacity: 0;
+    visibility: hidden; 
+    pointer-events: none;
+    transition: opacity 0.6s ease, visibility 0s linear 0.6s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* 2. 激活状态（显示状态） */
+.mode-none .text-block.temp-reveal {
+    opacity: 1 !important;
+    visibility: visible;
+    transition: opacity 0.1s ease-out;
+}
+
+/* 挖词模式 */
+.mode-cloze .word-highlight.cloze-hidden {
+    color: transparent !important;       
+    border-bottom: 2px solid #aaaaaa;    
+    background-color: rgba(255, 255, 255, 0.05); 
+    border-radius: 0;                    
+    user-select: none;                   
+    cursor: help;                        
+    transition: all 0.2s ease;
+}
+
+.mode-cloze .word-highlight.cloze-hidden:hover,
+.mode-cloze .word-highlight.cloze-hidden:active {
+    color: #00ffcc !important;           
+    border-bottom-color: #00ffcc;
+    background-color: rgba(0, 255, 204, 0.1);
+}
+
+.mode-cloze .translation {
+    display: none;
+}
+
+/* ======================================================
+   🚨 终极补丁：华为/平板防遮挡 & 触控修复 (V32)
+   涵盖: 手机 (767px以下) + 平板 (1280px以下)
+   ====================================================== */
+
+/* 1. 针对手机的特定布局微调 (max-width: 767px) */
 @media (max-width: 767px) {
     body { padding: 0; }
-
-    .player-container {
-        border-radius: 0; 
-        height: 100dvh; 
-        border: none;
-    }
-
-    /* 🔥 手机端：恢复出处显示，放在顶部区域 */
+    
     .social-credit {
         display: block !important; 
         font-size: 10px; 
@@ -436,141 +485,57 @@ h3 {
         margin-top: 2px;
         white-space: nowrap;
     }
-    
-    .controls {
-        padding: 0 12px; 
-        gap: 8px; 
-    }
-    
-    .controls select {
-        width: 100px; 
-    }
-
-    .copy-btn {
-        padding: 4px 8px;
-        font-size: 11px;
-        margin-left: 6px; 
-    }
-
-    .info-display {
-        align-items: flex-end;
-    }
-
-    .custom-player {
-        background: rgba(15, 25, 22, 0.95); /* 不透明度加深，防穿帮 */
-        padding: 10px 12px 5px 12px; /* 🔥 极度压缩底部 padding，确保菜单向上弹 */
-        /* 只保留必要的安全区域 */
-        padding-bottom: calc(5px + env(safe-area-inset-bottom));
-    }
-    
-    .transcript {
-        padding-bottom: 220px; 
-    }
-
-    .controls-main {
-        flex-wrap: nowrap; 
-        justify-content: space-between;
-        gap: 4px;
-    }
-
-    .time-display { 
-        display: block !important;
-        font-size: 10px;
-        min-width: auto;
-        margin-right: 4px;
-    }
-
-    .player-controls { 
-        justify-content: center;
-        gap: 8px; 
-        flex: 1;
-    }
-    
+    .controls { padding: 0 12px; gap: 8px; }
+    .controls select { width: 100px; }
+    .copy-btn { padding: 4px 8px; font-size: 11px; margin-left: 6px; }
+    .info-display { align-items: flex-end; }
+    .controls-main { flex-wrap: nowrap; gap: 4px; }
+    .time-display { display: block !important; font-size: 10px; margin-right: 4px; }
     .control-btn { width: 34px; height: 34px; } 
-    .control-btn svg { width: 18px; height: 18px; }
+    .mini-selectors { gap: 2px; margin-left: 0; }
+    .mini-select { height: 24px; font-size: 10px; padding: 0; min-width: 35px; }
+}
 
-    .mini-selectors { 
-        gap: 2px; 
-        min-width: auto; 
-        margin-left: 0;
+/* 2. 针对所有移动端(手机+平板)的强制布局 (max-width: 1280px) */
+/* 核心：只要宽度小于 1280px，强制把播放器钉在屏幕玻璃上 */
+@media (max-width: 1280px) {
+    
+    .player-container {
+        border-radius: 0; 
+        height: 100vh !important; /* 放弃 dVh，改用传统的 vh 防止兼容性问题 */
+        border: none;
+        overflow: hidden !important;
     }
 
-    .mini-select {
-        height: 24px;
-        font-size: 10px;
-        padding: 0;
-        min-width: 35px; 
+    /* 🔥 强制让播放器控制栏“吸”在屏幕玻璃上 */
+    .custom-player {
+        position: fixed !important; 
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        
+        /* 🔥 关键：增加底部安全距离，防止被华为的小黑条/导航栏遮住 */
+        /* 如果有安全区域用安全区域，没有的话额外加 20px */
+        padding-bottom: calc(20px + env(safe-area-inset-bottom)) !important;
+        
+        z-index: 99999 !important; /* 层级拉满，谁也别想挡住我 */
+        
+        /* 加深背景颜色，防止透底 */
+        background: rgba(15, 25, 22, 0.98) !important;
+        border-top: 1px solid rgba(0, 255, 204, 0.2);
     }
-    
-    .sentence-actions {
-        margin-left: 6px;
-        gap: 2px;
+
+    /* 给中间的文字区域底部加超级厚的垫子，防止文字被固定播放器挡住 */
+    .transcript {
+        padding-bottom: 260px !important; 
+        overflow-y: scroll !important;
+        -webkit-overflow-scrolling: touch !important; /* 丝滑滚动开启 */
     }
-    .copy-sentence-btn {
-        width: 28px; 
-        height: 28px;
+
+    /* 进度条触控区域放大，且强制置顶 */
+    .progress-container {
+        padding: 15px 0 !important; /* 加大手指点击区域 */
+        touch-action: none !important; /* 禁止浏览器抢夺控制权 */
     }
-}
-
-/* ============================================
-   🔥 6. 盲听模式偷看功能（全平台完美修复版）
-   ============================================ */
-
-/* 1. 基础状态（消失状态） */
-.mode-none .text-block {
-    opacity: 0;
-    
-    /* 🔥 强制隐藏：防止安卓/iOS 渲染残留 */
-    visibility: hidden; 
-    
-    pointer-events: none;
-    
-    /* 🔥 魔法组合拳：
-       - opacity: 0.6秒 慢慢变淡
-       - visibility: 等 0.6秒 后，瞬间变为 hidden
-    */
-    transition: opacity 0.6s ease, visibility 0s linear 0.6s;
-    
-    /* 🔥 硬件加速补丁 */
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-/* 2. 激活状态（显示状态） */
-.mode-none .text-block.temp-reveal {
-    opacity: 1 !important;
-    
-    /* 🔥 强制显示 */
-    visibility: visible;
-    
-    /* 出现时：0.1秒变快，不需要延迟 */
-    transition: opacity 0.1s ease-out;
-}
-
-/* ============================================
-   🔥 7. 挖词模式 (Cloze Mode)
-   ============================================ */
-
-/* 1. 默认状态：把特定的词变成下划线 */
-.mode-cloze .word-highlight.cloze-hidden {
-    color: transparent !important;       /* 文字隐身 */
-    border-bottom: 2px solid #aaaaaa;    /* 底部横线 */
-    background-color: rgba(255, 255, 255, 0.05); /* 微微的背景，提示填空区域 */
-    border-radius: 0;                    /* 去掉圆角，更像横线 */
-    user-select: none;                   /* 防止用户鼠标选中偷看 */
-    cursor: help;                        /* 鼠标放上去显示问号，提示可交互 */
-    transition: all 0.2s ease;
-}
-
-/* 2. 交互体验：鼠标悬停或点击时，临时偷看答案 */
-.mode-cloze .word-highlight.cloze-hidden:hover,
-.mode-cloze .word-highlight.cloze-hidden:active {
-    color: #00ffcc !important;           /* 悬停变色显示 */
-    border-bottom-color: #00ffcc;
-    background-color: rgba(0, 255, 204, 0.1);
-}
-
-/* 3. 在挖词模式下，隐藏译文（强制专注听写） */
-.mode-cloze .translation {
-    display: none;
 }
