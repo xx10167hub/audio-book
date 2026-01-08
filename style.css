@@ -392,7 +392,9 @@ h3 {
     transform: scale(0.92);
 }
 
-#loop-btn.active {
+/* 🔥 统一激活状态样式（支持单句循环和全文循环） */
+#loop-btn.active,
+#article-loop-btn.active {
     background: #10b981 !important;
     color: white;
     box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
