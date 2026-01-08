@@ -1,7 +1,14 @@
-// player-script.js - V31 Huawei Patch Version
-// 更新内容：增加华为/鸿蒙平板强制兼容性补丁 (Touch & Audio)
+// player-script.js - V39 Double-Click Fix
+// 更新内容：
+// 1. 修复“双击才能播放”Bug：在华为补丁中增加判断，如果用户是点击播放按钮触发的，不再强制暂停。
+// 2. 包含之前所有 V38 的功能（高亮修正、循环逻辑、防吞音等）。
+
 document.addEventListener('DOMContentLoaded', function() {
     
+    // ===== 🎛️ 核心微调参数 =====
+    const START_PADDING = 0.25; // 句首提前 0.25秒 抢跑 (解决吞音)
+    const END_PADDING = 0.40;   // 句尾提前 0.40秒 刹车 (解决带尾巴)
+
     // ===== 配置 =====
     const ARTICLES_CONFIG_FILE = 'articles.json';
     let articlesConfig = [];
@@ -19,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const backwardBtn = document.getElementById('backward-btn');
     const forwardBtn = document.getElementById('forward-btn');
     const loopBtn = document.getElementById('loop-btn');
+    const articleLoopBtn = document.getElementById('article-loop-btn'); 
     const progressBar = document.getElementById('progress-bar');
     const progressFilled = document.getElementById('progress-filled');
     const currentTimeDisplay = document.getElementById('current-time');
@@ -30,8 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let sentencesData = [];
     let currentHighlightElement = null;
-    let currentSentencePlayer = null;
-    let isLooping = false;
+    let currentSentencePlayer = null; 
+    
+    // 循环状态管理
+    let isLooping = false;        
+    let isArticleLooping = false; 
+    
     let isSeeking = false; 
     let currentLoopSentence = null;
     let isLoopSeeking = false;
@@ -42,9 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let allWordElements = [];
     let wordTimeMap = new Map();
     
-    // Blob 音频对象
     let currentAudioBlobUrl = null;
-
     let isTranscriptLoaded = false;
     let isAudioLoaded = false;
 
@@ -68,6 +78,10 @@ document.addEventListener('DOMContentLoaded', function() {
             currentSentencePlayer.playButton.classList.remove('paused');
             currentSentencePlayer = null; 
         }
+    }
+
+    function getSafeStartTime(originalStart) {
+        return Math.max(0, originalStart - START_PADDING);
     }
 
     // ===== 复制逻辑 =====
@@ -106,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function findSentenceDataByTime(currentTime) {
          for (let i = sentencesData.length - 1; i >= 0; i--) {
-            if (currentTime >= sentencesData[i].start - 0.1) { 
+            if (currentTime >= sentencesData[i].start - START_PADDING - 0.1) { 
                 return sentencesData[i];
             }
         }
@@ -115,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function findCurrentSentenceIndex(currentTime) {
         for (let i = sentencesData.length - 1; i >= 0; i--) {
-            if (currentTime >= sentencesData[i].start - 0.1) {
+            if (currentTime >= sentencesData[i].start - START_PADDING - 0.1) {
                 return i;
             }
         }
@@ -159,18 +173,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // 🔥 核心修改：修复最后一句结束时间判断逻辑
     function checkDataLoaded() {
         if (isTranscriptLoaded && isAudioLoaded) {
             if (sentencesData.length > 0) {
                 const lastSentence = sentencesData[sentencesData.length - 1];
-                // 如果最后一句的结束时间是 null 或者是默认的 99999
                 if (lastSentence.end === null || lastSentence.end === 99999) {
-                    // 只有当音频确实加载了时长，才去更新它
                     if (audioPlayer.duration && audioPlayer.duration > 0 && audioPlayer.duration !== Infinity) {
                         lastSentence.end = audioPlayer.duration;
                     } else {
-                        // 暂时还没获取到时长，保持占位
                         lastSentence.end = 99999;
                     }
                 }
@@ -265,6 +275,9 @@ document.addEventListener('DOMContentLoaded', function() {
         isAudioLoaded = false;
         
         loopBtn.classList.remove('active');
+        isArticleLooping = false;
+        if(articleLoopBtn) articleLoopBtn.classList.remove('active');
+        
         transcriptContainer.innerHTML = '<p style="text-align:center; color:#00ffcc;">加载中...</p>';
         updatePlayPauseButton(false);
         progressFilled.style.width = '0%';
@@ -280,7 +293,6 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 titleElement.textContent = title || data.title;
                 
-                // ===== Blob 加密加载音频 =====
                 const targetAudioUrl = audioFile || data.audioUrl;
                 
                 if (currentAudioBlobUrl) {
@@ -329,7 +341,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     const playButton = document.createElement('div');
                     playButton.className = 'play-button';
 
-                    // === 按钮组：复制按钮 ===
                     const actionContainer = document.createElement('div');
                     actionContainer.className = 'sentence-actions';
 
@@ -375,18 +386,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         index: index
                     };
                     
-                    // 点击句子逻辑
                     p.addEventListener('click', function(event) {
                         const target = event.target;
-                        
-                        // 1. 播放控制
                         if (target.classList.contains('play-button') || target.closest('.play-button') || target.closest('.text-block')) {
                             handleSentencePlayToggle(sentenceData);
                         } else {
                             handleSentencePlayFromStart(sentenceData);
                         }
 
-                        // 2. 盲听偷看逻辑 (1秒)
                         if (displayMode && displayMode.value === 'none') {
                             const textBlock = this.querySelector('.text-block');
                             if (textBlock) {
@@ -485,7 +492,6 @@ document.addEventListener('DOMContentLoaded', function() {
         checkDataLoaded();
     });
 
-    // 播放/暂停按钮逻辑
     playPauseBtn.addEventListener('click', function() {
         if (audioPlayer.paused) {
             audioPlayer.play();
@@ -501,37 +507,33 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!currentSentencePlayer) resetAllSentenceButtons();
     });
     
-    // 🔥 核心修改：新增 'ended' 事件监听，专门解决最后一句不循环的问题
     audioPlayer.addEventListener('ended', function() {
-        // 如果当前是循环模式，并且有锁定的句子，就强制跳回开始
         if (isLooping && currentLoopSentence) {
-            audioPlayer.currentTime = currentLoopSentence.start;
+            audioPlayer.currentTime = getSafeStartTime(currentLoopSentence.start);
+            audioPlayer.play();
+        }
+        else if (isArticleLooping) {
+            audioPlayer.currentTime = 0;
             audioPlayer.play();
         }
     });
 
     backwardBtn.addEventListener('click', function() {
-        cancelSentencePlayerMode();
-        currentLoopSentence = null;
-        isLooping = false;
-        loopBtn.classList.remove('active');
         const currentIndex = findCurrentSentenceIndex(audioPlayer.currentTime);
         let targetIndex = (currentIndex <= 0) ? 0 : currentIndex - 1;
-        audioPlayer.currentTime = sentencesData[targetIndex].start;
-        if (!audioPlayer.paused) audioPlayer.play();
-        updateHighlightAndButton();
+        const targetSentence = sentencesData[targetIndex];
+        
+        handleSentencePlayFromStart(targetSentence);
     });
 
     forwardBtn.addEventListener('click', function() {
-        cancelSentencePlayerMode();
-        currentLoopSentence = null;
-        isLooping = false;
-        loopBtn.classList.remove('active');
         const currentIndex = findCurrentSentenceIndex(audioPlayer.currentTime);
+        
         if (currentIndex < sentencesData.length - 1) {
-            audioPlayer.currentTime = sentencesData[currentIndex + 1].start;
-            if (!audioPlayer.paused) audioPlayer.play();
-            updateHighlightAndButton();
+            const targetIndex = currentIndex + 1;
+            const targetSentence = sentencesData[targetIndex];
+            
+            handleSentencePlayFromStart(targetSentence);
         } else {
             audioPlayer.currentTime = audioPlayer.duration || 0;
             audioPlayer.pause();
@@ -544,13 +546,19 @@ document.addEventListener('DOMContentLoaded', function() {
         isLooping = !isLooping;
         loopBtn.classList.toggle('active', isLooping);
         if (isLooping) {
-            // 开启循环时，立即锁定当前句子
             currentLoopSentence = findSentenceDataByTime(audioPlayer.currentTime);
             if (currentLoopSentence && audioPlayer.paused) audioPlayer.play();
         } else {
             currentLoopSentence = null;
         }
     });
+
+    if (articleLoopBtn) {
+        articleLoopBtn.addEventListener('click', function() {
+            isArticleLooping = !isArticleLooping;
+            articleLoopBtn.classList.toggle('active', isArticleLooping);
+        });
+    }
 
     function handleSeek(clientX) {
         cancelSentencePlayerMode();
@@ -587,15 +595,23 @@ document.addEventListener('DOMContentLoaded', function() {
             currentTimeDisplay.textContent = formatTime(currentTime);
         }
         
-        // 1. 循环逻辑：检测是否到达句尾，若是则跳回句首
         if (isLooping && currentLoopSentence && currentLoopSentence.end) {
-            if (currentTime >= currentLoopSentence.end - 0.15) {
+            if (currentTime >= currentLoopSentence.end - END_PADDING) {
                 isLoopSeeking = true;
-                audioPlayer.currentTime = currentLoopSentence.start;
+                audioPlayer.currentTime = getSafeStartTime(currentLoopSentence.start);
             }
         }
         
-        const currentWord = findCurrentWord(currentTime);
+        // 🔥 全局高亮修正
+        let searchTime = currentTime;
+        let targetS = isLooping ? currentLoopSentence : currentSentencePlayer;
+        if (targetS && currentTime < targetS.start) {
+             if (currentTime > targetS.start - START_PADDING - 0.2) {
+                 searchTime = targetS.start + 0.01; 
+             }
+        }
+
+        const currentWord = findCurrentWord(searchTime);
         highlightCurrentWord(currentWord);
         
         updateHighlightAndButton();
@@ -626,7 +642,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function handleSentencePlayToggle(sentenceData) {
         const currentTime = audioPlayer.currentTime;
-        const isTimeMatch = currentTime >= (sentenceData.start - 0.2) && (sentenceData.end === null || currentTime < sentenceData.end);
+        const safeStart = getSafeStartTime(sentenceData.start);
+        
+        const isTimeMatch = currentTime >= (safeStart - 0.2) && (sentenceData.end === null || currentTime < sentenceData.end);
 
         if (sentenceData === currentSentencePlayer || (currentSentencePlayer === null && isTimeMatch)) {
             if (audioPlayer.paused) {
@@ -643,16 +661,22 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function handleSentencePlayFromStart(sentenceData) {
         cancelSentencePlayerMode();
-        currentLoopSentence = null;
-        isLooping = false;
-        loopBtn.classList.remove('active');
+        
+        if (isLooping) {
+            currentLoopSentence = sentenceData;
+        } else {
+            currentLoopSentence = null;
+            loopBtn.classList.remove('active'); 
+        }
+
         currentSentencePlayer = sentenceData;
         if (currentHighlightElement) currentHighlightElement.classList.remove('active');
         currentHighlightElement = sentenceData.element;
         currentHighlightElement.classList.add('active');
         currentHighlightElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
         sentenceData.playButton.classList.add('paused');
-        audioPlayer.currentTime = sentenceData.start;
+        
+        audioPlayer.currentTime = getSafeStartTime(sentenceData.start);
         audioPlayer.play();
     }
     
@@ -664,7 +688,6 @@ document.addEventListener('DOMContentLoaded', function() {
         else if (e.code === 'KeyL') { e.preventDefault(); loopBtn.click(); }
     });
 
-    // 全文复制功能
     if (copyAllBtn) {
         copyAllBtn.addEventListener('click', function() {
             if (!sentencesData || sentencesData.length === 0) {
@@ -696,9 +719,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ===== 🤖 升级版：智能加权 + 专有名词保护 + 锚点救援 (Core V29) =====
-    
-    // 1. 评分用的停用词 (参与 Pass 1)
     const STOP_WORDS = new Set([
         'a', 'an', 'the', 'of', 'in', 'on', 'at', 'to', 'for', 'from', 'with', 'by', 'about',
         'is', 'are', 'am', 'was', 'were', 'be', 'been', 'being',
@@ -706,17 +726,14 @@ document.addEventListener('DOMContentLoaded', function() {
         'my', 'your', 'his', 'her', 'their', 'our', 'us', 'him', 'them'
     ]);
 
-    // 2. 救援用的锚点词 (只包含介词/连词，参与 Pass 3)
     const ANCHOR_WORDS = new Set([
         'in', 'on', 'at', 'to', 'for', 'from', 'with', 'by', 'about', 'of', 
         'and', 'but', 'or', 'so', 'as', 'into', 'like', 'than', 'over'
     ]);
 
     function generateClozeMode() {
-        // 1. 全局重置
         allWordElements.forEach(el => el.classList.remove('cloze-hidden'));
 
-        // 2. 按句子维度处理
         const sentences = transcriptContainer.querySelectorAll('.sentence');
 
         sentences.forEach(sentence => {
@@ -725,86 +742,72 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (totalWords === 0) return;
 
-            // --- Pass 1: 核心词权重挖掘 ---
             let targetHideCount = 0;
             if (totalWords <= 5) {
-                targetHideCount = totalWords; // 短句全挖
+                targetHideCount = totalWords; 
             } else {
-                targetHideCount = Math.ceil(totalWords * 0.75); // 长句挖 75%
+                targetHideCount = Math.ceil(totalWords * 0.75); 
             }
 
             const wordDetails = wordsInSentence.map((el, index) => {
-                const rawText = el.textContent.trim(); // 获取原始大小写文本
+                const rawText = el.textContent.trim(); 
                 const wordText = rawText.toLowerCase().replace(/[.,?!:;"'()]/g, '');
                 const isNum = /\d/.test(wordText); 
                 const isStop = STOP_WORDS.has(wordText);
                 const len = wordText.length;
                 
-                // 🔥 核心识别：首字母是否大写
                 const isCapitalized = /^[A-Z]/.test(rawText);
 
                 let score = 0;
 
-                // 🌟 Rule 1: 句首保护 & 数字必挖
                 if (index === 0 && !isNum && (isStop || len <= 4)) {
                     score = -1000; 
                 } else if (isNum) {
-                    score = 100;   // 必挖数字
+                    score = 100;   
                 } else if (!isStop && len >= 7) {
-                    score = 50;    // 长难词
+                    score = 50;    
                 } else if (!isStop && len >= 4) {
-                    score = 40;    // 中等词
+                    score = 40;    
                 } else if (!isStop) {
-                    score = 20;    // 短实词
+                    score = 20;    
                 } else {
-                    score = 1;     // 虚词
+                    score = 1;     
                 }
                 
-                // 🌟 Rule 2: 专有名词强力保护 (Proper Noun Protection)
-                // 如果不是句首词 (index>0) 且 首字母大写，极大可能是专有名词
-                // 排除 'I' (虽然大写但是代词)
                 if (index > 0 && isCapitalized && rawText !== 'I') {
-                    score = -9999; // 赋予极低分，绝对不挖
+                    score = -9999; 
                 }
 
                 score += Math.random() * 5;
                 return { el, score, isStop, wordText };
             });
 
-            // 排序并挖掉高分词
             wordDetails.sort((a, b) => b.score - a.score);
             for (let i = 0; i < targetHideCount; i++) {
                 if (wordDetails[i].score < 0) continue; 
                 wordDetails[i].el.classList.add('cloze-hidden');
             }
 
-            // --- Pass 2: 🧲 磁吸补刀 (Cohesion Pass) ---
             wordsInSentence.forEach((el, index) => {
-                if (index === 0) return; // 句首绝对防御
+                if (index === 0) return; 
 
                 if (!el.classList.contains('cloze-hidden') && wordDetails.find(w => w.el === el).isStop) {
                     let leftHidden = (index > 0 && wordsInSentence[index-1].classList.contains('cloze-hidden'));
                     let rightHidden = (index < totalWords - 1 && wordsInSentence[index+1].classList.contains('cloze-hidden'));
                     
-                    // 如果旁边是空洞，大概率吸进去
                     if ((leftHidden || rightHidden) && Math.random() < 0.6) {
                         el.classList.add('cloze-hidden');
                     }
                 }
             });
 
-            // --- Pass 3: ⚓️ 锚点救援 (Anchor Rescue) ---
-            // 针对长难句 (>7个词)，检查中间被挖掉的介词/连词，随机“复活”它们
             if (totalWords > 7) {
                 wordsInSentence.forEach((el, index) => {
-                    // 跳过句首和句尾
                     if (index === 0 || index === totalWords - 1) return;
 
                     const cleanText = el.textContent.trim().toLowerCase().replace(/[.,?!:;"'()]/g, '');
 
-                    // 如果这个词现在是被挖状态，且属于“锚点词库”(ANCHOR_WORDS)
                     if (el.classList.contains('cloze-hidden') && ANCHOR_WORDS.has(cleanText)) {
-                        // 50% 的概率把它救回来，作为提示线索
                         if (Math.random() < 0.5) {
                             el.classList.remove('cloze-hidden');
                         }
@@ -835,44 +838,35 @@ document.addEventListener('DOMContentLoaded', function() {
     loadArticlesConfig();
 });
 
-/* =========================================
-   🚨 HUAWEI TABLET COMPATIBILITY PATCH (JS)
-   粘贴在所有现有JS代码之后
-   ========================================= */
-
+// 华为/平板补丁 (V39 Double-Click Fix)
 (function() {
     console.log("Applying Huawei Tablet Patch...");
 
-    // 1. 解决拖动失效问题：暴力监听触摸事件
-    // 请将 'progress-bar' 替换成你实际的进度条 ID 或 Class
-    // 你的 HTML ID 是 'progress-bar'
     var targetSlider = document.getElementById('progress-bar') || document.querySelector('input[type="range"]');
 
     if (targetSlider) {
         targetSlider.addEventListener('touchstart', function(e) {
-            // 阻止默认事件：这是解决华为平板无法拖动的核心！
-            // 它阻止了浏览器把你的拖动识别为“滚动页面”
             e.stopPropagation(); 
         }, { passive: false });
 
         targetSlider.addEventListener('touchmove', function(e) {
             e.stopPropagation(); 
-            // 如果你的旧代码里没有阻止默认行为，这里强制阻止
             if (e.cancelable) {
                 e.preventDefault(); 
             }
         }, { passive: false });
     }
 
-    // 2. 解决无法播放/没声音问题：音频上下文“解锁”
-    // 华为平板有时候需要用户先“摸一下”屏幕，才能播放声音
-    // 我们监听第一次点击，偷偷解锁音频功能
     function unlockAudio() {
-        // 找到你的 audio 标签
         var audioEl = document.querySelector('audio'); 
         if (audioEl) {
-            // 尝试播放一微秒，然后立刻暂停
-            // 这会让浏览器认为“用户已经同意播放声音了”
+            // 🔥 V39 修复：如果音频已经在播放（说明用户点击了播放按钮），不要执行暂停
+            if (!audioEl.paused) {
+                document.removeEventListener('touchstart', unlockAudio);
+                document.removeEventListener('click', unlockAudio);
+                return;
+            }
+
             var playPromise = audioEl.play();
             if (playPromise !== undefined) {
                 playPromise.then(function() {
@@ -882,12 +876,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         }
-        // 解锁后移除监听，只执行一次
         document.removeEventListener('touchstart', unlockAudio);
         document.removeEventListener('click', unlockAudio);
     }
 
-    // 只要用户碰到屏幕任何地方，就尝试解锁音频
     document.addEventListener('touchstart', unlockAudio, { passive: false });
     document.addEventListener('click', unlockAudio);
 
