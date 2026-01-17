@@ -1,3 +1,5 @@
+/* style.css - V44 Fixed Width Select */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +9,7 @@
 }
 
 /* ============================================
-   🔥 1. 全局布局
+   🔥 1. 全局布局 (桌面/通用)
    ============================================ */
 body {
     line-height: 1.6;
@@ -50,7 +52,7 @@ body {
 }
 
 /* ============================================
-   🔥 2. 头部区域
+   🔥 2. 头部区域 (含标题与副标题)
    ============================================ */
 h3 {
     margin-top: 0;
@@ -58,10 +60,20 @@ h3 {
     font-size: 22px;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 4px; 
     text-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
     flex-shrink: 0; 
-    padding: 20px 20px 0 20px;
+    padding: calc(20px + env(safe-area-inset-top)) 20px 0 20px;
+}
+
+.article-subtitle {
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 16px;
+    padding: 0 20px;
+    font-weight: 400;
+    min-height: 0; 
 }
 
 .controls {
@@ -101,7 +113,15 @@ h3 {
     max-width: 100%; 
 }
 
-/* 复制按钮样式 */
+/* 🔥 核心修改：强制限制文章选择框的宽度 */
+#article-select {
+    width: 220px !important;  /* 电脑端固定宽度 */
+    max-width: 45vw;         /* 同时也限制不要超过屏幕一半 */
+    text-overflow: ellipsis; /* 文字超长显示省略号 */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .copy-btn {
     background: rgba(0, 255, 204, 0.1);
     border: 1px solid rgba(0, 255, 204, 0.3);
@@ -128,7 +148,6 @@ h3 {
     transform: scale(0.95);
 }
 
-/* 右侧信息显示区 */
 .info-display {
     margin-left: auto;        
     display: flex;            
@@ -150,7 +169,6 @@ h3 {
     font-weight: 600;
 }
 
-/* ID 样式 */
 .social-credit {
     font-size: 13px;          
     color: #00ffcc;           
@@ -207,7 +225,6 @@ h3 {
 .transcript p.active .original-text { color: #fff; }
 .transcript p.active .time-label { color: #00ffcc; }
 
-/* 行内播放按钮 */
 .play-button {
     width: 20px;
     height: 20px;
@@ -255,14 +272,12 @@ h3 {
 .word-highlight { transition: all 0.1s; border-radius: 2px; padding: 0 1px; }
 .word-highlight.current { background: #ffb700; color: #000; }
 
-/* 显示模式 */
 .mode-none .text-block { opacity: 0; pointer-events: none; }
 .mode-none .sentence-content:hover .text-block { opacity: 0.3; }
 .mode-original .translation { display: none; }
 .mode-translation .original-text { display: none; }
 .mode-translation .translation { opacity: 1; color: #ccc; }
 
-/* 句子右侧按钮容器 */
 .sentence-actions {
     display: flex;
     align-items: center;
@@ -272,7 +287,6 @@ h3 {
     margin-top: 3px;
 }
 
-/* 行内复制按钮 */
 .copy-sentence-btn {
     width: 24px;
     height: 24px;
@@ -310,12 +324,10 @@ h3 {
     box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.5);
 }
 
-/* 进度条 */
 .progress-container {
     margin-bottom: 8px; 
     padding: 8px 0;     
     width: 100%;
-    /* 核心触控修复：禁止浏览器默认行为 */
     touch-action: none !important; 
     cursor: pointer;
     position: relative;
@@ -392,7 +404,6 @@ h3 {
     transform: scale(0.92);
 }
 
-/* 🔥 统一激活状态样式（支持单句循环和全文循环） */
 #loop-btn.active,
 #article-loop-btn.active {
     background: #10b981 !important;
@@ -427,11 +438,6 @@ h3 {
     color: #fff;
 }
 
-/* ============================================
-   🔥 6. 盲听模式 & 挖词模式
-   ============================================ */
-
-/* 1. 基础状态（消失状态） */
 .mode-none .text-block {
     opacity: 0;
     visibility: hidden; 
@@ -441,14 +447,12 @@ h3 {
     backface-visibility: hidden;
 }
 
-/* 2. 激活状态（显示状态） */
 .mode-none .text-block.temp-reveal {
     opacity: 1 !important;
     visibility: visible;
     transition: opacity 0.1s ease-out;
 }
 
-/* 挖词模式 */
 .mode-cloze .word-highlight.cloze-hidden {
     color: transparent !important;       
     border-bottom: 2px solid #aaaaaa;    
@@ -471,11 +475,9 @@ h3 {
 }
 
 /* ======================================================
-   🚨 终极补丁：华为/平板防遮挡 & 触控修复 (V32)
-   涵盖: 手机 (767px以下) + 平板 (1280px以下)
+   🚨 移动端适配
    ====================================================== */
 
-/* 1. 针对手机的特定布局微调 (max-width: 767px) */
 @media (max-width: 767px) {
     body { padding: 0; }
     
@@ -487,57 +489,96 @@ h3 {
         margin-top: 2px;
         white-space: nowrap;
     }
+    
+    /* 🔥 手机端也覆盖这个选择框宽度，稍微窄一点 */
+    #article-select {
+        width: 140px !important;
+        max-width: 40vw;
+    }
+
     .controls { padding: 0 12px; gap: 8px; }
-    .controls select { width: 100px; }
+    .controls select { width: auto; /* 重置普通select的宽度 */ }
     .copy-btn { padding: 4px 8px; font-size: 11px; margin-left: 6px; }
     .info-display { align-items: flex-end; }
-    .controls-main { flex-wrap: nowrap; gap: 4px; }
-    .time-display { display: block !important; font-size: 10px; margin-right: 4px; }
-    .control-btn { width: 34px; height: 34px; } 
-    .mini-selectors { gap: 2px; margin-left: 0; }
-    .mini-select { height: 24px; font-size: 10px; padding: 0; min-width: 35px; }
+    
+    .controls-main { 
+        flex-wrap: nowrap !important; 
+        gap: 2px !important; 
+        justify-content: space-between; 
+        padding-bottom: 2px;
+    }
+    
+    .time-display { 
+        display: block !important; 
+        font-size: 9px !important; 
+        margin-right: 2px !important;
+        min-width: 50px !important; 
+        letter-spacing: -0.5px; 
+        line-height: 28px; 
+    }
+    
+    .player-controls {
+        gap: 3px !important; 
+        flex: 1; 
+        justify-content: center;
+    }
+    
+    .control-btn { 
+        width: 28px !important; 
+        height: 28px !important; 
+        border-radius: 6px !important;
+        margin: 0 !important;
+    } 
+    
+    .control-btn svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+
+    .mini-selectors { 
+        gap: 2px !important; 
+        margin-left: 0; 
+        min-width: auto !important; 
+    }
+    
+    .mini-select { 
+        height: 24px !important; 
+        font-size: 9px !important; 
+        padding: 0 1px !important; 
+        min-width: 40px !important; 
+        background-position: right 2px center !important; 
+    }
 }
 
-/* 2. 针对所有移动端(手机+平板)的强制布局 (max-width: 1280px) */
-/* 核心：只要宽度小于 1280px，强制把播放器钉在屏幕玻璃上 */
 @media (max-width: 1280px) {
-    
     .player-container {
         border-radius: 0; 
-        height: 100vh !important; /* 放弃 dVh，改用传统的 vh 防止兼容性问题 */
+        height: 100vh !important; 
         border: none;
         overflow: hidden !important;
     }
 
-    /* 🔥 强制让播放器控制栏“吸”在屏幕玻璃上 */
     .custom-player {
         position: fixed !important; 
         bottom: 0 !important;
         left: 0 !important;
         right: 0 !important;
         width: 100% !important;
-        
-        /* 🔥 关键：增加底部安全距离，防止被华为的小黑条/导航栏遮住 */
-        /* 如果有安全区域用安全区域，没有的话额外加 20px */
-        padding-bottom: calc(20px + env(safe-area-inset-bottom)) !important;
-        
-        z-index: 99999 !important; /* 层级拉满，谁也别想挡住我 */
-        
-        /* 加深背景颜色，防止透底 */
+        padding-top: 6px !important; 
+        padding-bottom: calc(5px + env(safe-area-inset-bottom)) !important;
+        z-index: 99999 !important; 
         background: rgba(15, 25, 22, 0.98) !important;
         border-top: 1px solid rgba(0, 255, 204, 0.2);
     }
 
-    /* 给中间的文字区域底部加超级厚的垫子，防止文字被固定播放器挡住 */
     .transcript {
         padding-bottom: 260px !important; 
         overflow-y: scroll !important;
-        -webkit-overflow-scrolling: touch !important; /* 丝滑滚动开启 */
+        -webkit-overflow-scrolling: touch !important; 
     }
 
-    /* 进度条触控区域放大，且强制置顶 */
     .progress-container {
-        padding: 15px 0 !important; /* 加大手指点击区域 */
-        touch-action: none !important; /* 禁止浏览器抢夺控制权 */
+        padding: 8px 0 !important; 
+        touch-action: none !important; 
     }
 }
