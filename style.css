@@ -1,4 +1,4 @@
-/* style.css - V44 Fixed Width Select */
+/* style.css - V47 Final (With Yellow Cloze Highlight) */
 
 * {
     margin: 0;
@@ -113,11 +113,11 @@ h3 {
     max-width: 100%; 
 }
 
-/* 🔥 核心修改：强制限制文章选择框的宽度 */
+/* 🔥 限制文章选择框宽度 */
 #article-select {
-    width: 220px !important;  /* 电脑端固定宽度 */
-    max-width: 45vw;         /* 同时也限制不要超过屏幕一半 */
-    text-overflow: ellipsis; /* 文字超长显示省略号 */
+    width: 220px !important;
+    max-width: 45vw;
+    text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -453,25 +453,53 @@ h3 {
     transition: opacity 0.1s ease-out;
 }
 
-.mode-cloze .word-highlight.cloze-hidden {
-    color: transparent !important;       
-    border-bottom: 2px solid #aaaaaa;    
-    background-color: rgba(255, 255, 255, 0.05); 
-    border-radius: 0;                    
-    user-select: none;                   
-    cursor: help;                        
-    transition: all 0.2s ease;
+/* ============================================
+   🔥 6. 挖词模式 & 高亮逻辑 (Yellow Updated)
+   ============================================ */
+   
+.mode-cloze .translation {
+    display: none;
 }
 
+/* 基础挖空样式 (未播放时) - 保持灰色 */
+.mode-cloze .word-highlight.cloze-hidden {
+    color: transparent !important;       
+    border-bottom: 2px solid #666;    
+    background-color: rgba(255, 255, 255, 0.05); 
+    border-radius: 2px;
+    user-select: none;                   
+    cursor: help;                        
+    transition: all 0.1s ease;
+}
+
+/* 🔥 重点：当挖空单词“正在播放”时 (.current) */
+/* 使用原先的黄色：#ffb700 */
+.mode-cloze .word-highlight.cloze-hidden.current {
+    /* 1. 文字透明，不剧透 */
+    color: transparent !important;
+    
+    /* 2. 下划线高亮：亮黄色 */
+    border-bottom: 2px solid #ffb700 !important;
+    
+    /* 3. 背景高亮：半透明黄色 */
+    background-color: rgba(255, 183, 0, 0.3) !important;
+    
+    /* 4. 外发光 */
+    box-shadow: 0 0 8px rgba(255, 183, 0, 0.4);
+    
+    /* 5. 微微放大 */
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+/* 鼠标悬停偷看 */
 .mode-cloze .word-highlight.cloze-hidden:hover,
 .mode-cloze .word-highlight.cloze-hidden:active {
     color: #00ffcc !important;           
     border-bottom-color: #00ffcc;
     background-color: rgba(0, 255, 204, 0.1);
-}
-
-.mode-cloze .translation {
-    display: none;
+    transform: none; 
+    box-shadow: none;
 }
 
 /* ======================================================
@@ -490,14 +518,13 @@ h3 {
         white-space: nowrap;
     }
     
-    /* 🔥 手机端也覆盖这个选择框宽度，稍微窄一点 */
     #article-select {
         width: 140px !important;
         max-width: 40vw;
     }
 
     .controls { padding: 0 12px; gap: 8px; }
-    .controls select { width: auto; /* 重置普通select的宽度 */ }
+    .controls select { width: auto; }
     .copy-btn { padding: 4px 8px; font-size: 11px; margin-left: 6px; }
     .info-display { align-items: flex-end; }
     
