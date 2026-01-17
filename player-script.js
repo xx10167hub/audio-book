@@ -1,13 +1,14 @@
-// player-script.js - V39 Double-Click Fix
+// player-script.js - V46 Fixed Full Title Selection
 // 更新内容：
-// 1. 修复“双击才能播放”Bug：在华为补丁中增加判断，如果用户是点击播放按钮触发的，不再强制暂停。
-// 2. 包含之前所有 V38 的功能（高亮修正、循环逻辑、防吞音等）。
+// 1. 文章选择框逻辑简化：无论手机/PC，option中始终写入完整标题。
+// 2. 依赖 CSS (style.css) 的 width 和 text-overflow 属性来控制显示长度，
+//    从而实现“框短，但点开是全名”的效果。
 
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===== 🎛️ 核心微调参数 =====
-    const START_PADDING = 0.25; // 句首提前 0.25秒 抢跑 (解决吞音)
-    const END_PADDING = 0.40;   // 句尾提前 0.40秒 刹车 (解决带尾巴)
+    const START_PADDING = 0.25; // 句首提前 0.25秒 抢跑
+    const END_PADDING = 0.40;   // 句尾提前 0.40秒 刹车
 
     // ===== 配置 =====
     const ARTICLES_CONFIG_FILE = 'articles.json';
@@ -17,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===== 获取 DOM 元素 =====
     const audioPlayer = document.getElementById('audio-player');
     const titleElement = document.getElementById('article-title');
+    const subtitleElement = document.getElementById('article-subtitle'); // 副标题元素
+    
     const transcriptContainer = document.getElementById('transcript-container');
     const speedControl = document.getElementById('speed-control');
     const displayMode = document.getElementById('display-mode'); 
@@ -188,17 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function updateSelectOptionsText() {
-        if (!articleSelect || articleSelect.options.length === 0) return;
-        const isMobile = window.innerWidth < 768;
-        Array.from(articleSelect.options).forEach(option => {
-            if (option.dataset.full && option.dataset.short) {
-                option.textContent = isMobile ? option.dataset.short : option.dataset.full;
-            }
-        });
-    }
-
-    window.addEventListener('resize', updateSelectOptionsText);
+    // 🔥 删除了 updateSelectOptionsText 函数，不再根据屏幕宽度动态截断标题
 
     async function loadArticlesConfig() {
         try {
@@ -212,17 +205,11 @@ document.addEventListener('DOMContentLoaded', function() {
             articlesConfig.forEach(article => {
                 const option = document.createElement('option');
                 option.value = article.id;
-                let shortTitle = article.title;
-                const match = article.title.match(/^(第\d+篇)/);
-                if (match) shortTitle = match[1]; 
-                else {
-                    const parts = article.title.split(/[:：]/); 
-                    if (parts.length > 0) shortTitle = parts[0];
-                }
-                option.dataset.full = article.title;
-                option.dataset.short = shortTitle;
-                const isMobile = window.innerWidth < 768;
-                option.textContent = isMobile ? shortTitle : article.title;
+                
+                // 🔥 修改点：无论何时，永远塞入完整标题
+                // 具体的宽度限制由 CSS 负责，浏览器会自动处理长文本截断
+                option.textContent = article.title;
+                
                 articleSelect.appendChild(option);
             });
             
@@ -282,6 +269,16 @@ document.addEventListener('DOMContentLoaded', function() {
         updatePlayPauseButton(false);
         progressFilled.style.width = '0%';
         currentTimeDisplay.textContent = '00:00';
+        
+        if (subtitleElement) {
+            subtitleElement.textContent = '';
+            subtitleElement.style.display = 'none';
+        }
+    }
+
+    function cleanText(str) {
+        if (!str) return "";
+        return str.replace(/[^\w\u4e00-\u9fa5]/g, '').toLowerCase();
     }
 
     function loadArticleData(dataFile, audioFile, title) {
@@ -291,7 +288,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 return response.json();
             })
             .then(data => {
-                titleElement.textContent = title || data.title;
+                const displayTitle = title || data.title;
+                titleElement.textContent = displayTitle;
+                
+                if (subtitleElement) {
+                    let subtitleText = "";
+                    if (data.titleTranslation && data.titleTranslation.trim() !== "") {
+                        subtitleText = data.titleTranslation;
+                    } 
+                    else if (data.title) {
+                        const hasChinese = /[\u4e00-\u9fa5]/.test(data.title);
+                        const isDuplicate = cleanText(data.title) === cleanText(displayTitle);
+
+                        if (hasChinese && !isDuplicate) {
+                            subtitleText = data.title;
+                        }
+                    }
+
+                    if (subtitleText) {
+                        subtitleElement.textContent = subtitleText;
+                        subtitleElement.style.display = 'block';
+                    } else {
+                        subtitleElement.style.display = 'none';
+                    }
+                }
                 
                 const targetAudioUrl = audioFile || data.audioUrl;
                 
@@ -602,7 +622,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // 🔥 全局高亮修正
         let searchTime = currentTime;
         let targetS = isLooping ? currentLoopSentence : currentSentencePlayer;
         if (targetS && currentTime < targetS.start) {
@@ -838,7 +857,6 @@ document.addEventListener('DOMContentLoaded', function() {
     loadArticlesConfig();
 });
 
-// 华为/平板补丁 (V39 Double-Click Fix)
 (function() {
     console.log("Applying Huawei Tablet Patch...");
 
@@ -860,7 +878,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function unlockAudio() {
         var audioEl = document.querySelector('audio'); 
         if (audioEl) {
-            // 🔥 V39 修复：如果音频已经在播放（说明用户点击了播放按钮），不要执行暂停
             if (!audioEl.paused) {
                 document.removeEventListener('touchstart', unlockAudio);
                 document.removeEventListener('click', unlockAudio);
