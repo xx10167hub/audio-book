@@ -1,8 +1,7 @@
-// player-script.js - V46 Fixed Full Title Selection
+// player-script.js - V47 Fixed Loop Logic
 // 更新内容：
-// 1. 文章选择框逻辑简化：无论手机/PC，option中始终写入完整标题。
-// 2. 依赖 CSS (style.css) 的 width 和 text-overflow 属性来控制显示长度，
-//    从而实现“框短，但点开是全名”的效果。
+// 1. 修复单句循环Bug：在静止状态先点“循环”再点“播放”时，强制重新锁定当前句子，防止顺延播放。
+// 2. 保持 V46 的长标题完整写入逻辑。
 
 document.addEventListener('DOMContentLoaded', function() {
     
@@ -512,8 +511,13 @@ document.addEventListener('DOMContentLoaded', function() {
         checkDataLoaded();
     });
 
+    // 🔥 核心修改：大播放键逻辑增强
     playPauseBtn.addEventListener('click', function() {
         if (audioPlayer.paused) {
+            // 如果处于单句循环模式，强制刷新当前循环句，防止数据丢失
+            if (isLooping) {
+                currentLoopSentence = findSentenceDataByTime(audioPlayer.currentTime);
+            }
             audioPlayer.play();
         } else {
             audioPlayer.pause();
@@ -615,6 +619,11 @@ document.addEventListener('DOMContentLoaded', function() {
             currentTimeDisplay.textContent = formatTime(currentTime);
         }
         
+        // 双重保险：如果开启了循环但目标丢失，尝试重新捕获
+        if (isLooping && !currentLoopSentence) {
+            currentLoopSentence = findSentenceDataByTime(audioPlayer.currentTime);
+        }
+
         if (isLooping && currentLoopSentence && currentLoopSentence.end) {
             if (currentTime >= currentLoopSentence.end - END_PADDING) {
                 isLoopSeeking = true;
