@@ -1,0 +1,718 @@
+{
+  "audioUrl": "./data/article-57.mp3",
+  "title": "The Harvard Study on Happiness",
+  "titleTranslation": "哈佛关于幸福的研究",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "What will most help you lead a long, happy and healthy life?",
+      "translation": "什么最能够帮助我们过上长寿、幸福且健康的生活呢？",
+      "words": [
+        {
+          "text": "What",
+          "start": 0.031,
+          "end": 0.171
+        },
+        {
+          "text": "will",
+          "start": 0.231,
+          "end": 0.412
+        },
+        {
+          "text": "most",
+          "start": 0.472,
+          "end": 0.732
+        },
+        {
+          "text": "help",
+          "start": 0.893,
+          "end": 1.093
+        },
+        {
+          "text": "you",
+          "start": 1.113,
+          "end": 1.433
+        },
+        {
+          "text": "lead",
+          "start": 1.474,
+          "end": 1.854
+        },
+        {
+          "text": "a",
+          "start": 1.874,
+          "end": 1.894
+        },
+        {
+          "text": "long,",
+          "start": 2.135,
+          "end": 2.435
+        },
+        {
+          "text": "happy",
+          "start": 2.636,
+          "end": 2.976
+        },
+        {
+          "text": "and",
+          "start": 3.136,
+          "end": 3.217
+        },
+        {
+          "text": "healthy",
+          "start": 3.337,
+          "end": 3.677
+        },
+        {
+          "text": "life?",
+          "start": 3.778,
+          "end": 4.058
+        }
+      ]
+    },
+    {
+      "time": 4.88,
+      "text": "We could learn about what makes people happy and what does not by studying people over the course of their lives.",
+      "translation": "不过，我们可以通过研究人们一生的经历，来了解什么能让人感到幸福，什么又不能。",
+      "words": [
+        {
+          "text": "We",
+          "start": 4.88,
+          "end": 5.0
+        },
+        {
+          "text": "could",
+          "start": 5.06,
+          "end": 5.26
+        },
+        {
+          "text": "learn",
+          "start": 5.34,
+          "end": 5.601
+        },
+        {
+          "text": "about",
+          "start": 5.641,
+          "end": 6.322
+        },
+        {
+          "text": "what",
+          "start": 6.382,
+          "end": 6.563
+        },
+        {
+          "text": "makes",
+          "start": 6.623,
+          "end": 6.863
+        },
+        {
+          "text": "people",
+          "start": 6.963,
+          "end": 7.244
+        },
+        {
+          "text": "happy",
+          "start": 7.304,
+          "end": 7.644
+        },
+        {
+          "text": "and",
+          "start": 7.684,
+          "end": 8.406
+        },
+        {
+          "text": "what",
+          "start": 8.446,
+          "end": 8.666
+        },
+        {
+          "text": "does",
+          "start": 8.726,
+          "end": 8.927
+        },
+        {
+          "text": "not",
+          "start": 9.027,
+          "end": 9.327
+        },
+        {
+          "text": "by",
+          "start": 9.628,
+          "end": 9.768
+        },
+        {
+          "text": "studying",
+          "start": 9.868,
+          "end": 10.289
+        },
+        {
+          "text": "people",
+          "start": 10.389,
+          "end": 10.75
+        },
+        {
+          "text": "over",
+          "start": 11.01,
+          "end": 11.171
+        },
+        {
+          "text": "the",
+          "start": 11.231,
+          "end": 11.331
+        },
+        {
+          "text": "course",
+          "start": 11.411,
+          "end": 11.772
+        },
+        {
+          "text": "of",
+          "start": 12.032,
+          "end": 12.092
+        },
+        {
+          "text": "their",
+          "start": 12.152,
+          "end": 12.333
+        },
+        {
+          "text": "lives.",
+          "start": 12.413,
+          "end": 12.834
+        }
+      ]
+    },
+    {
+      "time": 13.595,
+      "text": "For almost 80 years, Harvard Medical School researchers have been doing just that.",
+      "translation": "近80年来，哈佛医学院的研究人员一直在从事这样的研究工作。",
+      "words": [
+        {
+          "text": "For",
+          "start": 13.595,
+          "end": 13.755
+        },
+        {
+          "text": "almost",
+          "start": 13.895,
+          "end": 14.236
+        },
+        {
+          "text": "80",
+          "start": 14.256,
+          "end": 14.717
+        },
+        {
+          "text": "years,",
+          "start": 14.757,
+          "end": 15.238
+        },
+        {
+          "text": "Harvard",
+          "start": 15.739,
+          "end": 16.139
+        },
+        {
+          "text": "Medical",
+          "start": 16.3,
+          "end": 16.68
+        },
+        {
+          "text": "School",
+          "start": 16.781,
+          "end": 17.121
+        },
+        {
+          "text": "researchers",
+          "start": 17.221,
+          "end": 17.943
+        },
+        {
+          "text": "have",
+          "start": 18.443,
+          "end": 18.584
+        },
+        {
+          "text": "been",
+          "start": 18.644,
+          "end": 18.804
+        },
+        {
+          "text": "doing",
+          "start": 18.884,
+          "end": 19.185
+        },
+        {
+          "text": "just",
+          "start": 19.405,
+          "end": 19.666
+        },
+        {
+          "text": "that.",
+          "start": 19.806,
+          "end": 20.487
+        }
+      ]
+    },
+    {
+      "time": 21.327,
+      "text": "The Harvard Study of Adult Development is one of the most comprehensive longitudinal studies in history.",
+      "translation": "“哈佛成人发展研究”是历史上最为全面的纵向研究项目之一。",
+      "words": [
+        {
+          "text": "The",
+          "start": 21.327,
+          "end": 21.447
+        },
+        {
+          "text": "Harvard",
+          "start": 21.507,
+          "end": 21.908
+        },
+        {
+          "text": "Study",
+          "start": 21.968,
+          "end": 22.349
+        },
+        {
+          "text": "of",
+          "start": 22.649,
+          "end": 22.709
+        },
+        {
+          "text": "Adult",
+          "start": 22.749,
+          "end": 23.21
+        },
+        {
+          "text": "Development",
+          "start": 23.31,
+          "end": 23.931
+        },
+        {
+          "text": "is",
+          "start": 24.712,
+          "end": 24.812
+        },
+        {
+          "text": "one",
+          "start": 25.033,
+          "end": 25.173
+        },
+        {
+          "text": "of",
+          "start": 25.353,
+          "end": 25.413
+        },
+        {
+          "text": "the",
+          "start": 25.513,
+          "end": 25.614
+        },
+        {
+          "text": "most",
+          "start": 25.694,
+          "end": 25.954
+        },
+        {
+          "text": "comprehensive",
+          "start": 26.094,
+          "end": 27.076
+        },
+        {
+          "text": "longitudinal",
+          "start": 27.436,
+          "end": 28.398
+        },
+        {
+          "text": "studies",
+          "start": 28.498,
+          "end": 28.919
+        },
+        {
+          "text": "in",
+          "start": 29.119,
+          "end": 29.199
+        },
+        {
+          "text": "history.",
+          "start": 29.379,
+          "end": 29.94
+        }
+      ]
+    },
+    {
+      "time": 31.523,
+      "text": "The study finds that wealth, social position, and an important job title do not necessarily lead to health and happiness.",
+      "translation": "研究发现，财富、社会地位以及高职位并不一定能带来健康和幸福。",
+      "words": [
+        {
+          "text": "The",
+          "start": 31.523,
+          "end": 31.643
+        },
+        {
+          "text": "study",
+          "start": 31.683,
+          "end": 32.003
+        },
+        {
+          "text": "finds",
+          "start": 32.083,
+          "end": 32.524
+        },
+        {
+          "text": "that",
+          "start": 32.804,
+          "end": 32.965
+        },
+        {
+          "text": "wealth,",
+          "start": 33.085,
+          "end": 33.425
+        },
+        {
+          "text": "social",
+          "start": 34.106,
+          "end": 34.427
+        },
+        {
+          "text": "position,",
+          "start": 34.487,
+          "end": 34.968
+        },
+        {
+          "text": "and",
+          "start": 35.549,
+          "end": 35.689
+        },
+        {
+          "text": "an",
+          "start": 35.729,
+          "end": 35.909
+        },
+        {
+          "text": "important",
+          "start": 35.989,
+          "end": 36.49
+        },
+        {
+          "text": "job",
+          "start": 36.61,
+          "end": 36.891
+        },
+        {
+          "text": "title",
+          "start": 36.931,
+          "end": 37.291
+        },
+        {
+          "text": "do",
+          "start": 37.832,
+          "end": 37.972
+        },
+        {
+          "text": "not",
+          "start": 38.073,
+          "end": 38.273
+        },
+        {
+          "text": "necessarily",
+          "start": 38.373,
+          "end": 39.174
+        },
+        {
+          "text": "lead",
+          "start": 39.294,
+          "end": 39.615
+        },
+        {
+          "text": "to",
+          "start": 39.915,
+          "end": 40.076
+        },
+        {
+          "text": "health",
+          "start": 40.176,
+          "end": 40.436
+        },
+        {
+          "text": "and",
+          "start": 40.697,
+          "end": 40.797
+        },
+        {
+          "text": "happiness.",
+          "start": 40.877,
+          "end": 41.698
+        }
+      ]
+    },
+    {
+      "time": 42.708,
+      "text": "Robert Waldinger is the current director of the study.",
+      "translation": "罗伯特·瓦尔丁格是目前这项研究的负责人。",
+      "words": [
+        {
+          "text": "Robert",
+          "start": 42.708,
+          "end": 43.129
+        },
+        {
+          "text": "Waldinger",
+          "start": 43.409,
+          "end": 44.031
+        },
+        {
+          "text": "is",
+          "start": 44.472,
+          "end": 44.552
+        },
+        {
+          "text": "the",
+          "start": 44.612,
+          "end": 44.712
+        },
+        {
+          "text": "current",
+          "start": 44.772,
+          "end": 45.093
+        },
+        {
+          "text": "director",
+          "start": 45.173,
+          "end": 45.654
+        },
+        {
+          "text": "of",
+          "start": 45.754,
+          "end": 45.815
+        },
+        {
+          "text": "the",
+          "start": 45.875,
+          "end": 45.975
+        },
+        {
+          "text": "study.",
+          "start": 46.015,
+          "end": 46.376
+        }
+      ]
+    },
+    {
+      "time": 47.438,
+      "text": "He said, the surprising finding is that our relationships and how happy we are in our relationships has a powerful influence on our health.",
+      "translation": "他说：“令人惊讶的是，我们的社交关系以及我们在这些关系中感受到的幸福感，对我们的健康有着极其重要的影响。”",
+      "words": [
+        {
+          "text": "He",
+          "start": 47.438,
+          "end": 47.538
+        },
+        {
+          "text": "said,",
+          "start": 47.638,
+          "end": 47.939
+        },
+        {
+          "text": "the",
+          "start": 47.959,
+          "end": 48.62
+        },
+        {
+          "text": "surprising",
+          "start": 48.661,
+          "end": 49.302
+        },
+        {
+          "text": "finding",
+          "start": 49.342,
+          "end": 49.883
+        },
+        {
+          "text": "is",
+          "start": 50.244,
+          "end": 50.304
+        },
+        {
+          "text": "that",
+          "start": 50.364,
+          "end": 50.525
+        },
+        {
+          "text": "our",
+          "start": 50.545,
+          "end": 50.825
+        },
+        {
+          "text": "relationships",
+          "start": 50.865,
+          "end": 51.727
+        },
+        {
+          "text": "and",
+          "start": 52.248,
+          "end": 52.348
+        },
+        {
+          "text": "how",
+          "start": 52.429,
+          "end": 52.589
+        },
+        {
+          "text": "happy",
+          "start": 52.689,
+          "end": 53.01
+        },
+        {
+          "text": "we",
+          "start": 53.07,
+          "end": 53.19
+        },
+        {
+          "text": "are",
+          "start": 53.35,
+          "end": 53.451
+        },
+        {
+          "text": "in",
+          "start": 53.711,
+          "end": 53.791
+        },
+        {
+          "text": "our",
+          "start": 53.932,
+          "end": 54.032
+        },
+        {
+          "text": "relationships",
+          "start": 54.072,
+          "end": 54.954
+        },
+        {
+          "text": "has",
+          "start": 55.515,
+          "end": 55.695
+        },
+        {
+          "text": "a",
+          "start": 55.715,
+          "end": 55.736
+        },
+        {
+          "text": "powerful",
+          "start": 55.956,
+          "end": 56.457
+        },
+        {
+          "text": "influence",
+          "start": 56.597,
+          "end": 57.118
+        },
+        {
+          "text": "on",
+          "start": 57.319,
+          "end": 57.399
+        },
+        {
+          "text": "our",
+          "start": 57.519,
+          "end": 57.62
+        },
+        {
+          "text": "health.",
+          "start": 57.68,
+          "end": 57.96
+        }
+      ]
+    },
+    {
+      "time": 59.283,
+      "text": "He says, close relationships are what keep people happy throughout their lives, not money or fame.",
+      "translation": "他认为，正是这些亲密的关系让人们在一生中保持幸福——而不是金钱或名声。",
+      "words": [
+        {
+          "text": "He",
+          "start": 59.283,
+          "end": 59.403
+        },
+        {
+          "text": "says,",
+          "start": 59.483,
+          "end": 59.784
+        },
+        {
+          "text": "close",
+          "start": 59.844,
+          "end": 60.385
+        },
+        {
+          "text": "relationships",
+          "start": 60.445,
+          "end": 61.307
+        },
+        {
+          "text": "are",
+          "start": 61.668,
+          "end": 61.748
+        },
+        {
+          "text": "what",
+          "start": 61.808,
+          "end": 61.949
+        },
+        {
+          "text": "keep",
+          "start": 62.029,
+          "end": 62.249
+        },
+        {
+          "text": "people",
+          "start": 62.309,
+          "end": 62.63
+        },
+        {
+          "text": "happy",
+          "start": 62.71,
+          "end": 63.071
+        },
+        {
+          "text": "throughout",
+          "start": 63.091,
+          "end": 63.692
+        },
+        {
+          "text": "their",
+          "start": 63.752,
+          "end": 63.913
+        },
+        {
+          "text": "lives,",
+          "start": 63.973,
+          "end": 64.414
+        },
+        {
+          "text": "not",
+          "start": 65.095,
+          "end": 65.276
+        },
+        {
+          "text": "money",
+          "start": 65.356,
+          "end": 65.616
+        },
+        {
+          "text": "or",
+          "start": 65.657,
+          "end": 66.198
+        },
+        {
+          "text": "fame.",
+          "start": 66.298,
+          "end": 66.859
+        }
+      ]
+    }
+  ]
+}
