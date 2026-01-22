@@ -1,0 +1,763 @@
+{
+  "audioUrl": "./data/audio-24.m4a",
+  "title": "第24篇，US Scientists Develop Flea-Sized Robot for Future Medical Use ",
+  "titleTranslation": "美国科学家研发跳蚤大小机器人，未来有望用于医疗",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "American scientists have developed a 3D remote-controlled robot smaller than the size of a flea.",
+      "translation": "美国科学家研制出了一种比跳蚤还小的3D遥控机器人。",
+      "words": [
+        {
+          "text": "American",
+          "start": 0.031,
+          "end": 1.174
+        },
+        {
+          "text": "scientists",
+          "start": 1.235,
+          "end": 1.816
+        },
+        {
+          "text": "have",
+          "start": 1.877,
+          "end": 2.017
+        },
+        {
+          "text": "developed",
+          "start": 2.057,
+          "end": 2.478
+        },
+        {
+          "text": "a",
+          "start": 2.599,
+          "end": 2.639
+        },
+        {
+          "text": "3D",
+          "start": 2.699,
+          "end": 3.201
+        },
+        {
+          "text": "remote-controlled",
+          "start": 3.401,
+          "end": 4.164
+        },
+        {
+          "text": "robot",
+          "start": 4.244,
+          "end": 4.645
+        },
+        {
+          "text": "smaller",
+          "start": 5.066,
+          "end": 5.508
+        },
+        {
+          "text": "than",
+          "start": 5.648,
+          "end": 5.768
+        },
+        {
+          "text": "the",
+          "start": 5.788,
+          "end": 5.869
+        },
+        {
+          "text": "size",
+          "start": 5.949,
+          "end": 6.27
+        },
+        {
+          "text": "of",
+          "start": 6.41,
+          "end": 6.491
+        },
+        {
+          "text": "a",
+          "start": 6.551,
+          "end": 6.571
+        },
+        {
+          "text": "flea.",
+          "start": 6.711,
+          "end": 7.012
+        }
+      ]
+    },
+    {
+      "time": 7.494,
+      "text": "Its designers hope the tiny machine will have medical uses one day.",
+      "translation": "它的设计者希望这个小机器有一天能用于医疗。",
+      "words": [
+        {
+          "text": "Its",
+          "start": 7.494,
+          "end": 7.614
+        },
+        {
+          "text": "designers",
+          "start": 7.694,
+          "end": 8.156
+        },
+        {
+          "text": "hope",
+          "start": 8.216,
+          "end": 8.396
+        },
+        {
+          "text": "the",
+          "start": 8.416,
+          "end": 8.477
+        },
+        {
+          "text": "tiny",
+          "start": 8.537,
+          "end": 8.798
+        },
+        {
+          "text": "machine",
+          "start": 8.838,
+          "end": 9.159
+        },
+        {
+          "text": "will",
+          "start": 9.219,
+          "end": 9.359
+        },
+        {
+          "text": "have",
+          "start": 9.399,
+          "end": 9.52
+        },
+        {
+          "text": "medical",
+          "start": 9.62,
+          "end": 9.981
+        },
+        {
+          "text": "uses",
+          "start": 10.122,
+          "end": 10.382
+        },
+        {
+          "text": "one",
+          "start": 10.503,
+          "end": 10.603
+        },
+        {
+          "text": "day.",
+          "start": 10.643,
+          "end": 10.824
+        }
+      ]
+    },
+    {
+      "time": 11.064,
+      "text": "Ayesha Roberts reports.",
+      "translation": "阿伊莎·罗伯茨报道。",
+      "words": [
+        {
+          "text": "Ayesha",
+          "start": 11.064,
+          "end": 11.405
+        },
+        {
+          "text": "Roberts",
+          "start": 11.466,
+          "end": 11.787
+        },
+        {
+          "text": "reports.",
+          "start": 11.887,
+          "end": 12.589
+        }
+      ]
+    },
+    {
+      "time": 12.856,
+      "text": "The miniscule robot created by scientists at Northwestern University is shaped like a crab and is built using a special alloy that can take different shapes depending on the temperature.",
+      "translation": "美国西北大学的科学家们创造的这个微型机器人外形酷似一只螃蟹，它是用一种特殊合金制造的，可以根据温度的不同而呈现不同的形状。",
+      "words": [
+        {
+          "text": "The",
+          "start": 12.856,
+          "end": 12.976
+        },
+        {
+          "text": "miniscule",
+          "start": 13.016,
+          "end": 13.457
+        },
+        {
+          "text": "robot",
+          "start": 13.497,
+          "end": 13.858
+        },
+        {
+          "text": "created",
+          "start": 13.878,
+          "end": 14.178
+        },
+        {
+          "text": "by",
+          "start": 14.218,
+          "end": 14.319
+        },
+        {
+          "text": "scientists",
+          "start": 14.359,
+          "end": 14.86
+        },
+        {
+          "text": "at",
+          "start": 14.94,
+          "end": 15.0
+        },
+        {
+          "text": "Northwestern",
+          "start": 15.06,
+          "end": 15.601
+        },
+        {
+          "text": "University",
+          "start": 15.661,
+          "end": 16.202
+        },
+        {
+          "text": "is",
+          "start": 16.603,
+          "end": 16.683
+        },
+        {
+          "text": "shaped",
+          "start": 16.723,
+          "end": 16.963
+        },
+        {
+          "text": "like",
+          "start": 17.003,
+          "end": 17.124
+        },
+        {
+          "text": "a",
+          "start": 17.164,
+          "end": 17.184
+        },
+        {
+          "text": "crab",
+          "start": 17.244,
+          "end": 17.564
+        },
+        {
+          "text": "and",
+          "start": 17.985,
+          "end": 18.065
+        },
+        {
+          "text": "is",
+          "start": 18.125,
+          "end": 18.185
+        },
+        {
+          "text": "built",
+          "start": 18.226,
+          "end": 18.426
+        },
+        {
+          "text": "using",
+          "start": 18.506,
+          "end": 18.686
+        },
+        {
+          "text": "a",
+          "start": 18.726,
+          "end": 18.746
+        },
+        {
+          "text": "special",
+          "start": 18.787,
+          "end": 19.147
+        },
+        {
+          "text": "alloy",
+          "start": 19.287,
+          "end": 19.568
+        },
+        {
+          "text": "that",
+          "start": 19.628,
+          "end": 19.728
+        },
+        {
+          "text": "can",
+          "start": 19.768,
+          "end": 19.868
+        },
+        {
+          "text": "take",
+          "start": 19.909,
+          "end": 20.089
+        },
+        {
+          "text": "different",
+          "start": 20.149,
+          "end": 20.47
+        },
+        {
+          "text": "shapes",
+          "start": 20.53,
+          "end": 20.87
+        },
+        {
+          "text": "depending",
+          "start": 20.93,
+          "end": 21.371
+        },
+        {
+          "text": "on",
+          "start": 21.431,
+          "end": 21.491
+        },
+        {
+          "text": "the",
+          "start": 21.511,
+          "end": 21.572
+        },
+        {
+          "text": "temperature.",
+          "start": 21.612,
+          "end": 22.092
+        }
+      ]
+    },
+    {
+      "time": 22.593,
+      "text": "The diminutive machine can crawl, walk, turn and jump and is able to move at speeds of up to nearly half its body length per second.",
+      "translation": "这台小巧的机器能爬、能走、能转、能跳，移动速度可达每秒近一半身长。",
+      "words": [
+        {
+          "text": "The",
+          "start": 22.593,
+          "end": 22.673
+        },
+        {
+          "text": "diminutive",
+          "start": 22.714,
+          "end": 23.234
+        },
+        {
+          "text": "machine",
+          "start": 23.295,
+          "end": 23.655
+        },
+        {
+          "text": "can",
+          "start": 23.695,
+          "end": 23.916
+        },
+        {
+          "text": "crawl,",
+          "start": 24.016,
+          "end": 24.356
+        },
+        {
+          "text": "walk,",
+          "start": 24.597,
+          "end": 24.917
+        },
+        {
+          "text": "turn",
+          "start": 25.118,
+          "end": 25.438
+        },
+        {
+          "text": "and",
+          "start": 25.599,
+          "end": 25.739
+        },
+        {
+          "text": "jump",
+          "start": 25.799,
+          "end": 26.08
+        },
+        {
+          "text": "and",
+          "start": 26.48,
+          "end": 26.56
+        },
+        {
+          "text": "is",
+          "start": 26.621,
+          "end": 26.681
+        },
+        {
+          "text": "able",
+          "start": 26.821,
+          "end": 27.001
+        },
+        {
+          "text": "to",
+          "start": 27.041,
+          "end": 27.121
+        },
+        {
+          "text": "move",
+          "start": 27.202,
+          "end": 27.402
+        },
+        {
+          "text": "at",
+          "start": 27.462,
+          "end": 27.502
+        },
+        {
+          "text": "speeds",
+          "start": 27.522,
+          "end": 27.863
+        },
+        {
+          "text": "of",
+          "start": 27.923,
+          "end": 27.983
+        },
+        {
+          "text": "up",
+          "start": 28.043,
+          "end": 28.123
+        },
+        {
+          "text": "to",
+          "start": 28.163,
+          "end": 28.243
+        },
+        {
+          "text": "nearly",
+          "start": 28.283,
+          "end": 28.504
+        },
+        {
+          "text": "half",
+          "start": 28.604,
+          "end": 28.804
+        },
+        {
+          "text": "its",
+          "start": 28.844,
+          "end": 29.005
+        },
+        {
+          "text": "body",
+          "start": 29.045,
+          "end": 29.265
+        },
+        {
+          "text": "length",
+          "start": 29.285,
+          "end": 29.486
+        },
+        {
+          "text": "per",
+          "start": 29.566,
+          "end": 29.746
+        },
+        {
+          "text": "second.",
+          "start": 29.806,
+          "end": 30.848
+        }
+      ]
+    },
+    {
+      "time": 30.828,
+      "text": "The microbot's movement is controlled with the help of a laser.",
+      "translation": "微型机器人的运动通过激光控制。",
+      "words": [
+        {
+          "text": "The",
+          "start": 30.828,
+          "end": 31.049
+        },
+        {
+          "text": "microbots",
+          "start": 31.069,
+          "end": 31.59
+        },
+        {
+          "text": "movement",
+          "start": 31.65,
+          "end": 32.011
+        },
+        {
+          "text": "is",
+          "start": 32.091,
+          "end": 32.171
+        },
+        {
+          "text": "controlled",
+          "start": 32.212,
+          "end": 32.593
+        },
+        {
+          "text": "with",
+          "start": 32.633,
+          "end": 32.713
+        },
+        {
+          "text": "the",
+          "start": 32.733,
+          "end": 32.793
+        },
+        {
+          "text": "help",
+          "start": 32.853,
+          "end": 33.014
+        },
+        {
+          "text": "of",
+          "start": 33.054,
+          "end": 33.094
+        },
+        {
+          "text": "a",
+          "start": 33.194,
+          "end": 33.234
+        },
+        {
+          "text": "laser.",
+          "start": 33.254,
+          "end": 33.816
+        }
+      ]
+    },
+    {
+      "time": 33.836,
+      "text": "The beam lands on different body parts initiating a process of heating and cooling which changes the bot shape, pushing it forward.",
+      "translation": "激光束落在不同的身体部位，启动加热和冷却过程，改变机器人的形状，推动它前进。",
+      "words": [
+        {
+          "text": "The",
+          "start": 33.836,
+          "end": 33.936
+        },
+        {
+          "text": "beam",
+          "start": 33.976,
+          "end": 34.217
+        },
+        {
+          "text": "lands",
+          "start": 34.237,
+          "end": 34.477
+        },
+        {
+          "text": "on",
+          "start": 34.558,
+          "end": 34.598
+        },
+        {
+          "text": "different",
+          "start": 34.638,
+          "end": 34.938
+        },
+        {
+          "text": "body",
+          "start": 34.979,
+          "end": 35.179
+        },
+        {
+          "text": "parts",
+          "start": 35.219,
+          "end": 35.52
+        },
+        {
+          "text": "initiating",
+          "start": 35.64,
+          "end": 36.202
+        },
+        {
+          "text": "a",
+          "start": 36.242,
+          "end": 36.262
+        },
+        {
+          "text": "process",
+          "start": 36.322,
+          "end": 36.723
+        },
+        {
+          "text": "of",
+          "start": 36.783,
+          "end": 36.823
+        },
+        {
+          "text": "heating",
+          "start": 36.863,
+          "end": 37.284
+        },
+        {
+          "text": "and",
+          "start": 37.365,
+          "end": 37.445
+        },
+        {
+          "text": "cooling",
+          "start": 37.525,
+          "end": 37.906
+        },
+        {
+          "text": "which",
+          "start": 38.247,
+          "end": 38.387
+        },
+        {
+          "text": "changes",
+          "start": 38.468,
+          "end": 38.828
+        },
+        {
+          "text": "the",
+          "start": 38.889,
+          "end": 38.969
+        },
+        {
+          "text": "bot",
+          "start": 38.989,
+          "end": 39.209
+        },
+        {
+          "text": "shape,",
+          "start": 39.229,
+          "end": 39.53
+        },
+        {
+          "text": "pushing",
+          "start": 39.871,
+          "end": 40.212
+        },
+        {
+          "text": "it",
+          "start": 40.272,
+          "end": 40.312
+        },
+        {
+          "text": "forward.",
+          "start": 40.372,
+          "end": 40.773
+        }
+      ]
+    },
+    {
+      "time": 41.415,
+      "text": "The team hopes the tech can one day be used as the basis for future robotics in the fields of medicine.",
+      "translation": "该团队希望这项技术有朝一日能成为未来医学领域机器人技术的基础。",
+      "words": [
+        {
+          "text": "The",
+          "start": 41.415,
+          "end": 41.515
+        },
+        {
+          "text": "team",
+          "start": 41.555,
+          "end": 41.796
+        },
+        {
+          "text": "hopes",
+          "start": 41.856,
+          "end": 42.097
+        },
+        {
+          "text": "the",
+          "start": 42.117,
+          "end": 42.217
+        },
+        {
+          "text": "tech",
+          "start": 42.237,
+          "end": 42.418
+        },
+        {
+          "text": "can",
+          "start": 42.438,
+          "end": 42.558
+        },
+        {
+          "text": "one",
+          "start": 42.638,
+          "end": 42.718
+        },
+        {
+          "text": "day",
+          "start": 42.758,
+          "end": 42.899
+        },
+        {
+          "text": "be",
+          "start": 42.959,
+          "end": 43.059
+        },
+        {
+          "text": "used",
+          "start": 43.22,
+          "end": 43.42
+        },
+        {
+          "text": "as",
+          "start": 43.561,
+          "end": 43.621
+        },
+        {
+          "text": "the",
+          "start": 43.641,
+          "end": 43.721
+        },
+        {
+          "text": "basis",
+          "start": 43.781,
+          "end": 44.162
+        },
+        {
+          "text": "for",
+          "start": 44.202,
+          "end": 44.302
+        },
+        {
+          "text": "future",
+          "start": 44.343,
+          "end": 44.683
+        },
+        {
+          "text": "robotics",
+          "start": 44.744,
+          "end": 45.225
+        },
+        {
+          "text": "in",
+          "start": 45.325,
+          "end": 45.385
+        },
+        {
+          "text": "the",
+          "start": 45.425,
+          "end": 45.505
+        },
+        {
+          "text": "fields",
+          "start": 45.546,
+          "end": 45.786
+        },
+        {
+          "text": "of",
+          "start": 45.826,
+          "end": 45.866
+        },
+        {
+          "text": "medicine.",
+          "start": 45.907,
+          "end": 46.508
+        }
+      ]
+    }
+  ]
+}
