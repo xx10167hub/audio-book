@@ -1,0 +1,1228 @@
+{
+  "id": "article-22",
+  "audioUrl": "./data/audio-22.mp3",
+  "title": "第22篇：The Truth About Brain Fog 关于“脑雾”的真相 ",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "Do you ever wake up with a fuzzy feeling in your head, you can't concentrate on anything, or find your memory just isn't working as it should?",
+      "translation": "你有没有过这样的经历：早上醒来时感觉头脑模糊不清，无法集中注意力，或者发现记忆力明显下降？",
+      "words": [
+        {
+          "text": "Do",
+          "start": 0.031,
+          "end": 0.592
+        },
+        {
+          "text": "you",
+          "start": 0.612,
+          "end": 0.732
+        },
+        {
+          "text": "ever",
+          "start": 0.892,
+          "end": 1.052
+        },
+        {
+          "text": "wake",
+          "start": 1.132,
+          "end": 1.393
+        },
+        {
+          "text": "up",
+          "start": 1.513,
+          "end": 1.573
+        },
+        {
+          "text": "with",
+          "start": 1.793,
+          "end": 1.934
+        },
+        {
+          "text": "a",
+          "start": 1.994,
+          "end": 2.014
+        },
+        {
+          "text": "fuzzy",
+          "start": 2.174,
+          "end": 2.574
+        },
+        {
+          "text": "feeling",
+          "start": 2.654,
+          "end": 3.075
+        },
+        {
+          "text": "in",
+          "start": 3.235,
+          "end": 3.315
+        },
+        {
+          "text": "your",
+          "start": 3.355,
+          "end": 3.556
+        },
+        {
+          "text": "head,",
+          "start": 3.616,
+          "end": 3.876
+        },
+        {
+          "text": "you",
+          "start": 4.457,
+          "end": 4.597
+        },
+        {
+          "text": "can't",
+          "start": 4.677,
+          "end": 4.978
+        },
+        {
+          "text": "concentrate",
+          "start": 5.058,
+          "end": 5.739
+        },
+        {
+          "text": "on",
+          "start": 5.819,
+          "end": 5.879
+        },
+        {
+          "text": "anything,",
+          "start": 5.959,
+          "end": 6.359
+        },
+        {
+          "text": "or",
+          "start": 6.8,
+          "end": 6.9
+        },
+        {
+          "text": "find",
+          "start": 7.0,
+          "end": 7.301
+        },
+        {
+          "text": "your",
+          "start": 7.381,
+          "end": 7.581
+        },
+        {
+          "text": "memory",
+          "start": 7.681,
+          "end": 8.122
+        },
+        {
+          "text": "just",
+          "start": 8.202,
+          "end": 8.382
+        },
+        {
+          "text": "isn't",
+          "start": 8.642,
+          "end": 8.883
+        },
+        {
+          "text": "working",
+          "start": 9.063,
+          "end": 9.564
+        },
+        {
+          "text": "as",
+          "start": 9.724,
+          "end": 9.804
+        },
+        {
+          "text": "it",
+          "start": 9.904,
+          "end": 9.964
+        },
+        {
+          "text": "should?",
+          "start": 10.044,
+          "end": 10.305
+        }
+      ]
+    },
+    {
+      "time": 10.605,
+      "text": "You're not alone.",
+      "translation": "你不是一个人。",
+      "words": [
+        {
+          "text": "You're",
+          "start": 10.605,
+          "end": 10.805
+        },
+        {
+          "text": "not",
+          "start": 10.845,
+          "end": 10.945
+        },
+        {
+          "text": "alone.",
+          "start": 11.046,
+          "end": 11.366
+        }
+      ]
+    },
+    {
+      "time": 11.386,
+      "text": "39% of British people said they suffer brain fog on a regular basis in a Future You Cambridge study.",
+      "translation": "在一项由 Future You 剑桥进行的研究中，39%的英国人表示他们经常遭受脑雾的困扰。",
+      "words": [
+        {
+          "text": "39%",
+          "start": 11.386,
+          "end": 12.327
+        },
+        {
+          "text": "of",
+          "start": 13.148,
+          "end": 13.188
+        },
+        {
+          "text": "British",
+          "start": 13.269,
+          "end": 13.649
+        },
+        {
+          "text": "people",
+          "start": 13.689,
+          "end": 14.09
+        },
+        {
+          "text": "said",
+          "start": 14.33,
+          "end": 14.55
+        },
+        {
+          "text": "they",
+          "start": 14.59,
+          "end": 14.771
+        },
+        {
+          "text": "suffer",
+          "start": 14.891,
+          "end": 15.211
+        },
+        {
+          "text": "brain",
+          "start": 15.291,
+          "end": 15.632
+        },
+        {
+          "text": "fog",
+          "start": 15.692,
+          "end": 15.992
+        },
+        {
+          "text": "on",
+          "start": 16.192,
+          "end": 16.253
+        },
+        {
+          "text": "a",
+          "start": 16.293,
+          "end": 16.333
+        },
+        {
+          "text": "regular",
+          "start": 16.433,
+          "end": 16.833
+        },
+        {
+          "text": "basis",
+          "start": 16.873,
+          "end": 17.354
+        },
+        {
+          "text": "in",
+          "start": 17.755,
+          "end": 17.795
+        },
+        {
+          "text": "a",
+          "start": 17.855,
+          "end": 17.875
+        },
+        {
+          "text": "Future",
+          "start": 17.975,
+          "end": 18.395
+        },
+        {
+          "text": "You",
+          "start": 18.435,
+          "end": 18.656
+        },
+        {
+          "text": "Cambridge",
+          "start": 18.756,
+          "end": 19.176
+        },
+        {
+          "text": "study.",
+          "start": 19.216,
+          "end": 19.557
+        }
+      ]
+    },
+    {
+      "time": 19.957,
+      "text": "The technical word for brain fog is cognitive impairment.",
+      "translation": "认知障碍是脑雾的专业术语。",
+      "words": [
+        {
+          "text": "The",
+          "start": 19.957,
+          "end": 20.058
+        },
+        {
+          "text": "technical",
+          "start": 20.118,
+          "end": 20.598
+        },
+        {
+          "text": "word",
+          "start": 20.658,
+          "end": 20.919
+        },
+        {
+          "text": "for",
+          "start": 20.979,
+          "end": 21.119
+        },
+        {
+          "text": "brain",
+          "start": 21.159,
+          "end": 21.439
+        },
+        {
+          "text": "fog",
+          "start": 21.499,
+          "end": 21.76
+        },
+        {
+          "text": "is",
+          "start": 21.94,
+          "end": 22.02
+        },
+        {
+          "text": "cognitive",
+          "start": 22.14,
+          "end": 22.741
+        },
+        {
+          "text": "impairment.",
+          "start": 22.861,
+          "end": 23.482
+        }
+      ]
+    },
+    {
+      "time": 23.963,
+      "text": "When you have it, you can't think as clearly as you normally can.",
+      "translation": "当你有脑雾时，你无法像平时那样清晰地思考。",
+      "words": [
+        {
+          "text": "When",
+          "start": 23.963,
+          "end": 24.103
+        },
+        {
+          "text": "you",
+          "start": 24.143,
+          "end": 24.283
+        },
+        {
+          "text": "have",
+          "start": 24.343,
+          "end": 24.524
+        },
+        {
+          "text": "it,",
+          "start": 24.604,
+          "end": 24.664
+        },
+        {
+          "text": "you",
+          "start": 25.004,
+          "end": 25.124
+        },
+        {
+          "text": "can't",
+          "start": 25.204,
+          "end": 25.485
+        },
+        {
+          "text": "think",
+          "start": 25.545,
+          "end": 25.765
+        },
+        {
+          "text": "as",
+          "start": 25.825,
+          "end": 25.905
+        },
+        {
+          "text": "clearly",
+          "start": 26.005,
+          "end": 26.366
+        },
+        {
+          "text": "as",
+          "start": 26.506,
+          "end": 26.566
+        },
+        {
+          "text": "you",
+          "start": 26.606,
+          "end": 26.746
+        },
+        {
+          "text": "normally",
+          "start": 26.807,
+          "end": 27.187
+        },
+        {
+          "text": "can.",
+          "start": 27.247,
+          "end": 27.928
+        }
+      ]
+    },
+    {
+      "time": 27.908,
+      "text": "Dr Brennan, a neuroscientist and author, says \"Brain fog is different to these short-term disruptions, because it is persistent, occurs regularly and can interfere with the quality of your life, your relationships, and your work\".",
+      "translation": "神经科学家兼作家布伦南博士说 \"脑雾不同于这些短期的干扰，因为它具有持续性，经常发生，并可能影响你的生活质量、人际关系和工作\"。",
+      "words": [
+        {
+          "text": "Dr",
+          "start": 27.908,
+          "end": 28.309
+        },
+        {
+          "text": "Brennan,",
+          "start": 28.349,
+          "end": 28.79
+        },
+        {
+          "text": "a",
+          "start": 29.071,
+          "end": 29.131
+        },
+        {
+          "text": "neuroscientist",
+          "start": 29.211,
+          "end": 30.193
+        },
+        {
+          "text": "and",
+          "start": 30.254,
+          "end": 30.314
+        },
+        {
+          "text": "author,",
+          "start": 30.354,
+          "end": 30.855
+        },
+        {
+          "text": "says",
+          "start": 31.176,
+          "end": 31.416
+        },
+        {
+          "text": "\"Brain",
+          "start": 31.958,
+          "end": 32.258
+        },
+        {
+          "text": "fog",
+          "start": 32.278,
+          "end": 32.519
+        },
+        {
+          "text": "is",
+          "start": 32.639,
+          "end": 32.699
+        },
+        {
+          "text": "different",
+          "start": 32.779,
+          "end": 33.18
+        },
+        {
+          "text": "to",
+          "start": 33.241,
+          "end": 33.321
+        },
+        {
+          "text": "these",
+          "start": 33.381,
+          "end": 33.561
+        },
+        {
+          "text": "short-term",
+          "start": 33.702,
+          "end": 34.383
+        },
+        {
+          "text": "disruptions,",
+          "start": 34.423,
+          "end": 35.065
+        },
+        {
+          "text": "because",
+          "start": 35.386,
+          "end": 35.666
+        },
+        {
+          "text": "it",
+          "start": 35.726,
+          "end": 35.787
+        },
+        {
+          "text": "is",
+          "start": 35.907,
+          "end": 36.007
+        },
+        {
+          "text": "persistent,",
+          "start": 36.188,
+          "end": 36.909
+        },
+        {
+          "text": "occurs",
+          "start": 37.33,
+          "end": 37.631
+        },
+        {
+          "text": "regularly",
+          "start": 37.671,
+          "end": 38.292
+        },
+        {
+          "text": "and",
+          "start": 38.613,
+          "end": 38.693
+        },
+        {
+          "text": "can",
+          "start": 38.754,
+          "end": 38.874
+        },
+        {
+          "text": "interfere",
+          "start": 38.994,
+          "end": 39.535
+        },
+        {
+          "text": "with",
+          "start": 39.596,
+          "end": 39.716
+        },
+        {
+          "text": "the",
+          "start": 39.776,
+          "end": 39.856
+        },
+        {
+          "text": "quality",
+          "start": 39.916,
+          "end": 40.317
+        },
+        {
+          "text": "of",
+          "start": 40.357,
+          "end": 40.397
+        },
+        {
+          "text": "your",
+          "start": 40.438,
+          "end": 40.598
+        },
+        {
+          "text": "life,",
+          "start": 40.658,
+          "end": 40.919
+        },
+        {
+          "text": "your",
+          "start": 41.28,
+          "end": 41.42
+        },
+        {
+          "text": "relationships,",
+          "start": 41.46,
+          "end": 42.222
+        },
+        {
+          "text": "and",
+          "start": 42.462,
+          "end": 42.543
+        },
+        {
+          "text": "your",
+          "start": 42.583,
+          "end": 42.703
+        },
+        {
+          "text": "work\".",
+          "start": 42.763,
+          "end": 43.084
+        }
+      ]
+    },
+    {
+      "time": 43.765,
+      "text": "What we do know are factors that make it worse.",
+      "translation": "我们所知道的是，有些因素会使它恶化。",
+      "words": [
+        {
+          "text": "What",
+          "start": 43.765,
+          "end": 43.866
+        },
+        {
+          "text": "we",
+          "start": 43.906,
+          "end": 44.026
+        },
+        {
+          "text": "do",
+          "start": 44.086,
+          "end": 44.267
+        },
+        {
+          "text": "know",
+          "start": 44.307,
+          "end": 44.527
+        },
+        {
+          "text": "are",
+          "start": 44.547,
+          "end": 44.908
+        },
+        {
+          "text": "factors",
+          "start": 44.968,
+          "end": 45.349
+        },
+        {
+          "text": "that",
+          "start": 45.389,
+          "end": 45.509
+        },
+        {
+          "text": "make",
+          "start": 45.55,
+          "end": 45.73
+        },
+        {
+          "text": "it",
+          "start": 45.79,
+          "end": 45.85
+        },
+        {
+          "text": "worse.",
+          "start": 45.91,
+          "end": 46.592
+        }
+      ]
+    },
+    {
+      "time": 46.572,
+      "text": "Fatigue, for example, is a key contributor to brain fog, making it hard to stay focused.",
+      "translation": "例如，疲劳是导致脑雾的关键因素之一，疲劳使人难以保持专注。",
+      "words": [
+        {
+          "text": "Fatigue,",
+          "start": 46.572,
+          "end": 47.373
+        },
+        {
+          "text": "for",
+          "start": 47.574,
+          "end": 47.694
+        },
+        {
+          "text": "example,",
+          "start": 47.754,
+          "end": 48.235
+        },
+        {
+          "text": "is",
+          "start": 48.435,
+          "end": 48.515
+        },
+        {
+          "text": "a",
+          "start": 48.576,
+          "end": 48.596
+        },
+        {
+          "text": "key",
+          "start": 48.716,
+          "end": 48.996
+        },
+        {
+          "text": "contributor",
+          "start": 49.076,
+          "end": 49.738
+        },
+        {
+          "text": "to",
+          "start": 49.778,
+          "end": 49.878
+        },
+        {
+          "text": "brain",
+          "start": 49.938,
+          "end": 50.198
+        },
+        {
+          "text": "fog,",
+          "start": 50.258,
+          "end": 50.499
+        },
+        {
+          "text": "making",
+          "start": 50.88,
+          "end": 51.18
+        },
+        {
+          "text": "it",
+          "start": 51.26,
+          "end": 51.32
+        },
+        {
+          "text": "hard",
+          "start": 51.36,
+          "end": 51.661
+        },
+        {
+          "text": "to",
+          "start": 51.721,
+          "end": 51.841
+        },
+        {
+          "text": "stay",
+          "start": 51.901,
+          "end": 52.202
+        },
+        {
+          "text": "focused.",
+          "start": 52.262,
+          "end": 53.003
+        }
+      ]
+    },
+    {
+      "time": 53.023,
+      "text": "This is because sleep deficiency can change activity in some parts of the brain, which means processing and recalling detail becomes harder.",
+      "translation": "这是因为睡眠不足会改变大脑某些区域的活跃度，这意味着处理和回忆细节会变得更加困难。",
+      "words": [
+        {
+          "text": "This",
+          "start": 53.023,
+          "end": 53.164
+        },
+        {
+          "text": "is",
+          "start": 53.224,
+          "end": 53.284
+        },
+        {
+          "text": "because",
+          "start": 53.364,
+          "end": 53.704
+        },
+        {
+          "text": "sleep",
+          "start": 53.805,
+          "end": 54.125
+        },
+        {
+          "text": "deficiency",
+          "start": 54.165,
+          "end": 54.846
+        },
+        {
+          "text": "can",
+          "start": 54.947,
+          "end": 55.107
+        },
+        {
+          "text": "change",
+          "start": 55.207,
+          "end": 55.568
+        },
+        {
+          "text": "activity",
+          "start": 55.648,
+          "end": 56.209
+        },
+        {
+          "text": "in",
+          "start": 56.349,
+          "end": 56.429
+        },
+        {
+          "text": "some",
+          "start": 56.509,
+          "end": 56.71
+        },
+        {
+          "text": "parts",
+          "start": 56.75,
+          "end": 57.03
+        },
+        {
+          "text": "of",
+          "start": 57.09,
+          "end": 57.13
+        },
+        {
+          "text": "the",
+          "start": 57.171,
+          "end": 57.271
+        },
+        {
+          "text": "brain,",
+          "start": 57.331,
+          "end": 57.651
+        },
+        {
+          "text": "which",
+          "start": 58.052,
+          "end": 58.212
+        },
+        {
+          "text": "means",
+          "start": 58.293,
+          "end": 58.513
+        },
+        {
+          "text": "processing",
+          "start": 58.553,
+          "end": 59.274
+        },
+        {
+          "text": "and",
+          "start": 59.414,
+          "end": 59.495
+        },
+        {
+          "text": "recalling",
+          "start": 59.555,
+          "end": 60.076
+        },
+        {
+          "text": "detail",
+          "start": 60.156,
+          "end": 60.597
+        },
+        {
+          "text": "becomes",
+          "start": 60.697,
+          "end": 61.037
+        },
+        {
+          "text": "harder.",
+          "start": 61.117,
+          "end": 61.478
+        }
+      ]
+    },
+    {
+      "time": 62.139,
+      "text": "So, if you're suffering from brain fog, what can you do to fix it?",
+      "translation": "那么，如果你正受到脑雾的困扰，可以做些什么来改善呢？",
+      "words": [
+        {
+          "text": "So,",
+          "start": 62.139,
+          "end": 62.36
+        },
+        {
+          "text": "if",
+          "start": 62.56,
+          "end": 62.62
+        },
+        {
+          "text": "you're",
+          "start": 62.66,
+          "end": 62.861
+        },
+        {
+          "text": "suffering",
+          "start": 62.941,
+          "end": 63.442
+        },
+        {
+          "text": "from",
+          "start": 63.522,
+          "end": 63.682
+        },
+        {
+          "text": "brain",
+          "start": 63.782,
+          "end": 64.063
+        },
+        {
+          "text": "fog,",
+          "start": 64.123,
+          "end": 64.403
+        },
+        {
+          "text": "what",
+          "start": 64.704,
+          "end": 64.824
+        },
+        {
+          "text": "can",
+          "start": 64.864,
+          "end": 64.984
+        },
+        {
+          "text": "you",
+          "start": 65.044,
+          "end": 65.145
+        },
+        {
+          "text": "do",
+          "start": 65.205,
+          "end": 65.345
+        },
+        {
+          "text": "to",
+          "start": 65.445,
+          "end": 65.565
+        },
+        {
+          "text": "fix",
+          "start": 65.625,
+          "end": 65.906
+        },
+        {
+          "text": "it?",
+          "start": 66.006,
+          "end": 66.106
+        }
+      ]
+    },
+    {
+      "time": 66.908,
+      "text": "One thing you can do is avoid ultra-processed foods (UPFs).",
+      "translation": "你可以做的一件事是避免超加工食品（UPFs）。",
+      "words": [
+        {
+          "text": "One",
+          "start": 66.908,
+          "end": 67.008
+        },
+        {
+          "text": "thing",
+          "start": 67.068,
+          "end": 67.288
+        },
+        {
+          "text": "you",
+          "start": 67.308,
+          "end": 67.489
+        },
+        {
+          "text": "can",
+          "start": 67.529,
+          "end": 67.669
+        },
+        {
+          "text": "do",
+          "start": 67.729,
+          "end": 67.909
+        },
+        {
+          "text": "is",
+          "start": 67.949,
+          "end": 68.19
+        },
+        {
+          "text": "avoid",
+          "start": 68.27,
+          "end": 68.631
+        },
+        {
+          "text": "ultra-processed",
+          "start": 68.671,
+          "end": 69.793
+        },
+        {
+          "text": "foods",
+          "start": 69.873,
+          "end": 70.213
+        },
+        {
+          "text": "(UPFs).",
+          "start": 70.754,
+          "end": 71.736
+        }
+      ]
+    },
+    {
+      "time": 71.716,
+      "text": "Dr Megan Rossi, the founder of The Gut Health Doctor, told the BBC that UPFs are often low in essential nutrients like magnesium, omega-3 fatty acids and iron, all of which are crucial for brain function and mental clarity.",
+      "translation": " “肠道健康医生”的创始人 Megan Rossi 博士告诉 BBC，“超加工食品通常缺乏镁、Omega-3 脂肪酸和铁等必需营养素，这些营养素对大脑功能和思维清晰至关重要。”",
+      "words": [
+        {
+          "text": "Dr",
+          "start": 71.716,
+          "end": 72.217
+        },
+        {
+          "text": "Megan",
+          "start": 72.277,
+          "end": 72.557
+        },
+        {
+          "text": "Rossi,",
+          "start": 72.598,
+          "end": 72.978
+        },
+        {
+          "text": "the",
+          "start": 73.259,
+          "end": 73.359
+        },
+        {
+          "text": "founder",
+          "start": 73.419,
+          "end": 73.86
+        },
+        {
+          "text": "of",
+          "start": 73.98,
+          "end": 74.02
+        },
+        {
+          "text": "The",
+          "start": 74.08,
+          "end": 74.18
+        },
+        {
+          "text": "Gut",
+          "start": 74.26,
+          "end": 74.481
+        },
+        {
+          "text": "Health",
+          "start": 74.541,
+          "end": 74.821
+        },
+        {
+          "text": "Doctor,",
+          "start": 74.901,
+          "end": 75.282
+        },
+        {
+          "text": "told",
+          "start": 75.623,
+          "end": 75.843
+        },
+        {
+          "text": "the",
+          "start": 75.883,
+          "end": 75.943
+        },
+        {
+          "text": "BBC",
+          "start": 76.003,
+          "end": 76.624
+        },
+        {
+          "text": "that",
+          "start": 76.865,
+          "end": 77.025
+        },
+        {
+          "text": "UPFs",
+          "start": 77.466,
+          "end": 78.007
+        },
+        {
+          "text": "are",
+          "start": 78.207,
+          "end": 78.307
+        },
+        {
+          "text": "often",
+          "start": 78.407,
+          "end": 78.688
+        },
+        {
+          "text": "low",
+          "start": 78.748,
+          "end": 79.008
+        },
+        {
+          "text": "in",
+          "start": 79.169,
+          "end": 79.249
+        },
+        {
+          "text": "essential",
+          "start": 79.309,
+          "end": 79.87
+        },
+        {
+          "text": "nutrients",
+          "start": 79.95,
+          "end": 80.571
+        },
+        {
+          "text": "like",
+          "start": 80.791,
+          "end": 80.972
+        },
+        {
+          "text": "magnesium,",
+          "start": 81.052,
+          "end": 81.713
+        },
+        {
+          "text": "omega-3",
+          "start": 82.274,
+          "end": 82.955
+        },
+        {
+          "text": "fatty",
+          "start": 83.055,
+          "end": 83.396
+        },
+        {
+          "text": "acids",
+          "start": 83.536,
+          "end": 83.937
+        },
+        {
+          "text": "and",
+          "start": 84.157,
+          "end": 84.237
+        },
+        {
+          "text": "iron,",
+          "start": 84.478,
+          "end": 84.718
+        },
+        {
+          "text": "all",
+          "start": 85.64,
+          "end": 85.78
+        },
+        {
+          "text": "of",
+          "start": 85.82,
+          "end": 85.86
+        },
+        {
+          "text": "which",
+          "start": 85.92,
+          "end": 86.101
+        },
+        {
+          "text": "are",
+          "start": 86.221,
+          "end": 86.301
+        },
+        {
+          "text": "crucial",
+          "start": 86.421,
+          "end": 86.882
+        },
+        {
+          "text": "for",
+          "start": 86.982,
+          "end": 87.122
+        },
+        {
+          "text": "brain",
+          "start": 87.202,
+          "end": 87.543
+        },
+        {
+          "text": "function",
+          "start": 87.623,
+          "end": 88.044
+        },
+        {
+          "text": "and",
+          "start": 88.264,
+          "end": 88.344
+        },
+        {
+          "text": "mental",
+          "start": 88.404,
+          "end": 88.745
+        },
+        {
+          "text": "clarity.",
+          "start": 88.785,
+          "end": 89.286
+        }
+      ]
+    },
+    {
+      "time": 90.288,
+      "text": "Therefore, we should pack our diets with nutrient-rich foods.",
+      "translation": "因此，我们应该在饮食中增加富含营养的食物。",
+      "words": [
+        {
+          "text": "Therefore,",
+          "start": 90.288,
+          "end": 90.748
+        },
+        {
+          "text": "we",
+          "start": 90.909,
+          "end": 91.009
+        },
+        {
+          "text": "should",
+          "start": 91.049,
+          "end": 91.229
+        },
+        {
+          "text": "pack",
+          "start": 91.309,
+          "end": 91.55
+        },
+        {
+          "text": "our",
+          "start": 91.61,
+          "end": 91.71
+        },
+        {
+          "text": "diets",
+          "start": 91.75,
+          "end": 92.151
+        },
+        {
+          "text": "with",
+          "start": 92.211,
+          "end": 92.371
+        },
+        {
+          "text": "nutrient-rich",
+          "start": 92.552,
+          "end": 93.533
+        },
+        {
+          "text": "foods.",
+          "start": 93.593,
+          "end": 93.994
+        }
+      ]
+    }
+  ]
+}
