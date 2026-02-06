@@ -2,199 +2,205 @@
     "articles": [
         {
             "id": "1",
-            "title": "第1篇：🌳Nature can reduce anxiety and boost mental health🧘",
+            "title": "第1篇：🌳🌳Nature can reduce anxiety and boost mental health🧘🧘",
             "dataFile": "data/article-1.json",
             "audioFile": "data/audio-1.mp3"
         },
         {
             "id": "2",
-            "title": "第2篇：💔Exercise and therapy can heal a broken heart🏃‍♂️",
+            "title": "第2篇：💔💔Exercise and therapy can heal a broken heart🏃🏃♂️",
             "dataFile": "data/article-2.json",
             "audioFile": "data/audio-2.mp3"
         },
         {
             "id": "3",
-            "title": "第3篇：🙂Different foods affect your body's smells",
+            "title": "第3篇：🙂🙂Different foods affect your body's smells",
             "dataFile": "data/article-3.json",
             "audioFile": "data/audio-3.mp3"
         },
         {
             "id": "4",
-            "title": "第4篇：🐝How to make a home for solitary bees ",
+            "title": "第4篇：🐝🐝How to make a home for solitary bees ",
             "dataFile": "data/article-4.json",
             "audioFile": "data/audio-4.mp3"
         },
         {
             "id": "5",
-            "title": "第5篇：🦠Drug-resistant superbugs spreading💊",
+            "title": "第5篇：🦠🦠🦠Drug-resistant superbugs spreading💊💊",
             "dataFile": "data/article-5.json",
             "audioFile": "data/audio-5.mp3"
         },
         {
             "id": "6",
-            "title": "第6篇：💓Over 99% of heart attacks have a warning sign⚠️",
+            "title": "第6篇：💓💓Over 99% of heart attacks have a warning sign⚠️",
             "dataFile": "data/article-6.json",
             "audioFile": "data/audio-6.mp3"
         },
         {
             "id": "7",
-            "title": "第7篇：🐝New 'Lucifer' bee with devil-like horns found😈",
+            "title": "第7篇：🐝🐝New 'Lucifer' bee with devil-like horns found😈😈",
             "dataFile": "data/article-7.json",
             "audioFile": "data/audio-7.mp3"
         },
         {
             "id": "8",
-            "title": "第8篇：🏰Disney cuts hundreds of jobs✂️",
+            "title": "第8篇：🏰🏰Disney cuts hundreds of jobs✂✂️",
             "dataFile": "data/article-8.json",
             "audioFile": "data/audio-8.mp3"
         },
         {
             "id": "9",
-            "title": "第9篇：✈️Travelling could slow down the ageing process⏳",
+            "title": "第9篇：✈✈️Travelling could slow down the ageing process⏳⏳⏳",
             "dataFile": "data/article-9.json",
             "audioFile": "data/audio-9.mp3"
         },
         {
             "id": "10",
-            "title": "第10篇：🌍Global warming will delay next ice age❄️",
+            "title": "第10篇：🌍🌍Global warming will delay next ice age❄❄️",
             "dataFile": "data/article-10.json",
             "audioFile": "data/audio-10.mp3"
         },
         {
             "id": "11",
-            "title": "第11篇：🇳🇿New Zealand relaxes visa rules for 'digital nomads'💻",
+            "title": "第11篇：🇳🇳🇿🇿New Zealand relaxes visa rules for 'digital nomads'💻💻",
             "dataFile": "data/article-11.json",
             "audioFile": "data/audio-11.mp3"
         },
         {
             "id": "12",
-            "title": "第12篇：🧀Scientists say cheese could give us nightmares😈",
+            "title": "第12篇：🧀🧀Scientists say cheese could give us nightmares😈😈",
             "dataFile": "data/article-12.json",
             "audioFile": "data/audio-12.mp3"
         },
         {
             "id": "13",
-            "title": "第13篇：🦒Animal puppets walk 20,000 km for climate action🚶",
+            "title": "第13篇：🦒🦒🦒Animal puppets walk 20,000 km for climate action🚶🚶",
             "dataFile": "data/article-13.json",
             "audioFile": "data/audio-13.mp3"
         },
         {
             "id": "14",
-            "title": "第14篇：🎧Noise-cancelling headphones may cause hearing problems👂",
+            "title": "第14篇：🎧🎧Noise-cancelling headphones may cause hearing problems👂👂",
             "dataFile": "data/article-14.json",
             "audioFile": "data/audio-14.mp3"
         },
         {
             "id": "15",
-            "title": "第15篇：🦷Flossing your teeth could reduce the risk of stroke🧠",
+            "title": "第15篇：🦷🦷🦷Flossing your teeth could reduce the risk of stroke🧠🧠",
             "dataFile": "data/article-15.json",
             "audioFile": "data/audio-15.mp3"
         },
         {
             "id": "16",
-            "title": "第16篇：🔥Los Angeles wildfires lead to sky-high rents🏠",
+            "title": "第16篇：🔥Los Angeles wildfires lead to sky-high rents🏠🏠",
             "dataFile": "data/article-16.json",
             "audioFile": "data/audio-16.mp3"
         },
         {
             "id": "17",
-            "title": "第17篇：🎵Energy levels of songs affect memories🧠",
+            "title": "第17篇：🎵🎵Energy levels of songs affect memories🧠🧠",
             "dataFile": "data/article-17.json",
             "audioFile": "data/audio-17.mp3"
         },
         {
             "id": "18",
-            "title": "第18篇：🚀NASA spacecraft flies closest ever to the Sun☀️",
+            "title": "第18篇：🚀🚀NASA spacecraft flies closest ever to the Sun☀☀️",
             "dataFile": "data/article-18.json",
             "audioFile": "data/audio-18.mp3"
         },
         {
             "id": "19",
-            "title": "第19篇：🌞Solar and wind beat coal for first time💨",
+            "title": "第19篇：🌞🌞Solar and wind beat coal for first time💨💨",
             "dataFile": "data/article-19.json",
             "audioFile": "data/audio-19.mp3"
         },
         {
             "id": "20",
-            "title": "第20篇：🌉World's tallest bridge opens in China",
+            "title": "第20篇：🌉🌉World's tallest bridge opens in China",
             "dataFile": "data/article-20.json",
             "audioFile": "data/audio-20.mp3"
         },
         {
             "id": "21",
-            "title": "第21篇：🧗‍♂️The French Spiderman 🕷️",
+            "title": "第21篇：🧗🧗♂️The French Spiderman 🕷🕷🕷️",
             "dataFile": "data/article-21.json",
             "audioFile": "data/audio-21.mp3"
         },
         {
             "id": "22",
-            "title": "第22篇：🎈This is how hot air balloons work 🎈",
+            "title": "第22篇：🧠The Truth About Brain Fog 关于“脑雾”的真相🌫️",
             "dataFile": "data/article-22.json",
             "audioFile": "data/audio-22.mp3"
         },
         {
             "id": "24",
-            "title": "第24篇：US Scientists Develop Flea-Sized Robot for Future Medical Use🤖",
+            "title": "第24篇：US Scientists Develop Flea-Sized Robot for Future Medical Use🤖🤖",
             "dataFile": "data/article-24.json",
             "audioFile": "data/audio-24.m4a"
         },
         {
             "id": "51",
-            "title": "第51篇：📖The Story of Pearl Buck ✍️",
+            "title": "第51篇：📖📖The Story of Pearl Buck ✍✍️",
             "dataFile": "data/article-51.json",
             "audioFile": "data/audio-51.mp3"
         },
         {
             "id": "52",
-            "title": "第52篇：😴Why Napping Matters 🧠",
+            "title": "第52篇：😴😴Why Napping Matters 🧠🧠🧠",
             "dataFile": "data/article-52.json",
             "audioFile": "data/audio-52.mp3"
         },
         {
             "id": "53",
-            "title": "第53篇：🗣️The Truth About Accents 🧠",
+            "title": "第53篇：🗣🗣️The Truth About Accents 🧠🧠🧠",
             "dataFile": "data/article-53.json",
             "audioFile": "data/audio-53.mp3"
         },
         {
             "id": "54",
-            "title": "第54篇：🌋The Park Sitting on a Supervolcano🏞️",
+            "title": "第54篇：🌋🌋The Park Sitting on a Supervolcano🏞🏞️",
             "dataFile": "data/article-54.json",
             "audioFile": "data/audio-54.mp3"
         },
         {
             "id": "55",
-            "title": "第55篇：🍷How Does Drinking Alcohol Affect Your Health🏥",
+            "title": "第55篇：🍷🍷How Does Drinking Alcohol Affect Your Health🏥🏥",
             "dataFile": "data/article-55.json",
             "audioFile": "data/audio-55.mp3"
         },
         {
             "id": "56",
-            "title": "第56篇：📚How to Relieve Back-to-School Stress😌",
+            "title": "第56篇：📚📚How to Relieve Back-to-School Stress😌😌",
             "dataFile": "data/article-56.json",
             "audioFile": "data/audio-56.mp3"
         },
         {
             "id": "57",
-            "title": "第57篇：😊The Harvard Study on Happiness",
+            "title": "第57篇：😊😊The Harvard Study on Happiness",
             "dataFile": "data/article-57.json",
             "audioFile": "data/audio-57.mp3"
         },
         {
             "id": "65",
-            "title": "第65篇：📱Why Apps Know Exactly What You Like ❤️",
+            "title": "第65篇：📱📱Why Apps Know Exactly What You Like ❤❤️",
             "dataFile": "data/article-65.json",
             "audioFile": "data/audio-65.mp3"
         },
         {
+            "id": "71",
+            "title": "第71篇： 🚄🚄🚄Mid-Autumn Holiday Travel Rush",
+            "dataFile": "data/article-71.json",
+            "audioFile": "data/audio-71.m4a"
+        },
+        {
             "id": "79",
-            "title": "第79篇：✈️ Airbus flights disrupted for urgent software update 🛠️",
+            "title": "第79篇：✈✈️ Airbus flights disrupted for urgent software update 🛠🛠🛠️",
             "dataFile": "data/article-79.json",
             "audioFile": "data/audio-79.mp3"
         },
         {
             "id": "89",
-            "title": "第89篇：🏅Prepare for Parisian Perfection: Paris 2024 Olympics Set to Showcase French Flair and Global Unity",
+            "title": "第89篇：🏅🏅Prepare for Parisian Perfection: Paris 2024 Olympics Set to Showcase French Flair and Global Unity",
             "dataFile": "data/article-89.json",
             "audioFile": "data/audio-89.m4a"
         }
