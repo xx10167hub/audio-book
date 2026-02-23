@@ -97,6 +97,29 @@
                         </svg>
                     </button>
 
+                    <div class="sleep-timer-wrapper">
+                        <button class="control-btn" id="sleep-timer-btn" title="定时停止">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <polyline points="12 7 12 12 15 15"></polyline>
+                            </svg>
+                        </button>
+                        <div id="sleep-timer-menu" class="sleep-timer-menu">
+                            <div class="sleep-menu-title">定时停止</div>
+                            <div class="sleep-option" data-minutes="5">5 分钟</div>
+                            <div class="sleep-option" data-minutes="10">10 分钟</div>
+                            <div class="sleep-custom-row">
+                                <input type="number" id="sleep-custom-input" class="sleep-custom-input" placeholder="自定义" min="1" max="999">
+                                <span class="sleep-custom-unit">分钟</span>
+                                <button id="sleep-custom-confirm" class="sleep-custom-btn">✓</button>
+                            </div>
+                            <div class="sleep-finish-row" id="sleep-finish-row">
+                                <input type="checkbox" id="sleep-finish-article" class="sleep-finish-checkbox">
+                                <label for="sleep-finish-article" class="sleep-finish-label">播完整篇后停止</label>
+                            </div>
+                        </div>
+                    </div>
+
                     <button class="control-btn" id="loop-btn" title="单句循环">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M17 1l4 4-4 4"></path>
@@ -109,22 +132,59 @@
                 </div>
                 
                 <div class="mini-selectors">
-                    <select id="display-mode" class="mini-select" title="显示模式">
-                        <option value="all" selected>👁️ 显示全部</option>
-                        <option value="original">📝 只看原文</option>
-                        <option value="translation">🇨🇳 只看译文</option>
-                        <option value="none">🙈 盲听模式</option>
-                        <option value="cloze">🕳️ 挖词模式</option> 
-                    </select>
-                    
-                    <select id="speed-control" class="mini-select" title="播放速度">
-                        <option value="0.5">0.5x</option>
-                        <option value="0.8">0.8x</option>
-                        <option value="1.0" selected>1.0x</option>
-                        <option value="1.2">1.2x</option>
-                        <option value="1.5">1.5x</option>
-                    </select>
+                    <button class="mini-select-btn" id="display-mode-btn">
+                        <span id="display-mode-label">👁️ 显示全部</span>
+                    </button>
+                    <button class="mini-select-btn" id="speed-control-btn">
+                        <span id="speed-control-label">1.0x</span>
+                    </button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部弹出：显示模式 -->
+    <div class="bottom-sheet-overlay" id="display-mode-overlay">
+        <div class="bottom-sheet">
+            <div class="bottom-sheet-handle"></div>
+            <div class="bottom-sheet-title">显示模式</div>
+            <div class="bottom-sheet-option active" data-value="all">
+                <span class="bs-radio"></span><span>👁️ 显示全部</span>
+            </div>
+            <div class="bottom-sheet-option" data-value="original">
+                <span class="bs-radio"></span><span>📝 只看原文</span>
+            </div>
+            <div class="bottom-sheet-option" data-value="translation">
+                <span class="bs-radio"></span><span>🇨🇳 只看译文</span>
+            </div>
+            <div class="bottom-sheet-option" data-value="none">
+                <span class="bs-radio"></span><span>🙈 盲听模式</span>
+            </div>
+            <div class="bottom-sheet-option" data-value="cloze">
+                <span class="bs-radio"></span><span>🕳️ 挖词模式</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部弹出：播放速度 -->
+    <div class="bottom-sheet-overlay" id="speed-control-overlay">
+        <div class="bottom-sheet">
+            <div class="bottom-sheet-handle"></div>
+            <div class="bottom-sheet-title">播放速度</div>
+            <div class="bottom-sheet-option" data-value="0.5">
+                <span class="bs-radio"></span><span>0.5x</span>
+            </div>
+            <div class="bottom-sheet-option" data-value="0.8">
+                <span class="bs-radio"></span><span>0.8x</span>
+            </div>
+            <div class="bottom-sheet-option active" data-value="1.0">
+                <span class="bs-radio"></span><span>1.0x</span>
+            </div>
+            <div class="bottom-sheet-option" data-value="1.2">
+                <span class="bs-radio"></span><span>1.2x</span>
+            </div>
+            <div class="bottom-sheet-option" data-value="1.5">
+                <span class="bs-radio"></span><span>1.5x</span>
             </div>
         </div>
     </div>
