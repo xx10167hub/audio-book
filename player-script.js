@@ -20,8 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const subtitleElement = document.getElementById('article-subtitle'); // 副标题元素
     
     const transcriptContainer = document.getElementById('transcript-container');
-    const speedControl = document.getElementById('speed-control');
-    const displayMode = document.getElementById('display-mode'); 
+    // 自定义 bottom sheet 替代 select，用简单变量追踪当前值
+    let currentDisplayMode = 'all';
+    let currentSpeed = '1.0';
+    // 兼容旧代码中 displayMode.value 的引用
+    const displayMode = {
+        get value() { return currentDisplayMode; },
+        set value(v) { currentDisplayMode = v; }
+    };
+    const speedControl = {
+        get value() { return currentSpeed; },
+        set value(v) { currentSpeed = v; }
+    };
     const playPauseBtn = document.getElementById('play-pause-btn');
     const playIcon = document.getElementById('play-icon');
     const pauseIcon = document.getElementById('pause-icon');
@@ -336,7 +346,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 let totalWordCount = 0;
                 transcriptContainer.innerHTML = ''; 
-                if (displayMode) displayMode.dispatchEvent(new Event('change'));
+                if (displayMode) applyDisplayMode(currentDisplayMode);
                 
                 data.transcript.forEach((line, index) => {
                     if (line.words && line.words.length > 0) totalWordCount += line.words.length;
@@ -540,6 +550,9 @@ document.addEventListener('DOMContentLoaded', function() {
             audioPlayer.currentTime = 0;
             audioPlayer.play();
         }
+        else {
+            triggerSleepIfArticleEnd();
+        }
     });
 
     backwardBtn.addEventListener('click', function() {
@@ -564,7 +577,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    speedControl.addEventListener('change', function() { audioPlayer.playbackRate = parseFloat(this.value); });
+    currentSpeed = '1.0';
+    audioPlayer.playbackRate = 1.0;
 
     loopBtn.addEventListener('click', function() {
         isLooping = !isLooping;
@@ -708,6 +722,132 @@ document.addEventListener('DOMContentLoaded', function() {
         audioPlayer.play();
     }
     
+    // ===== 😴 睡眠计时器（定时停止，支持多档选择）=====
+    const sleepTimerBtn = document.getElementById('sleep-timer-btn');
+    const sleepTimerMenu = document.getElementById('sleep-timer-menu');
+    let sleepTimer = null;
+    let sleepCountdownInterval = null;
+    let sleepOnArticleEnd = false;  // 勾选了"播完整篇后停止"
+    let sleepPending = false;       // 时间到了，等待篇末再停
+
+    function cancelSleepTimer() {
+        clearTimeout(sleepTimer);
+        clearInterval(sleepCountdownInterval);
+        sleepTimer = null;
+        sleepPending = false;
+        sleepTimerBtn.classList.remove('active', 'sleep-pending');
+        sleepTimerBtn.querySelector('svg').style.display = '';
+        const label = sleepTimerBtn.querySelector('.sleep-label');
+        if (label) label.remove();
+    }
+
+    function triggerSleepIfArticleEnd() {
+        if (sleepPending) {
+            audioPlayer.pause();
+            cancelSleepTimer();
+        }
+    }
+
+    function startSleepTimer(minutes) {
+        cancelSleepTimer();
+        const finishCheckbox = document.getElementById('sleep-finish-article');
+        sleepOnArticleEnd = finishCheckbox ? finishCheckbox.checked : false;
+
+        let remaining = minutes * 60;
+        sleepTimerBtn.classList.add('active');
+        sleepTimerBtn.querySelector('svg').style.display = 'none';
+        const label = document.createElement('span');
+        label.className = 'sleep-label';
+        label.style.fontSize = '11px';
+        label.style.fontWeight = 'bold';
+        label.textContent = `${minutes}:00`;
+        sleepTimerBtn.appendChild(label);
+
+        sleepCountdownInterval = setInterval(function() {
+            remaining--;
+            const m = Math.floor(remaining / 60);
+            const s = remaining % 60;
+            label.textContent = `${m}:${String(s).padStart(2,'0')}`;
+        }, 1000);
+
+        sleepTimer = setTimeout(function() {
+            clearInterval(sleepCountdownInterval);
+            sleepTimer = null;
+            if (sleepOnArticleEnd) {
+                // 等篇末：进入 pending 状态，按钮变色提示
+                sleepPending = true;
+                label.textContent = '篇末';
+                sleepTimerBtn.classList.add('sleep-pending');
+            } else {
+                // 直接停
+                audioPlayer.pause();
+                cancelSleepTimer();
+            }
+        }, minutes * 60 * 1000);
+    }
+
+    if (sleepTimerBtn && sleepTimerMenu) {
+        // 点击按钮：计时中则取消；未计时则弹出菜单
+        sleepTimerBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (sleepTimer) {
+                cancelSleepTimer();
+                sleepTimerMenu.classList.remove('show');
+                return;
+            }
+            // 切换菜单显示
+            sleepTimerMenu.classList.toggle('show');
+        });
+
+        // 点击菜单选项
+        sleepTimerMenu.querySelectorAll('.sleep-option').forEach(function(opt) {
+            opt.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const minutes = parseInt(this.dataset.minutes);
+                startSleepTimer(minutes);
+                sleepTimerMenu.classList.remove('show');
+            });
+        });
+
+        // 勾选框点击不关闭菜单
+        const sleepFinishRow = document.getElementById('sleep-finish-row');
+        if (sleepFinishRow) {
+            sleepFinishRow.addEventListener('click', function(e) { e.stopPropagation(); });
+        }
+
+        // 自定义时间确认
+        const sleepCustomConfirm = document.getElementById('sleep-custom-confirm');
+        const sleepCustomInput = document.getElementById('sleep-custom-input');
+
+        function confirmCustomTimer() {
+            const val = parseInt(sleepCustomInput.value);
+            if (!val || val < 1) return;
+            startSleepTimer(val);
+            sleepTimerMenu.classList.remove('show');
+            sleepCustomInput.value = '';
+        }
+
+        if (sleepCustomConfirm) {
+            sleepCustomConfirm.addEventListener('click', function(e) {
+                e.stopPropagation();
+                confirmCustomTimer();
+            });
+        }
+
+        if (sleepCustomInput) {
+            sleepCustomInput.addEventListener('click', function(e) { e.stopPropagation(); });
+            sleepCustomInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') confirmCustomTimer();
+                e.stopPropagation();
+            });
+        }
+
+        // 点击其他地方关闭菜单
+        document.addEventListener('click', function() {
+            sleepTimerMenu.classList.remove('show');
+        });
+    }
+
     document.addEventListener('keydown', function(e) {
         if (['INPUT', 'SELECT', 'TEXTAREA'].includes(e.target.tagName)) return;
         if (e.code === 'Space') { e.preventDefault(); playPauseBtn.click(); }
@@ -846,22 +986,54 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    if (displayMode) {
-        displayMode.addEventListener('change', function() {
-            transcriptContainer.classList.remove('mode-all', 'mode-original', 'mode-translation', 'mode-none', 'mode-cloze');
-            
-            const currentMode = this.value;
-            transcriptContainer.classList.add(`mode-${currentMode}`);
+    // ===== 自定义 Bottom Sheet：显示模式 & 播放速度 =====
+    function setupBottomSheet(btnId, overlayId, labelId, onSelect) {
+        const btn = document.getElementById(btnId);
+        const overlay = document.getElementById(overlayId);
+        const labelEl = document.getElementById(labelId);
+        if (!btn || !overlay) return;
 
-            if (currentMode === 'cloze') {
-                generateClozeMode();
-            } else {
-                allWordElements.forEach(el => el.classList.remove('cloze-hidden'));
-            }
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            overlay.classList.add('show');
         });
-        
-        displayMode.dispatchEvent(new Event('change'));
+
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) overlay.classList.remove('show');
+        });
+
+        overlay.querySelectorAll('.bottom-sheet-option').forEach(function(opt) {
+            opt.addEventListener('click', function() {
+                overlay.querySelectorAll('.bottom-sheet-option').forEach(o => o.classList.remove('active'));
+                this.classList.add('active');
+                const value = this.dataset.value;
+                labelEl.textContent = this.querySelector('span:last-child').textContent.trim();
+                onSelect(value);
+                overlay.classList.remove('show');
+            });
+        });
     }
+
+    setupBottomSheet('display-mode-btn', 'display-mode-overlay', 'display-mode-label', function(value) {
+        applyDisplayMode(value);
+    });
+
+    setupBottomSheet('speed-control-btn', 'speed-control-overlay', 'speed-control-label', function(value) {
+        speedControl.value = value;
+        audioPlayer.playbackRate = parseFloat(value);
+    });
+
+    function applyDisplayMode(mode) {
+        currentDisplayMode = mode;
+        transcriptContainer.className = `transcript mode-${mode}`;
+        
+        if (mode === 'cloze') {
+            setTimeout(generateClozeMode, 100);
+        }
+    }
+
+    // 初始化显示模式
+    applyDisplayMode('all');
 
     loadArticlesConfig();
 });
