@@ -128,9 +128,15 @@
         },
         {
             "id": "22",
-            "title": "第22篇：🧠The Truth About Brain Fog 关于“脑雾”的真相🌫️",
+            "title": "第22篇：🧠The Truth About Brain Fog 关于脑雾的真相🌫️",
             "dataFile": "data/article-22.json",
             "audioFile": "data/audio-22.mp3"
+        },
+        {
+            "id": "30",
+            "title": "第30篇：🧘🧘How to Achieve Flow State in Everyday Life",
+            "dataFile": "data/article-30.json",
+            "audioFile": "data/audio-30.mp3"
         },
         {
             "id": "40",
