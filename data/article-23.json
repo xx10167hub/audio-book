@@ -1,0 +1,320 @@
+{
+  "audioUrl": "./data/audio-23.mp3",
+  "title": "article-23",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "All vegetables begin to decay when they're picked.",
+      "translation": "所有蔬菜一旦被采摘，就开始腐败变质。",
+      "words": [
+        {"text": "All", "start": 0.031, "end": 0.672},
+        {"text": "vegetables", "start": 0.752, "end": 1.313},
+        {"text": "begin", "start": 1.413, "end": 1.713},
+        {"text": "to", "start": 1.753, "end": 1.833},
+        {"text": "decay", "start": 1.874, "end": 2.254},
+        {"text": "when", "start": 2.294, "end": 2.414},
+        {"text": "they're", "start": 2.434, "end": 2.635},
+        {"text": "picked.", "start": 2.655, "end": 2.995}
+      ]
+    },
+    {
+      "time": 3.516,
+      "text": "Within hours they lose their flavour and become unusable.",
+      "translation": "几小时之内，它们就会失去风味，变得无法使用。",
+      "words": [
+        {"text": "Within", "start": 3.516, "end": 3.776},
+        {"text": "hours", "start": 3.836, "end": 4.117},
+        {"text": "they", "start": 4.177, "end": 4.297},
+        {"text": "lose", "start": 4.357, "end": 4.537},
+        {"text": "their", "start": 4.557, "end": 4.717},
+        {"text": "flavour", "start": 4.798, "end": 5.198},
+        {"text": "and", "start": 5.258, "end": 5.338},
+        {"text": "become", "start": 5.378, "end": 5.679},
+        {"text": "unusable.", "start": 5.779, "end": 6.36}
+      ]
+    },
+    {
+      "time": 7.241,
+      "text": "So at the specially chilled packhouse, 200 people work around the clock.",
+      "translation": "因此，在这个专门冷藏的包装车间里，200 名员工昼夜不停地工作。",
+      "words": [
+        {"text": "So", "start": 7.241, "end": 7.381},
+        {"text": "at", "start": 7.441, "end": 7.501},
+        {"text": "the", "start": 7.521, "end": 7.621},
+        {"text": "specially", "start": 7.661, "end": 8.082},
+        {"text": "chilled", "start": 8.162, "end": 8.503},
+        {"text": "packhouse,", "start": 8.583, "end": 9.184},
+        {"text": "200", "start": 9.584, "end": 9.744},
+        {"text": "people", "start": 10.085, "end": 10.365},
+        {"text": "work", "start": 10.405, "end": 10.706},
+        {"text": "around", "start": 10.746, "end": 11.006},
+        {"text": "the", "start": 11.046, "end": 11.106},
+        {"text": "clock.", "start": 11.166, "end": 11.567}
+      ]
+    },
+    {
+      "time": 12.628,
+      "text": "They prepare peppers, cucumbers and tomatoes from dozens of greenhouses for export.",
+      "translation": "他们把来自数十个温室的甜椒、黄瓜和番茄进行处理包装，准备出口。",
+      "words": [
+        {"text": "They", "start": 12.628, "end": 12.708},
+        {"text": "prepare", "start": 12.728, "end": 13.089},
+        {"text": "peppers,", "start": 13.189, "end": 13.69},
+        {"text": "cucumbers", "start": 14.13, "end": 14.791},
+        {"text": "and", "start": 14.931, "end": 15.012},
+        {"text": "tomatoes", "start": 15.092, "end": 15.652},
+        {"text": "from", "start": 15.693, "end": 16.153},
+        {"text": "dozens", "start": 16.233, "end": 16.614},
+        {"text": "of", "start": 16.674, "end": 16.714},
+        {"text": "greenhouses", "start": 16.774, "end": 17.415},
+        {"text": "for", "start": 17.455, "end": 17.815},
+        {"text": "export.", "start": 17.855, "end": 18.456}
+      ]
+    },
+    {
+      "time": 19.578,
+      "text": "Not every farmer in temperate climates can rely on greenhouses for their produce.",
+      "translation": "并非所有温带地区的农民都能依靠温室来种植农产品。",
+      "words": [
+        {"text": "Not", "start": 19.578, "end": 19.738},
+        {"text": "every", "start": 19.818, "end": 19.998},
+        {"text": "farmer", "start": 20.059, "end": 20.419},
+        {"text": "in", "start": 20.479, "end": 20.559},
+        {"text": "temperate", "start": 20.619, "end": 21.04},
+        {"text": "climates", "start": 21.1, "end": 21.561},
+        {"text": "can", "start": 21.641, "end": 21.781},
+        {"text": "rely", "start": 21.821, "end": 22.121},
+        {"text": "on", "start": 22.201, "end": 22.262},
+        {"text": "greenhouses", "start": 22.322, "end": 22.922},
+        {"text": "for", "start": 22.963, "end": 23.163},
+        {"text": "their", "start": 23.203, "end": 23.343},
+        {"text": "produce.", "start": 23.383, "end": 24.064}
+      ]
+    },
+    {
+      "time": 25.057,
+      "text": "Salad crop grower Liz Johnston is up against the daily challenge of the notorious British weather instead.",
+      "translation": "相反，沙拉作物种植者 Liz Johnston 每天都要面对臭名昭著的英国天气带来的挑战。",
+      "words": [
+        {"text": "Salad", "start": 25.057, "end": 25.498},
+        {"text": "crop", "start": 25.578, "end": 25.879},
+        {"text": "grower", "start": 25.939, "end": 26.36},
+        {"text": "Liz", "start": 26.46, "end": 26.761},
+        {"text": "Johnston", "start": 26.781, "end": 27.302},
+        {"text": "is", "start": 27.803, "end": 27.863},
+        {"text": "up", "start": 27.943, "end": 28.023},
+        {"text": "against", "start": 28.083, "end": 28.344},
+        {"text": "the", "start": 28.364, "end": 28.504},
+        {"text": "daily", "start": 28.544, "end": 28.845},
+        {"text": "challenge", "start": 28.925, "end": 29.306},
+        {"text": "of", "start": 29.346, "end": 29.406},
+        {"text": "the", "start": 29.446, "end": 29.526},
+        {"text": "notorious", "start": 29.586, "end": 30.148},
+        {"text": "British", "start": 30.248, "end": 30.649},
+        {"text": "weather", "start": 30.709, "end": 31.13},
+        {"text": "instead.", "start": 31.19, "end": 31.851}
+      ]
+    },
+    {
+      "time": 33.655,
+      "text": "Liz has to make sure they reach their targets.",
+      "translation": "Liz 必须确保它们达到既定目标（产量/质量指标）。",
+      "words": [
+        {"text": "Liz", "start": 33.655, "end": 33.875},
+        {"text": "has", "start": 33.915, "end": 34.056},
+        {"text": "to", "start": 34.076, "end": 34.156},
+        {"text": "make", "start": 34.196, "end": 34.356},
+        {"text": "sure", "start": 34.416, "end": 34.597},
+        {"text": "they", "start": 34.657, "end": 34.777},
+        {"text": "reach", "start": 34.837, "end": 35.038},
+        {"text": "their", "start": 35.078, "end": 35.238},
+        {"text": "targets.", "start": 35.278, "end": 35.759}
+      ]
+    },
+    {
+      "time": 36.32,
+      "text": "She walks for miles inspecting the crops and deciding how best to treat them.",
+      "translation": "她要走好几英里，检查作物，并决定用什么方式最合适地处理它们。",
+      "words": [
+        {"text": "She", "start": 36.32, "end": 36.441},
+        {"text": "walks", "start": 36.481, "end": 36.701},
+        {"text": "for", "start": 36.741, "end": 36.842},
+        {"text": "miles", "start": 36.922, "end": 37.323},
+        {"text": "inspecting", "start": 37.423, "end": 37.924},
+        {"text": "the", "start": 37.964, "end": 38.044},
+        {"text": "crops", "start": 38.124, "end": 38.445},
+        {"text": "and", "start": 38.826, "end": 38.886},
+        {"text": "deciding", "start": 38.946, "end": 39.387},
+        {"text": "how", "start": 39.427, "end": 39.527},
+        {"text": "best", "start": 39.587, "end": 39.828},
+        {"text": "to", "start": 39.868, "end": 39.948},
+        {"text": "treat", "start": 40.028, "end": 40.249},
+        {"text": "them.", "start": 40.289, "end": 40.429}
+      ]
+    },
+    {
+      "time": 42.072,
+      "text": "It all depends on what the weather will allow.",
+      "translation": "一切都取决于天气条件允许什么。",
+      "words": [
+        {"text": "It", "start": 42.072, "end": 42.133},
+        {"text": "all", "start": 42.193, "end": 42.293},
+        {"text": "depends", "start": 42.333, "end": 42.674},
+        {"text": "on", "start": 42.734, "end": 42.794},
+        {"text": "what", "start": 42.834, "end": 42.954},
+        {"text": "the", "start": 42.974, "end": 43.054},
+        {"text": "weather", "start": 43.115, "end": 43.395},
+        {"text": "will", "start": 43.435, "end": 43.636},
+        {"text": "allow.", "start": 43.696, "end": 44.297}
+      ]
+    },
+    {
+      "time": 45.172,
+      "text": "A hot and humid day could lead to pests and diseases affecting the lettuce, but if it's too windy, she won't be able to spray to protect it.",
+      "translation": "炎热潮湿的天气可能会导致害虫和病害侵袭生菜，但如果风太大，她就无法喷药来保护它。",
+      "words": [
+        {"text": "A", "start": 45.172, "end": 45.372},
+        {"text": "hot", "start": 45.392, "end": 45.593},
+        {"text": "and", "start": 45.653, "end": 45.753},
+        {"text": "humid", "start": 45.813, "end": 46.093},
+        {"text": "day", "start": 46.133, "end": 46.374},
+        {"text": "could", "start": 46.434, "end": 46.554},
+        {"text": "lead", "start": 46.614, "end": 46.774},
+        {"text": "to", "start": 46.814, "end": 46.914},
+        {"text": "pests", "start": 46.974, "end": 47.335},
+        {"text": "and", "start": 47.415, "end": 47.495},
+        {"text": "diseases", "start": 47.555, "end": 48.096},
+        {"text": "affecting", "start": 48.136, "end": 48.677},
+        {"text": "the", "start": 48.717, "end": 48.817},
+        {"text": "lettuce,", "start": 48.877, "end": 49.217},
+        {"text": "but", "start": 49.778, "end": 49.898},
+        {"text": "if", "start": 49.938, "end": 49.978},
+        {"text": "it's", "start": 50.038, "end": 50.138},
+        {"text": "too", "start": 50.178, "end": 50.339},
+        {"text": "windy,", "start": 50.379, "end": 50.819},
+        {"text": "she", "start": 51.14, "end": 51.24},
+        {"text": "won't", "start": 51.26, "end": 51.44},
+        {"text": "be", "start": 51.48, "end": 51.52},
+        {"text": "able", "start": 51.58, "end": 51.72},
+        {"text": "to", "start": 51.741, "end": 51.821},
+        {"text": "spray", "start": 51.881, "end": 52.301},
+        {"text": "to", "start": 52.361, "end": 52.461},
+        {"text": "protect", "start": 52.522, "end": 52.922},
+        {"text": "it.", "start": 52.982, "end": 53.062}
+      ]
+    },
+    {
+      "time": 53.823,
+      "text": "Too much rain and the crop could be ruined.",
+      "translation": "雨水过多，作物就可能被毁掉。",
+      "words": [
+        {"text": "Too", "start": 53.823, "end": 53.963},
+        {"text": "much", "start": 54.003, "end": 54.264},
+        {"text": "rain", "start": 54.344, "end": 54.664},
+        {"text": "and", "start": 54.744, "end": 54.825},
+        {"text": "the", "start": 54.865, "end": 54.925},
+        {"text": "crop", "start": 55.005, "end": 55.305},
+        {"text": "could", "start": 55.365, "end": 55.525},
+        {"text": "be", "start": 55.565, "end": 55.666},
+        {"text": "ruined.", "start": 55.726, "end": 56.206}
+      ]
+    },
+    {
+      "time": 56.807,
+      "text": "It's a constant battle to balance nature and science in order to grow the best lettuce.",
+      "translation": "为了种出最好的生菜，需要在自然与科学之间不断博弈、保持平衡。",
+      "words": [
+        {"text": "It's", "start": 56.807, "end": 56.927},
+        {"text": "a", "start": 56.967, "end": 57.007},
+        {"text": "constant", "start": 57.067, "end": 57.548},
+        {"text": "battle", "start": 57.608, "end": 57.989},
+        {"text": "to", "start": 58.049, "end": 58.129},
+        {"text": "balance", "start": 58.189, "end": 58.569},
+        {"text": "nature", "start": 58.69, "end": 59.05},
+        {"text": "and", "start": 59.13, "end": 59.23},
+        {"text": "science", "start": 59.35, "end": 59.791},
+        {"text": "in", "start": 60.151, "end": 60.232},
+        {"text": "order", "start": 60.292, "end": 60.512},
+        {"text": "to", "start": 60.552, "end": 60.612},
+        {"text": "grow", "start": 60.652, "end": 60.852},
+        {"text": "the", "start": 60.892, "end": 60.952},
+        {"text": "best", "start": 61.013, "end": 61.253},
+        {"text": "lettuce.", "start": 61.373, "end": 61.754}
+      ]
+    },
+    {
+      "time": 62.855,
+      "text": "We'll be actually looking at the crop many times right up to the end point of harvest.",
+      "translation": "我们会反复查看作物，一直到收获前的那一刻。",
+      "words": [
+        {"text": "We'll", "start": 62.855, "end": 63.035},
+        {"text": "be", "start": 63.055, "end": 63.115},
+        {"text": "actually", "start": 63.155, "end": 63.396},
+        {"text": "looking", "start": 63.436, "end": 63.676},
+        {"text": "at", "start": 63.696, "end": 63.736},
+        {"text": "the", "start": 63.776, "end": 63.856},
+        {"text": "crop", "start": 63.896, "end": 64.197},
+        {"text": "many", "start": 64.257, "end": 64.457},
+        {"text": "times", "start": 64.517, "end": 64.858},
+        {"text": "right", "start": 64.898, "end": 65.218},
+        {"text": "up", "start": 65.298, "end": 65.378},
+        {"text": "to", "start": 65.418, "end": 65.538},
+        {"text": "the", "start": 65.578, "end": 65.699},
+        {"text": "end", "start": 65.779, "end": 65.939},
+        {"text": "point", "start": 65.999, "end": 66.239},
+        {"text": "of", "start": 66.279, "end": 66.319},
+        {"text": "harvest.", "start": 66.359, "end": 66.8}
+      ]
+    },
+    {
+      "time": 67.641,
+      "text": "The lettuces are cut from the field at the front, and in the back they are wrapped and boxed and ready for the supermarket.",
+      "translation": "生菜在田地前端被切割收割，而在后端会被包裹、装箱，准备送往超市。",
+      "words": [
+        {"text": "The", "start": 67.641, "end": 67.701},
+        {"text": "lettuces", "start": 67.761, "end": 68.222},
+        {"text": "are", "start": 68.302, "end": 68.382},
+        {"text": "cut", "start": 68.422, "end": 68.642},
+        {"text": "from", "start": 68.703, "end": 68.823},
+        {"text": "the", "start": 68.863, "end": 68.943},
+        {"text": "field", "start": 69.023, "end": 69.383},
+        {"text": "at", "start": 69.464, "end": 69.504},
+        {"text": "the", "start": 69.544, "end": 69.624},
+        {"text": "front,", "start": 69.704, "end": 69.984},
+        {"text": "and", "start": 70.405, "end": 70.505},
+        {"text": "in", "start": 70.565, "end": 70.625},
+        {"text": "the", "start": 70.685, "end": 70.745},
+        {"text": "back", "start": 70.805, "end": 71.105},
+        {"text": "they", "start": 71.186, "end": 71.306},
+        {"text": "are", "start": 71.366, "end": 71.446},
+        {"text": "wrapped", "start": 71.506, "end": 71.827},
+        {"text": "and", "start": 71.907, "end": 71.987},
+        {"text": "boxed", "start": 72.067, "end": 72.468},
+        {"text": "and", "start": 72.548, "end": 72.668},
+        {"text": "ready", "start": 72.748, "end": 72.989},
+        {"text": "for", "start": 73.049, "end": 73.149},
+        {"text": "the", "start": 73.189, "end": 73.269},
+        {"text": "supermarket.", "start": 73.289, "end": 74.331}
+      ]
+    },
+    {
+      "time": 74.992,
+      "text": "There'll be in stores around the UK in less than 48 hours.",
+      "translation": "不到 48 小时，它们就会出现在英国各地的门店里。",
+      "words": [
+        {"text": "There'll", "start": 74.992, "end": 75.193},
+        {"text": "be", "start": 75.233, "end": 75.333},
+        {"text": "in", "start": 75.373, "end": 75.474},
+        {"text": "stores", "start": 75.514, "end": 75.875},
+        {"text": "around", "start": 75.935, "end": 76.216},
+        {"text": "the", "start": 76.256, "end": 76.336},
+        {"text": "UK", "start": 76.477, "end": 76.878},
+        {"text": "in", "start": 76.958, "end": 77.038},
+        {"text": "less", "start": 77.119, "end": 77.299},
+        {"text": "than", "start": 77.359, "end": 77.48},
+        {"text": "48", "start": 77.5, "end": 77.961},
+        {"text": "hours.", "start": 78.122, "end": 78.864}
+      ]
+    }
+  ]
+}
