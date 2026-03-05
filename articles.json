@@ -134,7 +134,7 @@
         },
         {
             "id": "23",
-            "title": "第23篇：How to Stop Our Food Decomposing 如何防⽌⻝物腐败",
+            "title": "第23篇：How to Stop Our Food Decomposing 如何防⽌⻝物腐烂",
             "dataFile": "data/article-23.json",
             "audioFile": "data/audio-23.mp3"
         },
@@ -224,3 +224,4 @@
         }
     ]
 }
+
