@@ -1,0 +1,1793 @@
+{
+  "audioUrl": "./data/audio-29.mp3",
+  "title": "How Did We Find the Molecular Composition of Water",
+  "titleTranslation": "揭秘水的分子组成",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "More than 70% of Earth's surface is covered with water.",
+      "words": [
+        {
+          "text": "More",
+          "start": 0.031,
+          "end": 0.432
+        },
+        {
+          "text": "than",
+          "start": 0.492,
+          "end": 0.612
+        },
+        {
+          "text": "70%",
+          "start": 0.632,
+          "end": 1.172
+        },
+        {
+          "text": "of",
+          "start": 1.233,
+          "end": 1.273
+        },
+        {
+          "text": "Earth's",
+          "start": 1.293,
+          "end": 1.953
+        },
+        {
+          "text": "surface",
+          "start": 2.134,
+          "end": 2.594
+        },
+        {
+          "text": "is",
+          "start": 2.654,
+          "end": 2.734
+        },
+        {
+          "text": "covered",
+          "start": 2.895,
+          "end": 3.215
+        },
+        {
+          "text": "with",
+          "start": 3.255,
+          "end": 3.375
+        },
+        {
+          "text": "water.",
+          "start": 3.435,
+          "end": 3.796
+        }
+      ],
+      "translation": "地球表面的 70% 以上都被水覆盖。"
+    },
+    {
+      "time": 3.836,
+      "text": "But that wasn't always the case.",
+      "words": [
+        {
+          "text": "But",
+          "start": 3.836,
+          "end": 4.397
+        },
+        {
+          "text": "that",
+          "start": 4.497,
+          "end": 4.677
+        },
+        {
+          "text": "wasn't",
+          "start": 4.757,
+          "end": 5.077
+        },
+        {
+          "text": "always",
+          "start": 5.318,
+          "end": 5.658
+        },
+        {
+          "text": "the",
+          "start": 5.698,
+          "end": 5.838
+        },
+        {
+          "text": "case.",
+          "start": 5.898,
+          "end": 6.259
+        }
+      ],
+      "translation": "但情况并非一直如此。"
+    },
+    {
+      "time": 6.82,
+      "text": "Earlier in our planet's history, when the surface was far too hot for liquid water, this planet was shrouded in a thick atmosphere of carbon dioxide and water, and all you'd have seen from space was the white cloud tops.",
+      "words": [
+        {
+          "text": "Earlier",
+          "start": 6.82,
+          "end": 7.06
+        },
+        {
+          "text": "in",
+          "start": 7.08,
+          "end": 7.12
+        },
+        {
+          "text": "our",
+          "start": 7.18,
+          "end": 7.26
+        },
+        {
+          "text": "planet's",
+          "start": 7.3,
+          "end": 7.641
+        },
+        {
+          "text": "history,",
+          "start": 7.661,
+          "end": 8.101
+        },
+        {
+          "text": "when",
+          "start": 8.161,
+          "end": 8.281
+        },
+        {
+          "text": "the",
+          "start": 8.322,
+          "end": 8.402
+        },
+        {
+          "text": "surface",
+          "start": 8.482,
+          "end": 8.842
+        },
+        {
+          "text": "was",
+          "start": 8.862,
+          "end": 8.982
+        },
+        {
+          "text": "far",
+          "start": 9.183,
+          "end": 9.443
+        },
+        {
+          "text": "too",
+          "start": 9.503,
+          "end": 9.703
+        },
+        {
+          "text": "hot",
+          "start": 9.783,
+          "end": 9.964
+        },
+        {
+          "text": "for",
+          "start": 10.064,
+          "end": 10.164
+        },
+        {
+          "text": "liquid",
+          "start": 10.224,
+          "end": 10.584
+        },
+        {
+          "text": "water,",
+          "start": 10.644,
+          "end": 11.025
+        },
+        {
+          "text": "this",
+          "start": 11.586,
+          "end": 11.726
+        },
+        {
+          "text": "planet",
+          "start": 11.826,
+          "end": 12.146
+        },
+        {
+          "text": "was",
+          "start": 12.186,
+          "end": 12.287
+        },
+        {
+          "text": "shrouded",
+          "start": 12.387,
+          "end": 12.947
+        },
+        {
+          "text": "in",
+          "start": 13.007,
+          "end": 13.068
+        },
+        {
+          "text": "a",
+          "start": 13.128,
+          "end": 13.148
+        },
+        {
+          "text": "thick",
+          "start": 13.308,
+          "end": 13.568
+        },
+        {
+          "text": "atmosphere",
+          "start": 13.808,
+          "end": 14.369
+        },
+        {
+          "text": "of",
+          "start": 14.429,
+          "end": 14.469
+        },
+        {
+          "text": "carbon",
+          "start": 14.61,
+          "end": 15.01
+        },
+        {
+          "text": "dioxide",
+          "start": 15.05,
+          "end": 15.651
+        },
+        {
+          "text": "and",
+          "start": 15.711,
+          "end": 15.791
+        },
+        {
+          "text": "water,",
+          "start": 15.851,
+          "end": 16.292
+        },
+        {
+          "text": "and",
+          "start": 16.312,
+          "end": 16.912
+        },
+        {
+          "text": "all",
+          "start": 16.952,
+          "end": 17.213
+        },
+        {
+          "text": "you'd",
+          "start": 17.273,
+          "end": 17.393
+        },
+        {
+          "text": "have",
+          "start": 17.413,
+          "end": 17.513
+        },
+        {
+          "text": "seen",
+          "start": 17.553,
+          "end": 17.774
+        },
+        {
+          "text": "from",
+          "start": 17.814,
+          "end": 17.954
+        },
+        {
+          "text": "space",
+          "start": 17.974,
+          "end": 18.414
+        },
+        {
+          "text": "was",
+          "start": 18.474,
+          "end": 18.575
+        },
+        {
+          "text": "the",
+          "start": 18.615,
+          "end": 18.695
+        },
+        {
+          "text": "white",
+          "start": 18.815,
+          "end": 19.095
+        },
+        {
+          "text": "cloud",
+          "start": 19.215,
+          "end": 19.576
+        },
+        {
+          "text": "tops.",
+          "start": 19.616,
+          "end": 20.537
+        }
+      ],
+      "translation": "在地球早期历史中，由于地表温度过高，无法形成液态水，地球被厚厚的二氧化碳和水蒸气大气层笼罩，从太空中看到的只有白色的云层。"
+    },
+    {
+      "time": 20.517,
+      "text": "But as the planet called, the rains began.",
+      "words": [
+        {
+          "text": "But",
+          "start": 20.517,
+          "end": 20.697
+        },
+        {
+          "text": "as",
+          "start": 20.757,
+          "end": 20.817
+        },
+        {
+          "text": "the",
+          "start": 20.858,
+          "end": 20.938
+        },
+        {
+          "text": "planet",
+          "start": 21.038,
+          "end": 21.458
+        },
+        {
+          "text": "called,",
+          "start": 21.539,
+          "end": 21.959
+        },
+        {
+          "text": "the",
+          "start": 21.979,
+          "end": 22.36
+        },
+        {
+          "text": "rains",
+          "start": 22.46,
+          "end": 22.861
+        },
+        {
+          "text": "began.",
+          "start": 22.961,
+          "end": 23.301
+        }
+      ],
+      "translation": "但随着地球逐渐冷却，降雨开始。"
+    },
+    {
+      "time": 23.362,
+      "text": "And the deluge shifted most of that water from the atmosphere to the oceans.",
+      "words": [
+        {
+          "text": "And",
+          "start": 23.362,
+          "end": 23.742
+        },
+        {
+          "text": "the",
+          "start": 23.782,
+          "end": 23.842
+        },
+        {
+          "text": "deluge",
+          "start": 24.043,
+          "end": 24.583
+        },
+        {
+          "text": "shifted",
+          "start": 24.764,
+          "end": 25.245
+        },
+        {
+          "text": "most",
+          "start": 25.405,
+          "end": 25.685
+        },
+        {
+          "text": "of",
+          "start": 25.745,
+          "end": 25.785
+        },
+        {
+          "text": "that",
+          "start": 25.845,
+          "end": 25.986
+        },
+        {
+          "text": "water",
+          "start": 26.046,
+          "end": 26.366
+        },
+        {
+          "text": "from",
+          "start": 26.426,
+          "end": 26.567
+        },
+        {
+          "text": "the",
+          "start": 26.607,
+          "end": 26.687
+        },
+        {
+          "text": "atmosphere",
+          "start": 26.747,
+          "end": 27.288
+        },
+        {
+          "text": "to",
+          "start": 27.328,
+          "end": 27.769
+        },
+        {
+          "text": "the",
+          "start": 27.789,
+          "end": 27.869
+        },
+        {
+          "text": "oceans.",
+          "start": 27.969,
+          "end": 28.41
+        }
+      ],
+      "translation": "洪流将大部分水从大气层带到了海洋中。"
+    },
+    {
+      "time": 29.01,
+      "text": "And then when the rain finished and the clouds cleared, the liquid of our blue planet was on show to the universe for the first time.",
+      "words": [
+        {
+          "text": "And",
+          "start": 29.01,
+          "end": 29.091
+        },
+        {
+          "text": "then",
+          "start": 29.111,
+          "end": 29.211
+        },
+        {
+          "text": "when",
+          "start": 29.231,
+          "end": 29.331
+        },
+        {
+          "text": "the",
+          "start": 29.371,
+          "end": 29.431
+        },
+        {
+          "text": "rain",
+          "start": 29.511,
+          "end": 29.772
+        },
+        {
+          "text": "finished",
+          "start": 29.832,
+          "end": 30.212
+        },
+        {
+          "text": "and",
+          "start": 30.433,
+          "end": 30.513
+        },
+        {
+          "text": "the",
+          "start": 30.553,
+          "end": 30.613
+        },
+        {
+          "text": "clouds",
+          "start": 30.673,
+          "end": 31.074
+        },
+        {
+          "text": "cleared,",
+          "start": 31.234,
+          "end": 31.675
+        },
+        {
+          "text": "the",
+          "start": 31.715,
+          "end": 32.376
+        },
+        {
+          "text": "liquid",
+          "start": 32.496,
+          "end": 32.877
+        },
+        {
+          "text": "of",
+          "start": 32.917,
+          "end": 32.957
+        },
+        {
+          "text": "our",
+          "start": 33.017,
+          "end": 33.117
+        },
+        {
+          "text": "blue",
+          "start": 33.217,
+          "end": 33.498
+        },
+        {
+          "text": "planet",
+          "start": 33.598,
+          "end": 33.938
+        },
+        {
+          "text": "was",
+          "start": 34.099,
+          "end": 34.199
+        },
+        {
+          "text": "on",
+          "start": 34.279,
+          "end": 34.359
+        },
+        {
+          "text": "show",
+          "start": 34.419,
+          "end": 34.619
+        },
+        {
+          "text": "to",
+          "start": 34.659,
+          "end": 34.74
+        },
+        {
+          "text": "the",
+          "start": 34.78,
+          "end": 34.84
+        },
+        {
+          "text": "universe",
+          "start": 34.92,
+          "end": 35.361
+        },
+        {
+          "text": "for",
+          "start": 35.461,
+          "end": 35.561
+        },
+        {
+          "text": "the",
+          "start": 35.601,
+          "end": 35.661
+        },
+        {
+          "text": "first",
+          "start": 35.721,
+          "end": 35.982
+        },
+        {
+          "text": "time.",
+          "start": 36.042,
+          "end": 36.923
+        }
+      ],
+      "translation": "雨过天晴之后，我们蓝色星球的液态水第一次展现在宇宙面前。"
+    },
+    {
+      "time": 36.903,
+      "text": "Ever since, the sheer physical power of water has been carving and shaping the surface of our planet.",
+      "words": [
+        {
+          "text": "Ever",
+          "start": 36.903,
+          "end": 37.283
+        },
+        {
+          "text": "since,",
+          "start": 37.384,
+          "end": 37.684
+        },
+        {
+          "text": "the",
+          "start": 37.944,
+          "end": 38.064
+        },
+        {
+          "text": "sheer",
+          "start": 38.185,
+          "end": 38.485
+        },
+        {
+          "text": "physical",
+          "start": 38.685,
+          "end": 39.106
+        },
+        {
+          "text": "power",
+          "start": 39.266,
+          "end": 39.606
+        },
+        {
+          "text": "of",
+          "start": 39.646,
+          "end": 39.686
+        },
+        {
+          "text": "water",
+          "start": 39.726,
+          "end": 40.147
+        },
+        {
+          "text": "has",
+          "start": 40.227,
+          "end": 40.347
+        },
+        {
+          "text": "been",
+          "start": 40.387,
+          "end": 40.547
+        },
+        {
+          "text": "carving",
+          "start": 40.667,
+          "end": 41.088
+        },
+        {
+          "text": "and",
+          "start": 41.148,
+          "end": 41.228
+        },
+        {
+          "text": "shaping",
+          "start": 41.348,
+          "end": 41.749
+        },
+        {
+          "text": "the",
+          "start": 41.829,
+          "end": 41.929
+        },
+        {
+          "text": "surface",
+          "start": 42.029,
+          "end": 42.45
+        },
+        {
+          "text": "of",
+          "start": 42.53,
+          "end": 42.59
+        },
+        {
+          "text": "our",
+          "start": 42.67,
+          "end": 42.77
+        },
+        {
+          "text": "planet.",
+          "start": 42.85,
+          "end": 43.291
+        }
+      ],
+      "translation": "从那时起，水的巨大物理力量一直在雕刻和塑造地球的表面。"
+    },
+    {
+      "time": 44.252,
+      "text": "And crucially for our story, all this water has had huge consequences for the Earth's temperature.",
+      "words": [
+        {
+          "text": "And",
+          "start": 44.252,
+          "end": 44.352
+        },
+        {
+          "text": "crucially",
+          "start": 44.512,
+          "end": 45.033
+        },
+        {
+          "text": "for",
+          "start": 45.093,
+          "end": 45.213
+        },
+        {
+          "text": "our",
+          "start": 45.313,
+          "end": 45.433
+        },
+        {
+          "text": "story,",
+          "start": 45.533,
+          "end": 45.994
+        },
+        {
+          "text": "all",
+          "start": 46.554,
+          "end": 46.715
+        },
+        {
+          "text": "this",
+          "start": 46.775,
+          "end": 46.935
+        },
+        {
+          "text": "water",
+          "start": 47.075,
+          "end": 47.536
+        },
+        {
+          "text": "has",
+          "start": 47.716,
+          "end": 47.856
+        },
+        {
+          "text": "had",
+          "start": 47.896,
+          "end": 48.016
+        },
+        {
+          "text": "huge",
+          "start": 48.176,
+          "end": 48.517
+        },
+        {
+          "text": "consequences",
+          "start": 48.617,
+          "end": 49.378
+        },
+        {
+          "text": "for",
+          "start": 49.458,
+          "end": 49.578
+        },
+        {
+          "text": "the",
+          "start": 49.618,
+          "end": 49.718
+        },
+        {
+          "text": "Earth's",
+          "start": 49.838,
+          "end": 50.079
+        },
+        {
+          "text": "temperature.",
+          "start": 50.159,
+          "end": 50.699
+        }
+      ],
+      "translation": "更重要的是，对于我们的故事来说，这些水对地球的温度产生了巨大的影响。"
+    },
+    {
+      "time": 51.761,
+      "text": "To understand why, we need to delve into the strange world of water at the molecular scale.",
+      "words": [
+        {
+          "text": "To",
+          "start": 51.761,
+          "end": 51.881
+        },
+        {
+          "text": "understand",
+          "start": 52.001,
+          "end": 52.521
+        },
+        {
+          "text": "why,",
+          "start": 52.562,
+          "end": 52.982
+        },
+        {
+          "text": "we",
+          "start": 53.282,
+          "end": 53.362
+        },
+        {
+          "text": "need",
+          "start": 53.423,
+          "end": 53.563
+        },
+        {
+          "text": "to",
+          "start": 53.603,
+          "end": 53.683
+        },
+        {
+          "text": "delve",
+          "start": 53.783,
+          "end": 54.123
+        },
+        {
+          "text": "into",
+          "start": 54.203,
+          "end": 54.384
+        },
+        {
+          "text": "the",
+          "start": 54.424,
+          "end": 54.524
+        },
+        {
+          "text": "strange",
+          "start": 54.624,
+          "end": 55.165
+        },
+        {
+          "text": "world",
+          "start": 55.225,
+          "end": 55.505
+        },
+        {
+          "text": "of",
+          "start": 55.565,
+          "end": 55.605
+        },
+        {
+          "text": "water",
+          "start": 55.645,
+          "end": 56.126
+        },
+        {
+          "text": "at",
+          "start": 56.406,
+          "end": 56.466
+        },
+        {
+          "text": "the",
+          "start": 56.486,
+          "end": 56.606
+        },
+        {
+          "text": "molecular",
+          "start": 56.646,
+          "end": 57.287
+        },
+        {
+          "text": "scale.",
+          "start": 57.367,
+          "end": 57.728
+        }
+      ],
+      "translation": "要了解其中的原因，我们需要深入探讨水分子层面的奇妙世界。"
+    },
+    {
+      "time": 58.629,
+      "text": "And that journey begins with a chance discovery that revealed for the first time what water is actually made of.",
+      "words": [
+        {
+          "text": "And",
+          "start": 58.629,
+          "end": 58.729
+        },
+        {
+          "text": "that",
+          "start": 58.789,
+          "end": 58.969
+        },
+        {
+          "text": "journey",
+          "start": 59.109,
+          "end": 59.53
+        },
+        {
+          "text": "begins",
+          "start": 59.71,
+          "end": 60.05
+        },
+        {
+          "text": "with",
+          "start": 60.11,
+          "end": 60.231
+        },
+        {
+          "text": "a",
+          "start": 60.291,
+          "end": 60.311
+        },
+        {
+          "text": "chance",
+          "start": 60.411,
+          "end": 60.771
+        },
+        {
+          "text": "discovery",
+          "start": 60.831,
+          "end": 61.392
+        },
+        {
+          "text": "that",
+          "start": 61.692,
+          "end": 61.852
+        },
+        {
+          "text": "revealed",
+          "start": 61.933,
+          "end": 62.353
+        },
+        {
+          "text": "for",
+          "start": 62.413,
+          "end": 62.533
+        },
+        {
+          "text": "the",
+          "start": 62.573,
+          "end": 62.653
+        },
+        {
+          "text": "first",
+          "start": 62.714,
+          "end": 62.974
+        },
+        {
+          "text": "time",
+          "start": 63.054,
+          "end": 63.374
+        },
+        {
+          "text": "what",
+          "start": 63.414,
+          "end": 64.015
+        },
+        {
+          "text": "water",
+          "start": 64.095,
+          "end": 64.456
+        },
+        {
+          "text": "is",
+          "start": 64.576,
+          "end": 64.636
+        },
+        {
+          "text": "actually",
+          "start": 64.816,
+          "end": 65.196
+        },
+        {
+          "text": "made",
+          "start": 65.277,
+          "end": 65.517
+        },
+        {
+          "text": "of.",
+          "start": 65.637,
+          "end": 66.538
+        }
+      ],
+      "translation": "这段旅程始于一次偶然的发现，这次发现首次揭示了水实际上是由什么构成的。"
+    },
+    {
+      "time": 66.518,
+      "text": "In 1766, a reclusive scientist, Henry Cavendish, added various metals to a liquid called spirits of salt, now known as hydrochloric acid.",
+      "words": [
+        {
+          "text": "In",
+          "start": 66.518,
+          "end": 66.798
+        },
+        {
+          "text": "1766,",
+          "start": 66.819,
+          "end": 67.46
+        },
+        {
+          "text": "a",
+          "start": 68.662,
+          "end": 68.682
+        },
+        {
+          "text": "reclusive",
+          "start": 68.742,
+          "end": 69.303
+        },
+        {
+          "text": "scientist,",
+          "start": 69.363,
+          "end": 70.044
+        },
+        {
+          "text": "Henry",
+          "start": 70.344,
+          "end": 70.645
+        },
+        {
+          "text": "Cavendish,",
+          "start": 70.705,
+          "end": 71.286
+        },
+        {
+          "text": "added",
+          "start": 71.847,
+          "end": 72.047
+        },
+        {
+          "text": "various",
+          "start": 72.127,
+          "end": 72.528
+        },
+        {
+          "text": "metals",
+          "start": 72.608,
+          "end": 72.969
+        },
+        {
+          "text": "to",
+          "start": 73.029,
+          "end": 73.149
+        },
+        {
+          "text": "a",
+          "start": 73.209,
+          "end": 73.249
+        },
+        {
+          "text": "liquid",
+          "start": 73.329,
+          "end": 73.69
+        },
+        {
+          "text": "called",
+          "start": 73.77,
+          "end": 74.051
+        },
+        {
+          "text": "spirits",
+          "start": 74.191,
+          "end": 74.612
+        },
+        {
+          "text": "of",
+          "start": 74.692,
+          "end": 74.752
+        },
+        {
+          "text": "salt,",
+          "start": 74.872,
+          "end": 75.233
+        },
+        {
+          "text": "now",
+          "start": 75.894,
+          "end": 76.134
+        },
+        {
+          "text": "known",
+          "start": 76.154,
+          "end": 76.415
+        },
+        {
+          "text": "as",
+          "start": 76.575,
+          "end": 76.635
+        },
+        {
+          "text": "hydrochloric",
+          "start": 76.675,
+          "end": 77.476
+        },
+        {
+          "text": "acid.",
+          "start": 77.577,
+          "end": 77.897
+        }
+      ],
+      "translation": "1766 年，一位深居简出的科学家亨利·卡文迪许将各种金属加入到一种被称为“盐精”的液体中，也就是现在的盐酸。"
+    },
+    {
+      "time": 78.819,
+      "text": "And what he saw was something that he called inflammable air, but today we know as hydrogen.",
+      "words": [
+        {
+          "text": "And",
+          "start": 78.819,
+          "end": 78.879
+        },
+        {
+          "text": "what",
+          "start": 78.919,
+          "end": 79.039
+        },
+        {
+          "text": "he",
+          "start": 79.079,
+          "end": 79.179
+        },
+        {
+          "text": "saw",
+          "start": 79.279,
+          "end": 79.54
+        },
+        {
+          "text": "was",
+          "start": 79.58,
+          "end": 79.72
+        },
+        {
+          "text": "something",
+          "start": 79.78,
+          "end": 80.081
+        },
+        {
+          "text": "that",
+          "start": 80.121,
+          "end": 80.221
+        },
+        {
+          "text": "he",
+          "start": 80.301,
+          "end": 80.482
+        },
+        {
+          "text": "called",
+          "start": 80.562,
+          "end": 80.882
+        },
+        {
+          "text": "inflammable",
+          "start": 80.922,
+          "end": 81.603
+        },
+        {
+          "text": "air,",
+          "start": 81.764,
+          "end": 81.904
+        },
+        {
+          "text": "but",
+          "start": 82.064,
+          "end": 82.164
+        },
+        {
+          "text": "today",
+          "start": 82.224,
+          "end": 82.505
+        },
+        {
+          "text": "we",
+          "start": 82.545,
+          "end": 82.866
+        },
+        {
+          "text": "know",
+          "start": 82.926,
+          "end": 83.146
+        },
+        {
+          "text": "as",
+          "start": 83.166,
+          "end": 83.467
+        },
+        {
+          "text": "hydrogen.",
+          "start": 83.487,
+          "end": 84.208
+        }
+      ],
+      "translation": "他看到了一种他称为“可燃空气”的东西，但今天我们知道那就是氢气。"
+    },
+    {
+      "time": 84.669,
+      "text": "And Cavendish was the first person to recognise its significance and to do experiments on it to test its properties.",
+      "words": [
+        {
+          "text": "And",
+          "start": 84.669,
+          "end": 84.749
+        },
+        {
+          "text": "Cavendish",
+          "start": 84.809,
+          "end": 85.25
+        },
+        {
+          "text": "was",
+          "start": 85.27,
+          "end": 85.37
+        },
+        {
+          "text": "the",
+          "start": 85.41,
+          "end": 85.49
+        },
+        {
+          "text": "first",
+          "start": 85.53,
+          "end": 85.75
+        },
+        {
+          "text": "person",
+          "start": 85.831,
+          "end": 86.111
+        },
+        {
+          "text": "to",
+          "start": 86.151,
+          "end": 86.251
+        },
+        {
+          "text": "recognise",
+          "start": 86.391,
+          "end": 86.952
+        },
+        {
+          "text": "its",
+          "start": 87.033,
+          "end": 87.133
+        },
+        {
+          "text": "significance",
+          "start": 87.173,
+          "end": 87.914
+        },
+        {
+          "text": "and",
+          "start": 88.295,
+          "end": 88.375
+        },
+        {
+          "text": "to",
+          "start": 88.415,
+          "end": 88.455
+        },
+        {
+          "text": "do",
+          "start": 88.515,
+          "end": 88.595
+        },
+        {
+          "text": "experiments",
+          "start": 88.655,
+          "end": 89.256
+        },
+        {
+          "text": "on",
+          "start": 89.336,
+          "end": 89.376
+        },
+        {
+          "text": "it",
+          "start": 89.437,
+          "end": 89.497
+        },
+        {
+          "text": "to",
+          "start": 89.537,
+          "end": 89.617
+        },
+        {
+          "text": "test",
+          "start": 89.697,
+          "end": 89.998
+        },
+        {
+          "text": "its",
+          "start": 90.078,
+          "end": 90.158
+        },
+        {
+          "text": "properties.",
+          "start": 90.198,
+          "end": 91.48
+        }
+      ],
+      "translation": "而卡文迪许是第一个认识到其重要性并对其进行实验以测试其性质的人。"
+    },
+    {
+      "time": 91.46,
+      "text": "Cavendish collected the gas given off by his experiment.",
+      "words": [
+        {
+          "text": "Cavendish",
+          "start": 91.46,
+          "end": 92.262
+        },
+        {
+          "text": "collected",
+          "start": 92.342,
+          "end": 92.803
+        },
+        {
+          "text": "the",
+          "start": 92.843,
+          "end": 92.944
+        },
+        {
+          "text": "gas",
+          "start": 93.004,
+          "end": 93.285
+        },
+        {
+          "text": "given",
+          "start": 93.345,
+          "end": 93.585
+        },
+        {
+          "text": "off",
+          "start": 93.645,
+          "end": 93.766
+        },
+        {
+          "text": "by",
+          "start": 93.826,
+          "end": 93.946
+        },
+        {
+          "text": "his",
+          "start": 93.966,
+          "end": 94.127
+        },
+        {
+          "text": "experiment.",
+          "start": 94.207,
+          "end": 94.828
+        }
+      ],
+      "translation": "卡文迪许收集了实验中产生的气体。"
+    },
+    {
+      "time": 95.751,
+      "text": "When he had enough, he took a flaming splint and put it next to the opening.",
+      "words": [
+        {
+          "text": "When",
+          "start": 95.751,
+          "end": 95.871
+        },
+        {
+          "text": "he",
+          "start": 95.911,
+          "end": 95.991
+        },
+        {
+          "text": "had",
+          "start": 96.051,
+          "end": 96.172
+        },
+        {
+          "text": "enough,",
+          "start": 96.252,
+          "end": 96.593
+        },
+        {
+          "text": "he",
+          "start": 96.914,
+          "end": 97.014
+        },
+        {
+          "text": "took",
+          "start": 97.054,
+          "end": 97.214
+        },
+        {
+          "text": "a",
+          "start": 97.275,
+          "end": 97.295
+        },
+        {
+          "text": "flaming",
+          "start": 97.375,
+          "end": 97.756
+        },
+        {
+          "text": "splint",
+          "start": 97.836,
+          "end": 98.217
+        },
+        {
+          "text": "and",
+          "start": 98.317,
+          "end": 98.377
+        },
+        {
+          "text": "put",
+          "start": 98.478,
+          "end": 98.658
+        },
+        {
+          "text": "it",
+          "start": 98.718,
+          "end": 98.778
+        },
+        {
+          "text": "next",
+          "start": 98.838,
+          "end": 99.019
+        },
+        {
+          "text": "to",
+          "start": 99.059,
+          "end": 99.159
+        },
+        {
+          "text": "the",
+          "start": 99.199,
+          "end": 99.259
+        },
+        {
+          "text": "opening.",
+          "start": 99.38,
+          "end": 99.741
+        }
+      ],
+      "translation": "当他收集到足够的气体后，他拿了一根燃烧的木条，放在开口旁边。"
+    },
+    {
+      "time": 101.465,
+      "text": "Afterwards, Cavendish noticed something intriguing.",
+      "words": [
+        {
+          "text": "Afterwards,",
+          "start": 101.465,
+          "end": 101.966
+        },
+        {
+          "text": "Cavendish",
+          "start": 102.287,
+          "end": 102.788
+        },
+        {
+          "text": "noticed",
+          "start": 102.868,
+          "end": 103.29
+        },
+        {
+          "text": "something",
+          "start": 103.39,
+          "end": 103.751
+        },
+        {
+          "text": "intriguing.",
+          "start": 103.831,
+          "end": 104.693
+        }
+      ],
+      "translation": "之后，卡文迪许注意到了一些有趣的现象。"
+    },
+    {
+      "time": 105.972,
+      "text": "On the inside of the glass vessel, there were tiny droplets of a clear liquid.",
+      "words": [
+       
+        {
+          "text": "On",
+          "start": 106.072,
+          "end": 106.132
+        },
+        {
+          "text": "the",
+          "start": 106.172,
+          "end": 106.253
+        },
+        {
+          "text": "inside",
+          "start": 106.393,
+          "end": 107.034
+        },
+        {
+          "text": "of",
+          "start": 107.074,
+          "end": 107.195
+        },
+        {
+          "text": "the",
+          "start": 107.235,
+          "end": 107.315
+        },
+        {
+          "text": "glass",
+          "start": 107.375,
+          "end": 107.615
+        },
+        {
+          "text": "vessel,",
+          "start": 107.696,
+          "end": 108.036
+        },
+        {
+          "text": "there",
+          "start": 108.116,
+          "end": 108.237
+        },
+        {
+          "text": "were",
+          "start": 108.257,
+          "end": 108.377
+        },
+        {
+          "text": "tiny",
+          "start": 108.477,
+          "end": 109.018
+        },
+        {
+          "text": "droplets",
+          "start": 109.078,
+          "end": 109.539
+        },
+        {
+          "text": "of",
+          "start": 109.66,
+          "end": 109.72
+        },
+        {
+          "text": "a",
+          "start": 109.8,
+          "end": 109.82
+        },
+        {
+          "text": "clear",
+          "start": 109.88,
+          "end": 110.161
+        },
+        {
+          "text": "liquid.",
+          "start": 110.201,
+          "end": 110.582
+        }
+      ],
+      "translation": "在玻璃容器的内壁上出现了微小的透明液滴。"
+    },
+    {
+      "time": 111.343,
+      "text": "And he wondered what that was, he tasted it, he smelled it, and he came to the conclusion that it was water.",
+      "words": [
+        {
+          "text": "And",
+          "start": 111.343,
+          "end": 111.504
+        },
+        {
+          "text": "he",
+          "start": 111.524,
+          "end": 111.684
+        },
+        {
+          "text": "wondered",
+          "start": 111.724,
+          "end": 112.005
+        },
+        {
+          "text": "what",
+          "start": 112.045,
+          "end": 112.145
+        },
+        {
+          "text": "that",
+          "start": 112.205,
+          "end": 112.345
+        },
+        {
+          "text": "was,",
+          "start": 112.425,
+          "end": 112.726
+        },
+        {
+          "text": "he",
+          "start": 112.906,
+          "end": 113.027
+        },
+        {
+          "text": "tasted",
+          "start": 113.147,
+          "end": 113.628
+        },
+        {
+          "text": "it,",
+          "start": 113.688,
+          "end": 113.748
+        },
+        {
+          "text": "he",
+          "start": 113.848,
+          "end": 113.969
+        },
+        {
+          "text": "smelled",
+          "start": 114.029,
+          "end": 114.43
+        },
+        {
+          "text": "it,",
+          "start": 114.53,
+          "end": 114.65
+        },
+        {
+          "text": "and",
+          "start": 114.75,
+          "end": 114.83
+        },
+        {
+          "text": "he",
+          "start": 114.871,
+          "end": 114.911
+        },
+        {
+          "text": "came",
+          "start": 114.991,
+          "end": 115.231
+        },
+        {
+          "text": "to",
+          "start": 115.291,
+          "end": 115.352
+        },
+        {
+          "text": "the",
+          "start": 115.392,
+          "end": 115.452
+        },
+        {
+          "text": "conclusion",
+          "start": 115.512,
+          "end": 116.093
+        },
+        {
+          "text": "that",
+          "start": 116.113,
+          "end": 116.614
+        },
+        {
+          "text": "it",
+          "start": 116.694,
+          "end": 116.754
+        },
+        {
+          "text": "was",
+          "start": 116.795,
+          "end": 116.915
+        },
+        {
+          "text": "water.",
+          "start": 117.035,
+          "end": 117.476
+        }
+      ],
+      "translation": "他很好奇那是什么，便尝了尝，又闻了闻，得出结论——那是水。"
+    },
+    {
+      "time": 118.197,
+      "text": "And so Cavendish was the first person to realise that water was a combination of hydrogen and oxygen.",
+      "words": [
+        {
+          "text": "And",
+          "start": 118.197,
+          "end": 118.278
+        },
+        {
+          "text": "so",
+          "start": 118.338,
+          "end": 118.478
+        },
+        {
+          "text": "Cavendish",
+          "start": 118.518,
+          "end": 119.179
+        },
+        {
+          "text": "was",
+          "start": 119.22,
+          "end": 119.3
+        },
+        {
+          "text": "the",
+          "start": 119.36,
+          "end": 119.44
+        },
+        {
+          "text": "first",
+          "start": 119.5,
+          "end": 119.741
+        },
+        {
+          "text": "person",
+          "start": 119.801,
+          "end": 120.101
+        },
+        {
+          "text": "to",
+          "start": 120.141,
+          "end": 120.222
+        },
+        {
+          "text": "realise",
+          "start": 120.282,
+          "end": 120.663
+        },
+        {
+          "text": "that",
+          "start": 120.723,
+          "end": 120.823
+        },
+        {
+          "text": "water",
+          "start": 120.903,
+          "end": 121.364
+        },
+        {
+          "text": "was",
+          "start": 121.404,
+          "end": 121.645
+        },
+        {
+          "text": "a",
+          "start": 121.685,
+          "end": 121.725
+        },
+        {
+          "text": "combination",
+          "start": 121.845,
+          "end": 122.707
+        },
+        {
+          "text": "of",
+          "start": 122.727,
+          "end": 122.867
+        },
+        {
+          "text": "hydrogen",
+          "start": 122.907,
+          "end": 123.589
+        },
+        {
+          "text": "and",
+          "start": 123.629,
+          "end": 124.09
+        },
+        {
+          "text": "oxygen.",
+          "start": 124.25,
+          "end": 124.651
+        }
+      ],
+      "translation": "因此，卡文迪许是第一个意识到水是由氢和氧组成的人。"
+    },
+    {
+      "time": 125.232,
+      "text": "And today we know that the chemical formula is H2O.",
+      "words": [
+        {
+          "text": "And",
+          "start": 125.232,
+          "end": 125.312
+        },
+        {
+          "text": "today",
+          "start": 125.332,
+          "end": 125.613
+        },
+        {
+          "text": "we",
+          "start": 125.693,
+          "end": 125.793
+        },
+        {
+          "text": "know",
+          "start": 125.853,
+          "end": 126.034
+        },
+        {
+          "text": "that",
+          "start": 126.074,
+          "end": 126.314
+        },
+        {
+          "text": "the",
+          "start": 126.394,
+          "end": 126.455
+        },
+        {
+          "text": "chemical",
+          "start": 126.515,
+          "end": 126.916
+        },
+        {
+          "text": "formula",
+          "start": 126.976,
+          "end": 127.437
+        },
+        {
+          "text": "is",
+          "start": 127.457,
+          "end": 127.637
+        },
+        {
+          "text": "H2O.",
+          "start": 127.657,
+          "end": 129.06
+        }
+      ],
+      "translation": "今天我们知道，水的化学式是 H₂O。"
+    }
+  ]
+}
