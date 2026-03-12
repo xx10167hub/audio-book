@@ -306,7 +306,7 @@
     },
     {
       "time": 20.517,
-      "text": "But as the planet called, the rains began.",
+      "text": "But as the planet cooled, the rains began.",
       "words": [
         {
           "text": "But",
@@ -329,7 +329,7 @@
           "end": 21.458
         },
         {
-          "text": "called,",
+          "text": "cooled,",
           "start": 21.539,
           "end": 21.959
         },
