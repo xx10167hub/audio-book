@@ -145,6 +145,12 @@
             "audioFile": "data/audio-24.m4a"
         },
         {
+            "id": "26",
+            "title": "第26篇：Why Is the Strait of Hormuz So Important?",
+            "dataFile": "data/article-26.json",
+            "audioFile": "data/audio-26.mp3"
+        },
+        {
             "id": "29",
             "title": "第29篇：How Did We Find the Molecular Composition of Water ",
             "dataFile": "data/article-29.json",
@@ -155,6 +161,18 @@
             "title": "第30篇：🧘🧘How to Achieve Flow State in Everyday Life",
             "dataFile": "data/article-30.json",
             "audioFile": "data/audio-30.mp3"
+        },
+        {
+            "id": "31",
+            "title": "第31篇：🦞OpenClaw Fever Sweeps China's Tech Sector",
+            "dataFile": "data/article-31.json",
+            "audioFile": "data/audio-31.mp3"
+        },
+        {
+            "id": "32",
+            "title": "第32篇：🛢️Oil Surges Back Above $100 a Barrel",
+            "dataFile": "data/article-32.json",
+            "audioFile": "data/audio-32.mp3"
         },
         {
             "id": "40",
@@ -203,6 +221,18 @@
             "title": "第57篇：😊😊The Harvard Study on Happiness",
             "dataFile": "data/article-57.json",
             "audioFile": "data/audio-57.mp3"
+        },
+        {
+            "id": "61",
+            "title": "第61篇：🌍A Tour of Our Solar System ",
+            "dataFile": "data/article-61.json",
+            "audioFile": "data/audio-61.mp3"
+        },
+        {
+            "id": "62",
+            "title": "第62篇：🤖🧠How Experts Train AI Models",
+            "dataFile": "data/article-62.json",
+            "audioFile": "data/audio-62.mp3"
         },
         {
             "id": "65",
