@@ -1,0 +1,879 @@
+{
+  "audioUrl": "./data/audio-31.mp3",
+  "title": "🦞OpenClaw Fever Sweeps China's Tech Sector",
+  "titleTranslation": "OpenClaw热潮席卷中国科技圈",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "A sudden craze surrounding an open source AI agent platform known as OpenClaw is sweeping China's technology sector.",
+      "words": [
+        {
+          "text": "A",
+          "start": 0.031,
+          "end": 0.312
+        },
+        {
+          "text": "sudden",
+          "start": 0.352,
+          "end": 0.652
+        },
+        {
+          "text": "craze",
+          "start": 0.792,
+          "end": 1.233
+        },
+        {
+          "text": "surrounding",
+          "start": 1.313,
+          "end": 1.794
+        },
+        {
+          "text": "an",
+          "start": 1.834,
+          "end": 1.874
+        },
+        {
+          "text": "open",
+          "start": 1.914,
+          "end": 2.315
+        },
+        {
+          "text": "source",
+          "start": 2.355,
+          "end": 2.616
+        },
+        {
+          "text": "AI",
+          "start": 2.796,
+          "end": 3.157
+        },
+        {
+          "text": "agent",
+          "start": 3.357,
+          "end": 3.638
+        },
+        {
+          "text": "platform",
+          "start": 3.718,
+          "end": 4.179
+        },
+        {
+          "text": "known",
+          "start": 4.219,
+          "end": 4.439
+        },
+        {
+          "text": "as",
+          "start": 4.499,
+          "end": 4.579
+        },
+        {
+          "text": "OpenClaw",
+          "start": 4.599,
+          "end": 5.501
+        },
+        {
+          "text": "is",
+          "start": 5.882,
+          "end": 5.962
+        },
+        {
+          "text": "sweeping",
+          "start": 6.062,
+          "end": 6.443
+        },
+        {
+          "text": "China's",
+          "start": 6.523,
+          "end": 6.864
+        },
+        {
+          "text": "technology",
+          "start": 6.924,
+          "end": 7.445
+        },
+        {
+          "text": "sector.",
+          "start": 7.525,
+          "end": 7.925
+        }
+      ],
+      "translation": "围绕一款名为OpenClaw的开源AI智能体平台，一股突如其来的狂热正在席卷中国科技行业。"
+    },
+    {
+      "time": 8.226,
+      "text": "The phenomenon erupted with remarkable speed.",
+      "words": [
+        {
+          "text": "The",
+          "start": 8.226,
+          "end": 8.306
+        },
+        {
+          "text": "phenomenon",
+          "start": 8.326,
+          "end": 8.847
+        },
+        {
+          "text": "erupted",
+          "start": 9.148,
+          "end": 9.568
+        },
+        {
+          "text": "with",
+          "start": 9.649,
+          "end": 9.789
+        },
+        {
+          "text": "remarkable",
+          "start": 9.829,
+          "end": 10.43
+        },
+        {
+          "text": "speed.",
+          "start": 10.49,
+          "end": 10.831
+        }
+      ],
+      "translation": "这一现象以惊人的速度爆发。"
+    },
+    {
+      "time": 11.071,
+      "text": "Online, the excitement quickly spawned a cottage industry of installers offering remote setups for a few dollars or premium in-person services.",
+      "words": [
+        {
+          "text": "Online,",
+          "start": 11.071,
+          "end": 11.472
+        },
+        {
+          "text": "the",
+          "start": 11.492,
+          "end": 11.572
+        },
+        {
+          "text": "excitement",
+          "start": 11.632,
+          "end": 12.033
+        },
+        {
+          "text": "quickly",
+          "start": 12.073,
+          "end": 12.354
+        },
+        {
+          "text": "spawned",
+          "start": 12.434,
+          "end": 12.774
+        },
+        {
+          "text": "a",
+          "start": 12.814,
+          "end": 12.874
+        },
+        {
+          "text": "cottage",
+          "start": 13.015,
+          "end": 13.415
+        },
+        {
+          "text": "industry",
+          "start": 13.536,
+          "end": 14.017
+        },
+        {
+          "text": "of",
+          "start": 14.097,
+          "end": 14.157
+        },
+        {
+          "text": "installers",
+          "start": 14.237,
+          "end": 14.758
+        },
+        {
+          "text": "offering",
+          "start": 15.119,
+          "end": 15.459
+        },
+        {
+          "text": "remote",
+          "start": 15.539,
+          "end": 15.9
+        },
+        {
+          "text": "setups",
+          "start": 15.98,
+          "end": 16.361
+        },
+        {
+          "text": "for",
+          "start": 16.782,
+          "end": 16.902
+        },
+        {
+          "text": "a",
+          "start": 16.962,
+          "end": 16.982
+        },
+        {
+          "text": "few",
+          "start": 17.042,
+          "end": 17.222
+        },
+        {
+          "text": "dollars",
+          "start": 17.283,
+          "end": 17.623
+        },
+        {
+          "text": "or",
+          "start": 17.743,
+          "end": 17.804
+        },
+        {
+          "text": "premium",
+          "start": 17.904,
+          "end": 18.365
+        },
+        {
+          "text": "in-person",
+          "start": 18.485,
+          "end": 19.066
+        },
+        {
+          "text": "services.",
+          "start": 19.126,
+          "end": 19.727
+        }
+      ],
+      "translation": "在网上，这种热情很快催生出一个“小型安装服务产业”：有人提供只需几美元的远程安装，也有人提供收费更高的上门安装服务。"
+    },
+    {
+      "time": 19.707,
+      "text": "Much of the enthusiasm appears driven less by immediate productivity gains than by fear of missing out.",
+      "words": [
+        {
+          "text": "Much",
+          "start": 19.707,
+          "end": 19.947
+        },
+        {
+          "text": "of",
+          "start": 20.008,
+          "end": 20.048
+        },
+        {
+          "text": "the",
+          "start": 20.068,
+          "end": 20.148
+        },
+        {
+          "text": "enthusiasm",
+          "start": 20.208,
+          "end": 20.949
+        },
+        {
+          "text": "appears",
+          "start": 20.99,
+          "end": 21.511
+        },
+        {
+          "text": "driven",
+          "start": 21.591,
+          "end": 21.871
+        },
+        {
+          "text": "less",
+          "start": 21.911,
+          "end": 22.112
+        },
+        {
+          "text": "by",
+          "start": 22.192,
+          "end": 22.312
+        },
+        {
+          "text": "immediate",
+          "start": 22.352,
+          "end": 22.793
+        },
+        {
+          "text": "productivity",
+          "start": 22.853,
+          "end": 23.394
+        },
+        {
+          "text": "gains",
+          "start": 23.434,
+          "end": 23.735
+        },
+        {
+          "text": "than",
+          "start": 24.216,
+          "end": 24.356
+        },
+        {
+          "text": "by",
+          "start": 24.436,
+          "end": 24.577
+        },
+        {
+          "text": "fear",
+          "start": 24.617,
+          "end": 25.017
+        },
+        {
+          "text": "of",
+          "start": 25.078,
+          "end": 25.138
+        },
+        {
+          "text": "missing",
+          "start": 25.198,
+          "end": 25.498
+        },
+        {
+          "text": "out.",
+          "start": 25.619,
+          "end": 25.779
+        }
+      ],
+      "translation": "这种热情在很大程度上并不是因为立刻能提高生产力，而更多是出于一种“错失恐惧症”的心理。"
+    },
+    {
+      "time": 25.999,
+      "text": "Many early adopters deployed the software without a clear use case.",
+      "words": [
+        {
+          "text": "Many",
+          "start": 25.999,
+          "end": 26.2
+        },
+        {
+          "text": "early",
+          "start": 26.26,
+          "end": 26.48
+        },
+        {
+          "text": "adopters",
+          "start": 26.52,
+          "end": 26.941
+        },
+        {
+          "text": "deployed",
+          "start": 26.981,
+          "end": 27.623
+        },
+        {
+          "text": "the",
+          "start": 27.663,
+          "end": 27.723
+        },
+        {
+          "text": "software",
+          "start": 27.783,
+          "end": 28.204
+        },
+        {
+          "text": "without",
+          "start": 28.244,
+          "end": 28.524
+        },
+        {
+          "text": "a",
+          "start": 28.584,
+          "end": 28.605
+        },
+        {
+          "text": "clear",
+          "start": 28.765,
+          "end": 29.085
+        },
+        {
+          "text": "use",
+          "start": 29.286,
+          "end": 29.466
+        },
+        {
+          "text": "case.",
+          "start": 29.546,
+          "end": 30.268
+        }
+      ],
+      "translation": "许多早期使用者在没有明确应用场景的情况下就部署了这款软件。"
+    },
+    {
+      "time": 30.288,
+      "text": "Social media platforms have been flooded with tutorial videos promising instant AI mastery, further amplifying the frenzy.",
+      "words": [
+        {
+          "text": "Social",
+          "start": 30.288,
+          "end": 30.548
+        },
+        {
+          "text": "media",
+          "start": 30.588,
+          "end": 30.829
+        },
+        {
+          "text": "platforms",
+          "start": 30.869,
+          "end": 31.31
+        },
+        {
+          "text": "have",
+          "start": 31.37,
+          "end": 31.49
+        },
+        {
+          "text": "been",
+          "start": 31.51,
+          "end": 31.671
+        },
+        {
+          "text": "flooded",
+          "start": 31.791,
+          "end": 32.111
+        },
+        {
+          "text": "with",
+          "start": 32.192,
+          "end": 32.332
+        },
+        {
+          "text": "tutorial",
+          "start": 32.632,
+          "end": 33.133
+        },
+        {
+          "text": "videos",
+          "start": 33.214,
+          "end": 33.654
+        },
+        {
+          "text": "promising",
+          "start": 33.735,
+          "end": 34.155
+        },
+        {
+          "text": "instant",
+          "start": 34.196,
+          "end": 34.696
+        },
+        {
+          "text": "AI",
+          "start": 34.817,
+          "end": 35.077
+        },
+        {
+          "text": "mastery,",
+          "start": 35.157,
+          "end": 35.658
+        },
+        {
+          "text": "further",
+          "start": 36.059,
+          "end": 36.36
+        },
+        {
+          "text": "amplifying",
+          "start": 36.44,
+          "end": 36.941
+        },
+        {
+          "text": "the",
+          "start": 36.981,
+          "end": 37.061
+        },
+        {
+          "text": "frenzy.",
+          "start": 37.121,
+          "end": 37.522
+        }
+      ],
+      "translation": "各大社交媒体平台也被大量教程视频淹没，这些视频承诺可以“立刻掌握AI”，进一步放大了这股狂热。"
+    },
+    {
+      "time": 37.763,
+      "text": "Yet the explosive growth obviously has also triggered rising concerns about security and regulatory oversight.",
+      "translation": "然而，这种爆炸式增长显然也引发了人们对安全问题和监管监督日益增加的担忧。",
+      "words": [
+        {
+          "text": "Yet",
+          "start": 37.763,
+          "end": 37.863
+        },
+        {
+          "text": "the",
+          "start": 37.903,
+          "end": 37.983
+        },
+        {
+          "text": "explosive",
+          "start": 38.023,
+          "end": 38.504
+        },
+        {
+          "text": "growth",
+          "start": 38.584,
+          "end": 38.945
+        },
+        {
+          "text": "obviously",
+          "start": 39.125,
+          "end": 39.606
+        },
+        {
+          "text": "has",
+          "start": 39.646,
+          "end": 39.827
+        },
+        {
+          "text": "also",
+          "start": 39.887,
+          "end": 40.107
+        },
+        {
+          "text": "triggered",
+          "start": 40.167,
+          "end": 40.568
+        },
+        {
+          "text": "rising",
+          "start": 40.548,
+          "end": 41.009
+        },
+        {
+          "text": "concerns",
+          "start": 41.049,
+          "end": 41.551
+        },
+        {
+          "text": "about",
+          "start": 41.631,
+          "end": 41.832
+        },
+        {
+          "text": "security",
+          "start": 41.912,
+          "end": 42.413
+        },
+        {
+          "text": "and",
+          "start": 42.493,
+          "end": 42.574
+        },
+        {
+          "text": "regulatory",
+          "start": 42.614,
+          "end": 43.115
+        },
+        {
+          "text": "oversight.",
+          "start": 43.235,
+          "end": 43.697
+        }
+      ]
+    },
+    {
+      "time": 43.957,
+      "text": "The government's approach appears less about stopping the trend than controlling it.",
+      "words": [
+        {
+          "text": "The",
+          "start": 43.957,
+          "end": 44.018
+        },
+        {
+          "text": "government's",
+          "start": 44.058,
+          "end": 44.379
+        },
+        {
+          "text": "approach",
+          "start": 44.399,
+          "end": 44.88
+        },
+        {
+          "text": "appears",
+          "start": 45.201,
+          "end": 45.762
+        },
+        {
+          "text": "less",
+          "start": 45.843,
+          "end": 46.103
+        },
+        {
+          "text": "about",
+          "start": 46.565,
+          "end": 46.805
+        },
+        {
+          "text": "stopping",
+          "start": 46.885,
+          "end": 47.206
+        },
+        {
+          "text": "the",
+          "start": 47.246,
+          "end": 47.307
+        },
+        {
+          "text": "trend",
+          "start": 47.367,
+          "end": 47.627
+        },
+        {
+          "text": "than",
+          "start": 47.668,
+          "end": 47.848
+        },
+        {
+          "text": "controlling",
+          "start": 47.908,
+          "end": 48.37
+        },
+        {
+          "text": "it.",
+          "start": 48.43,
+          "end": 48.51
+        }
+      ],
+      "translation": "政府的做法似乎并不完全是为了阻止这一趋势，而更多是为了对其进行控制。"
+    },
+    {
+      "time": 48.731,
+      "text": "Officials are increasingly wary of uncontrolled software capable of autonomous online actions, from financial transactions to web scraping.",
+      "words": [
+        {
+          "text": "Officials",
+          "start": 48.731,
+          "end": 49.212
+        },
+        {
+          "text": "are",
+          "start": 49.252,
+          "end": 49.513
+        },
+        {
+          "text": "increasingly",
+          "start": 49.553,
+          "end": 50.034
+        },
+        {
+          "text": "wary",
+          "start": 50.094,
+          "end": 50.355
+        },
+        {
+          "text": "of",
+          "start": 50.395,
+          "end": 50.435
+        },
+        {
+          "text": "uncontrolled",
+          "start": 50.455,
+          "end": 51.117
+        },
+        {
+          "text": "software",
+          "start": 51.197,
+          "end": 51.578
+        },
+        {
+          "text": "capable",
+          "start": 51.618,
+          "end": 52.0
+        },
+        {
+          "text": "of",
+          "start": 52.06,
+          "end": 52.1
+        },
+        {
+          "text": "autonomous",
+          "start": 52.18,
+          "end": 52.581
+        },
+        {
+          "text": "online",
+          "start": 52.661,
+          "end": 52.922
+        },
+        {
+          "text": "actions,",
+          "start": 53.002,
+          "end": 53.343
+        },
+        {
+          "text": "from",
+          "start": 53.764,
+          "end": 53.885
+        },
+        {
+          "text": "financial",
+          "start": 53.965,
+          "end": 54.326
+        },
+        {
+          "text": "transactions",
+          "start": 54.366,
+          "end": 54.968
+        },
+        {
+          "text": "to",
+          "start": 55.048,
+          "end": 55.148
+        },
+        {
+          "text": "web",
+          "start": 55.208,
+          "end": 55.429
+        },
+        {
+          "text": "scraping.",
+          "start": 55.609,
+          "end": 56.051
+        }
+      ],
+      "translation": "官员们越来越警惕那些能够在网上自主执行操作的软件，从金融交易到网页抓取。"
+    },
+    {
+      "time": 56.271,
+      "text": "That could potentially break regulations or create cybersecurity vulnerabilities.",
+      "words": [
+        {
+          "text": "That",
+          "start": 56.271,
+          "end": 56.392
+        },
+        {
+          "text": "could",
+          "start": 56.452,
+          "end": 56.592
+        },
+        {
+          "text": "potentially",
+          "start": 56.632,
+          "end": 57.094
+        },
+        {
+          "text": "break",
+          "start": 57.174,
+          "end": 57.414
+        },
+        {
+          "text": "regulations",
+          "start": 57.856,
+          "end": 58.517
+        },
+        {
+          "text": "or",
+          "start": 58.598,
+          "end": 58.678
+        },
+        {
+          "text": "create",
+          "start": 58.738,
+          "end": 58.999
+        },
+        {
+          "text": "cybersecurity",
+          "start": 59.019,
+          "end": 59.661
+        },
+        {
+          "text": "vulnerabilities.",
+          "start": 59.721,
+          "end": 60.403
+        }
+      ],
+      "translation": "这些程序可能违反监管规定，或带来网络安全漏洞。"
+    },
+    {
+      "time": 60.623,
+      "text": "China's major technology companies are therefore moving to bring the ecosystem under more structured control.",
+      "words": [
+        {
+          "text": "China's",
+          "start": 60.623,
+          "end": 60.904
+        },
+        {
+          "text": "major",
+          "start": 60.944,
+          "end": 61.145
+        },
+        {
+          "text": "technology",
+          "start": 61.165,
+          "end": 61.546
+        },
+        {
+          "text": "companies",
+          "start": 61.566,
+          "end": 61.887
+        },
+        {
+          "text": "are",
+          "start": 61.947,
+          "end": 62.007
+        },
+        {
+          "text": "therefore",
+          "start": 62.027,
+          "end": 62.368
+        },
+        {
+          "text": "moving",
+          "start": 62.428,
+          "end": 62.709
+        },
+        {
+          "text": "to",
+          "start": 62.749,
+          "end": 62.829
+        },
+        {
+          "text": "bring",
+          "start": 62.869,
+          "end": 63.03
+        },
+        {
+          "text": "the",
+          "start": 63.05,
+          "end": 63.17
+        },
+        {
+          "text": "ecosystem",
+          "start": 63.351,
+          "end": 63.993
+        },
+        {
+          "text": "under",
+          "start": 64.113,
+          "end": 64.354
+        },
+        {
+          "text": "more",
+          "start": 64.474,
+          "end": 64.755
+        },
+        {
+          "text": "structured",
+          "start": 64.815,
+          "end": 65.276
+        },
+        {
+          "text": "control.",
+          "start": 65.356,
+          "end": 65.998
+        }
+      ],
+      "translation": "因此，中国的大型科技公司正试图将这一生态系统纳入更加有序、结构化的控制之下。"
+    }
+  ]
+}

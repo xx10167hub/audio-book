@@ -1,0 +1,866 @@
+{
+  "audioUrl": "./data/audio-32.mp3",
+  "title": "Oil Surges Back Above $100 a Barrel",
+  "titleTranslation": "第32篇：全球油价暴涨突破100美元关口",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "The price of crude oil has again risen above $100 a barrel due to supply concerns linked to the US-Israeli war with Iran.",
+      "words": [
+        {
+          "text": "The",
+          "start": 0.031,
+          "end": 0.191
+        },
+        {
+          "text": "price",
+          "start": 0.211,
+          "end": 0.532
+        },
+        {
+          "text": "of",
+          "start": 0.592,
+          "end": 0.632
+        },
+        {
+          "text": "crude",
+          "start": 0.672,
+          "end": 1.093
+        },
+        {
+          "text": "oil",
+          "start": 1.293,
+          "end": 1.453
+        },
+        {
+          "text": "has",
+          "start": 1.473,
+          "end": 1.734
+        },
+        {
+          "text": "again",
+          "start": 1.774,
+          "end": 2.315
+        },
+        {
+          "text": "risen",
+          "start": 2.415,
+          "end": 2.775
+        },
+        {
+          "text": "above",
+          "start": 2.795,
+          "end": 3.196
+        },
+        {
+          "text": "$100",
+          "start": 3.216,
+          "end": 3.496
+        },
+        {
+          "text": "a",
+          "start": 4.077,
+          "end": 4.278
+        },
+        {
+          "text": "barrel",
+          "start": 4.438,
+          "end": 4.818
+        },
+        {
+          "text": "due",
+          "start": 5.199,
+          "end": 5.379
+        },
+        {
+          "text": "to",
+          "start": 5.419,
+          "end": 5.519
+        },
+        {
+          "text": "supply",
+          "start": 5.559,
+          "end": 6.06
+        },
+        {
+          "text": "concerns",
+          "start": 6.14,
+          "end": 6.701
+        },
+        {
+          "text": "linked",
+          "start": 6.781,
+          "end": 7.022
+        },
+        {
+          "text": "to",
+          "start": 7.042,
+          "end": 7.122
+        },
+        {
+          "text": "the",
+          "start": 7.162,
+          "end": 7.222
+        },
+        {
+          "text": "U.S.-Israeli",
+          "start": 7.362,
+          "end": 8.204
+        },
+        {
+          "text": "war",
+          "start": 8.284,
+          "end": 8.564
+        },
+        {
+          "text": "with",
+          "start": 8.624,
+          "end": 8.804
+        },
+        {
+          "text": "Iran.",
+          "start": 8.945,
+          "end": 9.345
+        }
+      ],
+      "translation": "由于美以与伊朗的战争引发供应担忧，原油价格再次突破每桶100美元关口。"
+    },
+    {
+      "time": 9.586,
+      "text": "It comes despite an announcement on Wednesday by the International Energy Agency that its members, including the US, will make available 400 million barrels of oil and refined products from their reserves.",
+      "words": [
+        {
+          "text": "It",
+          "start": 9.586,
+          "end": 9.646
+        },
+        {
+          "text": "comes",
+          "start": 9.726,
+          "end": 9.946
+        },
+        {
+          "text": "despite",
+          "start": 10.006,
+          "end": 10.467
+        },
+        {
+          "text": "an",
+          "start": 10.527,
+          "end": 10.567
+        },
+        {
+          "text": "announcement",
+          "start": 10.627,
+          "end": 11.108
+        },
+        {
+          "text": "on",
+          "start": 11.188,
+          "end": 11.248
+        },
+        {
+          "text": "Wednesday",
+          "start": 11.308,
+          "end": 11.769
+        },
+        {
+          "text": "by",
+          "start": 11.849,
+          "end": 12.029
+        },
+        {
+          "text": "the",
+          "start": 12.069,
+          "end": 12.17
+        },
+        {
+          "text": "International",
+          "start": 12.27,
+          "end": 12.851
+        },
+        {
+          "text": "Energy",
+          "start": 12.991,
+          "end": 13.291
+        },
+        {
+          "text": "Agency",
+          "start": 13.412,
+          "end": 13.852
+        },
+        {
+          "text": "that",
+          "start": 13.892,
+          "end": 14.393
+        },
+        {
+          "text": "its",
+          "start": 14.513,
+          "end": 14.633
+        },
+        {
+          "text": "members,",
+          "start": 14.714,
+          "end": 15.114
+        },
+        {
+          "text": "including",
+          "start": 15.274,
+          "end": 15.715
+        },
+        {
+          "text": "the",
+          "start": 15.755,
+          "end": 15.835
+        },
+        {
+          "text": "U.S.,",
+          "start": 15.975,
+          "end": 16.697
+        },
+        {
+          "text": "will",
+          "start": 16.717,
+          "end": 16.877
+        },
+        {
+          "text": "make",
+          "start": 16.917,
+          "end": 17.077
+        },
+        {
+          "text": "available",
+          "start": 17.137,
+          "end": 17.618
+        },
+        {
+          "text": "400",
+          "start": 17.638,
+          "end": 18.6
+        },
+        {
+          "text": "million",
+          "start": 18.7,
+          "end": 19.06
+        },
+        {
+          "text": "barrels",
+          "start": 19.14,
+          "end": 19.481
+        },
+        {
+          "text": "of",
+          "start": 19.561,
+          "end": 19.601
+        },
+        {
+          "text": "oil",
+          "start": 19.801,
+          "end": 19.942
+        },
+        {
+          "text": "and",
+          "start": 20.362,
+          "end": 20.442
+        },
+        {
+          "text": "refined",
+          "start": 20.522,
+          "end": 20.943
+        },
+        {
+          "text": "products",
+          "start": 21.023,
+          "end": 21.404
+        },
+        {
+          "text": "from",
+          "start": 21.464,
+          "end": 21.584
+        },
+        {
+          "text": "their",
+          "start": 21.624,
+          "end": 21.844
+        },
+        {
+          "text": "reserves.",
+          "start": 21.885,
+          "end": 22.405
+        }
+      ],
+      "translation": "尽管国际能源署周三宣布，其成员国（包括美国）将从储备中释放4亿桶石油及精炼产品，但油价仍然上涨。"
+    },
+    {
+      "time": 22.646,
+      "text": "This report from Nick Marsh.",
+      "words": [
+        {
+          "text": "The",
+          "start": 22.646,
+          "end": 22.766
+        },
+        {
+          "text": "support",
+          "start": 22.786,
+          "end": 23.167
+        },
+        {
+          "text": "from",
+          "start": 23.187,
+          "end": 23.327
+        },
+        {
+          "text": "Nick",
+          "start": 23.407,
+          "end": 23.627
+        },
+        {
+          "text": "Marsh.",
+          "start": 23.647,
+          "end": 24.148
+        }
+      ],
+      "translation": "尼克·马什报道。"
+    },
+    {
+      "time": 24.483,
+      "text": "The intervention from the IEA was significant, but it's not something it can do often.",
+      "words": [
+        {
+          "text": "The",
+          "start": 24.483,
+          "end": 24.623
+        },
+        {
+          "text": "intervention",
+          "start": 24.683,
+          "end": 25.204
+        },
+        {
+          "text": "from",
+          "start": 25.284,
+          "end": 25.424
+        },
+        {
+          "text": "the",
+          "start": 25.464,
+          "end": 25.544
+        },
+        {
+          "text": "IEA",
+          "start": 25.685,
+          "end": 26.245
+        },
+        {
+          "text": "was",
+          "start": 26.265,
+          "end": 26.606
+        },
+        {
+          "text": "significant,",
+          "start": 26.646,
+          "end": 27.407
+        },
+        {
+          "text": "but",
+          "start": 27.467,
+          "end": 27.587
+        },
+        {
+          "text": "it's",
+          "start": 27.627,
+          "end": 27.767
+        },
+        {
+          "text": "not",
+          "start": 27.887,
+          "end": 28.068
+        },
+        {
+          "text": "something",
+          "start": 28.148,
+          "end": 28.508
+        },
+        {
+          "text": "it",
+          "start": 28.568,
+          "end": 28.628
+        },
+        {
+          "text": "can",
+          "start": 28.668,
+          "end": 28.829
+        },
+        {
+          "text": "do",
+          "start": 28.869,
+          "end": 29.009
+        },
+        {
+          "text": "often.",
+          "start": 29.109,
+          "end": 29.369
+        }
+      ],
+      "translation": "国际能源署的干预措施意义重大，但这并非其能经常采取的行动。"
+    },
+    {
+      "time": 29.57,
+      "text": "And for traders, it didn't answer the crucial question of how long the Strait of Hormuz will remain a danger zone for oil tankers.",
+      "words": [
+        {
+          "text": "And",
+          "start": 29.57,
+          "end": 29.65
+        },
+        {
+          "text": "for",
+          "start": 29.69,
+          "end": 29.79
+        },
+        {
+          "text": "traders,",
+          "start": 29.87,
+          "end": 30.27
+        },
+        {
+          "text": "it",
+          "start": 30.671,
+          "end": 30.711
+        },
+        {
+          "text": "didn't",
+          "start": 30.811,
+          "end": 31.071
+        },
+        {
+          "text": "answer",
+          "start": 31.192,
+          "end": 31.392
+        },
+        {
+          "text": "the",
+          "start": 31.432,
+          "end": 31.512
+        },
+        {
+          "text": "crucial",
+          "start": 31.612,
+          "end": 32.013
+        },
+        {
+          "text": "question",
+          "start": 32.093,
+          "end": 32.473
+        },
+        {
+          "text": "of",
+          "start": 32.613,
+          "end": 32.673
+        },
+        {
+          "text": "how",
+          "start": 32.794,
+          "end": 33.014
+        },
+        {
+          "text": "long",
+          "start": 33.114,
+          "end": 33.314
+        },
+        {
+          "text": "the",
+          "start": 33.374,
+          "end": 33.454
+        },
+        {
+          "text": "Strait",
+          "start": 33.495,
+          "end": 33.775
+        },
+        {
+          "text": "of",
+          "start": 33.815,
+          "end": 33.855
+        },
+        {
+          "text": "Hormuz",
+          "start": 33.935,
+          "end": 34.376
+        },
+        {
+          "text": "will",
+          "start": 34.476,
+          "end": 34.616
+        },
+        {
+          "text": "remain",
+          "start": 34.676,
+          "end": 34.956
+        },
+        {
+          "text": "a",
+          "start": 35.016,
+          "end": 35.037
+        },
+        {
+          "text": "danger",
+          "start": 35.137,
+          "end": 35.557
+        },
+        {
+          "text": "zone",
+          "start": 35.597,
+          "end": 35.838
+        },
+        {
+          "text": "for",
+          "start": 35.958,
+          "end": 36.078
+        },
+        {
+          "text": "oil",
+          "start": 36.218,
+          "end": 36.378
+        },
+        {
+          "text": "tankers.",
+          "start": 36.418,
+          "end": 37.039
+        }
+      ],
+      "translation": "而对于贸易商来说，这并没有回答霍尔木兹海峡将在多长时间内仍是油轮危险区域这一关键问题。"
+    },
+    {
+      "time": 37.059,
+      "text": "Iran's Revolutionary Guards has warned the country's enemies that they will not be able to artificially lower the price of oil and to soon expect it at $200 per barrel.",
+      "words": [
+        {
+          "text": "Iran's",
+          "start": 37.059,
+          "end": 37.36
+        },
+        {
+          "text": "Revolutionary",
+          "start": 37.4,
+          "end": 37.98
+        },
+        {
+          "text": "Guards",
+          "start": 38.04,
+          "end": 38.381
+        },
+        {
+          "text": "has",
+          "start": 38.441,
+          "end": 38.561
+        },
+        {
+          "text": "warned",
+          "start": 38.641,
+          "end": 38.881
+        },
+        {
+          "text": "the",
+          "start": 38.901,
+          "end": 38.982
+        },
+        {
+          "text": "country's",
+          "start": 39.022,
+          "end": 39.342
+        },
+        {
+          "text": "enemies",
+          "start": 39.402,
+          "end": 39.682
+        },
+        {
+          "text": "that",
+          "start": 40.023,
+          "end": 40.123
+        },
+        {
+          "text": "they",
+          "start": 40.143,
+          "end": 40.223
+        },
+        {
+          "text": "will",
+          "start": 40.263,
+          "end": 40.403
+        },
+        {
+          "text": "not",
+          "start": 40.484,
+          "end": 40.664
+        },
+        {
+          "text": "be",
+          "start": 40.744,
+          "end": 40.824
+        },
+        {
+          "text": "able",
+          "start": 40.924,
+          "end": 41.124
+        },
+        {
+          "text": "to",
+          "start": 41.184,
+          "end": 41.285
+        },
+        {
+          "text": "artificially",
+          "start": 41.485,
+          "end": 42.166
+        },
+        {
+          "text": "lower",
+          "start": 42.226,
+          "end": 42.426
+        },
+        {
+          "text": "the",
+          "start": 42.466,
+          "end": 42.526
+        },
+        {
+          "text": "price",
+          "start": 42.566,
+          "end": 42.827
+        },
+        {
+          "text": "of",
+          "start": 42.887,
+          "end": 42.927
+        },
+        {
+          "text": "oil",
+          "start": 42.947,
+          "end": 43.187
+        },
+        {
+          "text": "and",
+          "start": 43.387,
+          "end": 43.467
+        },
+        {
+          "text": "to",
+          "start": 43.507,
+          "end": 43.608
+        },
+        {
+          "text": "soon",
+          "start": 43.708,
+          "end": 43.928
+        },
+        {
+          "text": "expect",
+          "start": 43.988,
+          "end": 44.348
+        },
+        {
+          "text": "it",
+          "start": 44.429,
+          "end": 44.469
+        },
+        {
+          "text": "at",
+          "start": 44.769,
+          "end": 44.829
+        },
+        {
+          "text": "$200",
+          "start": 44.849,
+          "end": 45.63
+        },
+        {
+          "text": "per",
+          "start": 45.991,
+          "end": 46.111
+        },
+        {
+          "text": "barrel.",
+          "start": 46.131,
+          "end": 47.132
+        }
+      ],
+      "translation": "伊朗伊斯兰革命卫队警告该国的敌人，他们无法人为压低油价，且很快就会看到油价达到每桶200美元。"
+    },
+    {
+      "time": 47.112,
+      "text": "President Trump, whose words have managed to appease markets previously, is now under more pressure than ever to explain to Americans how this conflict won't have an impact on the cost of living.",
+      "words": [
+        {
+          "text": "President",
+          "start": 47.112,
+          "end": 47.574
+        },
+        {
+          "text": "Trump,",
+          "start": 47.655,
+          "end": 47.936
+        },
+        {
+          "text": "whose",
+          "start": 48.338,
+          "end": 48.479
+        },
+        {
+          "text": "words",
+          "start": 48.539,
+          "end": 48.76
+        },
+        {
+          "text": "have",
+          "start": 48.78,
+          "end": 48.881
+        },
+        {
+          "text": "managed",
+          "start": 48.941,
+          "end": 49.223
+        },
+        {
+          "text": "to",
+          "start": 49.243,
+          "end": 49.323
+        },
+        {
+          "text": "appease",
+          "start": 49.403,
+          "end": 49.685
+        },
+        {
+          "text": "markets",
+          "start": 49.745,
+          "end": 50.087
+        },
+        {
+          "text": "previously,",
+          "start": 50.187,
+          "end": 50.75
+        },
+        {
+          "text": "is",
+          "start": 50.79,
+          "end": 51.273
+        },
+        {
+          "text": "now",
+          "start": 51.333,
+          "end": 51.494
+        },
+        {
+          "text": "under",
+          "start": 51.594,
+          "end": 51.815
+        },
+        {
+          "text": "more",
+          "start": 51.916,
+          "end": 52.097
+        },
+        {
+          "text": "pressure",
+          "start": 52.177,
+          "end": 52.459
+        },
+        {
+          "text": "than",
+          "start": 52.519,
+          "end": 52.639
+        },
+        {
+          "text": "ever",
+          "start": 52.72,
+          "end": 52.881
+        },
+        {
+          "text": "to",
+          "start": 53.062,
+          "end": 53.162
+        },
+        {
+          "text": "explain",
+          "start": 53.242,
+          "end": 53.705
+        },
+        {
+          "text": "to",
+          "start": 53.765,
+          "end": 53.846
+        },
+        {
+          "text": "Americans",
+          "start": 53.906,
+          "end": 54.388
+        },
+        {
+          "text": "how",
+          "start": 54.489,
+          "end": 54.629
+        },
+        {
+          "text": "this",
+          "start": 54.69,
+          "end": 54.81
+        },
+        {
+          "text": "conflict",
+          "start": 54.931,
+          "end": 55.393
+        },
+        {
+          "text": "won't",
+          "start": 55.815,
+          "end": 56.036
+        },
+        {
+          "text": "have",
+          "start": 56.097,
+          "end": 56.237
+        },
+        {
+          "text": "an",
+          "start": 56.278,
+          "end": 56.318
+        },
+        {
+          "text": "impact",
+          "start": 56.378,
+          "end": 56.72
+        },
+        {
+          "text": "on",
+          "start": 56.861,
+          "end": 56.921
+        },
+        {
+          "text": "the",
+          "start": 56.961,
+          "end": 57.021
+        },
+        {
+          "text": "cost",
+          "start": 57.062,
+          "end": 57.283
+        },
+        {
+          "text": "of",
+          "start": 57.323,
+          "end": 57.363
+        },
+        {
+          "text": "living.",
+          "start": 57.403,
+          "end": 58.388
+        }
+      ],
+      "translation": "特朗普总统此前的言论曾成功安抚市场，而现在他面临着前所未有的压力，需向美国人解释这场冲突为何不会对生活成本产生影响。"
+    }
+  ]
+}
