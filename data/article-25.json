@@ -1,0 +1,1570 @@
+{
+  "audioUrl": "./data/audio-25.mp3",
+  "title": "How Did Gold Get To Earth",
+  "titleTranslation": "第25篇：黄金的起源与发掘",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "Here's the Earth, all well separated, with all of the metals where they're supposed to be in the core.",
+      "translation": "这是地球，所有金属都被巧妙地分离，在它们应该在的地方——位于地核之中。",
+      "words": [
+        {
+          "text": "Here's",
+          "start": 0.031,
+          "end": 0.872
+        },
+        {
+          "text": "the",
+          "start": 0.933,
+          "end": 1.033
+        },
+        {
+          "text": "Earth,",
+          "start": 1.133,
+          "end": 1.393
+        },
+        {
+          "text": "all",
+          "start": 1.794,
+          "end": 1.934
+        },
+        {
+          "text": "well",
+          "start": 2.014,
+          "end": 2.255
+        },
+        {
+          "text": "separated,",
+          "start": 2.355,
+          "end": 3.096
+        },
+        {
+          "text": "with",
+          "start": 3.637,
+          "end": 3.818
+        },
+        {
+          "text": "all",
+          "start": 4.038,
+          "end": 4.419
+        },
+        {
+          "text": "of",
+          "start": 4.459,
+          "end": 4.499
+        },
+        {
+          "text": "the",
+          "start": 4.559,
+          "end": 4.639
+        },
+        {
+          "text": "metals",
+          "start": 4.699,
+          "end": 5.02
+        },
+        {
+          "text": "where",
+          "start": 5.06,
+          "end": 5.2
+        },
+        {
+          "text": "they're",
+          "start": 5.22,
+          "end": 5.4
+        },
+        {
+          "text": "supposed",
+          "start": 5.42,
+          "end": 5.801
+        },
+        {
+          "text": "to",
+          "start": 5.841,
+          "end": 5.901
+        },
+        {
+          "text": "be",
+          "start": 5.941,
+          "end": 6.042
+        },
+        {
+          "text": "in",
+          "start": 6.082,
+          "end": 6.122
+        },
+        {
+          "text": "the",
+          "start": 6.182,
+          "end": 6.242
+        },
+        {
+          "text": "core.",
+          "start": 6.322,
+          "end": 6.683
+        }
+      ]
+    },
+    {
+      "time": 6.703,
+      "text": "And then this planet was salted with meteorite debris that brought metals with it, including gold.",
+      "translation": "然后，地球迎来了含金属的陨石碎片，其中包括黄金。",
+      "words": [
+        {
+          "text": "And",
+          "start": 6.703,
+          "end": 7.624
+        },
+        {
+          "text": "then",
+          "start": 7.664,
+          "end": 7.845
+        },
+        {
+          "text": "this",
+          "start": 7.945,
+          "end": 8.125
+        },
+        {
+          "text": "planet",
+          "start": 8.225,
+          "end": 8.766
+        },
+        {
+          "text": "was",
+          "start": 9.187,
+          "end": 9.367
+        },
+        {
+          "text": "salted",
+          "start": 9.488,
+          "end": 10.069
+        },
+        {
+          "text": "with",
+          "start": 10.109,
+          "end": 10.69
+        },
+        {
+          "text": "meteorite",
+          "start": 10.73,
+          "end": 11.431
+        },
+        {
+          "text": "debris",
+          "start": 11.511,
+          "end": 12.072
+        },
+        {
+          "text": "that",
+          "start": 12.112,
+          "end": 12.693
+        },
+        {
+          "text": "brought",
+          "start": 12.733,
+          "end": 13.054
+        },
+        {
+          "text": "metals",
+          "start": 13.635,
+          "end": 13.996
+        },
+        {
+          "text": "with",
+          "start": 14.096,
+          "end": 14.276
+        },
+        {
+          "text": "it,",
+          "start": 14.396,
+          "end": 14.476
+        },
+        {
+          "text": "including",
+          "start": 14.577,
+          "end": 15.097
+        },
+        {
+          "text": "gold.",
+          "start": 15.218,
+          "end": 15.598
+        }
+      ]
+    },
+    {
+      "time": 15.799,
+      "text": "That's the surprising conclusion of the origin of gold to Earth's surface.",
+      "translation": "这就是关于地球表面黄金起源的惊人结论。",
+      "words": [
+        {
+          "text": "That's",
+          "start": 15.799,
+          "end": 16.019
+        },
+        {
+          "text": "the",
+          "start": 16.059,
+          "end": 16.159
+        },
+        {
+          "text": "surprising",
+          "start": 16.219,
+          "end": 16.82
+        },
+        {
+          "text": "conclusion",
+          "start": 16.881,
+          "end": 17.542
+        },
+        {
+          "text": "of",
+          "start": 17.562,
+          "end": 17.602
+        },
+        {
+          "text": "the",
+          "start": 18.463,
+          "end": 18.724
+        },
+        {
+          "text": "origin",
+          "start": 18.764,
+          "end": 19.345
+        },
+        {
+          "text": "of",
+          "start": 19.385,
+          "end": 19.425
+        },
+        {
+          "text": "gold",
+          "start": 19.465,
+          "end": 19.886
+        },
+        {
+          "text": "to",
+          "start": 19.926,
+          "end": 20.186
+        },
+        {
+          "text": "Earth's",
+          "start": 20.226,
+          "end": 20.507
+        },
+        {
+          "text": "surface.",
+          "start": 20.527,
+          "end": 21.128
+        }
+      ]
+    },
+    {
+      "time": 21.361,
+      "text": "Even though the planet had a new supply of gold, there wasn't anything to see because it was just too dilute.",
+      "translation": "尽管地球新增了黄金储量，但肉眼几乎难以察觉，因为它们太稀薄了。",
+      "words": [
+        {
+          "text": "Even",
+          "start": 21.361,
+          "end": 21.642
+        },
+        {
+          "text": "though",
+          "start": 21.702,
+          "end": 21.862
+        },
+        {
+          "text": "the",
+          "start": 21.902,
+          "end": 21.982
+        },
+        {
+          "text": "planet",
+          "start": 22.022,
+          "end": 22.323
+        },
+        {
+          "text": "had",
+          "start": 22.343,
+          "end": 22.443
+        },
+        {
+          "text": "a",
+          "start": 22.503,
+          "end": 22.524
+        },
+        {
+          "text": "new",
+          "start": 22.584,
+          "end": 22.764
+        },
+        {
+          "text": "supply",
+          "start": 22.824,
+          "end": 23.125
+        },
+        {
+          "text": "of",
+          "start": 23.165,
+          "end": 23.205
+        },
+        {
+          "text": "gold,",
+          "start": 23.285,
+          "end": 23.546
+        },
+        {
+          "text": "there",
+          "start": 23.586,
+          "end": 23.706
+        },
+        {
+          "text": "wasn't",
+          "start": 23.746,
+          "end": 23.987
+        },
+        {
+          "text": "anything",
+          "start": 24.067,
+          "end": 24.327
+        },
+        {
+          "text": "to",
+          "start": 24.368,
+          "end": 24.428
+        },
+        {
+          "text": "see",
+          "start": 24.508,
+          "end": 24.728
+        },
+        {
+          "text": "because",
+          "start": 24.809,
+          "end": 24.989
+        },
+        {
+          "text": "it",
+          "start": 25.009,
+          "end": 25.069
+        },
+        {
+          "text": "was",
+          "start": 25.089,
+          "end": 25.169
+        },
+        {
+          "text": "just",
+          "start": 25.189,
+          "end": 25.35
+        },
+        {
+          "text": "too",
+          "start": 25.51,
+          "end": 25.891
+        },
+        {
+          "text": "dilute.",
+          "start": 26.011,
+          "end": 26.693
+        }
+      ]
+    },
+    {
+      "time": 27.615,
+      "text": "The gold that there was was a tiny fraction of the Earth's crust and it was spread out around the planet.",
+      "translation": "过去，黄金只占地壳的很小一部分，而且分布在地球的各个角落，极为少见。",
+      "words": [
+        {
+          "text": "The",
+          "start": 27.615,
+          "end": 27.715
+        },
+        {
+          "text": "gold",
+          "start": 27.775,
+          "end": 28.056
+        },
+        {
+          "text": "that",
+          "start": 28.096,
+          "end": 28.216
+        },
+        {
+          "text": "there",
+          "start": 28.236,
+          "end": 28.356
+        },
+        {
+          "text": "was",
+          "start": 28.396,
+          "end": 28.617
+        },
+        {
+          "text": "was",
+          "start": 28.657,
+          "end": 28.757
+        },
+        {
+          "text": "a",
+          "start": 28.817,
+          "end": 28.837
+        },
+        {
+          "text": "tiny",
+          "start": 28.978,
+          "end": 29.679
+        },
+        {
+          "text": "fraction",
+          "start": 29.779,
+          "end": 30.28
+        },
+        {
+          "text": "of",
+          "start": 30.321,
+          "end": 30.461
+        },
+        {
+          "text": "the",
+          "start": 30.501,
+          "end": 30.601
+        },
+        {
+          "text": "Earth's",
+          "start": 30.661,
+          "end": 30.902
+        },
+        {
+          "text": "crust",
+          "start": 30.962,
+          "end": 31.283
+        },
+        {
+          "text": "and",
+          "start": 31.343,
+          "end": 31.403
+        },
+        {
+          "text": "it",
+          "start": 31.423,
+          "end": 31.463
+        },
+        {
+          "text": "was",
+          "start": 31.503,
+          "end": 31.603
+        },
+        {
+          "text": "spread",
+          "start": 31.704,
+          "end": 32.044
+        },
+        {
+          "text": "out",
+          "start": 32.165,
+          "end": 32.325
+        },
+        {
+          "text": "around",
+          "start": 32.345,
+          "end": 32.806
+        },
+        {
+          "text": "the",
+          "start": 32.846,
+          "end": 32.926
+        },
+        {
+          "text": "planet.",
+          "start": 32.986,
+          "end": 34.189
+        }
+      ]
+    },
+    {
+      "time": 34.456,
+      "text": "And yet, billions of years later, a human could just pick up a nugget of gold out of the landscape.",
+      "translation": "然而，数十亿年后，人类却已经能直接从地表捡起一块块金块。",
+      "words": [
+        {
+          "text": "And",
+          "start": 34.456,
+          "end": 34.636
+        },
+        {
+          "text": "yet,",
+          "start": 34.716,
+          "end": 35.017
+        },
+        {
+          "text": "billions",
+          "start": 35.397,
+          "end": 35.797
+        },
+        {
+          "text": "of",
+          "start": 35.878,
+          "end": 35.918
+        },
+        {
+          "text": "years",
+          "start": 35.978,
+          "end": 36.218
+        },
+        {
+          "text": "later,",
+          "start": 36.298,
+          "end": 36.698
+        },
+        {
+          "text": "a",
+          "start": 36.738,
+          "end": 37.179
+        },
+        {
+          "text": "human",
+          "start": 37.259,
+          "end": 37.659
+        },
+        {
+          "text": "could",
+          "start": 37.74,
+          "end": 37.88
+        },
+        {
+          "text": "just",
+          "start": 37.92,
+          "end": 38.08
+        },
+        {
+          "text": "pick",
+          "start": 38.22,
+          "end": 38.46
+        },
+        {
+          "text": "up",
+          "start": 38.58,
+          "end": 38.64
+        },
+        {
+          "text": "a",
+          "start": 38.821,
+          "end": 38.861
+        },
+        {
+          "text": "nugget",
+          "start": 39.021,
+          "end": 39.321
+        },
+        {
+          "text": "of",
+          "start": 39.361,
+          "end": 39.401
+        },
+        {
+          "text": "gold",
+          "start": 39.441,
+          "end": 39.802
+        },
+        {
+          "text": "out",
+          "start": 39.822,
+          "end": 40.202
+        },
+        {
+          "text": "of",
+          "start": 40.262,
+          "end": 40.302
+        },
+        {
+          "text": "the",
+          "start": 40.342,
+          "end": 40.442
+        },
+        {
+          "text": "landscape",
+          "start": 40.502,
+          "end": 41.003
+        },
+        {
+          "text": "with",
+          "start": 41.363,
+          "end": 41.484
+        },
+        {
+          "text": "only",
+          "start": 41.544,
+          "end": 41.704
+        },
+        {
+          "text": "one",
+          "start": 41.724,
+          "end": 42.024
+        },
+        {
+          "text": "gram",
+          "start": 42.064,
+          "end": 42.445
+        },
+        {
+          "text": "of",
+          "start": 42.505,
+          "end": 42.585
+        },
+        {
+          "text": "gold",
+          "start": 42.645,
+          "end": 42.925
+        },
+        {
+          "text": "for",
+          "start": 42.985,
+          "end": 43.065
+        },
+        {
+          "text": "every",
+          "start": 43.145,
+          "end": 43.366
+        },
+        {
+          "text": "thousand",
+          "start": 43.526,
+          "end": 44.006
+        },
+        {
+          "text": "tonnes",
+          "start": 44.146,
+          "end": 44.607
+        },
+        {
+          "text": "of",
+          "start": 44.707,
+          "end": 44.747
+        },
+        {
+          "text": "the",
+          "start": 44.787,
+          "end": 44.887
+        },
+        {
+          "text": "Earth's",
+          "start": 44.947,
+          "end": 45.188
+        },
+        {
+          "text": "crust.",
+          "start": 45.228,
+          "end": 45.588
+        }
+      ]
+    },
+    {
+      "time": 46.149,
+      "text": "With only one gram of gold for every thousand tons of the Earth's crust, there had to be a way to concentrate the tiny particles of gold into the colour we see today.",
+      "translation": "地壳每 1000 吨里只有 1 克黄金，大自然必须想办法把这些极其细微的金粒慢慢浓缩，才有了我们今天看到的金色。",
+      "words": [
+        {
+          "text": "With",
+          "start": 46.149,
+          "end": 46.329
+        },
+        {
+          "text": "had",
+          "start": 46.389,
+          "end": 46.569
+        },
+        {
+          "text": "to",
+          "start": 46.629,
+          "end": 46.709
+        },
+        {
+          "text": "be",
+          "start": 46.749,
+          "end": 46.849
+        },
+        {
+          "text": "a",
+          "start": 46.889,
+          "end": 46.929
+        },
+        {
+          "text": "way",
+          "start": 46.949,
+          "end": 47.15
+        },
+        {
+          "text": "to",
+          "start": 47.23,
+          "end": 47.31
+        },
+        {
+          "text": "concentrate",
+          "start": 47.39,
+          "end": 48.031
+        },
+        {
+          "text": "the",
+          "start": 48.051,
+          "end": 48.131
+        },
+        {
+          "text": "tiny",
+          "start": 48.231,
+          "end": 48.691
+        },
+        {
+          "text": "particles",
+          "start": 48.771,
+          "end": 49.292
+        },
+        {
+          "text": "of",
+          "start": 49.332,
+          "end": 49.392
+        },
+        {
+          "text": "gold",
+          "start": 49.472,
+          "end": 49.792
+        },
+        {
+          "text": "into",
+          "start": 49.833,
+          "end": 50.373
+        },
+        {
+          "text": "the",
+          "start": 50.393,
+          "end": 50.473
+        },
+        {
+          "text": "colour",
+          "start": 50.593,
+          "end": 50.994
+        },
+        {
+          "text": "we",
+          "start": 51.014,
+          "end": 51.254
+        },
+        {
+          "text": "see",
+          "start": 51.334,
+          "end": 51.534
+        },
+        {
+          "text": "today.",
+          "start": 51.594,
+          "end": 51.915
+        }
+      ]
+    },
+    {
+      "time": 51.975,
+      "text": "Over millions of years, water picked up gold, transported, sorted and concentrated it.",
+      "translation": "数百万年来，水流不断裹挟黄金，把它搬运、筛分、富集。",
+      "words": [
+        {
+          "text": "Over",
+          "start": 51.975,
+          "end": 52.475
+        },
+        {
+          "text": "millions",
+          "start": 52.636,
+          "end": 53.096
+        },
+        {
+          "text": "of",
+          "start": 53.176,
+          "end": 53.216
+        },
+        {
+          "text": "years,",
+          "start": 53.296,
+          "end": 53.697
+        },
+        {
+          "text": "water",
+          "start": 54.057,
+          "end": 54.417
+        },
+        {
+          "text": "picked",
+          "start": 54.538,
+          "end": 54.898
+        },
+        {
+          "text": "up",
+          "start": 54.998,
+          "end": 55.078
+        },
+        {
+          "text": "gold,",
+          "start": 55.218,
+          "end": 55.619
+        },
+        {
+          "text": "transported,",
+          "start": 56.219,
+          "end": 57.18
+        },
+        {
+          "text": "sorted",
+          "start": 57.421,
+          "end": 57.981
+        },
+        {
+          "text": "And",
+          "start": 58.021,
+          "end": 58.342
+        },
+        {
+          "text": "concentrated",
+          "start": 58.462,
+          "end": 59.283
+        },
+        {
+          "text": "it.",
+          "start": 59.383,
+          "end": 59.603
+        }
+      ]
+    },
+    {
+      "time": 61.169,
+      "text": "And then deposited it in a form that made it easier for us to find.",
+      "translation": "最后又把它沉积成更容易被人发现的形态。",
+      "words": [
+        {
+          "text": "And",
+          "start": 61.169,
+          "end": 61.309
+        },
+        {
+          "text": "then",
+          "start": 61.329,
+          "end": 61.449
+        },
+        {
+          "text": "deposited",
+          "start": 61.489,
+          "end": 62.13
+        },
+        {
+          "text": "it",
+          "start": 62.191,
+          "end": 62.231
+        },
+        {
+          "text": "in",
+          "start": 62.311,
+          "end": 62.351
+        },
+        {
+          "text": "a",
+          "start": 62.391,
+          "end": 62.411
+        },
+        {
+          "text": "form",
+          "start": 62.511,
+          "end": 62.832
+        },
+        {
+          "text": "that",
+          "start": 63.172,
+          "end": 63.312
+        },
+        {
+          "text": "made",
+          "start": 63.352,
+          "end": 63.513
+        },
+        {
+          "text": "it",
+          "start": 63.573,
+          "end": 63.633
+        },
+        {
+          "text": "easier",
+          "start": 63.773,
+          "end": 64.094
+        },
+        {
+          "text": "for",
+          "start": 64.154,
+          "end": 64.254
+        },
+        {
+          "text": "us",
+          "start": 64.374,
+          "end": 64.474
+        },
+        {
+          "text": "to",
+          "start": 64.554,
+          "end": 64.654
+        },
+        {
+          "text": "find.",
+          "start": 64.715,
+          "end": 65.055
+        }
+      ]
+    },
+    {
+      "time": 65.255,
+      "text": "It's a process that's still happening and drives our continued obsession with one of Earth's most alluring colours.",
+      "translation": "这一过程至今仍在继续，让我们对地球上这最迷人的色彩保持着无尽的痴迷。",
+      "words": [
+        {
+          "text": "It's",
+          "start": 65.255,
+          "end": 65.376
+        },
+        {
+          "text": "a",
+          "start": 65.436,
+          "end": 65.456
+        },
+        {
+          "text": "process",
+          "start": 65.536,
+          "end": 65.956
+        },
+        {
+          "text": "that's",
+          "start": 65.997,
+          "end": 66.157
+        },
+        {
+          "text": "still",
+          "start": 66.197,
+          "end": 66.477
+        },
+        {
+          "text": "happening",
+          "start": 66.517,
+          "end": 66.898
+        },
+        {
+          "text": "And",
+          "start": 67.679,
+          "end": 67.759
+        },
+        {
+          "text": "drives",
+          "start": 67.859,
+          "end": 68.26
+        },
+        {
+          "text": "our",
+          "start": 68.34,
+          "end": 68.42
+        },
+        {
+          "text": "continued",
+          "start": 68.5,
+          "end": 69.101
+        },
+        {
+          "text": "obsession",
+          "start": 69.202,
+          "end": 69.722
+        },
+        {
+          "text": "with",
+          "start": 70.123,
+          "end": 70.243
+        },
+        {
+          "text": "one",
+          "start": 70.323,
+          "end": 70.403
+        },
+        {
+          "text": "of",
+          "start": 70.443,
+          "end": 70.483
+        },
+        {
+          "text": "Earth's",
+          "start": 70.524,
+          "end": 70.904
+        },
+        {
+          "text": "most",
+          "start": 70.944,
+          "end": 71.205
+        },
+        {
+          "text": "alluring",
+          "start": 71.285,
+          "end": 71.866
+        },
+        {
+          "text": "colours.",
+          "start": 71.946,
+          "end": 72.286
+        }
+      ]
+    },
+    {
+      "time": 72.747,
+      "text": "These atoms have travelled from a distant star in time to be there for the birth of the solar system, and then they hit the Earth in an impact which left a golden signature on our landscape.",
+      "translation": "这些金原子最早来自遥远的恒星，穿越漫长时空，见证了太阳系的诞生，随后又随着一次撞击来到地球，在这颗星球的地表留下了金色的印记。",
+      "words": [
+        {
+          "text": "These",
+          "start": 72.747,
+          "end": 72.907
+        },
+        {
+          "text": "atoms",
+          "start": 73.027,
+          "end": 73.388
+        },
+        {
+          "text": "have",
+          "start": 73.428,
+          "end": 73.548
+        },
+        {
+          "text": "travelled",
+          "start": 73.628,
+          "end": 74.009
+        },
+        {
+          "text": "from",
+          "start": 74.049,
+          "end": 74.149
+        },
+        {
+          "text": "a",
+          "start": 74.169,
+          "end": 74.189
+        },
+        {
+          "text": "distant",
+          "start": 74.229,
+          "end": 74.57
+        },
+        {
+          "text": "star",
+          "start": 74.61,
+          "end": 74.93
+        },
+        {
+          "text": "in",
+          "start": 75.011,
+          "end": 75.071
+        },
+        {
+          "text": "time",
+          "start": 75.131,
+          "end": 75.351
+        },
+        {
+          "text": "to",
+          "start": 75.371,
+          "end": 75.411
+        },
+        {
+          "text": "be",
+          "start": 75.431,
+          "end": 75.511
+        },
+        {
+          "text": "there",
+          "start": 75.551,
+          "end": 75.692
+        },
+        {
+          "text": "for",
+          "start": 75.712,
+          "end": 75.792
+        },
+        {
+          "text": "the",
+          "start": 75.832,
+          "end": 75.892
+        },
+        {
+          "text": "birth",
+          "start": 75.972,
+          "end": 76.232
+        },
+        {
+          "text": "of",
+          "start": 76.273,
+          "end": 76.313
+        },
+        {
+          "text": "the",
+          "start": 76.353,
+          "end": 76.413
+        },
+        {
+          "text": "solar",
+          "start": 76.493,
+          "end": 76.793
+        },
+        {
+          "text": "system,",
+          "start": 76.833,
+          "end": 77.895
+        },
+        {
+          "text": "and",
+          "start": 77.875,
+          "end": 78.115
+        },
+        {
+          "text": "then",
+          "start": 78.155,
+          "end": 78.256
+        },
+        {
+          "text": "they",
+          "start": 78.276,
+          "end": 78.416
+        },
+        {
+          "text": "hit",
+          "start": 78.496,
+          "end": 78.696
+        },
+        {
+          "text": "the",
+          "start": 78.736,
+          "end": 78.836
+        },
+        {
+          "text": "earth",
+          "start": 78.916,
+          "end": 79.097
+        },
+        {
+          "text": "in",
+          "start": 79.157,
+          "end": 79.197
+        },
+        {
+          "text": "an",
+          "start": 79.257,
+          "end": 79.297
+        },
+        {
+          "text": "impact",
+          "start": 79.377,
+          "end": 79.738
+        },
+        {
+          "text": "which",
+          "start": 79.758,
+          "end": 79.878
+        },
+        {
+          "text": "left",
+          "start": 79.918,
+          "end": 80.058
+        },
+        {
+          "text": "a",
+          "start": 80.118,
+          "end": 80.138
+        },
+        {
+          "text": "golden",
+          "start": 80.298,
+          "end": 80.719
+        },
+        {
+          "text": "signature",
+          "start": 80.759,
+          "end": 81.2
+        },
+        {
+          "text": "on",
+          "start": 81.26,
+          "end": 81.32
+        },
+        {
+          "text": "our",
+          "start": 81.4,
+          "end": 81.48
+        },
+        {
+          "text": "landscape.",
+          "start": 81.52,
+          "end": 82.041
+        }
+      ]
+    },
+    {
+      "time": 82.281,
+      "text": "And even then it didn't stop because there were sorting processes, first by geology and then by water, until humans could pluck nuggets like this from the landscape.",
+      "translation": "即便如此，它们的旅程并未结束，因为接下来还经历了一轮轮筛选，先由地质作用完成，再由水流接手，直到人类终于能从地表拾起这样的金块。",
+      "words": [
+        {
+          "text": "And",
+          "start": 82.281,
+          "end": 82.381
+        },
+        {
+          "text": "even",
+          "start": 82.502,
+          "end": 82.702
+        },
+        {
+          "text": "then",
+          "start": 82.762,
+          "end": 82.922
+        },
+        {
+          "text": "it",
+          "start": 82.942,
+          "end": 83.022
+        },
+        {
+          "text": "didn't",
+          "start": 83.082,
+          "end": 83.303
+        },
+        {
+          "text": "stop",
+          "start": 83.403,
+          "end": 83.723
+        },
+        {
+          "text": "because",
+          "start": 83.924,
+          "end": 84.144
+        },
+        {
+          "text": "there",
+          "start": 84.184,
+          "end": 84.304
+        },
+        {
+          "text": "were",
+          "start": 84.324,
+          "end": 84.424
+        },
+        {
+          "text": "sorting",
+          "start": 84.544,
+          "end": 85.025
+        },
+        {
+          "text": "processes",
+          "start": 85.105,
+          "end": 85.766
+        },
+        {
+          "text": "first",
+          "start": 85.886,
+          "end": 86.127
+        },
+        {
+          "text": "by",
+          "start": 86.167,
+          "end": 86.307
+        },
+        {
+          "text": "geology",
+          "start": 86.367,
+          "end": 86.948
+        },
+        {
+          "text": "and",
+          "start": 86.988,
+          "end": 87.448
+        },
+        {
+          "text": "then",
+          "start": 87.489,
+          "end": 87.629
+        },
+        {
+          "text": "by",
+          "start": 87.689,
+          "end": 87.849
+        },
+        {
+          "text": "water",
+          "start": 87.969,
+          "end": 88.43
+        },
+        {
+          "text": "until",
+          "start": 88.891,
+          "end": 89.151
+        },
+        {
+          "text": "humans",
+          "start": 89.191,
+          "end": 89.511
+        },
+        {
+          "text": "could",
+          "start": 89.571,
+          "end": 89.732
+        },
+        {
+          "text": "pluck",
+          "start": 89.792,
+          "end": 90.052
+        },
+        {
+          "text": "nuggets",
+          "start": 90.092,
+          "end": 90.553
+        },
+        {
+          "text": "like",
+          "start": 90.613,
+          "end": 90.793
+        },
+        {
+          "text": "this",
+          "start": 90.833,
+          "end": 90.993
+        },
+        {
+          "text": "from",
+          "start": 91.074,
+          "end": 91.194
+        },
+        {
+          "text": "the",
+          "start": 91.214,
+          "end": 91.294
+        },
+        {
+          "text": "landscape.",
+          "start": 91.314,
+          "end": 91.855
+        }
+      ]
+    },
+    {
+      "time": 92.876,
+      "text": "And still it carries on because there are atoms from Egyptian jewelry or Inca trinkets that are almost certainly part of modern wedding rings or gold bullions.",
+      "translation": "而这场循环直到今天仍在继续，古埃及首饰或印加饰物中的那些金原子，很可能已经成了现代婚戒或金条的一部分。",
+      "words": [
+        {
+          "text": "And",
+          "start": 92.876,
+          "end": 92.996
+        },
+        {
+          "text": "still",
+          "start": 93.157,
+          "end": 93.477
+        },
+        {
+          "text": "it",
+          "start": 93.537,
+          "end": 93.597
+        },
+        {
+          "text": "carries",
+          "start": 93.637,
+          "end": 93.978
+        },
+        {
+          "text": "on",
+          "start": 94.158,
+          "end": 94.238
+        },
+        {
+          "text": "because",
+          "start": 94.538,
+          "end": 94.859
+        },
+        {
+          "text": "there",
+          "start": 95.199,
+          "end": 95.32
+        },
+        {
+          "text": "are",
+          "start": 95.36,
+          "end": 95.44
+        },
+        {
+          "text": "atoms",
+          "start": 95.52,
+          "end": 95.84
+        },
+        {
+          "text": "from",
+          "start": 95.9,
+          "end": 96.021
+        },
+        {
+          "text": "Egyptian",
+          "start": 96.061,
+          "end": 96.702
+        },
+        {
+          "text": "jewelry",
+          "start": 96.762,
+          "end": 97.282
+        },
+        {
+          "text": "or",
+          "start": 97.443,
+          "end": 97.523
+        },
+        {
+          "text": "Inca",
+          "start": 97.543,
+          "end": 97.923
+        },
+        {
+          "text": "trinkets",
+          "start": 97.983,
+          "end": 98.444
+        },
+        {
+          "text": "that",
+          "start": 98.464,
+          "end": 98.604
+        },
+        {
+          "text": "are",
+          "start": 98.624,
+          "end": 98.684
+        },
+        {
+          "text": "almost",
+          "start": 98.764,
+          "end": 99.045
+        },
+        {
+          "text": "certainly",
+          "start": 99.085,
+          "end": 99.425
+        },
+        {
+          "text": "part",
+          "start": 99.485,
+          "end": 99.746
+        },
+        {
+          "text": "of",
+          "start": 99.826,
+          "end": 99.866
+        },
+        {
+          "text": "modern",
+          "start": 99.906,
+          "end": 100.507
+        },
+        {
+          "text": "wedding",
+          "start": 100.567,
+          "end": 100.887
+        },
+        {
+          "text": "rings",
+          "start": 100.948,
+          "end": 101.168
+        },
+        {
+          "text": "or",
+          "start": 101.268,
+          "end": 101.328
+        },
+        {
+          "text": "gold",
+          "start": 101.408,
+          "end": 101.709
+        },
+        {
+          "text": "bullions.",
+          "start": 101.769,
+          "end": 102.149
+        }
+      ]
+    },
+    {
+      "time": 102.43,
+      "text": "So the cycling carries on but this fantastic colour stays exactly the same.",
+      "translation": "循环从未停止，但黄金那种迷人的光彩，却始终没有改变。",
+      "words": [
+        {
+          "text": "So",
+          "start": 102.43,
+          "end": 102.55
+        },
+        {
+          "text": "the",
+          "start": 102.59,
+          "end": 102.69
+        },
+        {
+          "text": "cycling",
+          "start": 102.77,
+          "end": 103.251
+        },
+        {
+          "text": "carries",
+          "start": 103.291,
+          "end": 103.631
+        },
+        {
+          "text": "on",
+          "start": 103.771,
+          "end": 103.872
+        },
+        {
+          "text": "but",
+          "start": 104.272,
+          "end": 104.392
+        },
+        {
+          "text": "this",
+          "start": 104.472,
+          "end": 104.653
+        },
+        {
+          "text": "fantastic",
+          "start": 104.753,
+          "end": 105.634
+        },
+        {
+          "text": "colour",
+          "start": 105.714,
+          "end": 106.015
+        },
+        {
+          "text": "stays",
+          "start": 106.215,
+          "end": 106.475
+        },
+        {
+          "text": "exactly",
+          "start": 106.575,
+          "end": 107.056
+        },
+        {
+          "text": "the",
+          "start": 107.096,
+          "end": 107.176
+        },
+        {
+          "text": "same.",
+          "start": 107.236,
+          "end": 107.697
+        }
+      ]
+    }
+  ]
+}
