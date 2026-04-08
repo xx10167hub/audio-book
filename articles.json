@@ -145,6 +145,12 @@
             "audioFile": "data/audio-24.m4a"
         },
         {
+            "id": "25",
+            "title": "第25篇：🪙 How Did Gold Get To Earth 黄金的起源与发掘",
+            "dataFile": "data/article-25.json",
+            "audioFile": "data/audio-25.mp3"
+        },
+        {
             "id": "26",
             "title": "第26篇：Why Is the Strait of Hormuz So Important?",
             "dataFile": "data/article-26.json",
@@ -173,6 +179,12 @@
             "title": "第32篇：🛢️Oil Surges Back Above $100 a Barrel",
             "dataFile": "data/article-32.json",
             "audioFile": "data/audio-32.mp3"
+        },
+        {
+            "id": "33",
+            "title": "第33篇：🚢 France Starts Work on Next-Generation Aircraft Carrier",
+            "dataFile": "data/article-33.json",
+            "audioFile": "data/audio-33.mp3"
         },
         {
             "id": "40",
@@ -245,6 +257,18 @@
             "title": "第71篇： 🚄🚄🚄Mid-Autumn Holiday Travel Rush",
             "dataFile": "data/article-71.json",
             "audioFile": "data/audio-71.m4a"
+        },
+        {
+            "id": "77",
+            "title": "第77篇：⚖️ Meta, Google Ordered to Pay $6 Million in Addiction Case",
+            "dataFile": "data/article-77.json",
+            "audioFile": "data/audio-77.mp3"
+        },
+        {
+            "id": "78",
+            "title": "第78篇：🌊 Iceland Warns of AMOC Collapse Risk",
+            "dataFile": "data/article-78.json",
+            "audioFile": "data/audio-78.mp3"
         },
         {
             "id": "79",
