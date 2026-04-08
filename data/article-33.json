@@ -1,0 +1,939 @@
+{
+  "audioUrl": "./data/audio-33.mp3",
+  "title": "France Starts Work on Next-Generation Aircraft Carrier",
+  "titleTranslation": "第33篇：法国启动建造新一代航母“自由法国”号",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "It's the largest shipbuilding project in Europe.",
+      "translation": "这是欧洲最大的造船项目。",
+      "words": [
+        {
+          "text": "It's",
+          "start": 0.031,
+          "end": 0.512
+        },
+        {
+          "text": "the",
+          "start": 0.592,
+          "end": 0.672
+        },
+        {
+          "text": "largest",
+          "start": 0.712,
+          "end": 1.173
+        },
+        {
+          "text": "shipbuilding",
+          "start": 1.313,
+          "end": 1.854
+        },
+        {
+          "text": "project",
+          "start": 1.894,
+          "end": 2.274
+        },
+        {
+          "text": "in",
+          "start": 2.334,
+          "end": 2.374
+        },
+        {
+          "text": "Europe.",
+          "start": 2.434,
+          "end": 2.815
+        }
+      ]
+    },
+    {
+      "time": 3.316,
+      "text": "Slated for 2038, France Libre, the next generation aircraft carrier, will be colossal at 310 metres long and weighing nearly 80,000 tonnes.",
+      "translation": "计划于2038年建成的下一代航空母舰“自由法国”号规模巨大--长310米，重量接近8万吨。",
+      "words": [
+        {
+          "text": "Slated",
+          "start": 3.316,
+          "end": 3.676
+        },
+        {
+          "text": "for",
+          "start": 3.716,
+          "end": 3.816
+        },
+        {
+          "text": "2038,",
+          "start": 3.836,
+          "end": 4.117
+        },
+        {
+          "text": "France",
+          "start": 5.118,
+          "end": 5.399
+        },
+        {
+          "text": "Libre,",
+          "start": 5.479,
+          "end": 5.879
+        },
+        {
+          "text": "the",
+          "start": 6.12,
+          "end": 6.22
+        },
+        {
+          "text": "next",
+          "start": 6.28,
+          "end": 6.58
+        },
+        {
+          "text": "generation",
+          "start": 6.701,
+          "end": 7.201
+        },
+        {
+          "text": "aircraft",
+          "start": 7.241,
+          "end": 7.762
+        },
+        {
+          "text": "carrier,",
+          "start": 7.802,
+          "end": 8.243
+        },
+        {
+          "text": "will",
+          "start": 8.283,
+          "end": 8.443
+        },
+        {
+          "text": "be",
+          "start": 8.483,
+          "end": 8.543
+        },
+        {
+          "text": "colossal",
+          "start": 8.603,
+          "end": 9.104
+        },
+        {
+          "text": "at",
+          "start": 9.685,
+          "end": 9.745
+        },
+        {
+          "text": "310",
+          "start": 9.765,
+          "end": 10.306
+        },
+        {
+          "text": "metres",
+          "start": 10.626,
+          "end": 11.047
+        },
+        {
+          "text": "long",
+          "start": 11.107,
+          "end": 11.307
+        },
+        {
+          "text": "and",
+          "start": 11.688,
+          "end": 11.768
+        },
+        {
+          "text": "weighing",
+          "start": 11.788,
+          "end": 12.068
+        },
+        {
+          "text": "nearly",
+          "start": 12.128,
+          "end": 12.389
+        },
+        {
+          "text": "80,000",
+          "start": 12.409,
+          "end": 13.23
+        },
+        {
+          "text": "tonnes.",
+          "start": 13.31,
+          "end": 13.671
+        }
+      ]
+    },
+    {
+      "time": 14.412,
+      "text": "For those workers, the new contract brings stability for their future.",
+      "translation": "对那些工人来说，这份新合同为他们的未来带来了稳定。",
+      "words": [
+        {
+          "text": "For",
+          "start": 14.412,
+          "end": 14.512
+        },
+        {
+          "text": "those",
+          "start": 14.552,
+          "end": 14.732
+        },
+        {
+          "text": "workers,",
+          "start": 14.792,
+          "end": 15.193
+        },
+        {
+          "text": "the",
+          "start": 15.253,
+          "end": 15.353
+        },
+        {
+          "text": "new",
+          "start": 15.393,
+          "end": 15.513
+        },
+        {
+          "text": "contract",
+          "start": 15.573,
+          "end": 16.054
+        },
+        {
+          "text": "brings",
+          "start": 16.114,
+          "end": 16.354
+        },
+        {
+          "text": "stability",
+          "start": 16.434,
+          "end": 16.955
+        },
+        {
+          "text": "for",
+          "start": 17.015,
+          "end": 17.115
+        },
+        {
+          "text": "their",
+          "start": 17.156,
+          "end": 17.296
+        },
+        {
+          "text": "future.",
+          "start": 17.336,
+          "end": 17.716
+        }
+      ]
+    },
+    {
+      "time": 18.618,
+      "text": "We're steeplejacks and since they can't install cranes everywhere, there will definitely be a need for us.",
+      "translation": "“我们是高空作业工人，而且由于不可能在所有地方都安装起重机，所以肯定会需要我们。”",
+      "words": [
+        {
+          "text": "We're",
+          "start": 18.618,
+          "end": 19.058
+        },
+        {
+          "text": "steeplejacks",
+          "start": 19.759,
+          "end": 20.44
+        },
+        {
+          "text": "and",
+          "start": 20.46,
+          "end": 20.58
+        },
+        {
+          "text": "since",
+          "start": 20.6,
+          "end": 20.741
+        },
+        {
+          "text": "they",
+          "start": 20.761,
+          "end": 20.861
+        },
+        {
+          "text": "can't",
+          "start": 20.901,
+          "end": 21.101
+        },
+        {
+          "text": "install",
+          "start": 21.121,
+          "end": 21.402
+        },
+        {
+          "text": "cranes",
+          "start": 21.442,
+          "end": 21.702
+        },
+        {
+          "text": "everywhere,",
+          "start": 21.782,
+          "end": 22.203
+        },
+        {
+          "text": "there",
+          "start": 22.243,
+          "end": 22.443
+        },
+        {
+          "text": "will",
+          "start": 22.463,
+          "end": 22.543
+        },
+        {
+          "text": "definitely",
+          "start": 22.563,
+          "end": 22.884
+        },
+        {
+          "text": "be",
+          "start": 22.944,
+          "end": 23.044
+        },
+        {
+          "text": "a",
+          "start": 23.064,
+          "end": 23.124
+        },
+        {
+          "text": "need",
+          "start": 23.144,
+          "end": 23.324
+        },
+        {
+          "text": "for",
+          "start": 23.344,
+          "end": 23.465
+        },
+        {
+          "text": "us.",
+          "start": 23.565,
+          "end": 24.486
+        }
+      ]
+    },
+    {
+      "time": 24.466,
+      "text": "The multi-year project also guarantees work for subcontractors.",
+      "translation": "这个为期多年的项目也为分包商提供了稳定的工作保障。",
+      "words": [
+        {
+          "text": "The",
+          "start": 24.466,
+          "end": 24.686
+        },
+        {
+          "text": "multi-year",
+          "start": 24.726,
+          "end": 25.287
+        },
+        {
+          "text": "project",
+          "start": 25.327,
+          "end": 25.667
+        },
+        {
+          "text": "also",
+          "start": 25.807,
+          "end": 26.028
+        },
+        {
+          "text": "guarantees",
+          "start": 26.088,
+          "end": 26.608
+        },
+        {
+          "text": "work",
+          "start": 26.668,
+          "end": 26.949
+        },
+        {
+          "text": "for",
+          "start": 26.989,
+          "end": 27.089
+        },
+        {
+          "text": "subcontractors.",
+          "start": 27.149,
+          "end": 28.03
+        }
+      ]
+    },
+    {
+      "time": 28.791,
+      "text": "This welding company has already started training people for special methods required to build a military vessel.",
+      "translation": "这家焊接公司已经开始培训人员，学习建造军舰所需的特殊工艺。",
+      "words": [
+        {
+          "text": "This",
+          "start": 28.791,
+          "end": 28.911
+        },
+        {
+          "text": "welding",
+          "start": 28.971,
+          "end": 29.311
+        },
+        {
+          "text": "company",
+          "start": 29.351,
+          "end": 29.732
+        },
+        {
+          "text": "has",
+          "start": 29.772,
+          "end": 29.892
+        },
+        {
+          "text": "already",
+          "start": 30.052,
+          "end": 30.392
+        },
+        {
+          "text": "started",
+          "start": 30.473,
+          "end": 30.793
+        },
+        {
+          "text": "training",
+          "start": 30.833,
+          "end": 31.293
+        },
+        {
+          "text": "people",
+          "start": 31.333,
+          "end": 31.614
+        },
+        {
+          "text": "for",
+          "start": 31.674,
+          "end": 31.794
+        },
+        {
+          "text": "special",
+          "start": 31.834,
+          "end": 32.174
+        },
+        {
+          "text": "methods",
+          "start": 32.254,
+          "end": 32.575
+        },
+        {
+          "text": "required",
+          "start": 32.675,
+          "end": 33.155
+        },
+        {
+          "text": "to",
+          "start": 33.215,
+          "end": 33.316
+        },
+        {
+          "text": "build",
+          "start": 33.356,
+          "end": 33.576
+        },
+        {
+          "text": "a",
+          "start": 33.616,
+          "end": 33.716
+        },
+        {
+          "text": "military",
+          "start": 33.756,
+          "end": 34.136
+        },
+        {
+          "text": "vessel.",
+          "start": 34.177,
+          "end": 34.497
+        }
+      ]
+    },
+    {
+      "time": 36.099,
+      "text": "The massive undertaking will bring 15,000 new jobs but also hundreds of military personnel to San Jose.",
+      "translation": "这一庞大的工程将带来1.5万个新工作岗位，同时也会有数百名军方人员来到圣纳泽尔市。",
+      "words": [
+        {
+          "text": "The",
+          "start": 36.099,
+          "end": 36.199
+        },
+        {
+          "text": "massive",
+          "start": 36.219,
+          "end": 36.539
+        },
+        {
+          "text": "undertaking",
+          "start": 36.599,
+          "end": 37.14
+        },
+        {
+          "text": "will",
+          "start": 37.2,
+          "end": 37.36
+        },
+        {
+          "text": "bring",
+          "start": 37.4,
+          "end": 37.62
+        },
+        {
+          "text": "15,000",
+          "start": 37.64,
+          "end": 38.141
+        },
+        {
+          "text": "new",
+          "start": 38.441,
+          "end": 38.942
+        },
+        {
+          "text": "jobs",
+          "start": 38.982,
+          "end": 39.262
+        },
+        {
+          "text": "but",
+          "start": 39.522,
+          "end": 39.642
+        },
+        {
+          "text": "also",
+          "start": 39.803,
+          "end": 40.103
+        },
+        {
+          "text": "hundreds",
+          "start": 40.143,
+          "end": 40.583
+        },
+        {
+          "text": "of",
+          "start": 40.644,
+          "end": 40.684
+        },
+        {
+          "text": "military",
+          "start": 40.784,
+          "end": 41.184
+        },
+        {
+          "text": "personnel",
+          "start": 41.244,
+          "end": 41.685
+        },
+        {
+          "text": "to",
+          "start": 41.745,
+          "end": 41.845
+        },
+        {
+          "text": "San",
+          "start": 41.885,
+          "end": 42.085
+        },
+        {
+          "text": "Jose.",
+          "start": 42.105,
+          "end": 42.486
+        }
+      ]
+    },
+    {
+      "time": 43.106,
+      "text": "The owner of this restaurant is gearing up for an influx of new customers.",
+      "translation": "这家餐厅的老板正为即将到来的大量新顾客做准备。",
+      "words": [
+        {
+          "text": "The",
+          "start": 43.106,
+          "end": 43.206
+        },
+        {
+          "text": "owner",
+          "start": 43.286,
+          "end": 43.507
+        },
+        {
+          "text": "of",
+          "start": 43.567,
+          "end": 43.607
+        },
+        {
+          "text": "this",
+          "start": 43.667,
+          "end": 43.807
+        },
+        {
+          "text": "restaurant",
+          "start": 43.887,
+          "end": 44.328
+        },
+        {
+          "text": "is",
+          "start": 44.588,
+          "end": 44.648
+        },
+        {
+          "text": "gearing",
+          "start": 44.708,
+          "end": 44.968
+        },
+        {
+          "text": "up",
+          "start": 45.028,
+          "end": 45.108
+        },
+        {
+          "text": "for",
+          "start": 45.148,
+          "end": 45.249
+        },
+        {
+          "text": "an",
+          "start": 45.309,
+          "end": 45.349
+        },
+        {
+          "text": "influx",
+          "start": 45.469,
+          "end": 45.889
+        },
+        {
+          "text": "of",
+          "start": 45.969,
+          "end": 46.029
+        },
+        {
+          "text": "new",
+          "start": 46.049,
+          "end": 46.31
+        },
+        {
+          "text": "customers.",
+          "start": 46.39,
+          "end": 47.571
+        }
+      ]
+    },
+    {
+      "time": 47.956,
+      "text": "And more homes will be needed to accommodate that many people.",
+      "translation": "并且还需要更多的住房来容纳这么多人。",
+      "words": [
+        {
+          "text": "And",
+          "start": 47.956,
+          "end": 48.117
+        },
+        {
+          "text": "more",
+          "start": 48.177,
+          "end": 48.377
+        },
+        {
+          "text": "homes",
+          "start": 48.418,
+          "end": 48.719
+        },
+        {
+          "text": "will",
+          "start": 48.779,
+          "end": 48.939
+        },
+        {
+          "text": "be",
+          "start": 48.979,
+          "end": 49.06
+        },
+        {
+          "text": "needed",
+          "start": 49.1,
+          "end": 49.381
+        },
+        {
+          "text": "to",
+          "start": 49.421,
+          "end": 49.461
+        },
+        {
+          "text": "accommodate",
+          "start": 49.481,
+          "end": 50.083
+        },
+        {
+          "text": "that",
+          "start": 50.143,
+          "end": 50.304
+        },
+        {
+          "text": "many",
+          "start": 50.344,
+          "end": 50.525
+        },
+        {
+          "text": "people.",
+          "start": 50.585,
+          "end": 50.906
+        }
+      ]
+    },
+    {
+      "time": 51.368,
+      "text": "There's already a plan to install 200 mobile homes, but the new project is set to put pressure on the local housing market.",
+      "translation": "目前已经有计划安置200套移动住房，但这个新项目预计将对当地房地产市场造成压力。",
+      "words": [
+        {
+          "text": "There's",
+          "start": 51.368,
+          "end": 51.568
+        },
+        {
+          "text": "already",
+          "start": 51.689,
+          "end": 52.01
+        },
+        {
+          "text": "a",
+          "start": 52.05,
+          "end": 52.07
+        },
+        {
+          "text": "plan",
+          "start": 52.11,
+          "end": 52.391
+        },
+        {
+          "text": "to",
+          "start": 52.411,
+          "end": 52.451
+        },
+        {
+          "text": "install",
+          "start": 52.471,
+          "end": 52.832
+        },
+        {
+          "text": "200",
+          "start": 52.853,
+          "end": 53.033
+        },
+        {
+          "text": "mobile",
+          "start": 53.455,
+          "end": 53.836
+        },
+        {
+          "text": "homes,",
+          "start": 53.876,
+          "end": 54.177
+        },
+        {
+          "text": "but",
+          "start": 54.458,
+          "end": 54.558
+        },
+        {
+          "text": "the",
+          "start": 54.578,
+          "end": 54.659
+        },
+        {
+          "text": "new",
+          "start": 54.719,
+          "end": 54.839
+        },
+        {
+          "text": "project",
+          "start": 54.899,
+          "end": 55.281
+        },
+        {
+          "text": "is",
+          "start": 55.361,
+          "end": 55.421
+        },
+        {
+          "text": "set",
+          "start": 55.481,
+          "end": 55.662
+        },
+        {
+          "text": "to",
+          "start": 55.722,
+          "end": 55.802
+        },
+        {
+          "text": "put",
+          "start": 55.843,
+          "end": 55.983
+        },
+        {
+          "text": "pressure",
+          "start": 56.063,
+          "end": 56.384
+        },
+        {
+          "text": "on",
+          "start": 56.525,
+          "end": 56.565
+        },
+        {
+          "text": "the",
+          "start": 56.605,
+          "end": 56.685
+        },
+        {
+          "text": "local",
+          "start": 56.746,
+          "end": 57.007
+        },
+        {
+          "text": "housing",
+          "start": 57.067,
+          "end": 57.428
+        },
+        {
+          "text": "market.",
+          "start": 57.468,
+          "end": 57.869
+        }
+      ]
+    },
+    {
+      "time": 58.732,
+      "text": "The initial cost estimate for the aircraft carrier is 10 billion euros, as the main construction site, San Jose will take the lion's share.",
+      "translation": "“自由法国”号航母的初步成本估计为100亿欧元，而作为主要建造地的圣纳泽尔将占据其中最大的一部分。",
+      "words": [
+        {
+          "text": "The",
+          "start": 58.732,
+          "end": 58.813
+        },
+        {
+          "text": "initial",
+          "start": 58.873,
+          "end": 59.194
+        },
+        {
+          "text": "cost",
+          "start": 59.254,
+          "end": 59.495
+        },
+        {
+          "text": "estimate",
+          "start": 59.575,
+          "end": 59.936
+        },
+        {
+          "text": "for",
+          "start": 59.977,
+          "end": 60.057
+        },
+        {
+          "text": "the",
+          "start": 60.097,
+          "end": 60.157
+        },
+        {
+          "text": "aircraft",
+          "start": 60.197,
+          "end": 60.599
+        },
+        {
+          "text": "carrier",
+          "start": 60.639,
+          "end": 61.02
+        },
+        {
+          "text": "is",
+          "start": 61.12,
+          "end": 61.201
+        },
+        {
+          "text": "10",
+          "start": 61.221,
+          "end": 61.622
+        },
+        {
+          "text": "billion",
+          "start": 61.662,
+          "end": 61.983
+        },
+        {
+          "text": "euros,",
+          "start": 62.084,
+          "end": 62.425
+        },
+        {
+          "text": "as",
+          "start": 63.007,
+          "end": 63.107
+        },
+        {
+          "text": "the",
+          "start": 63.147,
+          "end": 63.207
+        },
+        {
+          "text": "main",
+          "start": 63.248,
+          "end": 63.408
+        },
+        {
+          "text": "construction",
+          "start": 63.468,
+          "end": 64.03
+        },
+        {
+          "text": "site,",
+          "start": 64.07,
+          "end": 64.291
+        },
+        {
+          "text": "San",
+          "start": 64.632,
+          "end": 64.813
+        },
+        {
+          "text": "Jose",
+          "start": 64.833,
+          "end": 65.154
+        },
+        {
+          "text": "will",
+          "start": 65.174,
+          "end": 65.355
+        },
+        {
+          "text": "take",
+          "start": 65.395,
+          "end": 65.595
+        },
+        {
+          "text": "the",
+          "start": 65.636,
+          "end": 65.836
+        },
+        {
+          "text": "lion's",
+          "start": 65.876,
+          "end": 66.218
+        },
+        {
+          "text": "share.",
+          "start": 66.258,
+          "end": 66.96
+        }
+      ]
+    }
+  ]
+}

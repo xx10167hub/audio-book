@@ -1,0 +1,731 @@
+{
+  "audioUrl": "./data/audio-78.mp3",
+  "title": "Iceland Warns of AMOC Collapse Risk",
+  "titleTranslation": "第78篇：冰岛警告称洋流系统面临崩溃风险",
+  "transcript": [
+    {
+      "time": 0.031,
+      "text": "An ocean current system, critical to Earth's climate, is at risk of collapse, and Iceland has just declared it a national security concern.",
+      "translation": "一个对地球气候至关重要的洋流系统正面临崩溃风险，冰岛已将其宣布为国家安全问题。",
+      "words": [
+        {
+          "text": "An",
+          "start": 0.031,
+          "end": 0.251
+        },
+        {
+          "text": "ocean",
+          "start": 0.432,
+          "end": 0.712
+        },
+        {
+          "text": "current",
+          "start": 0.812,
+          "end": 1.133
+        },
+        {
+          "text": "system,",
+          "start": 1.253,
+          "end": 1.613
+        },
+        {
+          "text": "critical",
+          "start": 2.054,
+          "end": 2.495
+        },
+        {
+          "text": "to",
+          "start": 2.875,
+          "end": 2.975
+        },
+        {
+          "text": "Earth's",
+          "start": 3.076,
+          "end": 3.356
+        },
+        {
+          "text": "climate,",
+          "start": 3.436,
+          "end": 3.877
+        },
+        {
+          "text": "is",
+          "start": 4.317,
+          "end": 4.397
+        },
+        {
+          "text": "at",
+          "start": 4.478,
+          "end": 4.518
+        },
+        {
+          "text": "risk",
+          "start": 4.558,
+          "end": 4.938
+        },
+        {
+          "text": "of",
+          "start": 4.978,
+          "end": 5.018
+        },
+        {
+          "text": "collapse,",
+          "start": 5.139,
+          "end": 5.679
+        },
+        {
+          "text": "and",
+          "start": 6.06,
+          "end": 6.14
+        },
+        {
+          "text": "Iceland",
+          "start": 6.32,
+          "end": 6.701
+        },
+        {
+          "text": "has",
+          "start": 6.861,
+          "end": 7.001
+        },
+        {
+          "text": "just",
+          "start": 7.142,
+          "end": 7.362
+        },
+        {
+          "text": "declared",
+          "start": 7.422,
+          "end": 7.863
+        },
+        {
+          "text": "it",
+          "start": 7.923,
+          "end": 7.963
+        },
+        {
+          "text": "a",
+          "start": 8.163,
+          "end": 8.183
+        },
+        {
+          "text": "national",
+          "start": 8.263,
+          "end": 8.664
+        },
+        {
+          "text": "security",
+          "start": 8.744,
+          "end": 9.245
+        },
+        {
+          "text": "concern.",
+          "start": 9.305,
+          "end": 9.806
+        }
+      ]
+    },
+    {
+      "time": 10.046,
+      "text": "The Atlantic Meridional Overturning Circulation, or AMOC, is an ocean current that helps keep Europe's winters mild by carrying warm water from the tropics northward toward the Arctic.",
+      "translation": "大西洋经向翻转流简称AMOC，这种洋流有助于保持欧洲冬季天气温和，因为洋流将温暖的海水从热带地区向北输送至北极。",
+      "words": [
+        {
+          "text": "The",
+          "start": 10.046,
+          "end": 10.126
+        },
+        {
+          "text": "Atlantic",
+          "start": 10.226,
+          "end": 10.687
+        },
+        {
+          "text": "Meridional",
+          "start": 10.767,
+          "end": 11.348
+        },
+        {
+          "text": "Overturning",
+          "start": 11.508,
+          "end": 12.169
+        },
+        {
+          "text": "Circulation,",
+          "start": 12.289,
+          "end": 13.05
+        },
+        {
+          "text": "or",
+          "start": 13.371,
+          "end": 13.451
+        },
+        {
+          "text": "AMOC,",
+          "start": 13.491,
+          "end": 14.252
+        },
+        {
+          "text": "is",
+          "start": 14.653,
+          "end": 14.753
+        },
+        {
+          "text": "an",
+          "start": 14.813,
+          "end": 14.853
+        },
+        {
+          "text": "ocean",
+          "start": 15.033,
+          "end": 15.314
+        },
+        {
+          "text": "current",
+          "start": 15.394,
+          "end": 15.694
+        },
+        {
+          "text": "that",
+          "start": 15.754,
+          "end": 15.875
+        },
+        {
+          "text": "helps",
+          "start": 15.955,
+          "end": 16.255
+        },
+        {
+          "text": "keep",
+          "start": 16.435,
+          "end": 16.736
+        },
+        {
+          "text": "Europe's",
+          "start": 16.896,
+          "end": 17.217
+        },
+        {
+          "text": "winters",
+          "start": 17.297,
+          "end": 17.697
+        },
+        {
+          "text": "mild",
+          "start": 17.817,
+          "end": 18.238
+        },
+        {
+          "text": "by",
+          "start": 18.719,
+          "end": 18.839
+        },
+        {
+          "text": "carrying",
+          "start": 18.919,
+          "end": 19.26
+        },
+        {
+          "text": "warm",
+          "start": 19.42,
+          "end": 19.72
+        },
+        {
+          "text": "water",
+          "start": 19.76,
+          "end": 20.061
+        },
+        {
+          "text": "from",
+          "start": 20.121,
+          "end": 20.261
+        },
+        {
+          "text": "the",
+          "start": 20.301,
+          "end": 20.381
+        },
+        {
+          "text": "tropics",
+          "start": 20.401,
+          "end": 21.022
+        },
+        {
+          "text": "northward",
+          "start": 21.603,
+          "end": 22.144
+        },
+        {
+          "text": "toward",
+          "start": 22.444,
+          "end": 22.765
+        },
+        {
+          "text": "the",
+          "start": 22.805,
+          "end": 22.865
+        },
+        {
+          "text": "Arctic.",
+          "start": 23.005,
+          "end": 24.267
+        }
+      ]
+    },
+    {
+      "time": 24.247,
+      "text": "As warming temperatures accelerate the thaw of Arctic ice, meltwater from Greenland's ice sheet is pouring into the ocean.",
+      "translation": "随着气温升高，北极冰层融化加速，格陵兰岛冰盖的融水正源源不断地流入海洋。",
+      "words": [
+        {
+          "text": "As",
+          "start": 24.247,
+          "end": 24.678
+        },
+        {
+          "text": "warming",
+          "start": 24.678,
+          "end": 25.11
+        },
+        {
+          "text": "temperatures",
+          "start": 25.11,
+          "end": 25.541
+        },
+        {
+          "text": "accelerate",
+          "start": 25.541,
+          "end": 25.973
+        },
+        {
+          "text": "the",
+          "start": 25.973,
+          "end": 26.404
+        },
+        {
+          "text": "thaw",
+          "start": 26.404,
+          "end": 26.836
+        },
+        {
+          "text": "of",
+          "start": 26.836,
+          "end": 27.267
+        },
+        {
+          "text": "Arctic",
+          "start": 27.267,
+          "end": 27.699
+        },
+        {
+          "text": "ice,",
+          "start": 27.699,
+          "end": 28.13
+        },
+        {
+          "text": "meltwater",
+          "start": 28.13,
+          "end": 28.562
+        },
+        {
+          "text": "from",
+          "start": 28.562,
+          "end": 28.993
+        },
+        {
+          "text": "Greenland's",
+          "start": 28.993,
+          "end": 29.425
+        },
+        {
+          "text": "ice",
+          "start": 29.425,
+          "end": 29.856
+        },
+        {
+          "text": "sheet",
+          "start": 29.856,
+          "end": 30.288
+        },
+        {
+          "text": "is",
+          "start": 30.288,
+          "end": 30.719
+        },
+        {
+          "text": "pouring",
+          "start": 30.719,
+          "end": 31.151
+        },
+        {
+          "text": "into",
+          "start": 31.151,
+          "end": 31.582
+        },
+        {
+          "text": "the",
+          "start": 31.582,
+          "end": 32.014
+        },
+        {
+          "text": "ocean.",
+          "start": 32.014,
+          "end": 32.445
+        }
+      ]
+    },
+    {
+      "time": 32.485,
+      "text": "And scientists warned that cold freshwater could disrupt the current's flow.",
+      "translation": "科学家警告称，这些冰冷的淡水可能会扰乱洋流的流动。",
+      "words": [
+        {
+          "text": "And",
+          "start": 32.485,
+          "end": 32.946
+        },
+        {
+          "text": "scientists",
+          "start": 32.946,
+          "end": 33.407
+        },
+        {
+          "text": "warned",
+          "start": 33.407,
+          "end": 33.868
+        },
+        {
+          "text": "that",
+          "start": 33.868,
+          "end": 34.329
+        },
+        {
+          "text": "cold",
+          "start": 34.329,
+          "end": 34.79
+        },
+        {
+          "text": "freshwater",
+          "start": 34.79,
+          "end": 35.252
+        },
+        {
+          "text": "could",
+          "start": 35.252,
+          "end": 35.713
+        },
+        {
+          "text": "disrupt",
+          "start": 35.713,
+          "end": 36.174
+        },
+        {
+          "text": "the",
+          "start": 36.174,
+          "end": 36.635
+        },
+        {
+          "text": "current's",
+          "start": 36.635,
+          "end": 37.096
+        },
+        {
+          "text": "flow.",
+          "start": 37.096,
+          "end": 37.557
+        }
+      ]
+    },
+    {
+      "time": 37.957,
+      "text": "If the AMOC collapses completely, the effects could extend far beyond Iceland, potentially triggering a modern-day ice age in northern Europe and disrupting rainfall patterns across India, Africa and South America.",
+      "translation": "如果大西洋经向翻转流完全崩溃，受到影响的可能远不只冰岛，还可能促使北欧进入现代冰河世纪，并扰乱印度、非洲、南美洲的降雨模式。",
+      "words": [
+        {
+          "text": "If",
+          "start": 37.957,
+          "end": 38.038
+        },
+        {
+          "text": "the",
+          "start": 38.098,
+          "end": 38.198
+        },
+        {
+          "text": "AMOC",
+          "start": 38.398,
+          "end": 39.05
+        },
+        {
+          "text": "collapses",
+          "start": 39.08,
+          "end": 39.72
+        },
+        {
+          "text": "completely,",
+          "start": 39.74,
+          "end": 40.4
+        },
+        {
+          "text": "The",
+          "start": 40.463,
+          "end": 40.663
+        },
+        {
+          "text": "effects",
+          "start": 40.724,
+          "end": 41.125
+        },
+        {
+          "text": "could",
+          "start": 41.225,
+          "end": 41.385
+        },
+        {
+          "text": "extend",
+          "start": 41.445,
+          "end": 41.786
+        },
+        {
+          "text": "far",
+          "start": 41.946,
+          "end": 42.207
+        },
+        {
+          "text": "beyond",
+          "start": 42.307,
+          "end": 42.688
+        },
+        {
+          "text": "Iceland,",
+          "start": 42.728,
+          "end": 43.27
+        },
+        {
+          "text": "potentially",
+          "start": 43.791,
+          "end": 44.432
+        },
+        {
+          "text": "triggering",
+          "start": 44.573,
+          "end": 44.974
+        },
+        {
+          "text": "a",
+          "start": 44.994,
+          "end": 45.014
+        },
+        {
+          "text": "modern-day",
+          "start": 45.234,
+          "end": 45.856
+        },
+        {
+          "text": "ice",
+          "start": 45.896,
+          "end": 46.257
+        },
+        {
+          "text": "age",
+          "start": 46.357,
+          "end": 46.517
+        },
+        {
+          "text": "in",
+          "start": 46.738,
+          "end": 46.818
+        },
+        {
+          "text": "northern",
+          "start": 46.898,
+          "end": 47.279
+        },
+        {
+          "text": "Europe",
+          "start": 47.419,
+          "end": 47.7
+        },
+        {
+          "text": "and",
+          "start": 48.121,
+          "end": 48.201
+        },
+        {
+          "text": "disrupting",
+          "start": 48.241,
+          "end": 48.722
+        },
+        {
+          "text": "rainfall",
+          "start": 48.763,
+          "end": 49.404
+        },
+        {
+          "text": "patterns",
+          "start": 49.464,
+          "end": 49.885
+        },
+        {
+          "text": "across",
+          "start": 50.106,
+          "end": 50.467
+        },
+        {
+          "text": "India,",
+          "start": 50.707,
+          "end": 51.068
+        },
+        {
+          "text": "Africa",
+          "start": 51.369,
+          "end": 51.73
+        },
+        {
+          "text": "and",
+          "start": 51.77,
+          "end": 52.171
+        },
+        {
+          "text": "South",
+          "start": 52.311,
+          "end": 52.572
+        },
+        {
+          "text": "America.",
+          "start": 52.652,
+          "end": 53.173
+        }
+      ]
+    },
+    {
+      "time": 53.393,
+      "text": "Experts warn that unless carbon emissions are reduced, this critical system could collapse.",
+      "translation": "专家警告称，除非碳排放量减少，否则这一关键系统可能崩溃。",
+      "words": [
+        {
+          "text": "Experts",
+          "start": 53.393,
+          "end": 53.814
+        },
+        {
+          "text": "warn",
+          "start": 53.895,
+          "end": 54.215
+        },
+        {
+          "text": "that",
+          "start": 54.376,
+          "end": 54.496
+        },
+        {
+          "text": "unless",
+          "start": 54.596,
+          "end": 55.037
+        },
+        {
+          "text": "carbon",
+          "start": 55.138,
+          "end": 55.539
+        },
+        {
+          "text": "emissions",
+          "start": 55.599,
+          "end": 56.02
+        },
+        {
+          "text": "are",
+          "start": 56.12,
+          "end": 56.22
+        },
+        {
+          "text": "reduced,",
+          "start": 56.26,
+          "end": 56.781
+        },
+        {
+          "text": "this",
+          "start": 57.383,
+          "end": 57.543
+        },
+        {
+          "text": "critical",
+          "start": 57.664,
+          "end": 58.044
+        },
+        {
+          "text": "system",
+          "start": 58.145,
+          "end": 58.505
+        },
+        {
+          "text": "could",
+          "start": 58.686,
+          "end": 58.846
+        },
+        {
+          "text": "collapse.",
+          "start": 58.926,
+          "end": 59.468
+        }
+      ]
+    },
+    {
+      "time": 59.708,
+      "text": "Altering life in Iceland and beyond for generations to come.",
+      "translation": "并将在未来数代中改变冰岛乃至更广泛地区的生活。",
+      "words": [
+        {
+          "text": "Altering",
+          "start": 59.708,
+          "end": 60.129
+        },
+        {
+          "text": "life",
+          "start": 60.21,
+          "end": 60.45
+        },
+        {
+          "text": "in",
+          "start": 60.51,
+          "end": 60.57
+        },
+        {
+          "text": "Iceland",
+          "start": 60.771,
+          "end": 61.132
+        },
+        {
+          "text": "and",
+          "start": 61.472,
+          "end": 61.573
+        },
+        {
+          "text": "beyond",
+          "start": 61.633,
+          "end": 62.074
+        },
+        {
+          "text": "for",
+          "start": 62.114,
+          "end": 62.455
+        },
+        {
+          "text": "generations",
+          "start": 62.515,
+          "end": 63.176
+        },
+        {
+          "text": "to",
+          "start": 63.257,
+          "end": 63.337
+        },
+        {
+          "text": "come.",
+          "start": 63.397,
+          "end": 63.838
+        }
+      ]
+    }
+  ]
+}
